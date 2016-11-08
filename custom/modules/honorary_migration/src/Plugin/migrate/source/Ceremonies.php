@@ -2,7 +2,7 @@
 
 namespace Drupal\honorary_migration\Plugin\migrate\source;
 
-use Drupal\migrate\Plugin\migrate\souce\SqlBase;
+use Drupal\migrate\Plugin\migrate\source\SqlBase;
 
  /**
   * Source plugin for ceremonies.
