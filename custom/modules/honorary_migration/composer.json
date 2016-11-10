@@ -1,6 +1,0 @@
-{
-    "name": "drupal/honorary_migration",
-    "description": "Migrates Honorary Degrees site database to D8.",
-    "type": "drupal-module",
-    "license": "GPL-2.0+"
-}
