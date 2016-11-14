@@ -68,5 +68,4 @@ class Ceremony extends SqlBase {
      */
     return parent::prepareRow($row);
   }
-
 }
