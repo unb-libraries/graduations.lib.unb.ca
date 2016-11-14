@@ -1,0 +1,19 @@
+# Migration configuration for ceremony content.
+id: ceremony
+label: Graduation ceremonies
+migration_group: honorary_migration
+source:
+  plugin: ceremony
+destination:
+  plugin: entity:node
+process:
+  # Hardcode the destination node type (bundle) as 'honorary_ceremony'.
+  type:
+    plugin: default_value
+    default_value: honorary_ceremony
+  title: type
+  nid: ceremony_id
+dependencies:
+  enforced:
+    module:
+      - honorary_migration
