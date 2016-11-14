@@ -4,6 +4,7 @@ label: Graduation ceremonies
 migration_group: honorary_migration
 source:
   plugin: ceremony
+  key: default
 destination:
   plugin: entity:node
 process:
