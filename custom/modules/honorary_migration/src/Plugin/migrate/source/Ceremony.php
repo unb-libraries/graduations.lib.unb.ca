@@ -34,11 +34,15 @@ class Ceremony extends SqlBase {
   }
 
   /**
+   * The names on the left are internal to the migration, the ones on the right
+   * are code-meaningless descriptions. Mapping is done in migration YAML file.
+   *
    * {@inheritdoc}
+   *
    */
   public function fields() {
     $fields = [
-      'bid' => $this->t('Ceremony ID'),
+      'ceremony_id' => $this->t('Ceremony ID'),
       'year' => $this->t('Year of ceremony'),
       'campus' => $this->t('Campus location of ceremony'),
       'type' => $this->t('Type of ceremony')

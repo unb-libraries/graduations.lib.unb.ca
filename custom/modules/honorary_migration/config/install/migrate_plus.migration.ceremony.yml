@@ -12,8 +12,14 @@ process:
   type:
     plugin: default_value
     default_value: honorary_ceremony
-  title: type
-  nid: ceremony_id
+  # Map Drupal MACHINE NAME fields to migration field names as declared
+  # in source plugin.
+  field_ceremony_id: ceremony_id
+  title: ceremony_id
+  field_year: year
+  field_campus: campus
+  field_ceremony_type: type
+  # Dependency on module itself.
 dependencies:
   enforced:
     module:
