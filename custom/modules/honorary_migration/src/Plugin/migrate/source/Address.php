@@ -9,10 +9,10 @@ use Drupal\migrate\Row;
  * Source plugin for ceremony content.
  *
  * @MigrateSource(
- *   id = "ceremony"
+ *   id = "address"
  * )
  */
-class Ceremony extends SqlBase {
+class Address extends SqlBase {
 
   /**
    * {@inheritdoc}
@@ -28,8 +28,9 @@ class Ceremony extends SqlBase {
      * the base node data here, and pull in the relationships in prepareRow()
      * below.
      */
-    $query = $this->select('grad_ceremonies', 'c')
-                  ->fields('c', ['ceremony_id', 'year', 'campus', 'type']);
+    $query = $this->select('addresses', 'a')
+                  ->fields('a', ['address_id', 'ceremony_id', 'type',
+                  'delivered_by', 'content']);
     return $query;
   }
 
@@ -42,10 +43,11 @@ class Ceremony extends SqlBase {
    */
   public function fields() {
     $fields = [
+      'address_id' => $this->t('Address ID'),
       'ceremony_id' => $this->t('Ceremony ID'),
-      'year' => $this->t('Year of ceremony'),
-      'campus' => $this->t('Campus location of ceremony'),
-      'type' => $this->t('Type of ceremony')
+      'type' => $this->t('Type of address')
+      'delivered_by' => $this->t('Delivered by'),
+      'content' => $this->t('Address content')
     ];
 
     return $fields;
@@ -56,9 +58,9 @@ class Ceremony extends SqlBase {
    */
   public function getIds() {
     return [
-      'ceremony_id' => [
+      'address_id' => [
         'type' => 'integer',
-        'alias' => 'c',
+        'alias' => 'a',
       ],
     ];
   }

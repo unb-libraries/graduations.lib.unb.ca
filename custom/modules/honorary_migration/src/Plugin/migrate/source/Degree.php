@@ -9,10 +9,10 @@ use Drupal\migrate\Row;
  * Source plugin for ceremony content.
  *
  * @MigrateSource(
- *   id = "ceremony"
+ *   id = "degree"
  * )
  */
-class Ceremony extends SqlBase {
+class Degree extends SqlBase {
 
   /**
    * {@inheritdoc}
@@ -28,8 +28,10 @@ class Ceremony extends SqlBase {
      * the base node data here, and pull in the relationships in prepareRow()
      * below.
      */
-    $query = $this->select('grad_ceremonies', 'c')
-                  ->fields('c', ['ceremony_id', 'year', 'campus', 'type']);
+    $query = $this->select('degrees', 'd')
+                  ->fields('d', ['degree_id', 'ceremony_id', 'degree',
+                  'name', 'gender', 'valedictorian', 'orator', 'citation',
+                  'image', 'img_caption', 'img_caption_2']);
     return $query;
   }
 
@@ -42,10 +44,17 @@ class Ceremony extends SqlBase {
    */
   public function fields() {
     $fields = [
+      'degree_id' => $this->t('Degree ID'),
       'ceremony_id' => $this->t('Ceremony ID'),
-      'year' => $this->t('Year of ceremony'),
-      'campus' => $this->t('Campus location of ceremony'),
-      'type' => $this->t('Type of ceremony')
+      'degree' => $this->t('Degree')
+      'name' => $this->t('Recipient name'),
+      'gender' => $this->t('Recipient gender'),
+      'valedictorian' => $this->t('Valedictorian'),
+      'orator' => $this->t('Orator'),
+      'citation' => $this->t('Citation'),
+      'image' => $this->t('Image'),
+      'img_caption' => $this->t('Image caption'),
+      'img_caption_2' => $this->t('Second image caption'),
     ];
 
     return $fields;
@@ -56,9 +65,9 @@ class Ceremony extends SqlBase {
    */
   public function getIds() {
     return [
-      'ceremony_id' => [
+      'degree_id' => [
         'type' => 'integer',
-        'alias' => 'c',
+        'alias' => 'd',
       ],
     ];
   }

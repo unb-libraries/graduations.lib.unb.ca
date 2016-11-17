@@ -15,6 +15,7 @@ process:
   # Map Drupal MACHINE NAME fields to migration field names as declared
   # in source plugin.
   field_address_id: degree_id
+  field_degree_ceremony: ceremony_id
   title: degree_id
   field_degree_name: degree
   field_recipient_name: name
@@ -22,6 +23,7 @@ process:
   field_valedictorian: valedictorian
   field_orator: orator
   field_citation: citation
+  field_image:
   field_img_caption: img_caption
   field_img_caption_2: img_caption_2
   # Dependency on module itself.

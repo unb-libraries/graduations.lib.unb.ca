@@ -15,6 +15,7 @@ process:
   # Map Drupal MACHINE NAME fields to migration field names as declared
   # in source plugin.
   field_address_id: address_id
+  field_address_ceremony_id: ceremony_id
   title: address_id
   field_address_type: type
   field_delivered_by: delivered_by
