@@ -1,0 +1,19 @@
+uuid: fcb3cc31-2636-4360-b7a5-eba0f1220c1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_campus
+    - node.type.honorary_ceremony
+id: node.honorary_ceremony.field_campus
+field_name: field_campus
+entity_type: node
+bundle: honorary_ceremony
+label: campus
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

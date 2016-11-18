@@ -1,0 +1,17 @@
+uuid: ea4603c0-8470-4779-8b67-9dcdb8469526
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.honorary_degree
+  module:
+    - user
+id: node.honorary_degree.teaser
+targetEntityType: node
+bundle: honorary_degree
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden: {  }

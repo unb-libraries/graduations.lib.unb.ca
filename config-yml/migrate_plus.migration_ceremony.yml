@@ -1,0 +1,19 @@
+id: ceremony
+label: 'Graduation ceremonies'
+migration_group: honorary_migration
+source:
+  plugin: ceremony
+destination:
+  plugin: 'entity:node'
+process:
+  type:
+    plugin: default_value
+    default_value: honorary_ceremony
+  title: type
+  nid: ceremony_id
+dependencies:
+  enforced:
+    module:
+      - honorary_migration
+_core:
+  default_config_hash: AXV62SvE2s4xNuvzS3Z7MFWhKi5pguGV28hNqQ98dFE

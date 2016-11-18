@@ -1,0 +1,29 @@
+uuid: cd41796b-173c-4a9e-8f21-815a0f965800
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - honorary_migration
+_core:
+  default_config_hash: X2dqYonSxTvVADtTG7-1d3uMuFPvu2jw0BZz_BDNd3k
+id: address
+migration_tags: null
+migration_group: honorary_migration
+label: 'Graduation speech addresses'
+source:
+  plugin: address
+  key: default
+process:
+  type:
+    plugin: default_value
+    default_value: honorary_address
+  field_address_id: address_id
+  field_address_ceremony_id: ceremony_id
+  title: address_id
+  field_address_type: type
+  field_delivered_by: delivered_by
+  field_address_content: content
+destination:
+  plugin: 'entity:node'
+migration_dependencies: null

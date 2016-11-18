@@ -1,0 +1,19 @@
+uuid: 2721f428-55e5-4d1e-9d3c-86675c6ce0be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_address_content
+    - node.type.honorary_address
+id: node.honorary_address.field_address_content
+field_name: field_address_content
+entity_type: node
+bundle: honorary_address
+label: address_content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

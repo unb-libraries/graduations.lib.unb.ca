@@ -1,0 +1,17 @@
+uuid: d7374949-6833-4f28-b076-acfa4ef0efb2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.honorary_ceremony
+  module:
+    - user
+id: node.honorary_ceremony.teaser
+targetEntityType: node
+bundle: honorary_ceremony
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden: {  }

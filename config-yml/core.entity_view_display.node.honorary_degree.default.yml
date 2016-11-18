@@ -1,0 +1,107 @@
+uuid: 6aec5829-dbba-4f39-9264-5e1bded3a7be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.honorary_degree.field_citation
+    - field.field.node.honorary_degree.field_degree_ceremony
+    - field.field.node.honorary_degree.field_degree_id
+    - field.field.node.honorary_degree.field_degree_name
+    - field.field.node.honorary_degree.field_image
+    - field.field.node.honorary_degree.field_img_caption
+    - field.field.node.honorary_degree.field_img_caption_2
+    - field.field.node.honorary_degree.field_orator
+    - field.field.node.honorary_degree.field_recipient_gender
+    - field.field.node.honorary_degree.field_recipient_name
+    - field.field.node.honorary_degree.field_valedictorian
+    - node.type.honorary_degree
+  module:
+    - image
+    - user
+id: node.honorary_degree.default
+targetEntityType: node
+bundle: honorary_degree
+mode: default
+content:
+  field_citation:
+    weight: 108
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_degree_ceremony:
+    weight: 102
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+  field_degree_id:
+    weight: 101
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+  field_degree_name:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_image:
+    weight: 109
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_img_caption:
+    weight: 110
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_img_caption_2:
+    weight: 111
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_orator:
+    weight: 107
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_recipient_gender:
+    weight: 105
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_recipient_name:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_valedictorian:
+    weight: 106
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  links:
+    weight: 100
+hidden: {  }

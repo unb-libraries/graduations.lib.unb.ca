@@ -1,0 +1,19 @@
+uuid: 2bbfcaaa-67b8-43bd-9106-de5f3f41e833
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_delivered_by
+    - node.type.honorary_address
+id: node.honorary_address.field_delivered_by
+field_name: field_delivered_by
+entity_type: node
+bundle: honorary_address
+label: delivered_by
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,20 @@
+uuid: 4bb2377b-74f0-4cba-a211-6f98c8847c5a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_address_ceremony
+field_name: field_address_ceremony
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

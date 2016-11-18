@@ -1,0 +1,17 @@
+uuid: 9435e6be-baaf-40b4-8604-e2eac4483f74
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.honorary_address
+  module:
+    - user
+id: node.honorary_address.teaser
+targetEntityType: node
+bundle: honorary_address
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden: {  }

@@ -1,0 +1,23 @@
+uuid: 4f2d7e94-cb14-4315-b928-20439b729f8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_degree_id
+    - node.type.honorary_degree
+id: node.honorary_degree.field_degree_id
+field_name: field_degree_id
+entity_type: node
+bundle: honorary_degree
+label: degree_id
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
