@@ -45,7 +45,7 @@ class Address extends SqlBase {
     $fields = [
       'address_id' => $this->t('Address ID'),
       'ceremony_id' => $this->t('Ceremony ID'),
-      'type' => $this->t('Type of address')
+      'type' => $this->t('Type of address'),
       'delivered_by' => $this->t('Delivered by'),
       'content' => $this->t('Address content')
     ];

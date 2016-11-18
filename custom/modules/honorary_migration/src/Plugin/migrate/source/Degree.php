@@ -46,7 +46,7 @@ class Degree extends SqlBase {
     $fields = [
       'degree_id' => $this->t('Degree ID'),
       'ceremony_id' => $this->t('Ceremony ID'),
-      'degree' => $this->t('Degree')
+      'degree' => $this->t('Degree'),
       'name' => $this->t('Recipient name'),
       'gender' => $this->t('Recipient gender'),
       'valedictorian' => $this->t('Valedictorian'),
@@ -54,7 +54,7 @@ class Degree extends SqlBase {
       'citation' => $this->t('Citation'),
       'image' => $this->t('Image'),
       'img_caption' => $this->t('Image caption'),
-      'img_caption_2' => $this->t('Second image caption'),
+      'img_caption_2' => $this->t('Second image caption')
     ];
 
     return $fields;
