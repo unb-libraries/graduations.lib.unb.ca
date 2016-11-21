@@ -1,17 +1,15 @@
-uuid: b604a411-d4ce-484a-8fda-171959976981
+uuid: 45dbd5bc-e79d-46c9-a95a-a7e8a7da5441
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_delivered_by
-field_name: field_delivered_by
+id: node.field_ref_address_ceremony
+field_name: field_ref_address_ceremony
 entity_type: node
-type: string
+type: entity_reference
 settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
+  target_type: node
 module: core
 locked: false
 cardinality: 1

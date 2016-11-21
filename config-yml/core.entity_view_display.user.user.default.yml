@@ -25,4 +25,6 @@ content:
       image_link: content
     third_party_settings: {  }
     label: hidden
-hidden: {  }
+hidden:
+  field_migrate_example_favbeers: true
+  field_migrate_example_gender: true

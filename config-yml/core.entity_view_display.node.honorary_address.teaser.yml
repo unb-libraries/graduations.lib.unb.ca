@@ -14,4 +14,9 @@ mode: teaser
 content:
   links:
     weight: 100
-hidden: {  }
+hidden:
+  field_address_ceremony: true
+  field_address_content: true
+  field_address_id: true
+  field_address_type: true
+  field_delivered_by: true

@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.honorary_degree.field_orator
     - field.field.node.honorary_degree.field_recipient_gender
     - field.field.node.honorary_degree.field_recipient_name
+    - field.field.node.honorary_degree.field_ref_degree_ceremony
     - field.field.node.honorary_degree.field_valedictorian
     - image.style.thumbnail
     - node.type.honorary_degree
@@ -97,6 +98,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+  field_ref_degree_ceremony:
+    weight: 42
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
   field_valedictorian:
     weight: 36
     settings:

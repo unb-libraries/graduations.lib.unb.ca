@@ -1,0 +1,28 @@
+uuid: ebf99114-d1f5-4ffe-93e6-d1a4f848cd35
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ref_address_ceremony
+    - node.type.honorary_address
+    - node.type.honorary_ceremony
+id: node.honorary_address.field_ref_address_ceremony
+field_name: field_ref_address_ceremony
+entity_type: node
+bundle: honorary_address
+label: ref_address_ceremony
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      honorary_ceremony: honorary_ceremony
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
