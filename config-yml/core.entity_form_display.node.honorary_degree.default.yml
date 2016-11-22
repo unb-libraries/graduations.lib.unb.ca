@@ -9,8 +9,8 @@ dependencies:
     - field.field.node.honorary_degree.field_img_caption
     - field.field.node.honorary_degree.field_img_caption_2
     - field.field.node.honorary_degree.field_orator
-    - field.field.node.honorary_degree.field_recipent_name
     - field.field.node.honorary_degree.field_recipient_gender
+    - field.field.node.honorary_degree.field_recipient_name
     - field.field.node.honorary_degree.field_ref_degree_ceremony
     - field.field.node.honorary_degree.field_valedictorian
     - image.style.thumbnail
@@ -70,15 +70,15 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-  field_recipent_name:
-    weight: 33
+  field_recipient_gender:
+    weight: 34
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-  field_recipient_gender:
-    weight: 34
+  field_recipient_name:
+    weight: 42
     settings:
       size: 60
       placeholder: ''

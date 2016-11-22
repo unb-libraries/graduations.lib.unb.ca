@@ -14,4 +14,14 @@ mode: teaser
 content:
   links:
     weight: 100
-hidden: {  }
+hidden:
+  field_citation: true
+  field_degree_name: true
+  field_image: true
+  field_img_caption: true
+  field_img_caption_2: true
+  field_orator: true
+  field_recipent_name: true
+  field_recipient_gender: true
+  field_ref_degree_ceremony: true
+  field_valedictorian: true
