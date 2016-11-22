@@ -1,4 +1,4 @@
-uuid: 43760b30-b734-436c-9319-734cdc58670b
+uuid: 61392082-15c8-4374-93e5-890235333c25
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ field_name: field_address_type
 entity_type: node
 type: string
 settings:
-  max_length: 63
+  max_length: 255
   is_ascii: false
   case_sensitive: false
 module: core

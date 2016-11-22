@@ -1,4 +1,4 @@
-uuid: 4eb85685-5247-458b-86a8-3e03267a6c22
+uuid: 8b670e29-5693-49d2-a1c6-1d90bc4e3d73
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ field_name: field_campus
 entity_type: node
 type: string
 settings:
-  max_length: 63
+  max_length: 255
   is_ascii: false
   case_sensitive: false
 module: core

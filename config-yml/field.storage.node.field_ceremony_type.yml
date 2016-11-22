@@ -1,4 +1,4 @@
-uuid: aca7a59e-3d70-4068-9774-495d29d3742f
+uuid: fab3c95b-53d8-47b0-afeb-6e26ec050624
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ field_name: field_ceremony_type
 entity_type: node
 type: string
 settings:
-  max_length: 63
+  max_length: 255
   is_ascii: false
   case_sensitive: false
 module: core

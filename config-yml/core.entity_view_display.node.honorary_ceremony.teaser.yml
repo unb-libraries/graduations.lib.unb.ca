@@ -1,4 +1,4 @@
-uuid: d7374949-6833-4f28-b076-acfa4ef0efb2
+uuid: 23f37d15-87ec-42a4-a80c-873d8c34ac29
 langcode: en
 status: true
 dependencies:
@@ -14,8 +14,4 @@ mode: teaser
 content:
   links:
     weight: 100
-hidden:
-  field_campus: true
-  field_ceremony_id: true
-  field_ceremony_type: true
-  field_year: true
+hidden: {  }

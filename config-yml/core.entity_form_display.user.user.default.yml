@@ -1,4 +1,4 @@
-uuid: c67083ea-930e-4a69-a955-7db07da2229f
+uuid: c9a149d0-830a-49b6-baf7-f32ce933aecb
 langcode: en
 status: true
 dependencies:
@@ -30,6 +30,4 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     weight: -1
-hidden:
-  field_migrate_example_favbeers: true
-  field_migrate_example_gender: true
+hidden: {  }

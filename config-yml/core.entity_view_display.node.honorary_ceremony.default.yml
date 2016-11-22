@@ -1,10 +1,9 @@
-uuid: 328e3f14-30b2-4011-b15d-96bd1fd99c74
+uuid: e87319d8-ea09-49ec-b549-ef6edc6e2f7b
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.node.honorary_ceremony.field_campus
-    - field.field.node.honorary_ceremony.field_ceremony_id
     - field.field.node.honorary_ceremony.field_ceremony_type
     - field.field.node.honorary_ceremony.field_year
     - node.type.honorary_ceremony
@@ -16,29 +15,21 @@ bundle: honorary_ceremony
 mode: default
 content:
   field_campus:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_ceremony_type:
     weight: 103
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-  field_ceremony_id:
-    weight: 101
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-  field_ceremony_type:
-    weight: 104
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
   field_year:
-    weight: 102
+    weight: 101
     label: above
     settings:
       link_to_entity: false

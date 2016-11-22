@@ -1,4 +1,4 @@
-uuid: 09cb4132-136f-4d48-8db9-ab32a8cb5c8e
+uuid: 2b538e00-1283-4bd8-9d03-ca6f3f8c7b14
 langcode: en
 status: true
 dependencies:
@@ -25,6 +25,4 @@ content:
     third_party_settings: {  }
     label: hidden
 hidden:
-  field_migrate_example_favbeers: true
-  field_migrate_example_gender: true
   member_for: true

@@ -26,8 +26,16 @@ process:
   field_image:
   field_img_caption: img_caption
   field_img_caption_2: img_caption_2
+  # Get ceremony table for ceremony entity reference.
+  field_ref_degree_ceremony:
+    plugin: migration
+    migration: ceremony
+    source: nid
   # Dependency on module itself.
 dependencies:
   enforced:
     module:
       - honorary_migration
+migration_dependencies:
+  required:
+    - ceremony

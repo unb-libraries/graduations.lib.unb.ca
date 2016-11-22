@@ -1,4 +1,4 @@
-uuid: 9435e6be-baaf-40b4-8604-e2eac4483f74
+uuid: 0d199019-fa42-4431-996b-ffcf0a9a7b1e
 langcode: en
 status: true
 dependencies:
@@ -14,9 +14,4 @@ mode: teaser
 content:
   links:
     weight: 100
-hidden:
-  field_address_ceremony: true
-  field_address_content: true
-  field_address_id: true
-  field_address_type: true
-  field_delivered_by: true
+hidden: {  }
