@@ -4,6 +4,16 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.honorary_degree.field_citation
+    - field.field.node.honorary_degree.field_degree_name
+    - field.field.node.honorary_degree.field_image
+    - field.field.node.honorary_degree.field_img_caption
+    - field.field.node.honorary_degree.field_img_caption_2
+    - field.field.node.honorary_degree.field_orator
+    - field.field.node.honorary_degree.field_recipient_gender
+    - field.field.node.honorary_degree.field_recipient_name
+    - field.field.node.honorary_degree.field_ref_degree_ceremony
+    - field.field.node.honorary_degree.field_valedictorian
     - node.type.honorary_degree
   module:
     - user
@@ -23,5 +33,6 @@ hidden:
   field_orator: true
   field_recipent_name: true
   field_recipient_gender: true
+  field_recipient_name: true
   field_ref_degree_ceremony: true
   field_valedictorian: true
