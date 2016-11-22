@@ -14,6 +14,7 @@ process:
     default_value: honorary_address
   # Map Drupal MACHINE NAME fields to migration field names as declared
   # in source plugin.
+  title: type
   field_ref_address_ceremony: ceremony_id
   field_address_type: type
   field_delivered_by: delivered_by

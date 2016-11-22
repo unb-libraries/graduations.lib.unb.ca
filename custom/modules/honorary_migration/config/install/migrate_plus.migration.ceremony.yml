@@ -15,8 +15,8 @@ process:
   # Map Drupal MACHINE NAME fields to migration field names as declared
   # in source plugin.
   nid: ceremony_id
+  title: type
   field_ceremony_id: ceremony_id
-  title: ceremony_id
   field_year: year
   field_campus: campus
   field_ceremony_type: type

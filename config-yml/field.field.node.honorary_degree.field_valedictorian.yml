@@ -1,0 +1,19 @@
+uuid: a28ba9c6-4ad0-4048-8a08-a61ee40aef01
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_valedictorian
+    - node.type.honorary_degree
+id: node.honorary_degree.field_valedictorian
+field_name: field_valedictorian
+entity_type: node
+bundle: honorary_degree
+label: valedictorian
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

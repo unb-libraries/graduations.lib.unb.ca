@@ -1,0 +1,19 @@
+uuid: 04dc2f6f-1e9f-4f89-843b-6305fa0447ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recipent_name
+    - node.type.honorary_degree
+id: node.honorary_degree.field_recipent_name
+field_name: field_recipent_name
+entity_type: node
+bundle: honorary_degree
+label: recipent_name
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

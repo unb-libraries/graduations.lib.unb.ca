@@ -1,0 +1,19 @@
+uuid: f4fae20f-b402-432e-b7fa-da86f107a8cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_citation
+    - node.type.honorary_degree
+id: node.honorary_degree.field_citation
+field_name: field_citation
+entity_type: node
+bundle: honorary_degree
+label: citation
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
