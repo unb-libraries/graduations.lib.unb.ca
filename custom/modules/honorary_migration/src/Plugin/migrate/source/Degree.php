@@ -96,7 +96,7 @@ class Degree extends SqlBase {
     $temp_uri = stream_get_meta_data($temp)['uri'];
 
     /**
-     * Define parameters for file creation.
+     * Build unique, somewhat descriptive file name.
      */
 
     $name = $row->getSourceProperty('name'));
@@ -107,20 +107,19 @@ class Degree extends SqlBase {
      * Restrict filename to alphanumeric (and '_') and assign jpg extension.
      */
 
-    $filename_string = $name . '_' . $degree . '_' . $id
+    $filename_string = $name . '_' . $degree . '_' . $id;
     $filename = preg_replace("/[^a-zA-Z0-9_]+/", "", $filename_string) . 'jpg';
 
-    $file_destination = 'public://$filename'
-
     /**
-     * Create file, create file reference, pass it to source image field.
+     * Copy file, create file reference, pass it to source image field.
      */
 
+    $file_destination = 'public://$filename';
     $uri = file_unmanaged_copy($temp_uri, $file_destination,
       FILE_EXISTS_REPLACE);
     $file = File::Create(['uri' = $uri]);
     $row->setSourceProperty('image', $file);
-    
+
     return parent::prepareRow($row);
   }
 }
