@@ -77,8 +77,50 @@ class Degree extends SqlBase {
    */
   public function prepareRow(Row $row) {
     /**
-     * Return row as is.
+     * prepareRow runs after a row is fetched. It will be use to create a temp
+     * file from the original blob, copy that file to Drupal, and return the
+     * reference for our target field to use.
      */
+
+    /**
+     * Create temp file and write blob's contents to it.
+     */
+
+    $temp = tmpfile();
+    fwrite($temp, $row->getSourceProperty('image'));
+
+    /**
+     * Recover temp file uri.
+     */
+
+    $temp_uri = stream_get_meta_data($temp)['uri'];
+
+    /**
+     * Define parameters for file creation.
+     */
+
+    $name = $row->getSourceProperty('name'));
+    $degree = $row->getSourceProperty('degree'));
+    $id = (string)$row->getSourceProperty('degree_id'));
+
+    /**
+     * Restrict filename to alphanumeric (and '_') and assign jpg extension.
+     */
+
+    $filename_string = $name . '_' . $degree . '_' . $id
+    $filename = preg_replace("/[^a-zA-Z0-9_]+/", "", $filename_string) . 'jpg';
+
+    $file_destination = 'public://$filename'
+
+    /**
+     * Create file, create file reference, pass it to source image field.
+     */
+
+    $uri = file_unmanaged_copy($temp_uri, $file_destination,
+      FILE_EXISTS_REPLACE);
+    $file = File::Create(['uri' = $uri]);
+    $row->setSourceProperty('image', $file);
+    
     return parent::prepareRow($row);
   }
 }
