@@ -22,7 +22,7 @@ process:
   field_valedictorian: valedictorian
   field_orator: orator
   field_citation: citation
-  field_image:
+  field_image: image
   field_img_caption: img_caption
   field_img_caption_2: img_caption_2
   # Get ceremony table for ceremony entity reference.

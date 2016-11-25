@@ -4,6 +4,7 @@ namespace Drupal\honorary_migration\Plugin\migrate\source;
 
 use Drupal\migrate\Plugin\migrate\source\SqlBase;
 use Drupal\migrate\Row;
+use Drupal\file\Entity\File;
 
 /**
  * Source plugin for ceremony content.
@@ -108,13 +109,13 @@ class Degree extends SqlBase {
      */
 
     $filename_string = $name . '_' . $degree . '_' . $id;
-    $filename = preg_replace("/[^a-zA-Z0-9_]+/", "", $filename_string) . 'jpg';
+    $filename = preg_replace("/[^a-zA-Z0-9_]+/", "", $filename_string) . '.jpg';
 
     /**
      * Copy file, create file reference, pass it to source image field.
      */
 
-    $file_destination = 'public://$filename';
+    $file_destination = "public://$filename";
     $uri = file_unmanaged_copy($temp_uri, $file_destination,
       FILE_EXISTS_REPLACE);
     $file = File::Create(['uri' => $uri]);
