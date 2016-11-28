@@ -1,0 +1,9 @@
+uuid: 5fa2431a-66ac-42de-a072-9706678ed7a7
+langcode: en
+status: true
+dependencies: {  }
+name: Genders
+vid: genders
+description: 'Genders of honorary degree recipients.'
+hierarchy: 0
+weight: 0

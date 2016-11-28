@@ -1,0 +1,29 @@
+uuid: da166150-a097-4075-92e2-7d1a72d4d836
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - honorary_migration
+_core:
+  default_config_hash: 1o-EjUpRPdhVdrjW1pTMw3XeBwt5097UBUDgFJK8tQs
+id: ceremony
+migration_tags: null
+migration_group: honorary_migration
+label: 'Graduation ceremonies'
+source:
+  plugin: ceremony
+  key: default
+process:
+  type:
+    plugin: default_value
+    default_value: honorary_ceremony
+  nid: ceremony_id
+  title: type
+  field_ceremony_id: ceremony_id
+  field_year: year
+  field_campus: campus
+  field_ceremony_type: type
+destination:
+  plugin: 'entity:node'
+migration_dependencies: null
