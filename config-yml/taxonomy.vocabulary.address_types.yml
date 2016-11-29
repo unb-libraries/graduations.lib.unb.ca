@@ -1,9 +1,0 @@
-uuid: ce16bdb3-933b-45af-84c1-882386273090
-langcode: en
-status: true
-dependencies: {  }
-name: 'Address Types'
-vid: address_types
-description: 'Types of ceremony address/speech.'
-hierarchy: 0
-weight: 0

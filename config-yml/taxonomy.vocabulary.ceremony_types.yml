@@ -1,9 +1,0 @@
-uuid: a4c745b9-05cc-4215-af8d-8cf62904e42b
-langcode: en
-status: true
-dependencies: {  }
-name: 'Ceremony Types'
-vid: ceremony_types
-description: 'Types of graduation ceremony.'
-hierarchy: 0
-weight: 0
