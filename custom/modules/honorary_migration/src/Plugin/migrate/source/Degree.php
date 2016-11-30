@@ -84,11 +84,12 @@ class Degree extends SqlBase {
      */
 
     /**
-     * Create temp file and write blob's contents to it.
+     * Create temp file and write blob's contents to it (if there is one).
      */
 
     $temp = tmpfile();
-    fwrite($temp, $row->getSourceProperty('image'));
+    $blob = $row->getSourceProperty('image');
+    fwrite($temp, $blob);
 
     /**
      * Recover temp file uri.
@@ -116,6 +117,7 @@ class Degree extends SqlBase {
      */
 
     $file_destination = "public://$filename";
+
     $uri = file_unmanaged_copy($temp_uri, $file_destination,
       FILE_EXISTS_REPLACE);
     $file = File::Create(['uri' => $uri]);
