@@ -1,0 +1,22 @@
+uuid: 59c8f3a7-62da-44f9-b5a4-8a50eaea20ab
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - honorary_subtheme
+_core:
+  default_config_hash: za-39d5WDUg6XvbyqSnuVYEeq6QM4qKJxW8MnoAha5A
+id: honorary_subtheme_search
+theme: honorary_subtheme
+region: sidebar_first
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+visibility: {  }

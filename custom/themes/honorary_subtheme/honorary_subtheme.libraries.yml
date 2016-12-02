@@ -1,0 +1,5 @@
+global-styling:
+  version: 8.2.0
+  css:
+    base:
+      css/honorary.css: {}
