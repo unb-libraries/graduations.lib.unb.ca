@@ -11,7 +11,7 @@ _core:
 id: honorary_subtheme_help
 theme: honorary_subtheme
 region: content
-weight: -30
+weight: -7
 provider: null
 plugin: help_block
 settings:

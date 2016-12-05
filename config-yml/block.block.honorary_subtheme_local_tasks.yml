@@ -9,7 +9,7 @@ _core:
 id: honorary_subtheme_local_tasks
 theme: honorary_subtheme
 region: content
-weight: -40
+weight: -7
 provider: null
 plugin: local_tasks_block
 settings:
