@@ -57,12 +57,20 @@ img:after {
 .browse-degree figure {
   display: table !important;
   width: 200px !important;
-  -webkit-margin-before: auto;
-  -webkit-margin-after: 0px;
-  -webkit-margin-start: auto;
-  -webkit-margin-end: 0px;
+  -webkit-margin-before: auto !important;
+  -webkit-margin-after: 0px !important;
+  -webkit-margin-start: auto !important;
+  -webkit-margin-end: 0px !important;
 }
 
 .browse-degree figcaption {
   display: table-row !important;
+}
+
+#views-exposed-form-browse-degrees-page-1 label {
+  font-family: sans-serif;
+}
+
+#views-exposed-form-browse-degrees-page-1 input {
+  width: 226px;
 }
