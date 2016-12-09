@@ -1,4 +1,4 @@
-uuid: dbda3de8-1c1a-49b4-986d-58e60e90d3a9
+uuid: 63aaa4c1-6c0a-4093-b6a3-14148e43722c
 langcode: en
 status: true
 dependencies:
@@ -7,9 +7,6 @@ dependencies:
     - field.storage.node.field_ceremony_type
     - field.storage.node.field_degree_name
     - field.storage.node.field_image
-    - field.storage.node.field_img_caption
-    - field.storage.node.field_img_caption_2
-    - field.storage.node.field_orator
     - field.storage.node.field_year
     - image.style.medium
     - node.type.honorary_degree
@@ -17,7 +14,7 @@ dependencies:
     - image
     - node
     - user
-id: browse_degrees
+id: honorary_browse_degrees
 label: 'Browse degrees'
 module: views
 description: ''
@@ -334,7 +331,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: false
+            link_to_entity: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -350,69 +347,6 @@ display:
           id: field_degree_name
           table: node__field_degree_name
           field: field_degree_name
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: false
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_orator:
-          id: field_orator
-          table: node__field_orator
-          field: field_orator
           relationship: none
           group_type: group
           admin_label: ''
@@ -524,134 +458,8 @@ display:
           type: image
           settings:
             image_style: medium
-            image_link: file
+            image_link: ''
           group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_img_caption:
-          id: field_img_caption
-          table: node__field_img_caption
-          field: field_img_caption
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: false
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_img_caption_2:
-          id: field_img_caption_2
-          table: node__field_img_caption_2
-          field: field_img_caption_2
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: false
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -673,7 +481,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<table>\n  <tr>\n    <td>\n      <strong>Honorary Degree Recipient: </strong><span>{{ title }}</span>\n      <ul>\n        <li>Year: {{ field_year }} ({{ field_campus }}, {{ field_ceremony_type }})</li>\n        <li>Degree Conferred: {{ field_degree_name }}</li>\n        <li>Orator: {{ field_orator }}</li>\n      </ul>\n    </td>\n    <td>\n      <figure>\n        {{ field_image }}\n        <figcaption>{{ field_img_caption }}</figcaption>\n        <figcaption>{{ field_img_caption_2 }}</figcaption>\n      </figure>\n    </td>\n  </tr>\n</table>\n"
+            text: "<table>\n  <tr>\n    <td>\n      <strong>{{ title }} </strong><span>{{ field_degree_name }}</span>\n       <p>Year: {{ field_year }} ({{ field_campus }}, {{ field_ceremony_type }})</p>\n    </td>\n    <td>\n      <figure>\n        {{ field_image }}\n      </figure>\n    </td>\n  </tr>\n</table>\n"
             make_link: false
             path: ''
             absolute: false
@@ -831,44 +639,6 @@ display:
               2: {  }
               3: {  }
           plugin_id: string
-        field_orator_value:
-          id: field_orator_value
-          table: node__field_orator
-          field: field_orator_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: contains
-          value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_orator_value_op
-            label: 'Orator/Speaker:'
-            description: ''
-            use_operator: false
-            operator: field_orator_value_op
-            identifier: field_orator_value
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: string
         field_year_value:
           id: field_year_value
           table: node__field_year
@@ -956,9 +726,6 @@ display:
         - 'config:field.storage.node.field_ceremony_type'
         - 'config:field.storage.node.field_degree_name'
         - 'config:field.storage.node.field_image'
-        - 'config:field.storage.node.field_img_caption'
-        - 'config:field.storage.node.field_img_caption_2'
-        - 'config:field.storage.node.field_orator'
         - 'config:field.storage.node.field_year'
   page_1:
     display_plugin: page
@@ -982,7 +749,4 @@ display:
         - 'config:field.storage.node.field_ceremony_type'
         - 'config:field.storage.node.field_degree_name'
         - 'config:field.storage.node.field_image'
-        - 'config:field.storage.node.field_img_caption'
-        - 'config:field.storage.node.field_img_caption_2'
-        - 'config:field.storage.node.field_orator'
         - 'config:field.storage.node.field_year'

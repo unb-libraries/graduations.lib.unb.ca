@@ -1,0 +1,36 @@
+uuid: fca3e66b-9a62-41d0-b462-1c21e675b9c0
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - honorary_migration
+_core:
+  default_config_hash: sGgAlrSdwumrcZoI443n1JPHrs-gdd3wR-u9xrM6rb8
+id: degree
+migration_tags: null
+migration_group: honorary_migration
+label: 'Honorary degrees'
+source:
+  plugin: degree
+  key: default
+process:
+  type:
+    plugin: default_value
+    default_value: honorary_degree
+  title: name
+  field_ref_degree_ceremony: ceremony_id
+  field_degree_name: degree
+  field_recipient_name: name
+  field_recipient_gender: gender
+  field_valedictorian: valedictorian
+  field_orator: orator
+  field_citation: citation
+  field_image: image
+  field_img_caption: img_caption
+  field_img_caption_2: img_caption_2
+destination:
+  plugin: 'entity:node'
+migration_dependencies:
+  required:
+    - ceremony

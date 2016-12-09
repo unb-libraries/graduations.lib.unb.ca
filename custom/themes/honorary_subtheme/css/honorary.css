@@ -30,12 +30,12 @@ img:after {
 
 .browse-degree table {
   table-layout: fixed !important;
-  width: 700px !important;
+  width: 600px !important;
   border: none !important;
 }
 
 .browse-degree tr td {
-  padding: 20px !important;
+  padding: 10px !important;
   border: none !important;
   background-color: #FFFFFF !important;
 }
@@ -56,7 +56,7 @@ img:after {
 
 .browse-degree figure {
   display: table !important;
-  width: 200px !important;
+  width: 100px !important;
   -webkit-margin-before: auto !important;
   -webkit-margin-after: 0px !important;
   -webkit-margin-start: auto !important;
@@ -67,10 +67,10 @@ img:after {
   display: table-row !important;
 }
 
-#views-exposed-form-browse-degrees-page-1 label {
+#views-exposed-form-honorary-browse-degrees-page-1 label {
   font-family: sans-serif;
 }
 
-#views-exposed-form-browse-degrees-page-1 input {
-  width: 226px;
+#views-exposed-form-honorary-browse-degrees-page-1 input {
+  width: 294px;
 }
