@@ -26,16 +26,23 @@ img:after {
   background-color: #FFFFFF;
 }
 
+/* No serif fonts. */
+
+body {
+  font-family: sans-serif;
+}
+
 /* Rules related to "Browse Degrees" view. */
 
 .browse-degree table {
+  font-size: 87.5% !important;
   table-layout: fixed !important;
   width: 600px !important;
   border: none !important;
 }
 
 .browse-degree tr td {
-  padding: 10px !important;
+  padding-bottom: 10px !important;
   border: none !important;
   background-color: #FFFFFF !important;
 }
@@ -68,7 +75,7 @@ img:after {
 }
 
 #views-exposed-form-honorary-browse-degrees-page-1 label {
-  font-family: sans-serif;
+  font-size: 87.5% !important;
 }
 
 #views-exposed-form-honorary-browse-degrees-page-1 input {

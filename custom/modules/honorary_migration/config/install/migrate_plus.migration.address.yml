@@ -18,6 +18,9 @@ process:
   field_ref_address_ceremony: ceremony_id
   field_address_type: type
   field_delivered_by: delivered_by
+  'field_address_content/format':
+    plugin: default_value
+    default_value: full_html
   field_address_content: content
   # Dependency on module itself.
 dependencies:
