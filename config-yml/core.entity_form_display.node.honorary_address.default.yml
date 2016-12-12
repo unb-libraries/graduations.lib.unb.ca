@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.honorary_address.body
     - field.field.node.honorary_address.field_address_content
     - field.field.node.honorary_address.field_address_type
     - field.field.node.honorary_address.field_delivered_by
@@ -10,11 +11,20 @@ dependencies:
     - node.type.honorary_address
   module:
     - path
+    - text
 id: node.honorary_address.default
 targetEntityType: node
 bundle: honorary_address
 mode: default
 content:
+  body:
+    weight: 35
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
   created:
     type: datetime_timestamp
     weight: 10

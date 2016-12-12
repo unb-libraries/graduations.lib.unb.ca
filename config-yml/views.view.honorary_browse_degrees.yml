@@ -84,7 +84,7 @@ display:
       row:
         type: fields
         options:
-          default_field_elements: false
+          default_field_elements: true
           inline: {  }
           separator: '|'
           hide_empty: false
@@ -481,7 +481,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<table>\n  <tr>\n    <td>\n      <strong>{{ title }} </strong><span>{{ field_degree_name }}</span>\n       <p>Year: {{ field_year }} ({{ field_campus }}, {{ field_ceremony_type }})</p>\n    </td>\n    <td>\n      <figure>\n        {{ field_image }}\n      </figure>\n    </td>\n  </tr>\n</table>\n"
+            text: "<table>\n  <tr>\n    <td>\n      <strong>{{ title }} </strong><span>{{ field_degree_name }}</span>\n       <p>Awarded at {{ field_ceremony_type }}. {{ field_campus }}. {{ field_year }}.</p>\n    </td>\n    <td>\n      <figure>\n        {{ field_image }}\n      </figure>\n    </td>\n  </tr>\n</table>\n"
             make_link: false
             path: ''
             absolute: false
@@ -652,7 +652,7 @@ display:
           exposed: true
           expose:
             operator_id: field_year_value_op
-            label: 'Year a degree was granted:'
+            label: 'Year degree was awarded:'
             description: ''
             use_operator: false
             operator: field_year_value_op
@@ -711,7 +711,7 @@ display:
         operator: AND
         groups:
           1: AND
-      title: ''
+      title: 'Browse Honorary Degrees'
     cache_metadata:
       max-age: -1
       contexts:

@@ -63,7 +63,7 @@ display:
           grouping:
             -
               field: nothing
-              rendered: true
+              rendered: false
               rendered_strip: false
           row_class: ''
           default_row_class: true
@@ -72,6 +72,11 @@ display:
           class: ''
       row:
         type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
       fields:
         field_campus:
           id: field_campus
@@ -273,7 +278,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: '{{ field_year }} ({{ field_campus }}, {{ field_ceremony_type }})'
+            text: 'Degrees awarded at {{ field_ceremony_type }}. {{ field_campus }}. {{ field_year }}.'
             make_link: false
             path: ''
             absolute: false
@@ -362,7 +367,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: false
+            link_to_entity: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -410,7 +415,7 @@ display:
           exposed: false
           expose:
             label: ''
-      title: 'View ceremony degrees'
+      title: 'View Ceremony Degrees'
       header: {  }
       footer:
         view:
