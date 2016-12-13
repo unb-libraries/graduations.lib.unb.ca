@@ -481,7 +481,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<table>\n  <tr>\n    <td>\n      <strong>{{ title }} </strong><span>{{ field_degree_name }}</span>\n       <p>Awarded at {{ field_ceremony_type }}. {{ field_campus }}. {{ field_year }}.</p>\n    </td>\n    <td>\n      <figure>\n        {{ field_image }}\n      </figure>\n    </td>\n  </tr>\n</table>\n"
+            text: "<table>\n  <tr>\n    <td>\n      <strong>{{ title }} </strong><span>{{ field_degree_name }}</span>\n       <p>Awarded at {{ field_campus }} {{ field_ceremony_type }}, {{ field_year }}.</p>\n    </td>\n    <td>\n      <figure>\n        {{ field_image }}\n      </figure>\n    </td>\n  </tr>\n</table>\n"
             make_link: false
             path: ''
             absolute: false

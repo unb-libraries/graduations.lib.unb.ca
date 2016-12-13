@@ -278,7 +278,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: 'Degrees awarded at {{ field_ceremony_type }}. {{ field_campus }}. {{ field_year }}.'
+            text: 'Honorary degrees awarded at {{ field_campus }} {{ field_ceremony_type }}, {{ field_year }}.'
             make_link: false
             path: ''
             absolute: false
@@ -415,7 +415,7 @@ display:
           exposed: false
           expose:
             label: ''
-      title: 'View Ceremony Degrees'
+      title: 'Graduation Ceremony'
       header: {  }
       footer:
         view:

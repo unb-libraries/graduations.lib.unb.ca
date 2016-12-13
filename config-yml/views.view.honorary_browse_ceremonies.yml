@@ -421,7 +421,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: browse-ceremonies
+      path: browse_ceremonies
     cache_metadata:
       max-age: -1
       contexts:

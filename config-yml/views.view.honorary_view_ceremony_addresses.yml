@@ -272,7 +272,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: 'Addresses delivered at {{ field_ceremony_type }}. {{ field_campus }}. {{ field_year }}.'
+            text: 'Addresses delivered at {{ field_campus }} {{ field_ceremony_type }}, {{ field_year }}.'
             make_link: false
             path: ''
             absolute: false
