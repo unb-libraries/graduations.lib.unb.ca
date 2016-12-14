@@ -82,6 +82,14 @@ body {
   width: 294px;
 }
 
+#views-exposed-form-browse-degrees-2-page-1 label {
+  font-size: 87.5% !important;
+}
+
+#views-exposed-form-browse-degrees-2-page-1 input {
+  width: 294px;
+}
+
 /* Rules related to "Browse Ceremonies" view. */
 
 #views-exposed-form-honorary-browse-ceremonies-page-1 input {

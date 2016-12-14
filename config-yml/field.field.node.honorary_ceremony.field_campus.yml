@@ -9,7 +9,7 @@ id: node.honorary_ceremony.field_campus
 field_name: field_campus
 entity_type: node
 bundle: honorary_ceremony
-label: campus
+label: 'Campus:'
 description: ''
 required: false
 translatable: false

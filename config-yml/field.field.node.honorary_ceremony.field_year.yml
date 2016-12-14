@@ -9,7 +9,7 @@ id: node.honorary_ceremony.field_year
 field_name: field_year
 entity_type: node
 bundle: honorary_ceremony
-label: year
+label: 'Year:'
 description: ''
 required: false
 translatable: false
