@@ -9,7 +9,7 @@ id: node.honorary_degree.field_recipient_gender
 field_name: field_recipient_gender
 entity_type: node
 bundle: honorary_degree
-label: recipient_gender
+label: 'Gender:'
 description: ''
 required: false
 translatable: false

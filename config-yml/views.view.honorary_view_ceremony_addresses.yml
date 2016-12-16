@@ -272,7 +272,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: 'Addresses delivered at {{ field_campus }} {{ field_ceremony_type }}, {{ field_year }}.'
+            text: 'Addresses delivered:'
             make_link: false
             path: ''
             absolute: false
@@ -483,7 +483,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: honorary-view-ceremony-addresses
+      path: view-ceremony-addresses
     cache_metadata:
       max-age: -1
       contexts:

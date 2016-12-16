@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.honorary_degree.field_recipient_name
     - field.field.node.honorary_degree.field_ref_degree_ceremony
     - field.field.node.honorary_degree.field_valedictorian
+    - image.style.large
     - node.type.honorary_degree
   module:
     - image
@@ -23,57 +24,57 @@ bundle: honorary_degree
 mode: default
 content:
   field_citation:
-    weight: 7
+    weight: 10
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
   field_degree_name:
-    weight: 2
-    label: above
+    weight: 3
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_image:
-    weight: 8
+    weight: 6
     label: above
     settings:
-      image_style: ''
+      image_style: large
       image_link: ''
     third_party_settings: {  }
     type: image
   field_img_caption:
-    weight: 10
-    label: above
+    weight: 7
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_img_caption_2:
-    weight: 9
-    label: above
+    weight: 8
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_orator:
-    weight: 6
-    label: above
+    weight: 9
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_recipient_gender:
     weight: 4
-    label: above
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_recipient_name:
-    weight: 3
-    label: above
+    weight: 2
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -87,7 +88,7 @@ content:
     type: entity_reference_label
   field_valedictorian:
     weight: 5
-    label: above
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }

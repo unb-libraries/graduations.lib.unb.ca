@@ -9,7 +9,7 @@ id: node.honorary_degree.field_img_caption
 field_name: field_img_caption
 entity_type: node
 bundle: honorary_degree
-label: img_caption
+label: 'Caption 1:'
 description: ''
 required: false
 translatable: false

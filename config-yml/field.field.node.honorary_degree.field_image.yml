@@ -11,7 +11,7 @@ id: node.honorary_degree.field_image
 field_name: field_image
 entity_type: node
 bundle: honorary_degree
-label: image
+label: 'Photo:'
 description: ''
 required: false
 translatable: false

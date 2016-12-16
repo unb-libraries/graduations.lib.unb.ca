@@ -9,7 +9,7 @@ id: node.honorary_degree.field_orator
 field_name: field_orator
 entity_type: node
 bundle: honorary_degree
-label: orator
+label: 'Orator:'
 description: ''
 required: false
 translatable: false

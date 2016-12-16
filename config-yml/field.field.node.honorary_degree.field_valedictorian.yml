@@ -9,7 +9,7 @@ id: node.honorary_degree.field_valedictorian
 field_name: field_valedictorian
 entity_type: node
 bundle: honorary_degree
-label: valedictorian
+label: 'Valedictorian:'
 description: ''
 required: false
 translatable: false

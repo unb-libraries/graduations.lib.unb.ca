@@ -9,7 +9,7 @@ id: node.honorary_degree.field_degree_name
 field_name: field_degree_name
 entity_type: node
 bundle: honorary_degree
-label: degree_name
+label: 'Degree awarded:'
 description: ''
 required: false
 translatable: false

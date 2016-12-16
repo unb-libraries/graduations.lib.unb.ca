@@ -35,7 +35,7 @@ body {
 /* Rules related to "Browse Degrees" view. */
 
 .browse-degree table {
-  font-size: 87.5% !important;
+  font-size: 14px !important;
   table-layout: fixed !important;
   width: 600px !important;
   border: none !important;
@@ -61,21 +61,8 @@ body {
   list-style-position: inside !important;
 }
 
-.browse-degree figure {
-  display: table !important;
-  width: 100px !important;
-  -webkit-margin-before: auto !important;
-  -webkit-margin-after: 0px !important;
-  -webkit-margin-start: auto !important;
-  -webkit-margin-end: 0px !important;
-}
-
-.browse-degree figcaption {
-  display: table-row !important;
-}
-
 #views-exposed-form-honorary-browse-degrees-page-1 label {
-  font-size: 87.5% !important;
+  font-size: 14px% !important;
 }
 
 #views-exposed-form-honorary-browse-degrees-page-1 input {
@@ -83,11 +70,54 @@ body {
 }
 
 #views-exposed-form-browse-degrees-2-page-1 label {
-  font-size: 87.5% !important;
+  font-size: 14px% !important;
 }
 
 #views-exposed-form-browse-degrees-2-page-1 input {
   width: 294px;
+}
+
+/* Rules related to "View Degree" view. */
+
+.view-degree table {
+  font-size: 14px !important;
+  table-layout: fixed !important;
+  width: 600px !important;
+  border: none !important;
+}
+
+.view-degree tr td {
+  padding-bottom: 10px !important;
+  border: none !important;
+  background-color: #FFFFFF !important;
+}
+
+.view-degree tr td:first-child {
+  width: 400px !important;
+  vertical-align: top !important;
+  text-align: left !important;
+}
+
+.view-degree tr td:last-child {
+  vertical-align: top !important;
+}
+
+.view-degree table ul {
+  list-style-position: inside !important;
+}
+
+.view-degree figure {
+  display: table !important;
+  width: 200px !important;
+  -webkit-margin-before: auto !important;
+  -webkit-margin-after: 0px !important;
+  -webkit-margin-start: auto !important;
+  -webkit-margin-end: 0px !important;
+}
+
+.view-degree figcaption {
+  display: table-row !important;
+  font-size: 12px;
 }
 
 /* Rules related to "Browse Ceremonies" view. */
