@@ -86,6 +86,10 @@ body {
   border: none !important;
 }
 
+.view-degree table strong {
+  font-size: 20px !important;
+}
+
 .view-degree tr td {
   padding-bottom: 10px !important;
   border: none !important;

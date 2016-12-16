@@ -587,7 +587,7 @@ display:
           type: image
           settings:
             image_style: medium
-            image_link: ''
+            image_link: file
           group_column: ''
           group_columns: {  }
           group_rows: true

@@ -145,7 +145,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: true
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -357,8 +357,8 @@ display:
           label: ''
           exclude: true
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ field_campus }} {{ field_ceremony_type }}, {{ field_year }}'
             make_link: true
             path: '/view-ceremony-degrees/{{ field_ref_degree_ceremony }}'
             absolute: false
@@ -525,7 +525,7 @@ display:
           type: image
           settings:
             image_style: medium
-            image_link: ''
+            image_link: file
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -708,7 +708,7 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
+          hide_empty: true
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
@@ -771,7 +771,7 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
+          hide_empty: true
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
@@ -799,7 +799,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<table>\n  <tr>\n    <td>\n      <strong>{{ title }} </strong><span>{{ field_degree_name }}</span>\n       <p>Awarded at {{ field_campus }} {{ field_ceremony_type }}, {{ field_year }}.</p>\n    </td>\n    <td>\n      <figure>\n        {{ field_image }}\n        <figcaption>{{ field_img_caption }}</figcaption>\n        <figcaption>{{ field_img_caption_2 }}</figcaption>\n      </figure>\n    </td>\n  </tr>\n</table>\n<b>Orator:</b> {{ field_orator }}<br><br>\n<b>Oration:</b><br>\n{{ field_citation }}\n"
+            text: "<table>\n  <tr>\n    <td>\n      <strong>{{ title }} </strong><span>{{ field_degree_name }}</span>\n       <p>Awarded at {{ field_ceremony_type }}</p>\n    </td>\n    <td>\n      <figure>\n        {{ field_image }}\n        <figcaption>{{ field_img_caption }}</figcaption>\n        <figcaption>{{ field_img_caption_2 }}</figcaption>\n      </figure>\n    </td>\n  </tr>\n</table>\n<b>Orator:</b> {{ field_orator }}<br><br>\n<b>Oration:</b><br>\n{{ field_citation }}\n"
             make_link: false
             path: ''
             absolute: false
