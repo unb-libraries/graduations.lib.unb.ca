@@ -126,6 +126,16 @@ body {
 
 /* Rules related to "Browse Ceremonies" view. */
 
+
+li.browse-ceremonies {
+  float: left !important;
+}
+
+.browse-ceremonies img {
+  width: 100px;
+  margin: 10px;
+}
+
 #views-exposed-form-honorary-browse-ceremonies-page-1 input {
   width: 294px;
 }
