@@ -136,6 +136,14 @@ li.browse-ceremonies {
   margin: 10px;
 }
 
+/* So images can float, but group changes break. */
+
+.view-grouping ul:after {
+   clear: both;
+   content: "";
+   display: table;
+}
+
 #views-exposed-form-honorary-browse-ceremonies-page-1 input {
   width: 294px;
 }
