@@ -79,7 +79,7 @@ display:
           grouping:
             -
               field: field_year
-              rendered: false
+              rendered: true
               rendered_strip: false
             -
               field: nothing
@@ -366,7 +366,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: '<b>{{ field_year }}</b>'
+            text: '<h2><b>{{ field_year }}</b></h2>'
             make_link: false
             path: '/view-degree/{{ nid }}'
             absolute: false
@@ -391,7 +391,7 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
+          element_type: h2
           element_class: ''
           element_label_type: ''
           element_label_class: ''
