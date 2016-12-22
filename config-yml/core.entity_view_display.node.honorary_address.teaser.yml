@@ -15,6 +15,7 @@ content:
   links:
     weight: 100
 hidden:
+  body: true
   field_address_content: true
   field_address_type: true
   field_delivered_by: true

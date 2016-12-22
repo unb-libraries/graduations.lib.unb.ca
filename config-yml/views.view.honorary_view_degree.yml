@@ -18,6 +18,7 @@ dependencies:
   module:
     - image
     - node
+    - text
     - user
 id: honorary_view_degree
 label: 'View degree'
@@ -771,11 +772,11 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: true
+          hide_empty: false
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: basic_string
+          type: text_default
           settings: {  }
           group_column: value
           group_columns: {  }

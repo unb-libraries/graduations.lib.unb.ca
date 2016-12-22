@@ -17,6 +17,7 @@ dependencies:
     - node.type.honorary_degree
   module:
     - image
+    - text
     - user
 id: node.honorary_degree.default
 targetEntityType: node
@@ -28,7 +29,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    type: text_default
   field_degree_name:
     weight: 3
     label: inline
