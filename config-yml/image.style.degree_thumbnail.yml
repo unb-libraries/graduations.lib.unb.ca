@@ -1,0 +1,14 @@
+uuid: 74f1af4d-2102-48b6-abd0-e1d8e89d42d7
+langcode: en
+status: true
+dependencies: {  }
+name: degree_thumbnail
+label: 'Degree thumbnail (140x140)'
+effects:
+  7a6ef2a0-35ec-4e6b-872a-a19264c703d5:
+    uuid: 7a6ef2a0-35ec-4e6b-872a-a19264c703d5
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 140
+      height: 140
