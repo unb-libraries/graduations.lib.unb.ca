@@ -87,41 +87,54 @@ class Degree extends SqlBase {
      * Create temp file and write blob's contents to it (if there is one).
      */
 
-    $temp = tmpfile();
+
     $blob = $row->getSourceProperty('image');
-    fwrite($temp, $blob);
 
-    /**
-     * Recover temp file uri.
-     */
+    if (empty($blob)) {
+      $row->setSourceProperty('image', null);
+    }
+    else {
 
-    $temp_uri = stream_get_meta_data($temp)['uri'];
+      /**
+       * Create temp file.
+       */
 
-    /**
-     * Build unique, somewhat descriptive file name.
-     */
+      $temp = tmpfile();
+      fwrite($temp, $blob);
 
-    $name = $row->getSourceProperty('name');
-    $degree = $row->getSourceProperty('degree');
-    $id = (string)$row->getSourceProperty('degree_id');
+      /**
+       * Recover temp file uri.
+       */
 
-    /**
-     * Restrict filename to alphanumeric (and '_') and assign jpg extension.
-     */
+      $temp_uri = stream_get_meta_data($temp)['uri'];
 
-    $filename_string = $name . '_' . $degree . '_' . $id;
-    $filename = preg_replace("/[^a-zA-Z0-9_]+/", "", $filename_string) . '.jpg';
+      /**
+       * Build unique, somewhat descriptive file name.
+       */
 
-    /**
-     * Copy file, create file reference, pass it to source image field.
-     */
+      $name = $row->getSourceProperty('name');
+      $degree = $row->getSourceProperty('degree');
+      $id = (string)$row->getSourceProperty('degree_id');
 
-    $file_destination = "public://$filename";
+      /**
+       * Restrict filename to alphanumeric (and '_') and assign jpg extension.
+       */
 
-    $uri = file_unmanaged_copy($temp_uri, $file_destination,
-      FILE_EXISTS_REPLACE);
-    $file = File::Create(['uri' => $uri]);
-    $row->setSourceProperty('image', $file);
+      $filename_string = $name . '_' . $degree . '_' . $id;
+      $filename = preg_replace("/[^a-zA-Z0-9_]+/", "", $filename_string) . '.jpg';
+
+      /**
+       * Copy file, create file reference, pass it to source image field.
+       */
+
+      $file_destination = "public://$filename";
+
+      $uri = file_unmanaged_copy($temp_uri, $file_destination,
+        FILE_EXISTS_REPLACE);
+      $file = File::Create(['uri' => $uri]);
+
+      $row->setSourceProperty('image', $file);
+    }
 
     return parent::prepareRow($row);
   }
