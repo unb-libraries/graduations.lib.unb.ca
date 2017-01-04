@@ -55,7 +55,8 @@
         "drupal/core": "8.2",
         "drupal/features": "3.0-beta8",
         "drupal/field_collection": "1.0-alpha1",
-        "drush/drush": "~8.0"
+        "drush/drush": "~8.0",
+        "drupal/zircon": "1.0-rc1"
     },
     "require-dev": {
         "behat/mink": "~1.7",

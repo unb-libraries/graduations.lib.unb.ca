@@ -1,0 +1,20 @@
+uuid: 681fb375-c79f-4793-95a8-8a3e173ee42e
+langcode: en
+status: true
+dependencies:
+  theme:
+    - pomp_subtheme
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: pomp_subtheme_local_actions
+theme: pomp_subtheme
+region: content
+weight: -7
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

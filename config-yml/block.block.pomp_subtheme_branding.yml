@@ -1,0 +1,25 @@
+uuid: 2118fea9-13d3-4686-8ee5-81b73da6880c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - pomp_subtheme
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: pomp_subtheme_branding
+theme: pomp_subtheme
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'UNB Honorary Degrees Database'
+  provider: system
+  label_display: '0'
+  use_site_logo: false
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

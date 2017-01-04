@@ -1,0 +1,20 @@
+uuid: 2e28efa5-e70c-4feb-90a3-5ab54b26ab58
+langcode: en
+status: true
+dependencies:
+  theme:
+    - pomp_subtheme
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: pomp_subtheme_page_title
+theme: pomp_subtheme
+region: content
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

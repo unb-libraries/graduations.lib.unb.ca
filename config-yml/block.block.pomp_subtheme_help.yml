@@ -1,0 +1,22 @@
+uuid: 8263d934-bc40-436d-97ba-e2af181d60eb
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - pomp_subtheme
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: pomp_subtheme_help
+theme: pomp_subtheme
+region: content
+weight: -7
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

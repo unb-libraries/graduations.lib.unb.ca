@@ -45,5 +45,7 @@ theme:
   bartik: 0
   seven: 0
   honorary_subtheme: 0
+  zircon: 0
+  pomp_subtheme: 0
 _core:
   default_config_hash: m2GVq11UAOVuNgj8x0t5fMOPujpvQQ_zxLoaly1BMEU
