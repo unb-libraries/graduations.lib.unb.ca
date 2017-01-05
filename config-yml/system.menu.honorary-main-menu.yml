@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: honorary-main-menu
 label: 'Honorary Main Menu'
-description: ''
+description: 'Main menu for honorary.lib.unb.ca'
 locked: false

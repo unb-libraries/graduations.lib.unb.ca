@@ -10,8 +10,8 @@ dependencies:
     - pomp_subtheme
 id: pomp_subtheme_honorarymainmenu
 theme: pomp_subtheme
-region: sidebar_first
-weight: 0
+region: main_menu
+weight: -6
 provider: null
 plugin: 'system_menu_block:honorary-main-menu'
 settings:
