@@ -1,0 +1,25 @@
+uuid: 99b1832f-048a-4d1e-a581-f735bef4d3ec
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:bd1f2da5-3455-41e4-bdb5-42ab51eb5036'
+  module:
+    - block_content
+  theme:
+    - pomp_subtheme
+id: slideshowplaceholder
+theme: pomp_subtheme
+region: '-1'
+weight: -7
+provider: null
+plugin: 'block_content:bd1f2da5-3455-41e4-bdb5-42ab51eb5036'
+settings:
+  id: 'block_content:bd1f2da5-3455-41e4-bdb5-42ab51eb5036'
+  label: 'Slideshow Placeholder'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

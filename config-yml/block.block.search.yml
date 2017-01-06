@@ -1,0 +1,25 @@
+uuid: 6452819b-7f70-4a5a-bc13-6e3ee661dfff
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:f71e02a5-58ab-4ecb-bde1-8c00e31df1bf'
+  module:
+    - block_content
+  theme:
+    - pomp_subtheme
+id: search
+theme: pomp_subtheme
+region: featured
+weight: 0
+provider: null
+plugin: 'block_content:f71e02a5-58ab-4ecb-bde1-8c00e31df1bf'
+settings:
+  id: 'block_content:f71e02a5-58ab-4ecb-bde1-8c00e31df1bf'
+  label: Search
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

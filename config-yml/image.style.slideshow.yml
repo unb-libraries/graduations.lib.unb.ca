@@ -1,0 +1,14 @@
+uuid: eb524aeb-6986-4924-ab50-f4145d558375
+langcode: en
+status: true
+dependencies: {  }
+name: slideshow
+label: Slideshow
+effects:
+  21828a45-18e2-406f-a0a2-1d05d8099367:
+    uuid: 21828a45-18e2-406f-a0a2-1d05d8099367
+    id: image_resize
+    weight: 1
+    data:
+      width: 1170
+      height: 325

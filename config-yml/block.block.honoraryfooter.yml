@@ -1,0 +1,25 @@
+uuid: 87227c4c-2147-4cc7-b62e-4bc48ffaf951
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:c676a93c-5023-42b3-99f7-e718338f75cc'
+  module:
+    - block_content
+  theme:
+    - pomp_subtheme
+id: honoraryfooter
+theme: pomp_subtheme
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:c676a93c-5023-42b3-99f7-e718338f75cc'
+settings:
+  id: 'block_content:c676a93c-5023-42b3-99f7-e718338f75cc'
+  label: 'Honorary footer'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
