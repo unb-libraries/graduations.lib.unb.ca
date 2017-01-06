@@ -4,6 +4,12 @@ body {
   font-family: sans-serif;
 }
 
+/* Site title */
+
+.site-name {
+  font-size: 40px;
+}
+
 /* Rules related to "Browse Degrees" view. */
 
 .browse-degree table {
