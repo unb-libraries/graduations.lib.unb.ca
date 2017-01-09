@@ -101,3 +101,16 @@ body {
   display: table-row !important;
   font-size: 12px;
 }
+
+/* Display browse-search as columns */
+
+.region.region-featured {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#block-browse #block-search {
+  display: flex;
+  flex-direction: column;
+}
