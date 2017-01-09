@@ -1,7 +1,13 @@
-/* No serif fonts. */
+/* Global */
 
 body {
   font-family: sans-serif;
+  background: white;
+}
+
+div {
+  box-shadow: none !important;
+  border-radius: 0px !important;
 }
 
 /* Site title */
@@ -10,7 +16,56 @@ body {
   font-size: 40px;
 }
 
-/* Rules related to "Browse Degrees" view. */
+/* Menu. */
+
+#main-menu {
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+/* Slideshow */
+
+#slideshow {
+  margin-bottom: 10px;
+}
+
+/* Browse-search */
+
+section.featured > div.container {
+  padding: 0px !important;
+}
+
+.region.region-featured {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#block-browse, #block-search {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 570px;
+  background-color: #f0f0f0;
+}
+
+#block-search {
+  margin-left: 10px;
+}
+
+/* Main content */
+
+#main > div {
+  padding: 0px !important;
+}
+
+/* Footer */
+
+div.region.region-footer {
+  font-size: 12px;
+}
+
+/* Browse degrees */
 
 .browse-degree table {
   font-size: 14px !important;
@@ -91,6 +146,7 @@ body {
 .view-degree figure {
   display: table !important;
   width: 200px !important;
+  margin: none !important;
   -webkit-margin-before: auto !important;
   -webkit-margin-after: 0px !important;
   -webkit-margin-start: auto !important;
@@ -100,17 +156,4 @@ body {
 .view-degree figcaption {
   display: table-row !important;
   font-size: 12px;
-}
-
-/* Display browse-search as columns */
-
-.region.region-featured {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-#block-browse #block-search {
-  display: flex;
-  flex-direction: column;
 }
