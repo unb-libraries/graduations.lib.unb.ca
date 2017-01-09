@@ -1,0 +1,14 @@
+uuid: a7f5ff47-5349-4ff1-b3ce-d9ed96f8d595
+langcode: en
+status: true
+dependencies: {  }
+name: degree_main
+label: 'Degree main'
+effects:
+  e8ada7f7-4674-42bc-9959-c1b4f544d500:
+    uuid: e8ada7f7-4674-42bc-9959-c1b4f544d500
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 200
+      height: 200

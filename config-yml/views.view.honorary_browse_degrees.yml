@@ -9,7 +9,7 @@ dependencies:
     - field.storage.node.field_image
     - field.storage.node.field_ref_degree_ceremony
     - field.storage.node.field_year
-    - image.style.medium
+    - image.style.degree_thumbnail
     - node.type.honorary_degree
   module:
     - image
@@ -586,7 +586,7 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_style: medium
+            image_style: degree_thumbnail
             image_link: file
           group_column: ''
           group_columns: {  }
