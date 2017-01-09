@@ -65,6 +65,10 @@ div.region.region-footer {
   font-size: 12px;
 }
 
+div.region.region-footer > div {
+  width: 100% !important;
+}
+
 /* Browse degrees */
 
 .browse-degree table {
