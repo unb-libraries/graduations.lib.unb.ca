@@ -74,7 +74,7 @@ div.region.region-footer > div {
 .browse-degree table {
   font-size: 14px !important;
   table-layout: fixed !important;
-  width: 600px !important;
+  width: 1000px !important;
   border: none !important;
 }
 
@@ -85,7 +85,7 @@ div.region.region-footer > div {
 }
 
 .browse-degree tr td:first-child {
-  width: 400px !important;
+  width: 800px !important;
   vertical-align: top !important;
   text-align: left !important;
 }
@@ -93,9 +93,29 @@ div.region.region-footer > div {
 .browse-degree tr td:last-child {
   vertical-align: top !important;
 }
+/* View degree */
 
-.browse-degree table ul {
-  list-style-position: inside !important;
+.view-degree table {
+  font-size: 14px !important;
+  table-layout: fixed !important;
+  width: 1000px !important;
+  border: none !important;
+}
+
+.view-degree tr td {
+  padding-bottom: 10px !important;
+  border: none !important;
+  background-color: #FFFFFF !important;
+}
+
+.view-degree tr td:first-child {
+  width: 800px !important;
+  vertical-align: top !important;
+  text-align: left !important;
+}
+
+.view-degree tr td:last-child {
+  vertical-align: top !important;
 }
 
 #views-exposed-form-honorary-browse-degrees-page-1 label {
