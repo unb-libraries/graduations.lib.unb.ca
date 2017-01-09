@@ -6,6 +6,7 @@ dependencies:
     - 'block_content:basic:f71e02a5-58ab-4ecb-bde1-8c00e31df1bf'
   module:
     - block_content
+    - system
   theme:
     - pomp_subtheme
 id: search
@@ -22,4 +23,9 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
