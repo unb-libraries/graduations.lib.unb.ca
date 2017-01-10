@@ -10,6 +10,10 @@ div {
   border-radius: 0px !important;
 }
 
+input {
+  display: block;
+}
+
 /* Site title */
 
 .site-name {
@@ -118,6 +122,7 @@ div.region.region-footer > div {
   vertical-align: top !important;
 }
 
+/*
 #views-exposed-form-honorary-browse-degrees-page-1 label {
   font-size: 14px% !important;
 }
@@ -133,7 +138,7 @@ div.region.region-footer > div {
 #views-exposed-form-browse-degrees-2-page-1 input {
   width: 294px;
 }
-
+*/
 /* Rules related to "View Degree" view. */
 
 .view-degree table {

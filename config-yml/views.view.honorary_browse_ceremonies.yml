@@ -53,7 +53,7 @@ display:
       pager:
         type: full
         options:
-          items_per_page: 10
+          items_per_page: 25
           offset: 0
           id: 0
           total_pages: null
@@ -425,7 +425,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: '='
+          operator: contains
           value: ''
           group: 1
           exposed: true
@@ -455,6 +455,47 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+          plugin_id: string
+        field_campus_value:
+          id: field_campus_value
+          table: node__field_campus
+          field: field_campus_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_campus_value_op
+            label: 'Campus:'
+            description: ''
+            use_operator: false
+            operator: field_campus_value_op
+            identifier: field_campus_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+          is_grouped: false
+          group_info:
+            label: 'Campus: (field_campus)'
+            description: null
+            identifier: field_campus_value
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1: {  }
+              2: {  }
+              3: {  }
           plugin_id: string
       sorts:
         field_year_value:
