@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_campus
     - field.storage.node.field_ceremony_type
+    - field.storage.node.field_ceremony_year
     - field.storage.node.field_year
     - node.type.honorary_ceremony
   module:
@@ -76,7 +77,7 @@ display:
         options:
           grouping:
             -
-              field: field_year
+              field: field_ceremony_year
               rendered: true
               rendered_strip: false
           row_class: browse-ceremonies
@@ -348,6 +349,70 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        field_ceremony_year:
+          id: field_ceremony_year
+          table: node__field_ceremony_year
+          field: field_ceremony_year
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         nothing:
           id: nothing
           table: views
@@ -418,24 +483,28 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
-        field_year_value:
-          id: field_year_value
-          table: node__field_year
-          field: field_year_value
+          group: 1
+        field_ceremony_year_value:
+          id: field_ceremony_year_value
+          table: node__field_ceremony_year
+          field: field_ceremony_year_value
           relationship: none
           group_type: group
           admin_label: ''
-          operator: contains
-          value: ''
+          operator: '>'
+          value:
+            min: ''
+            max: ''
+            value: ''
           group: 1
           exposed: true
           expose:
-            operator_id: field_year_value_op
-            label: 'Year ceremony took place:'
+            operator_id: field_ceremony_year_value_op
+            label: 'Year from:'
             description: ''
             use_operator: false
-            operator: field_year_value_op
-            identifier: field_year_value
+            operator: field_ceremony_year_value_op
+            identifier: field_ceremony_year_value
             required: false
             remember: false
             multiple: false
@@ -455,7 +524,48 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: string
+          plugin_id: numeric
+        field_ceremony_year_value_1:
+          id: field_ceremony_year_value_1
+          table: node__field_ceremony_year
+          field: field_ceremony_year_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '<='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_ceremony_year_value_1_op
+            label: 'Year to:'
+            description: ''
+            use_operator: false
+            operator: field_ceremony_year_value_1_op
+            identifier: field_ceremony_year_value_1
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: numeric
         field_campus_value:
           id: field_campus_value
           table: node__field_campus
@@ -498,10 +608,10 @@ display:
               3: {  }
           plugin_id: string
       sorts:
-        field_year_value:
-          id: field_year_value
-          table: node__field_year
-          field: field_year_value
+        field_ceremony_year_value:
+          id: field_ceremony_year_value
+          table: node__field_ceremony_year
+          field: field_ceremony_year_value
           relationship: none
           group_type: group
           admin_label: ''
@@ -541,6 +651,10 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
@@ -553,6 +667,7 @@ display:
       tags:
         - 'config:field.storage.node.field_campus'
         - 'config:field.storage.node.field_ceremony_type'
+        - 'config:field.storage.node.field_ceremony_year'
         - 'config:field.storage.node.field_year'
   page_1:
     display_plugin: page
@@ -574,4 +689,5 @@ display:
       tags:
         - 'config:field.storage.node.field_campus'
         - 'config:field.storage.node.field_ceremony_type'
+        - 'config:field.storage.node.field_ceremony_year'
         - 'config:field.storage.node.field_year'

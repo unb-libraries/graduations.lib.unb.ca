@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.honorary_ceremony.field_campus
     - field.field.node.honorary_ceremony.field_ceremony_type
+    - field.field.node.honorary_ceremony.field_ceremony_year
     - field.field.node.honorary_ceremony.field_year
     - node.type.honorary_ceremony
   module:
@@ -28,6 +29,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+  field_ceremony_year:
+    weight: 104
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
   field_year:
     weight: 101
     label: above

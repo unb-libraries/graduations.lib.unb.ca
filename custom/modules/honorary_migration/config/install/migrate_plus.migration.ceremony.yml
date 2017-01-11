@@ -18,6 +18,7 @@ process:
   title: type
   field_ceremony_id: ceremony_id
   field_year: year
+  field_ceremony_year: ceremony_year
   field_campus: campus
   field_ceremony_type: type
   # Dependency on module itself.

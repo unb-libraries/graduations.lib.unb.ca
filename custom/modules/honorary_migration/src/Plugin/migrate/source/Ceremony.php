@@ -29,7 +29,7 @@ class Ceremony extends SqlBase {
      * below.
      */
     $query = $this->select('grad_ceremonies', 'c')
-                  ->fields('c', ['ceremony_id', 'year', 'campus', 'type']);
+                  ->fields('c', ['ceremony_id', 'year', 'year', 'campus', 'type']);
     return $query;
   }
 
@@ -44,6 +44,7 @@ class Ceremony extends SqlBase {
     $fields = [
       'ceremony_id' => $this->t('Ceremony ID'),
       'year' => $this->t('Year of ceremony'),
+      'ceremony_year' => $this->t('Numeric year'),
       'campus' => $this->t('Campus location of ceremony'),
       'type' => $this->t('Type of ceremony')
     ];
@@ -67,6 +68,11 @@ class Ceremony extends SqlBase {
    * {@inheritdoc}
    */
   public function prepareRow(Row $row) {
+    /* Duplicate year as numeric field */
+
+    $num_year = (int)$row->getSourceProperty('year');
+    $row->setSourceProperty('ceremony_year', $num_year);
+
     /**
      * Return row as is.
      */
