@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_campus
     - field.storage.node.field_ceremony_type
+    - field.storage.node.field_ceremony_year
     - field.storage.node.field_citation
     - field.storage.node.field_degree_name
     - field.storage.node.field_image
@@ -12,7 +13,6 @@ dependencies:
     - field.storage.node.field_img_caption_2
     - field.storage.node.field_orator
     - field.storage.node.field_ref_degree_ceremony
-    - field.storage.node.field_year
     - image.style.degree_main
     - node.type.honorary_degree
   module:
@@ -222,10 +222,10 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_year:
-          id: field_year
-          table: node__field_year
-          field: field_year
+        field_ceremony_year:
+          id: field_ceremony_year
+          table: node__field_ceremony_year
+          field: field_ceremony_year
           relationship: field_ref_degree_ceremony
           group_type: group
           admin_label: ''
@@ -265,15 +265,16 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: false
+          element_default_classes: true
           empty: ''
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: string
+          type: number_integer
           settings:
-            link_to_entity: false
+            thousand_separator: ''
+            prefix_suffix: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -359,7 +360,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: '{{ field_campus }} {{ field_ceremony_type }}, {{ field_year }}'
+            text: '{{ field_campus }} {{ field_ceremony_type }}, {{ field_ceremony_year }}'
             make_link: true
             path: '/view-ceremony-degrees/{{ field_ref_degree_ceremony }}'
             absolute: false
@@ -1001,6 +1002,7 @@ display:
       tags:
         - 'config:field.storage.node.field_campus'
         - 'config:field.storage.node.field_ceremony_type'
+        - 'config:field.storage.node.field_ceremony_year'
         - 'config:field.storage.node.field_citation'
         - 'config:field.storage.node.field_degree_name'
         - 'config:field.storage.node.field_image'
@@ -1008,7 +1010,6 @@ display:
         - 'config:field.storage.node.field_img_caption_2'
         - 'config:field.storage.node.field_orator'
         - 'config:field.storage.node.field_ref_degree_ceremony'
-        - 'config:field.storage.node.field_year'
   page_1:
     display_plugin: page
     id: page_1
@@ -1029,6 +1030,7 @@ display:
       tags:
         - 'config:field.storage.node.field_campus'
         - 'config:field.storage.node.field_ceremony_type'
+        - 'config:field.storage.node.field_ceremony_year'
         - 'config:field.storage.node.field_citation'
         - 'config:field.storage.node.field_degree_name'
         - 'config:field.storage.node.field_image'
@@ -1036,4 +1038,3 @@ display:
         - 'config:field.storage.node.field_img_caption_2'
         - 'config:field.storage.node.field_orator'
         - 'config:field.storage.node.field_ref_degree_ceremony'
-        - 'config:field.storage.node.field_year'

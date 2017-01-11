@@ -491,7 +491,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: '>'
+          operator: '>='
           value:
             min: ''
             max: ''
@@ -500,7 +500,7 @@ display:
           exposed: true
           expose:
             operator_id: field_ceremony_year_value_op
-            label: 'Year from:'
+            label: 'From (year):'
             description: ''
             use_operator: false
             operator: field_ceremony_year_value_op
@@ -541,7 +541,7 @@ display:
           exposed: true
           expose:
             operator_id: field_ceremony_year_value_1_op
-            label: 'Year to:'
+            label: 'To (year):'
             description: ''
             use_operator: false
             operator: field_ceremony_year_value_1_op

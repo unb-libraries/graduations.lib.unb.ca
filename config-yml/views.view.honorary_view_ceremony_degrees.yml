@@ -5,9 +5,9 @@ dependencies:
   config:
     - field.storage.node.field_campus
     - field.storage.node.field_ceremony_type
+    - field.storage.node.field_ceremony_year
     - field.storage.node.field_degree_name
     - field.storage.node.field_recipient_name
-    - field.storage.node.field_year
     - node.type.honorary_ceremony
     - views.view.honorary_view_ceremony_addresses
   module:
@@ -205,10 +205,10 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_year:
-          id: field_year
-          table: node__field_year
-          field: field_year
+        field_ceremony_year:
+          id: field_ceremony_year
+          table: node__field_ceremony_year
+          field: field_ceremony_year
           relationship: none
           group_type: group
           admin_label: ''
@@ -254,9 +254,10 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: string
+          type: number_integer
           settings:
-            link_to_entity: false
+            thousand_separator: ''
+            prefix_suffix: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -405,7 +406,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: "<b>{{ field_campus }} {{ field_ceremony_type }}, {{ field_year }}</b><br><br>\nHonorary degrees awarded:"
+            text: "<b>{{ field_campus }} {{ field_ceremony_type }}, {{ field_ceremony_year }}</b><br><br>\nHonorary degrees awarded:"
             make_link: false
             path: ''
             absolute: false
@@ -555,9 +556,9 @@ display:
       tags:
         - 'config:field.storage.node.field_campus'
         - 'config:field.storage.node.field_ceremony_type'
+        - 'config:field.storage.node.field_ceremony_year'
         - 'config:field.storage.node.field_degree_name'
         - 'config:field.storage.node.field_recipient_name'
-        - 'config:field.storage.node.field_year'
   page_1:
     display_plugin: page
     id: page_1
@@ -577,6 +578,6 @@ display:
       tags:
         - 'config:field.storage.node.field_campus'
         - 'config:field.storage.node.field_ceremony_type'
+        - 'config:field.storage.node.field_ceremony_year'
         - 'config:field.storage.node.field_degree_name'
         - 'config:field.storage.node.field_recipient_name'
-        - 'config:field.storage.node.field_year'

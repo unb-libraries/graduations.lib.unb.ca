@@ -1,3 +1,11 @@
+/* Var */
+
+body {
+  --pgray1: #F0F0F0;
+  --pred1:  #A01300;
+  --pred2:  #C01700;
+}
+
 /* Global */
 
 body {
@@ -33,7 +41,17 @@ input {
   margin-bottom: 10px;
 }
 
+/* Content */
+
+div.region.region-content a {
+  color: var(--pred1);
+}
+
 /* Browse-search */
+
+section.featured a {
+  color: var(--pred1);
+}
 
 section.featured > div.container {
   padding: 0px !important;
@@ -50,7 +68,7 @@ section.featured > div.container {
   flex-direction: column;
   padding: 20px;
   width: 570px;
-  background-color: #f0f0f0;
+  background-color: var(--pgray1);
 }
 
 #block-search {
