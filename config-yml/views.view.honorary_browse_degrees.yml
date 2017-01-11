@@ -884,7 +884,7 @@ display:
           exposed: true
           expose:
             operator_id: field_degree_name_value_op
-            label: 'Degree awarded:'
+            label: 'Degree:'
             description: ''
             use_operator: false
             operator: field_degree_name_value_op
