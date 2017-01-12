@@ -1,0 +1,45 @@
+uuid: 8ce41b36-a985-4d31-9fa5-d96f38710d72
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_list_degree
+field_name: field_list_degree
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: D.C.L.
+      label: D.C.L.
+    -
+      value: LL.D.
+      label: LL.D.
+    -
+      value: D.Sc.
+      label: D.Sc.
+    -
+      value: M.A.
+      label: M.A.
+    -
+      value: D.Litt.
+      label: D.Litt.
+    -
+      value: Ph.D.
+      label: Ph.D.
+    -
+      value: M.Sc.
+      label: M.Sc.
+    -
+      value: N/A
+      label: N/A
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

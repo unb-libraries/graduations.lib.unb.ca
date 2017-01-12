@@ -5,9 +5,12 @@ dependencies:
   config:
     - field.field.node.honorary_degree.field_citation
     - field.field.node.honorary_degree.field_degree_name
+    - field.field.node.honorary_degree.field_degree_notes
     - field.field.node.honorary_degree.field_image
     - field.field.node.honorary_degree.field_img_caption
     - field.field.node.honorary_degree.field_img_caption_2
+    - field.field.node.honorary_degree.field_list_degree
+    - field.field.node.honorary_degree.field_list_gender
     - field.field.node.honorary_degree.field_orator
     - field.field.node.honorary_degree.field_recipient_gender
     - field.field.node.honorary_degree.field_recipient_name
@@ -17,6 +20,7 @@ dependencies:
     - node.type.honorary_degree
   module:
     - image
+    - options
     - text
     - user
 id: node.honorary_degree.default
@@ -33,6 +37,13 @@ content:
   field_degree_name:
     weight: 3
     label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_degree_notes:
+    weight: 13
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -59,6 +70,18 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+  field_list_degree:
+    weight: 12
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_list_gender:
+    weight: 11
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
   field_orator:
     weight: 9
     label: inline

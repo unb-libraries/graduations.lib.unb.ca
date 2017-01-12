@@ -30,9 +30,9 @@ class Degree extends SqlBase {
      * below.
      */
     $query = $this->select('degrees', 'd')
-                  ->fields('d', ['degree_id', 'ceremony_id', 'degree',
-                  'name', 'gender', 'valedictorian', 'orator', 'citation',
-                  'image', 'img_caption', 'img_caption_2']);
+                  ->fields('d', ['degree_id', 'ceremony_id', 'degree', 'degree',
+                  'name', 'gender', 'gender', 'valedictorian', 'orator', 'citation',
+                  'image', 'img_caption', 'img_caption_2', 'notes']);
     return $query;
   }
 
@@ -48,14 +48,17 @@ class Degree extends SqlBase {
       'degree_id' => $this->t('Degree ID'),
       'ceremony_id' => $this->t('Ceremony ID'),
       'degree' => $this->t('Degree'),
+      'list_degree' => $this->t('List degree'),
       'name' => $this->t('Recipient name'),
       'gender' => $this->t('Recipient gender'),
+      'list_gender' => $this->t('List gender'),
       'valedictorian' => $this->t('Valedictorian'),
       'orator' => $this->t('Orator'),
       'citation' => $this->t('Citation'),
       'image' => $this->t('Image'),
       'img_caption' => $this->t('Image caption'),
-      'img_caption_2' => $this->t('Second image caption')
+      'img_caption_2' => $this->t('Second image caption'),
+      'notes' => $this->t('Notes')
     ];
 
     return $fields;

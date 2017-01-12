@@ -15,6 +15,7 @@ dependencies:
   module:
     - image
     - node
+    - options
     - user
 id: honorary_browse_degrees
 label: 'Browse degrees'
@@ -833,44 +834,6 @@ display:
               2: {  }
               3: {  }
           plugin_id: string
-        field_recipient_gender_value:
-          id: field_recipient_gender_value
-          table: node__field_recipient_gender
-          field: field_recipient_gender_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_recipient_gender_value_op
-            label: 'Gender:'
-            description: ''
-            use_operator: false
-            operator: field_recipient_gender_value_op
-            identifier: field_recipient_gender_value
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: string
         field_degree_name_value:
           id: field_degree_name_value
           table: node__field_degree_name
@@ -1029,6 +992,49 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: numeric
+        field_list_gender_value:
+          id: field_list_gender_value
+          table: node__field_list_gender
+          field: field_list_gender_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            Female: Female
+            Male: Male
+            Unspecified: Unspecified
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_list_gender_value_op
+            label: 'Gender:'
+            description: ''
+            use_operator: false
+            operator: field_list_gender_value_op
+            identifier: field_list_gender_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: true
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
       sorts:
         title:
           id: title

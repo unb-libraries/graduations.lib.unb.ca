@@ -1,0 +1,19 @@
+uuid: 39d3360f-8e20-4cb3-974d-c782bbf15321
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_degree_notes
+    - node.type.honorary_degree
+id: node.honorary_degree.field_degree_notes
+field_name: field_degree_notes
+entity_type: node
+bundle: honorary_degree
+label: 'Notes:'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

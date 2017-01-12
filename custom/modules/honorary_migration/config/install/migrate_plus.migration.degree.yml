@@ -17,14 +17,17 @@ process:
   title: name
   field_ref_degree_ceremony: ceremony_id
   field_degree_name: degree
+  field_list_degree: degree
   field_recipient_name: name
   field_recipient_gender: gender
+  field_list_gender: gender
   field_valedictorian: valedictorian
   field_orator: orator
   field_citation: citation
   field_image: image
   field_img_caption: img_caption
   field_img_caption_2: img_caption_2
+  field_degree_notes: notes
   # Get ceremony table for ceremony entity reference.
   field_ref_degree_ceremony:
     plugin: migration
