@@ -12,9 +12,24 @@ dependencies:
     - field.storage.node.field_year
     - image.style.degree_thumbnail
     - node.type.honorary_degree
+    - taxonomy.vocabulary.degree_vox
+    - taxonomy.vocabulary.gender_voc
+  content:
+    - 'taxonomy_term:degree_vox:194ee031-26f7-4247-bc82-16ae456c7f47'
+    - 'taxonomy_term:degree_vox:1c4630d4-692b-4393-a352-aab780cc98b0'
+    - 'taxonomy_term:degree_vox:4cd330d8-b5a4-41bc-9cf7-b34d52de7528'
+    - 'taxonomy_term:degree_vox:82043b9a-89e4-46b2-9c1e-49c005fe5b77'
+    - 'taxonomy_term:degree_vox:a207abac-8352-43f4-9e40-ed8bc4cb0c55'
+    - 'taxonomy_term:degree_vox:bb1822ba-d4f0-4881-921d-c9a76d911e22'
+    - 'taxonomy_term:degree_vox:defee39a-5abf-49d3-a02b-face51724867'
+    - 'taxonomy_term:degree_vox:ec8c192d-cf7a-407a-8ef8-fb3ad8e21030'
+    - 'taxonomy_term:gender_voc:7eb85496-2e50-49e4-a64b-e76989467499'
+    - 'taxonomy_term:gender_voc:8385880e-7413-4f27-9359-4e44cfd51eb2'
+    - 'taxonomy_term:gender_voc:d1798c7e-78f3-49da-9d9a-87ef0344a63c'
   module:
     - image
     - node
+    - taxonomy
     - user
 id: honorary_browse_degrees
 label: 'Browse degrees'
@@ -833,24 +848,27 @@ display:
               2: {  }
               3: {  }
           plugin_id: string
-        field_degree_name_value:
-          id: field_degree_name_value
-          table: node__field_degree_name
-          field: field_degree_name_value
+        field_list_gender_target_id:
+          id: field_list_gender_target_id
+          table: node__field_list_gender
+          field: field_list_gender_target_id
           relationship: none
           group_type: group
           admin_label: ''
-          operator: contains
-          value: ''
+          operator: or
+          value:
+            1: 1
+            2: 2
+            3: 3
           group: 1
           exposed: true
           expose:
-            operator_id: field_degree_name_value_op
-            label: 'Degree:'
+            operator_id: field_list_gender_target_id_op
+            label: 'Gender:'
             description: ''
             use_operator: false
-            operator: field_degree_name_value_op
-            identifier: field_degree_name_value
+            operator: field_list_gender_target_id_op
+            identifier: field_list_gender_target_id
             required: false
             remember: false
             multiple: false
@@ -858,6 +876,7 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
+            reduce: true
           is_grouped: false
           group_info:
             label: ''
@@ -870,7 +889,66 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: string
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: gender_voc
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_list_degree_target_id:
+          id: field_list_degree_target_id
+          table: node__field_list_degree
+          field: field_list_degree_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            6: 6
+            10: 10
+            8: 8
+            7: 7
+            9: 9
+            12: 12
+            13: 13
+            11: 11
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_list_degree_target_id_op
+            label: 'Degree:'
+            description: ''
+            use_operator: false
+            operator: field_list_degree_target_id_op
+            identifier: field_list_degree_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: true
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: degree_vox
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
         field_campus_value:
           id: field_campus_value
           table: node__field_campus
@@ -1033,6 +1111,7 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -1058,6 +1137,7 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
