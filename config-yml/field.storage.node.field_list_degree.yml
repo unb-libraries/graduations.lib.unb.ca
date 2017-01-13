@@ -1,42 +1,17 @@
-uuid: 8ce41b36-a985-4d31-9fa5-d96f38710d72
+uuid: 9cd330fb-f773-4357-b96d-21c6b11f048b
 langcode: en
 status: true
 dependencies:
   module:
     - node
-    - options
+    - taxonomy
 id: node.field_list_degree
 field_name: field_list_degree
 entity_type: node
-type: list_string
+type: entity_reference
 settings:
-  allowed_values:
-    -
-      value: D.C.L.
-      label: D.C.L.
-    -
-      value: LL.D.
-      label: LL.D.
-    -
-      value: D.Sc.
-      label: D.Sc.
-    -
-      value: M.A.
-      label: M.A.
-    -
-      value: D.Litt.
-      label: D.Litt.
-    -
-      value: Ph.D.
-      label: Ph.D.
-    -
-      value: M.Sc.
-      label: M.Sc.
-    -
-      value: N/A
-      label: N/A
-  allowed_values_function: ''
-module: options
+  target_type: taxonomy_term
+module: core
 locked: false
 cardinality: 1
 translatable: true

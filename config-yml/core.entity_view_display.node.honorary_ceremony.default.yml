@@ -6,6 +6,8 @@ dependencies:
     - field.field.node.honorary_ceremony.field_campus
     - field.field.node.honorary_ceremony.field_ceremony_type
     - field.field.node.honorary_ceremony.field_ceremony_year
+    - field.field.node.honorary_ceremony.field_list_campus
+    - field.field.node.honorary_ceremony.field_list_season
     - field.field.node.honorary_ceremony.field_year
     - node.type.honorary_ceremony
   module:
@@ -37,6 +39,20 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_integer
+  field_list_campus:
+    weight: 106
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_list_season:
+    weight: 105
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
   field_year:
     weight: 101
     label: above

@@ -1,12 +1,11 @@
-uuid: 49005218-9796-44dd-90fc-88b9158277c6
+uuid: de0eab48-c9a8-4ce2-b92d-5436eeb18604
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_list_degree
     - node.type.honorary_degree
-  module:
-    - options
+    - taxonomy.vocabulary.degree_vox
 id: node.honorary_degree.field_list_degree
 field_name: field_list_degree
 entity_type: node
@@ -17,5 +16,13 @@ required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings: {  }
-field_type: list_string
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      degree_vox: degree_vox
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

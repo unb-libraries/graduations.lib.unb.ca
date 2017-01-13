@@ -75,15 +75,21 @@ content:
     third_party_settings: {  }
     type: string_textfield
   field_list_degree:
-    weight: 28
-    settings: {  }
+    weight: 30
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: options_select
+    type: entity_reference_autocomplete
   field_list_gender:
-    weight: 27
-    settings: {  }
+    weight: 31
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: options_select
+    type: entity_reference_autocomplete
   field_orator:
     weight: 11
     settings:

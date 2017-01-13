@@ -1,16 +1,16 @@
-uuid: d5b1aaad-3189-47a4-9bfa-007f0be13b30
+uuid: e3aa570f-beef-4c1c-bb10-08b99926496f
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_list_gender
-    - node.type.honorary_degree
-    - taxonomy.vocabulary.gender_voc
-id: node.honorary_degree.field_list_gender
-field_name: field_list_gender
+    - field.storage.node.field_list_campus
+    - node.type.honorary_ceremony
+    - taxonomy.vocabulary.campus_voc
+id: node.honorary_ceremony.field_list_campus
+field_name: field_list_campus
 entity_type: node
-bundle: honorary_degree
-label: 'List gender:'
+bundle: honorary_ceremony
+label: 'List campus:'
 description: ''
 required: false
 translatable: false
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      gender_voc: gender_voc
+      campus_voc: campus_voc
     sort:
       field: _none
     auto_create: true

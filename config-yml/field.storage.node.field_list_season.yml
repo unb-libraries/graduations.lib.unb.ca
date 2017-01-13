@@ -1,12 +1,12 @@
-uuid: cfdc4c70-14ec-4d4a-95a9-d8ddd91b2d8b
+uuid: 2ac84a8c-270c-4daf-8a59-0b363aea96d5
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - taxonomy
-id: node.field_list_gender
-field_name: field_list_gender
+id: node.field_list_season
+field_name: field_list_season
 entity_type: node
 type: entity_reference
 settings:
