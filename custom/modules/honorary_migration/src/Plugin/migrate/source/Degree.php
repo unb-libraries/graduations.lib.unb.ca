@@ -30,8 +30,8 @@ class Degree extends SqlBase {
      * below.
      */
     $query = $this->select('degrees', 'd')
-                  ->fields('d', ['degree_id', 'ceremony_id', 'degree', 'degree',
-                  'name', 'gender', 'gender', 'valedictorian', 'orator', 'citation',
+                  ->fields('d', ['degree_id', 'ceremony_id', 'degree', 'list_degree',
+                  'name', 'gender', 'list_gender', 'valedictorian', 'orator', 'citation',
                   'image', 'img_caption', 'img_caption_2', 'notes']);
     return $query;
   }

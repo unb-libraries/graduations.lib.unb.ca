@@ -1,0 +1,9 @@
+uuid: acbc50fa-dbce-4064-8010-08b76346724f
+langcode: en
+status: true
+dependencies: {  }
+name: degree_voc
+vid: degree_vox
+description: ''
+hierarchy: 0
+weight: 0

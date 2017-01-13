@@ -17,10 +17,10 @@ process:
   title: name
   field_ref_degree_ceremony: ceremony_id
   field_degree_name: degree
-  field_list_degree: degree
+  field_list_degree: list_degree
   field_recipient_name: name
   field_recipient_gender: gender
-  field_list_gender: gender
+  field_list_gender: list_gender
   field_valedictorian: valedictorian
   field_orator: orator
   field_citation: citation
