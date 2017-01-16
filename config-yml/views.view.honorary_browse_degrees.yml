@@ -1038,7 +1038,7 @@ display:
           id: field_list_campus_target_id
           table: node__field_list_campus
           field: field_list_campus_target_id
-          relationship: none
+          relationship: field_ref_degree_ceremony
           group_type: group
           admin_label: ''
           operator: or

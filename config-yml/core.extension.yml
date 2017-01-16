@@ -18,9 +18,13 @@ module:
   filter: 0
   help: 0
   history: 0
+  honorary_migration: 0
   image: 0
   link: 0
   menu_ui: 0
+  migrate: 0
+  migrate_plus: 0
+  migrate_tools: 0
   node: 0
   options: 0
   page_cache: 0
