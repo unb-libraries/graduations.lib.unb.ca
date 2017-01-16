@@ -29,7 +29,8 @@ class Ceremony extends SqlBase {
      * below.
      */
     $query = $this->select('grad_ceremonies', 'c')
-                  ->fields('c', ['ceremony_id', 'year', 'year', 'campus', 'type']);
+                  ->fields('c', ['ceremony_id', 'year', 'year', 'campus',
+                  'list_campus', 'type', 'list_season']);
     return $query;
   }
 
@@ -46,7 +47,9 @@ class Ceremony extends SqlBase {
       'year' => $this->t('Year of ceremony'),
       'ceremony_year' => $this->t('Numeric year'),
       'campus' => $this->t('Campus location of ceremony'),
-      'type' => $this->t('Type of ceremony')
+      'list_campus' => $this->t('Index for Campus taxonomy term'),
+      'type' => $this->t('Type of ceremony'),
+      'list_season' => $this->t('Index for Season taxonomy term')
     ];
 
     return $fields;

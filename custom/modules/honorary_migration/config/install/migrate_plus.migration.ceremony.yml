@@ -20,7 +20,9 @@ process:
   field_year: year
   field_ceremony_year: ceremony_year
   field_campus: campus
+  field_list_campus: list_campus
   field_ceremony_type: type
+  field_list_season: list_season
   # Dependency on module itself.
 dependencies:
   enforced:

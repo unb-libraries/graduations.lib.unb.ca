@@ -12,9 +12,12 @@ dependencies:
     - field.storage.node.field_year
     - image.style.degree_thumbnail
     - node.type.honorary_degree
+    - taxonomy.vocabulary.campus_voc
     - taxonomy.vocabulary.degree_vox
     - taxonomy.vocabulary.gender_voc
   content:
+    - 'taxonomy_term:campus_voc:37bfd424-e749-4652-9f27-68c5a8a499f7'
+    - 'taxonomy_term:campus_voc:8cd96f82-3671-48f3-88dd-a6c47e549bfc'
     - 'taxonomy_term:degree_vox:194ee031-26f7-4247-bc82-16ae456c7f47'
     - 'taxonomy_term:degree_vox:1c4630d4-692b-4393-a352-aab780cc98b0'
     - 'taxonomy_term:degree_vox:4cd330d8-b5a4-41bc-9cf7-b34d52de7528'
@@ -949,44 +952,6 @@ display:
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
-        field_campus_value:
-          id: field_campus_value
-          table: node__field_campus
-          field: field_campus_value
-          relationship: field_ref_degree_ceremony
-          group_type: group
-          admin_label: ''
-          operator: contains
-          value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_campus_value_op
-            label: 'Campus:'
-            description: ''
-            use_operator: false
-            operator: field_campus_value_op
-            identifier: field_campus_value
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: string
         field_ceremony_year_value:
           id: field_ceremony_year_value
           table: node__field_ceremony_year
@@ -1069,6 +1034,53 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: numeric
+        field_list_campus_target_id:
+          id: field_list_campus_target_id
+          table: node__field_list_campus
+          field: field_list_campus_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            4: 4
+            5: 5
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_list_campus_target_id_op
+            label: 'Campus:'
+            description: ''
+            use_operator: false
+            operator: field_list_campus_target_id_op
+            identifier: field_list_campus_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: true
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: campus_voc
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
       sorts:
         title:
           id: title
