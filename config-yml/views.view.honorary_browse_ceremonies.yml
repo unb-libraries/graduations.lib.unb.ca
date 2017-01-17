@@ -719,7 +719,17 @@ display:
           empty: false
           content: 'Displaying @start - @end of @total'
           plugin_id: result
-      footer: {  }
+      footer:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: 'Displaying @start - @end of @total'
+          plugin_id: result
       empty:
         area_text_custom:
           id: area_text_custom
@@ -730,7 +740,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: 'Filter criteria does not match any records.'
+          content: 'No records match filter criteria.'
           plugin_id: text_custom
       relationships: {  }
       arguments: {  }

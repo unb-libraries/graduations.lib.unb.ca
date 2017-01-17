@@ -1096,9 +1096,40 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: standard
-      header: {  }
-      footer: {  }
-      empty: {  }
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: 'Displaying @start - @end of @total'
+          plugin_id: result
+      footer:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: 'Displaying @start - @end of @total'
+          plugin_id: result
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content: 'No records match filter criteria.'
+          plugin_id: text_custom
       relationships:
         field_ref_degree_ceremony:
           id: field_ref_degree_ceremony

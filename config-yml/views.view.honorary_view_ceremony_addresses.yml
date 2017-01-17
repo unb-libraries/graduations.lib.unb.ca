@@ -226,10 +226,10 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: ''
+          empty: 'No addresses on record.'
           hide_empty: false
           empty_zero: false
-          hide_alter_empty: true
+          hide_alter_empty: false
           click_sort_column: value
           type: string
           settings:
@@ -284,7 +284,18 @@ display:
       title: 'View Ceremony Addresses'
       header: {  }
       footer: {  }
-      empty: {  }
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content: 'No addresses on record.'
+          plugin_id: text_custom
       relationships:
         reverse__node__field_ref_address_ceremony:
           id: reverse__node__field_ref_address_ceremony

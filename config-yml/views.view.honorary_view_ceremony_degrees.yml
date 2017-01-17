@@ -376,7 +376,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: ''
+          empty: 'No honorary degrees awarded.'
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -439,7 +439,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: ''
+          empty: 'No honorary degrees awarded.'
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
@@ -494,7 +494,18 @@ display:
           view_to_insert: 'honorary_view_ceremony_addresses:default'
           inherit_arguments: true
           plugin_id: view
-      empty: {  }
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content: 'No honorary degrees awarded.'
+          plugin_id: text_custom
       relationships:
         reverse__node__field_ref_degree_ceremony:
           id: reverse__node__field_ref_degree_ceremony
