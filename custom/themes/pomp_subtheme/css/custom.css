@@ -20,6 +20,8 @@ div {
 
 input, select {
   display: block;
+  width: 120px;
+  height: 36px;
 }
 
 /* Site title */
@@ -39,6 +41,31 @@ input, select {
 
 #slideshow {
   margin-bottom: 10px;
+}
+
+/* Filters */
+
+div.view-filters {
+  background-color: var(--pgray1);
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 0px 14px;
+}
+
+/* Break filter form on year and campus */
+
+div.js-form-item-field-ceremony-year-value {
+  display: block;
+  clear: both;
+}
+
+div.js-form-item-field-list-campus-target-id {
+  display: block;
+  clear: both;
+}
+
+div#edit-actions {
+  padding-top: 1em !important;
 }
 
 /* Content */
