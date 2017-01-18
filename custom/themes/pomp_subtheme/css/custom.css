@@ -167,23 +167,6 @@ div.region.region-footer > div {
   vertical-align: top !important;
 }
 
-/*
-#views-exposed-form-honorary-browse-degrees-page-1 label {
-  font-size: 14px% !important;
-}
-
-#views-exposed-form-honorary-browse-degrees-page-1 input {
-  width: 294px;
-}
-
-#views-exposed-form-browse-degrees-2-page-1 label {
-  font-size: 14px% !important;
-}
-
-#views-exposed-form-browse-degrees-2-page-1 input {
-  width: 294px;
-}
-*/
 /* Rules related to "View Degree" view. */
 
 .view-degree table {
@@ -215,6 +198,10 @@ div.region.region-footer > div {
 
 .view-degree table ul {
   list-style-position: inside !important;
+}
+
+div.float-right {
+  float: right;
 }
 
 .view-degree figure {
