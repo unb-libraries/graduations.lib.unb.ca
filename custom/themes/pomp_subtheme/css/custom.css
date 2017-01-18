@@ -200,7 +200,7 @@ div.region.region-footer > div {
   list-style-position: inside !important;
 }
 
-div.float-right {
+div.floated-fig {
   float: right;
   margin: 10px;
   padding: 10px;
