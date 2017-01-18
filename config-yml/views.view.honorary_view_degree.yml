@@ -676,7 +676,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: "<div>\n<div class=\"float-right\">\n  <figure>\n    {{ field_image }}\n    <figcaption>{{ field_img_caption }}</figcaption>\n    <figcaption>{{ field_img_caption_2 }}</figcaption>\n  </figure>\n</div>\n  {{ field_citation__value }}\n</div>"
+            text: "<div>\n<div class=\"float-right\">\n  <figure>\n    {{ field_image }}\n    <figcaption><br>{{ field_img_caption }}</figcaption>\n    <figcaption>{{ field_img_caption_2 }}</figcaption>\n  </figure>\n</div>\n  {{ field_citation__value }}\n</div>"
             make_link: false
             path: ''
             absolute: false

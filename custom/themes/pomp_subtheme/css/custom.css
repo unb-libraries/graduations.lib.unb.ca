@@ -130,7 +130,7 @@ div.region.region-footer > div {
 .browse-degree tr td {
   padding-bottom: 10px !important;
   border: none !important;
-  background-color: #FFFFFF !important;
+  background-color: white !important;
 }
 
 .browse-degree tr td:first-child {
@@ -154,7 +154,7 @@ div.region.region-footer > div {
 .view-degree tr td {
   padding-bottom: 10px !important;
   border: none !important;
-  background-color: #FFFFFF !important;
+  background-color: white !important;
 }
 
 .view-degree tr td:first-child {
@@ -183,7 +183,7 @@ div.region.region-footer > div {
 .view-degree tr td {
   padding-bottom: 10px !important;
   border: none !important;
-  background-color: #FFFFFF !important;
+  background-color: white !important;
 }
 
 .view-degree tr td:first-child {
@@ -202,12 +202,15 @@ div.region.region-footer > div {
 
 div.float-right {
   float: right;
+  margin: 10px;
+  padding: 10px;
+  background: var(--pgray1);
 }
 
 .view-degree figure {
   display: table !important;
   width: 200px !important;
-  margin: none !important;
+  margin: 10px !important;
   -webkit-margin-before: auto !important;
   -webkit-margin-after: 0px !important;
   -webkit-margin-start: auto !important;
