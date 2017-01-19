@@ -135,6 +135,7 @@ class Degree extends SqlBase {
       $uri = file_unmanaged_copy($temp_uri, $file_destination,
         FILE_EXISTS_REPLACE);
       $file = File::Create(['uri' => $uri]);
+      file_set_status($file, FILE_STATUS_PERMANENT);
 
       $row->setSourceProperty('image', $file);
     }
