@@ -15,6 +15,7 @@ dependencies:
     - taxonomy.vocabulary.campus_voc
     - taxonomy.vocabulary.degree_vox
     - taxonomy.vocabulary.gender_voc
+    - taxonomy.vocabulary.season_voc
   content:
     - 'taxonomy_term:campus_voc:37bfd424-e749-4652-9f27-68c5a8a499f7'
     - 'taxonomy_term:campus_voc:8cd96f82-3671-48f3-88dd-a6c47e549bfc'
@@ -29,6 +30,9 @@ dependencies:
     - 'taxonomy_term:gender_voc:7eb85496-2e50-49e4-a64b-e76989467499'
     - 'taxonomy_term:gender_voc:8385880e-7413-4f27-9359-4e44cfd51eb2'
     - 'taxonomy_term:gender_voc:d1798c7e-78f3-49da-9d9a-87ef0344a63c'
+    - 'taxonomy_term:season_voc:9860013c-b6a6-4ba0-af75-a0db7f296fa1'
+    - 'taxonomy_term:season_voc:99e0c286-e081-463a-8342-2e8c90e76175'
+    - 'taxonomy_term:season_voc:ae1e3f5f-b49d-4c0d-9aff-3a6df5475cc1'
   module:
     - image
     - node
@@ -1078,6 +1082,54 @@ display:
           type: select
           limit: true
           vid: campus_voc
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_list_season_target_id:
+          id: field_list_season_target_id
+          table: node__field_list_season
+          field: field_list_season_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            15: 15
+            14: 14
+            42: 42
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_list_season_target_id_op
+            label: 'Graduation ceremony:'
+            description: ''
+            use_operator: false
+            operator: field_list_season_target_id_op
+            identifier: field_list_season_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: true
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: season_voc
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid

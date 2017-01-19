@@ -549,14 +549,14 @@ display:
           admin_label: ''
           operator: or
           value:
+            15: 15
             14: 14
             42: 42
-            15: 15
           group: 1
           exposed: true
           expose:
             operator_id: field_list_season_target_id_op
-            label: 'Season:'
+            label: 'Graduation ceremony:'
             description: ''
             use_operator: false
             operator: field_list_season_target_id_op
