@@ -343,9 +343,9 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '{{ field_recipient_name }}, {{ field_degree_name }}'
-            make_link: false
-            path: ''
+            text: '{{ field_recipient_name }} {{ field_degree_name }}'
+            make_link: true
+            path: '/degree/{{ raw_arguments.nid }}'
             absolute: false
             external: false
             replace_spaces: false
@@ -383,7 +383,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: true
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -566,7 +566,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: ceremony-details
+      path: ceremony
     cache_metadata:
       max-age: -1
       contexts:
