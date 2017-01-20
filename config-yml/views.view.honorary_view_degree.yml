@@ -676,7 +676,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: "<div>\n  {{ field_image }}\n  {{ field_citation__value }}\n</div>"
+            text: "<div>\n  {{ field_image }}\n  {{ field_citation }}\n</div>"
             make_link: false
             path: ''
             absolute: false
