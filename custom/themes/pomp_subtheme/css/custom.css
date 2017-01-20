@@ -2,6 +2,7 @@
 
 body {
   --pgray1: #F0F0F0;
+  --pgray2: #555555;
   --pred1:  #C01700;
   --pred2:  #880404;
 }
@@ -24,10 +25,25 @@ input, select {
   height: 36px;
 }
 
+a, a:link {
+  color: var(--pred1);
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+  color: var(--pred2);
+}
+
 /* Site title */
 
-.site-name {
+.site-name a {
   font-size: 40px;
+  color: var(--pgray2) !important;
+}
+
+.site-name a:hover, a:focus {
+  text-decoration: none !important;
+  color: var(--pred2) !important;
 }
 
 /* Menu. */
@@ -35,6 +51,10 @@ input, select {
 #main-menu {
   margin-bottom: 10px;
   font-size: 13px;
+}
+
+#main-menu a:hover, a:focus {
+  text-decoration: none !important;
 }
 
 /* Slideshow */
@@ -70,23 +90,7 @@ div#edit-actions {
 
 /* Content */
 
-div.region.region-content a {
-  color: var(--pred1);
-}
-
-div.region.region-content a:hover {
-  color: var(--pred2);
-}
-
 /* Browse-search */
-
-section.featured a {
-  color: var(--pred1);
-}
-
-section.featured a:hover {
-  color: var(--pred2);
-}
 
 section.featured > div.container {
   padding: 0px !important;
