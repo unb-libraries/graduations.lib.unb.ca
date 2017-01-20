@@ -362,7 +362,7 @@ display:
             alter_text: true
             text: '{{ field_campus }} {{ field_ceremony_type }}, {{ field_ceremony_year }}'
             make_link: true
-            path: '/view-ceremony-degrees/{{ field_ref_degree_ceremony }}'
+            path: '/ceremony-details/{{ field_ref_degree_ceremony }}'
             absolute: false
             external: false
             replace_spaces: false

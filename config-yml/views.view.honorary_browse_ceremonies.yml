@@ -435,7 +435,7 @@ display:
             alter_text: true
             text: '{{ field_campus }} {{ field_ceremony_type }}'
             make_link: true
-            path: '/view-ceremony-degrees/{{ nid }}'
+            path: '/ceremony-details/{{ nid }}'
             absolute: false
             external: false
             replace_spaces: false
