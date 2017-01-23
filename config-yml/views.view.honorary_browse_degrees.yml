@@ -710,46 +710,6 @@ display:
           entity_type: node
           entity_field: status
           plugin_id: boolean
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: in
-          value:
-            honorary_degree: honorary_degree
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
         field_recipient_name_value:
           id: field_recipient_name_value
           table: node__field_recipient_name
@@ -763,7 +723,7 @@ display:
           exposed: true
           expose:
             operator_id: field_recipient_name_value_op
-            label: 'Degree recipient:'
+            label: 'Search degree recipient:'
             description: ''
             use_operator: false
             operator: field_recipient_name_value_op
@@ -791,107 +751,6 @@ display:
               2: {  }
               3: {  }
           plugin_id: string
-        field_list_gender_target_id:
-          id: field_list_gender_target_id
-          table: node__field_list_gender
-          field: field_list_gender_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value:
-            1: 1
-            2: 2
-            3: 3
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_list_gender_target_id_op
-            label: 'Gender:'
-            description: ''
-            use_operator: false
-            operator: field_list_gender_target_id_op
-            identifier: field_list_gender_target_id
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-            reduce: true
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: gender_voc
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
-        field_list_degree_target_id:
-          id: field_list_degree_target_id
-          table: node__field_list_degree
-          field: field_list_degree_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value:
-            6: 6
-            10: 10
-            8: 8
-            7: 7
-            9: 9
-            12: 12
-            13: 13
-            11: 11
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_list_degree_target_id_op
-            label: 'Degree:'
-            description: ''
-            use_operator: false
-            operator: field_list_degree_target_id_op
-            identifier: field_list_degree_target_id
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-            reduce: true
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: degree_vox
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
         field_ceremony_year_value:
           id: field_ceremony_year_value
           table: node__field_ceremony_year
@@ -1069,6 +928,147 @@ display:
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
+        field_list_gender_target_id:
+          id: field_list_gender_target_id
+          table: node__field_list_gender
+          field: field_list_gender_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            1: 1
+            2: 2
+            3: 3
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_list_gender_target_id_op
+            label: 'Gender:'
+            description: ''
+            use_operator: false
+            operator: field_list_gender_target_id_op
+            identifier: field_list_gender_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: true
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: gender_voc
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_list_degree_target_id:
+          id: field_list_degree_target_id
+          table: node__field_list_degree
+          field: field_list_degree_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            6: 6
+            10: 10
+            8: 8
+            7: 7
+            9: 9
+            12: 12
+            13: 13
+            11: 11
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_list_degree_target_id_op
+            label: 'Degree:'
+            description: ''
+            use_operator: false
+            operator: field_list_degree_target_id_op
+            identifier: field_list_degree_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: true
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: degree_vox
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            honorary_degree: honorary_degree
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
       sorts:
         title:
           id: title
