@@ -4,9 +4,10 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.honorary_ceremony.field_campus
     - field.field.node.honorary_ceremony.field_ceremony_type
-    - field.field.node.honorary_ceremony.field_year
+    - field.field.node.honorary_ceremony.field_ceremony_year
+    - field.field.node.honorary_ceremony.field_list_campus
+    - field.field.node.honorary_ceremony.field_list_season
     - node.type.honorary_ceremony
   module:
     - user
@@ -18,6 +19,7 @@ content:
   links:
     weight: 100
 hidden:
-  field_campus: true
   field_ceremony_type: true
-  field_year: true
+  field_ceremony_year: true
+  field_list_campus: true
+  field_list_season: true

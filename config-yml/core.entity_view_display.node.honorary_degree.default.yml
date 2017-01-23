@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.honorary_degree.field_citation
-    - field.field.node.honorary_degree.field_degree_name
     - field.field.node.honorary_degree.field_degree_notes
     - field.field.node.honorary_degree.field_image
     - field.field.node.honorary_degree.field_img_caption
@@ -12,7 +11,6 @@ dependencies:
     - field.field.node.honorary_degree.field_list_degree
     - field.field.node.honorary_degree.field_list_gender
     - field.field.node.honorary_degree.field_orator
-    - field.field.node.honorary_degree.field_recipient_gender
     - field.field.node.honorary_degree.field_recipient_name
     - field.field.node.honorary_degree.field_ref_degree_ceremony
     - field.field.node.honorary_degree.field_valedictorian
@@ -33,13 +31,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
-  field_degree_name:
-    weight: 3
-    label: inline
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
   field_degree_notes:
     weight: 13
     label: above
@@ -85,13 +76,6 @@ content:
     type: entity_reference_label
   field_orator:
     weight: 9
-    label: inline
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-  field_recipient_gender:
-    weight: 4
     label: inline
     settings:
       link_to_entity: false

@@ -3,12 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.honorary_ceremony.field_campus
     - field.field.node.honorary_ceremony.field_ceremony_type
     - field.field.node.honorary_ceremony.field_ceremony_year
     - field.field.node.honorary_ceremony.field_list_campus
     - field.field.node.honorary_ceremony.field_list_season
-    - field.field.node.honorary_ceremony.field_year
     - node.type.honorary_ceremony
   module:
     - path
@@ -22,13 +20,6 @@ content:
     weight: 10
     settings: {  }
     third_party_settings: {  }
-  field_campus:
-    weight: 32
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
   field_ceremony_type:
     weight: 33
     settings:
@@ -58,13 +49,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
-  field_year:
-    weight: 31
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
   path:
     type: path
     weight: 30
