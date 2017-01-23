@@ -3,12 +3,21 @@ langcode: en
 status: true
 dependencies: {  }
 name: degree_main
-label: 'Degree main'
+label: 'Degree main (200x200)'
 effects:
-  e8ada7f7-4674-42bc-9959-c1b4f544d500:
-    uuid: e8ada7f7-4674-42bc-9959-c1b4f544d500
-    id: image_scale_and_crop
+  aedd5de6-225f-4aa3-9019-2cc276d7e8f3:
+    uuid: aedd5de6-225f-4aa3-9019-2cc276d7e8f3
+    id: image_scale
     weight: 1
+    data:
+      width: 260
+      height: null
+      upscale: true
+  3115ce1b-c12a-48af-abde-5652ebe7952d:
+    uuid: 3115ce1b-c12a-48af-abde-5652ebe7952d
+    id: image_crop
+    weight: 2
     data:
       width: 200
       height: 200
+      anchor: left-top

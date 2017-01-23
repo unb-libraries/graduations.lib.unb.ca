@@ -5,10 +5,19 @@ dependencies: {  }
 name: degree_thumbnail
 label: 'Degree thumbnail (140x140)'
 effects:
-  7a6ef2a0-35ec-4e6b-872a-a19264c703d5:
-    uuid: 7a6ef2a0-35ec-4e6b-872a-a19264c703d5
-    id: image_scale_and_crop
-    weight: 1
+  5c2322e8-7b8d-4fc5-b9e5-608b4219acb1:
+    uuid: 5c2322e8-7b8d-4fc5-b9e5-608b4219acb1
+    id: image_crop
+    weight: -9
     data:
       width: 140
       height: 140
+      anchor: left-top
+  7ac999c9-7d27-4f6b-b469-914245296e6f:
+    uuid: 7ac999c9-7d27-4f6b-b469-914245296e6f
+    id: image_scale
+    weight: -10
+    data:
+      width: 200
+      height: null
+      upscale: false
