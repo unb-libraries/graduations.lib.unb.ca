@@ -49,9 +49,21 @@ a:hover, a:focus {
 
 /* Menu. */
 
+li.menu-item a {
+  height: 45px !important;
+}
+
+#main-menu .container ul.menu ul.menu li {
+  width: 300px !important;
+}
+
 #main-menu {
   margin-bottom: 10px;
-  font-size: 13px;
+  font-size: 12px;
+}
+
+#main-menu .container ul.menu li > a {
+  padding: 10px 20px 10px 10px !important;
 }
 
 #main-menu a:hover, a:focus {
