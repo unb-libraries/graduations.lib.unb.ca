@@ -2,7 +2,8 @@
 
 body {
   --pgray1: #F0F0F0;
-  --pgray2: #555555;
+  --pgray2: #DADADA;
+  --pgray3: #555555;
   --pred1:  #C01700;
   --pred2:  #880404;
 }
@@ -38,7 +39,7 @@ a:hover, a:focus {
 
 .site-name a {
   font-size: 40px;
-  color: var(--pgray2) !important;
+  color: var(--pgray3) !important;
 }
 
 .site-name a:hover, a:focus {
@@ -123,6 +124,8 @@ section.featured > div.container {
 /* Footer */
 
 div.region.region-footer {
+  padding-top: 20px;
+  border-top: 1px dotted var(--pgray2);
   font-size: 12px;
 }
 
