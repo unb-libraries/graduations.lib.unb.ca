@@ -1,10 +1,12 @@
-uuid: cd522dfa-2b92-41b1-a514-e10a17854163
+uuid: 312f259e-fc1c-4dac-840f-fd54938ce846
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_address_content
     - node.type.honorary_address
+  module:
+    - text
 id: node.honorary_address.field_address_content
 field_name: field_address_content
 entity_type: node
@@ -16,4 +18,4 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: string_long
+field_type: text_long

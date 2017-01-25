@@ -24,11 +24,11 @@ content:
     third_party_settings: {  }
     type: text_default
   field_address_content:
-    weight: 104
+    weight: 106
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    type: text_default
   field_address_type:
     weight: 102
     label: above

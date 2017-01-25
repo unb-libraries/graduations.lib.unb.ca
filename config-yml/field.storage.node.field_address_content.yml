@@ -1,16 +1,16 @@
-uuid: d39b173b-9d03-498e-a73c-4a6bafeade20
+uuid: 254482ce-3c7b-4e57-8f49-3cff1045aae9
 langcode: en
 status: true
 dependencies:
   module:
     - node
+    - text
 id: node.field_address_content
 field_name: field_address_content
 entity_type: node
-type: string_long
-settings:
-  case_sensitive: false
-module: core
+type: text_long
+settings: {  }
+module: text
 locked: false
 cardinality: 1
 translatable: true
