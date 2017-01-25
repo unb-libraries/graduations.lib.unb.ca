@@ -5,13 +5,17 @@
  * Contains pmportal_lexical_item.install.
  */
 
- use Drupal\node\Entiy\Node;
+use Drupal\node\Entity\Node;
 
- // Get number of items we need to update.
+// Get number of items we need to update.
 $count_query = \Drupal::entityQuery('node')
   ->condition('type', 'honorary_address');
 $count_nids = $count_query->execute();
 $num_nodes = count($count_nids);
+
+// Set batch size to ALL records.
+
+$batch_size = $num_nodes;
 
 // Set up the batch if this is the first run.
 if (!isset($sandbox['progress'])) {
@@ -29,10 +33,11 @@ $nids = $query->execute();
 // Iterate through rows, load node, save node.
 foreach ($nids as $nid) {
   $node = Node::load($nid);
+  $node->get('field_address_content')->format = 'full_html';
   $node->save();
   $sandbox['progress']++;
   $sandbox['current_nid'] = $node->id();
-  }
+
   unset($node);
 }
 
