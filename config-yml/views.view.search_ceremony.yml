@@ -481,7 +481,7 @@ display:
           exposed: true
           expose:
             operator_id: combine_op
-            label: 'Search:'
+            label: ''
             description: ''
             use_operator: false
             operator: combine_op
@@ -527,7 +527,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: 'Search ceremony'
+      title: 'Search:'
       header: {  }
       footer: {  }
       empty: {  }
