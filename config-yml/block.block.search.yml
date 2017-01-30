@@ -1,6 +1,6 @@
 uuid: 6452819b-7f70-4a5a-bc13-6e3ee661dfff
 langcode: en
-status: true
+status: false
 dependencies:
   content:
     - 'block_content:basic:f71e02a5-58ab-4ecb-bde1-8c00e31df1bf'
@@ -11,8 +11,8 @@ dependencies:
     - pomp_subtheme
 id: search
 theme: pomp_subtheme
-region: featured
-weight: 0
+region: '-1'
+weight: -7
 provider: null
 plugin: 'block_content:f71e02a5-58ab-4ecb-bde1-8c00e31df1bf'
 settings:
