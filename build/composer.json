@@ -34,6 +34,11 @@
             "themes/contrib/{$name}": [
                 "type:drupal-theme"
             ]
+        },
+        "patches": {
+          "drupal/drupal": {
+            "Allow match-any-word in combined filters": "https://www.drupal.org/files/issues/combine_filter_word-2664530-63.patch"
+          }
         }
     },
     "license": "GPL-2.0+",
@@ -57,7 +62,9 @@
         "drupal/field_collection": "1.0-alpha1",
         "drush/drush": "~8.0",
         "drupal/token_filter": "1.0-beta1",
-        "drupal/zircon": "1.0-rc1"
+        "drupal/zircon": "1.0-rc1",
+        "cweagans/composer-patches": "~1.0",
+        "drupal/drupal": "~8.2"
     },
     "require-dev": {
         "behat/mink": "~1.7",
@@ -85,19 +92,8 @@
             "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
         ]
     },
-    "require": {
-      "cweagans/composer-patches": "~1.0",
-      "drupal/drupal": "~8.2"
-    },
     "config": {
       "preferred-install": "source"
-    },
-    "extra": {
-      "patches": {
-        "drupal/drupal": {
-          "Add startup configuration for PHP server": "https://www.drupal.org/files/issues/combine_filter_word-2664530-63.patch"
-        }
-      }
     },
     "type": "project"
 }
