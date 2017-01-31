@@ -72,8 +72,15 @@ li.menu-item a {
 
 /* Slideshow */
 
+
+
 #slideshow {
+  margin-bottom: 10px;
+}
+
+#slideshow p {
   margin-bottom: 0px;
+  border-bottom: 10px;
 }
 
 /* Filters */
