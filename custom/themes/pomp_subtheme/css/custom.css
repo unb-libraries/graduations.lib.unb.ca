@@ -138,6 +138,11 @@ section.featured > div.container {
   margin-left: 10px;
 }
 
+/* Search-ceremony */
+
+h1.js-quickedit-page-title.page-title {
+}
+
 /* Main content */
 
 #main > div {
