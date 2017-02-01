@@ -443,7 +443,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: '{{ field_list_campus }} {{ field_ceremony_type }}, {{ field_ceremony_year }}'
+            text: '{{ field_ceremony_year }} {{ field_list_campus }} {{ field_ceremony_type }}'
             make_link: true
             path: '/ceremony/{{ field_ref_degree_ceremony }}'
             absolute: false
@@ -633,7 +633,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<table>\n  <tr>\n    <td>\n      <strong>{{ title }} </strong><span>{{ field_list_degree }}</span>\n       <p>Awarded at {{ field_ceremony_type }}.</p>\n    </td>\n    <td>\n      <figure>\n        {{ field_image }}\n      </figure>\n    </td>\n  </tr>\n</table>\n"
+            text: "<table>\n  <tr>\n    <td>\n      <strong>{{ title }} </strong><span>{{ field_list_degree }}</span>\n       <p>Awarded at the {{ field_ceremony_type }}</p>\n    </td>\n    <td>\n      <figure>\n        {{ field_image }}\n      </figure>\n    </td>\n  </tr>\n</table>\n"
             make_link: false
             path: ''
             absolute: false
