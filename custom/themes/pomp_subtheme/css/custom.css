@@ -185,6 +185,11 @@ div.region.region-footer > div {
 .browse-degree tr td:last-child {
   vertical-align: top !important;
 }
+
+#edit-field-recipient-name-value {
+  width: 330px !important;
+}
+
 /* View degree */
 
 .view-degree table {
