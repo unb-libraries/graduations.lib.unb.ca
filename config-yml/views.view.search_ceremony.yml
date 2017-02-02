@@ -659,8 +659,8 @@ display:
           label: ''
           exclude: true
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ field_recipient_name }} {{ field_list_degree }}'
             make_link: true
             path: '/degree/{{ nid }}'
             absolute: false
@@ -849,7 +849,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "Honorary degree awarded to {{ field_recipient_name }} {{ field_list_degree }}<br>\n"
+            text: "Honorary degree awarded to {{ field_recipient_name }}\n"
             make_link: false
             path: ''
             absolute: false
@@ -976,7 +976,7 @@ display:
             use_operator: false
             operator: combine_op
             identifier: combine
-            required: true
+            required: false
             remember: false
             multiple: false
             remember_roles:

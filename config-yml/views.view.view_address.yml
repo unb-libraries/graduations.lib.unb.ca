@@ -60,6 +60,10 @@ display:
           offset: 0
       style:
         type: default
+        options:
+          grouping: {  }
+          row_class: view-address
+          default_row_class: true
       row:
         type: fields
       fields:
@@ -330,7 +334,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '{{ title }} Address'
+            text: '<b>{{ title }} Address</b>'
             make_link: false
             path: ''
             absolute: false
@@ -595,7 +599,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: 'View address'
+      title: ''
       header: {  }
       footer: {  }
       empty: {  }

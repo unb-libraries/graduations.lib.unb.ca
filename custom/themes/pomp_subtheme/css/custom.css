@@ -210,7 +210,13 @@ div.region.region-footer > div {
   vertical-align: top !important;
 }
 
-/* Rules related to "View Degree" view. */
+/* Rules related to "View address" view. */
+
+.view-address .views-field-title b {
+  font-size: 20px !important;
+}
+
+/* Rules related to "View degree" view. */
 
 .view-degree table {
   font-size: 14px !important;
