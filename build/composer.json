@@ -38,7 +38,8 @@
         "patches": {
           "drupal/core": {
             "Allow match-any-word in combined filters": "https://www.drupal.org/files/issues/combine_filter_word-2664530-63.patch",
-            "Reinstate titles for exposed filter blocks": "https://www.drupal.org/files/issues/2720101-7-views-exposed-block-title.diff"
+            "Reinstate titles for exposed filter blocks": "https://www.drupal.org/files/issues/2720101-7-views-exposed-block-title.diff",
+            "Allow for no-link menu items": "https://www.drupal.org/files/allow_empty_menu_path-1543750-13.patch"
           }
         }
     },

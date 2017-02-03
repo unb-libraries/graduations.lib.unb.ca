@@ -26,24 +26,17 @@ input, select {
   height: 36px;
 }
 
-a, a:link {
-  color: var(--pred1);
-}
-
-a:hover, a:focus {
-  text-decoration: underline;
-  color: var(--pred2);
-}
-
 /* Site title */
 
-.site-name a {
+div.site-name a {
   font-size: 40px;
-  color: var(--pgray3) !important;
 }
 
-.site-name a:hover, a:focus {
-  text-decoration: none !important;
+div.site-name a:link, a:visited {
+  color: var(--pgray3);
+}
+
+div#block-pomp-subtheme-branding > div.site-name > a:hover, a:focus {
   color: var(--pred2) !important;
 }
 
@@ -51,6 +44,13 @@ a:hover, a:focus {
 
 li.menu-item a {
   height: 45px !important;
+  color: white !important;
+}
+
+li.menu-item > a:focus {
+  text-decoration: none !important;
+  background-color: #a01300;
+  background: -webkit-linear-gradient(top, #c01700, #a01300);
 }
 
 #main-menu .container ul.menu ul.menu li {
@@ -64,10 +64,6 @@ li.menu-item a {
 
 #main-menu .container ul.menu li > a {
   padding: 10px 20px 10px 10px !important;
-}
-
-#main-menu a:hover, a:focus {
-  text-decoration: none !important;
 }
 
 /* Slideshow */
@@ -118,6 +114,15 @@ div.field-content blockquote {
   right-margin: 2.5em;
 }
 
+div#block-pomp-subtheme-content a:link, a:visited {
+  color: var(--pred1);
+}
+
+div#block-pomp-subtheme-content a:hover, a:focus {
+  text-decoration: underline;
+  color: var(--pred2);
+}
+
 /* Browse-search */
 
 section.featured > div.container {
@@ -163,6 +168,15 @@ div.region.region-footer {
 
 div.region.region-footer > div {
   width: 100% !important;
+}
+
+footer#footer a:link, a:visited {
+  color: var(--pred1);
+}
+
+footer#block-honoraryfooter > a:hover, a:focus {
+  text-decoration: underline;
+  color: var(--pred2);
 }
 
 /* Back to top button */
