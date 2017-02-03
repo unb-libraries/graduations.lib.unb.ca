@@ -72,8 +72,6 @@ li.menu-item a {
 
 /* Slideshow */
 
-
-
 #slideshow {
   margin-bottom: 10px;
 }
@@ -159,6 +157,12 @@ div.region.region-footer {
 
 div.region.region-footer > div {
   width: 100% !important;
+}
+
+/* Back to top button */
+
+a.btn-btt {
+  color: white !important;
 }
 
 /* Browse degrees */
