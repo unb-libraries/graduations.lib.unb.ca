@@ -7,6 +7,8 @@ dependencies:
     - field.field.node.honorary_ceremony.field_ceremony_year
     - field.field.node.honorary_ceremony.field_list_campus
     - field.field.node.honorary_ceremony.field_list_season
+    - field.field.node.honorary_ceremony.field_ref_ceremony_address
+    - field.field.node.honorary_ceremony.field_ref_ceremony_degree
     - node.type.honorary_ceremony
   module:
     - path
@@ -43,6 +45,22 @@ content:
     type: entity_reference_autocomplete
   field_list_season:
     weight: 35
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+  field_ref_ceremony_address:
+    weight: 38
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+  field_ref_ceremony_degree:
+    weight: 37
     settings:
       match_operator: CONTAINS
       size: 60
