@@ -112,6 +112,12 @@ div.view-content {
   padding-top: 20px;
 }
 
+div.field-content blockquote {
+  font-size: 14px;
+  left-margin: 2.5em;
+  right-margin: 2.5em;
+}
+
 /* Browse-search */
 
 section.featured > div.container {
