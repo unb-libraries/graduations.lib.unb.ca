@@ -10,7 +10,7 @@ id: node.honorary_ceremony.field_list_season
 field_name: field_list_season
 entity_type: node
 bundle: honorary_ceremony
-label: 'List season:'
+label: 'Season:'
 description: ''
 required: false
 translatable: false
