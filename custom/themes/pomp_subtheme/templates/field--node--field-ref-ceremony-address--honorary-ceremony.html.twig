@@ -37,6 +37,13 @@
  * @see template_preprocess_field()
  */
 #}
+
+{{ devel_dump(items) }}
+
+{{ '***DEBUG***' }}
+{{ items.0.content['#url'].options.entity.get('field_delivered_by').value }}
+{{ '***DEBUG***' }}
+
 {%
   set classes = [
     'field',
