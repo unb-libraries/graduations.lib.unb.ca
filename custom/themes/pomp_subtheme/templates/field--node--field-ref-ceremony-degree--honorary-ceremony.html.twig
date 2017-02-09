@@ -38,7 +38,7 @@
  */
 #}
 
-{#{ devel_dump(items) }#}
+{{ devel_dump(items) }}
 
 {%
   set classes = [
@@ -60,14 +60,14 @@
     <div{{ attributes.addClass(classes, 'field__items') }}>
       {% for item in items %}
         <div{{ item.attributes.addClass('field__item') }}>
-          {{ item.content }}, delivered by {{ item.content['#url'].options.entity.get('field_delivered_by').value }}
+          {{ item.content }} {{ item.content['#url'].options.entity.get('field_list_degree').value }}
         </div>
       {% endfor %}
     </div>
   {% else %}
     {% for item in items %}
       <div{{ attributes.addClass(classes, 'field__item') }}>
-        {{ item.content }}, delivered by {{ item.content['#url'].options.entity.get('field_delivered_by').value }}
+        {{ item.content }} {{ item.content['#url'].options.entity.get('field_list_degree').value }}
       </div>
     {% endfor %}
   {% endif %}
@@ -79,7 +79,7 @@
     {% endif %}
     {% for item in items %}
       <div{{ item.attributes.addClass('field__item') }}>
-        {{ item.content }}, delivered by {{ item.content['#url'].options.entity.get('field_delivered_by').value }}
+        {{ item.content }} {{ item.content['#url'].options.entity.get('field_list_degree').0.entity.value }}
       </div>
     {% endfor %}
     {% if multiple %}
