@@ -60,7 +60,7 @@
     <div{{ attributes.addClass(classes, 'field__items') }}>
       {% for item in items %}
         <div{{ item.attributes.addClass('field__item') }}>
-          {{ item.content }} {{ item.content['#url'].options.entity.get('field_list_degree').value }}
+          {{ item.content }} {{ item.content['#url'].options.entity.get('field_list_degree').getTarget().getValue() }}
         </div>
       {% endfor %}
     </div>
@@ -79,7 +79,7 @@
     {% endif %}
     {% for item in items %}
       <div{{ item.attributes.addClass('field__item') }}>
-        {{ item.content }} {{ item.content['#url'].options.entity.get('field_list_degree').0.entity.value }}
+        {{ item.content }} {{ item.content['#url'].options.entity.get('field_list_degree').0.getTarget() }}
       </div>
     {% endfor %}
     {% if multiple %}

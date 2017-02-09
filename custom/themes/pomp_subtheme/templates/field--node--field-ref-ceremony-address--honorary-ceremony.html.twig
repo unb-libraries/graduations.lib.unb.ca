@@ -79,7 +79,7 @@
     {% endif %}
     {% for item in items %}
       <div{{ item.attributes.addClass('field__item') }}>
-        {{ item.content }}, delivered by {{ item.content['#url'].options.entity.get('field_delivered_by').value }}
+        {{ item.content }}, delivered by {{ item.content['#url'].options.entity.get('field_delivered_by').0 }}
       </div>
     {% endfor %}
     {% if multiple %}
