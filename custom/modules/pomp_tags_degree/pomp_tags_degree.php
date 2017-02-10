@@ -33,6 +33,17 @@ $nids = $query->execute();
 // Iterate through rows, load node, save node.
 foreach ($nids as $nid) {
   $node = Node::load($nid);
+
+  // POMP-37: Add Cattley attribution.
+  $ora = $node->get('field_orator')->getValue()[0]['value'];
+
+  if (strpos($ora, 'tley') !== false) {
+    $cit = $node->get('field_citation')->getValue()[0]['value'];
+    $cit_new = $cit . '<br><br /><strong>From:</strong> <br />Cattley, Robert E.D.'
+      . ' <em>Honoris causa: the effervescences of a university orator</em>.'
+      . ' Fredericton: UNB Associated Alumnae, 1968.';
+    $node->get('field_citation')->setValue($cit_new);
+  }
   $node->get('field_citation')->format = 'full_html';
   $node->save();
   $sandbox['progress']++;
