@@ -102,6 +102,16 @@ div#edit-actions {
   padding-top: 1em !important;
 }
 
+/* Contact form */
+
+.contact-message-feedback-form input {
+  width: 330px;
+}
+
+input#edit-preview {
+  display: none;
+}
+
 /* Content */
 
 div.view-content {
