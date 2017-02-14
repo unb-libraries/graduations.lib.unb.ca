@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.honorary_ceremony.field_ceremony_notes
     - field.field.node.honorary_ceremony.field_ceremony_type
     - field.field.node.honorary_ceremony.field_ceremony_year
     - field.field.node.honorary_ceremony.field_list_campus
@@ -12,6 +13,7 @@ dependencies:
     - node.type.honorary_ceremony
   module:
     - path
+    - text
 id: node.honorary_ceremony.default
 targetEntityType: node
 bundle: honorary_ceremony
@@ -22,6 +24,13 @@ content:
     weight: 10
     settings: {  }
     third_party_settings: {  }
+  field_ceremony_notes:
+    weight: 39
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
   field_ceremony_type:
     weight: 33
     settings:

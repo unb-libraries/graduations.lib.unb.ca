@@ -999,6 +999,7 @@ display:
             field_ceremony_year: field_ceremony_year
             field_list_campus: field_list_campus
             field_recipient_name: field_recipient_name
+            field_orator: field_orator
             field_delivered_by: field_delivered_by
           plugin_id: combine
         field_recipient_name_value:

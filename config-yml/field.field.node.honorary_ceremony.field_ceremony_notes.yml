@@ -1,0 +1,21 @@
+uuid: 9db31416-792e-4806-98e2-1b3f38b7525d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ceremony_notes
+    - node.type.honorary_ceremony
+  module:
+    - text
+id: node.honorary_ceremony.field_ceremony_notes
+field_name: field_ceremony_notes
+entity_type: node
+bundle: honorary_ceremony
+label: ceremony_notes
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
