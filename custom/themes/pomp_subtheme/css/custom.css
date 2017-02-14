@@ -168,6 +168,16 @@ h1.js-quickedit-page-title.page-title {
   padding: 0px !important;
 }
 
+/* Orations */
+
+div.field--name-field-address-content blockquote {
+  left-margin: 2.5em;
+  right-margin: 2.5em;
+  -webkit-margin-start: 2.5em;
+  -webkit-margin-end: 2.5em;
+  font-size: 14px;
+}
+
 /* Footer */
 
 div.region.region-footer {
