@@ -1,6 +1,6 @@
 uuid: 6c43b238-03ec-4779-892b-f939bbf05f13
 langcode: en
-status: true
+status: false
 dependencies:
   content:
     - 'block_content:basic:bd1f2da5-3455-41e4-bdb5-42ab51eb5036'
@@ -10,8 +10,8 @@ dependencies:
     - pomp_subtheme
 id: slideshowplaceholder_2
 theme: pomp_subtheme
-region: slideshow
-weight: 0
+region: '-1'
+weight: -6
 provider: null
 plugin: 'block_content:bd1f2da5-3455-41e4-bdb5-42ab51eb5036'
 settings:

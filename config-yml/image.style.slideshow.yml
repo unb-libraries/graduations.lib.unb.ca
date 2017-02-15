@@ -3,12 +3,21 @@ langcode: en
 status: true
 dependencies: {  }
 name: slideshow
-label: Slideshow
+label: 'Banner Full (1170x325)'
 effects:
-  21828a45-18e2-406f-a0a2-1d05d8099367:
-    uuid: 21828a45-18e2-406f-a0a2-1d05d8099367
-    id: image_resize
-    weight: 1
+  ea64c641-f30c-4ea4-8eec-ad20bc9a2e82:
+    uuid: ea64c641-f30c-4ea4-8eec-ad20bc9a2e82
+    id: image_scale
+    weight: -10
+    data:
+      width: 1170
+      height: null
+      upscale: true
+  7f94de9a-c1ca-492e-b660-76665dbf082f:
+    uuid: 7f94de9a-c1ca-492e-b660-76665dbf082f
+    id: image_crop
+    weight: 2
     data:
       width: 1170
       height: 325
+      anchor: center-top

@@ -1,0 +1,19 @@
+uuid: a22d6863-4519-47cd-b9b0-84beec9cca62
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_path
+    - node.type.honorary_banner
+id: node.honorary_banner.field_link_path
+field_name: field_link_path
+entity_type: node
+bundle: honorary_banner
+label: 'Link Path'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

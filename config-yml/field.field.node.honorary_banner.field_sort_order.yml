@@ -1,0 +1,23 @@
+uuid: fff130fb-6d26-48d6-81d3-e3288484d370
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sort_order
+    - node.type.honorary_banner
+id: node.honorary_banner.field_sort_order
+field_name: field_sort_order
+entity_type: node
+bundle: honorary_banner
+label: 'Sort Order'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: 50
+  prefix: ''
+  suffix: ''
+field_type: integer

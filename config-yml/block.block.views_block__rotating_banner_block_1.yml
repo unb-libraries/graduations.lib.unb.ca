@@ -1,0 +1,24 @@
+uuid: 965a4db5-8889-462d-8b50-203db1dc1ceb
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.rotating_banner
+  module:
+    - views
+  theme:
+    - pomp_subtheme
+id: views_block__rotating_banner_block_1
+theme: pomp_subtheme
+region: slideshow
+weight: 0
+provider: null
+plugin: 'views_block:rotating_banner-block_1'
+settings:
+  id: 'views_block:rotating_banner-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

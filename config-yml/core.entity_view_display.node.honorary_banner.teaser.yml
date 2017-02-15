@@ -1,0 +1,17 @@
+uuid: c2f7d775-f4a6-4c28-bc98-5dd775fd8d00
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.honorary_banner
+  module:
+    - user
+id: node.honorary_banner.teaser
+targetEntityType: node
+bundle: honorary_banner
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden: {  }

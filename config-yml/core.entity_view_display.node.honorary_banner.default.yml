@@ -1,0 +1,43 @@
+uuid: 3d1a9da8-d3e5-4c82-8509-a774f838eab1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.honorary_banner.field_banner_image
+    - field.field.node.honorary_banner.field_link_path
+    - field.field.node.honorary_banner.field_sort_order
+    - node.type.honorary_banner
+  module:
+    - image
+    - user
+id: node.honorary_banner.default
+targetEntityType: node
+bundle: honorary_banner
+mode: default
+content:
+  field_banner_image:
+    weight: 101
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_link_path:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_sort_order:
+    weight: 103
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+  links:
+    weight: 100
+hidden: {  }
