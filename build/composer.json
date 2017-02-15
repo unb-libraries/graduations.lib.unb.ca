@@ -63,7 +63,9 @@
         "drush/drush": "~8.0",
         "drupal/token_filter": "1.0-beta1",
         "drupal/zircon": "1.0-rc1",
-        "cweagans/composer-patches": "~1.0"
+        "cweagans/composer-patches": "~1.0",
+        "drupal/views_slideshow": "4.3"
+
     },
     "require-dev": {
         "behat/mink": "~1.7",
