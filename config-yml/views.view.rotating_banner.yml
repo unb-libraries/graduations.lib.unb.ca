@@ -128,7 +128,7 @@ display:
                     field_sort_order: 0
                   views_slideshow_pager_fields_hover: 0
               views_slideshow_controls:
-                enable: false
+                enable: true
                 weight: '1'
                 hide_on_single_slide: '0'
                 type: views_slideshow_controls_text
