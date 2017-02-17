@@ -114,10 +114,6 @@ input#edit-preview {
 
 /* Content */
 
-div.view-content {
-  padding-top: 20px;
-}
-
 div.field-content blockquote {
   font-size: 14px;
   left-margin: 2.5em;

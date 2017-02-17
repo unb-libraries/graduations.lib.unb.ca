@@ -37,8 +37,11 @@
         },
         "patches": {
           "drupal/core": {
-            "Allow match-any-word in combined filters": "https://www.drupal.org/files/issues/combine_filter_word-2664530-63.patch",
-            "Allow for no-link menu items": "https://www.drupal.org/files/issues/allow-menu-items-without-path-1543750-124.patch"
+            "Allow for no-link menu items": "https://www.drupal.org/files/issues/allow-menu-items-without-path-1543750-124.patch",
+            "Allow for titles on exposed block filters": "https://www.drupal.org/files/issues/2720101-7-views-exposed-block-title.diff"
+          },
+          "drupal/views_slideshow": {
+            "Eliminate views help error": "https://www.drupal.org/files/issues/Undefined_variable_output_2845199_2.patch"
           }
         }
     },
@@ -50,10 +53,26 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "malsup/jquery.cycle",
+                "version": "master",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://malsup.github.io/jquery.cycle.all.js",
+                    "type": "file"
+                },
+                "require": {
+                    "composer/installers": "^1.0.20"
+                }
+            }
         }
     ],
     "require": {
         "composer/installers": "^1.0.20",
+        "oomphinc/composer-installers-extender": "1.1.1",
         "drupal-composer/drupal-scaffold": "^2.0.1",
         "drupal/config_update": "1.1",
         "drupal/console": "~1.0",
@@ -65,8 +84,7 @@
         "drupal/zircon": "1.0-rc1",
         "cweagans/composer-patches": "~1.0",
         "drupal/views_slideshow": "4.3",
-        "drupal/advanced_help": "1.x-dev"
-
+        "malsup/jquery.cycle": "master"
     },
     "require-dev": {
         "behat/mink": "~1.7",
