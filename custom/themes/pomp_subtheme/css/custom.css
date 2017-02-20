@@ -95,10 +95,15 @@ li.menu-item > a:focus {
 }
 
 #views_slideshow_controls_text_previous_rotating_banner-block_1 a {
+  position: absolute;
   visibility: hidden;
 }
 
 #views_slideshow_controls_text_previous_rotating_banner-block_1 a:after {
+}
+
+#views_slideshow_controls_text_previous_rotating_banner-block_1 a:after {
+  visibility: hidden;
   position: absolute;
   z-index: 100;
   top: 120px;
@@ -107,7 +112,7 @@ li.menu-item > a:focus {
   font-size: 2em;
   content: "\f137";
   color: white;
-  opacity: .7;
+  opacity: .7 !important;
 }
 
 #views_slideshow_controls_text_previous_rotating_banner-block_1 a:hover:after {
@@ -115,10 +120,12 @@ li.menu-item > a:focus {
 }
 
 #views_slideshow_controls_text_next_rotating_banner-block_1 a {
+  position: absolute;
   visibility: hidden;
 }
 
 #views_slideshow_controls_text_next_rotating_banner-block_1 a:after {
+  visibility: hidden;
   position: absolute;
   z-index: 100;
   top: 120px;
@@ -127,7 +134,7 @@ li.menu-item > a:focus {
   font-size: 2em;
   content: "\f138";
   color: white;
-  opacity: .7;
+  opacity: .7 !important;
 }
 
 #views_slideshow_controls_text_next_rotating_banner-block_1 a:hover:after {
