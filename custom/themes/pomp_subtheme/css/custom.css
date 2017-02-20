@@ -86,10 +86,6 @@ li.menu-item > a:focus {
   width: 970px;
 }
 
-#views_slideshow_controls_text_rotating_banner-block_1:hover a:after {
-  visibility: visible !important;
-}
-
 #views_slideshow_controls_text_pause_rotating_banner-block_1 a {
   display: none;
 }
@@ -103,7 +99,7 @@ li.menu-item > a:focus {
 }
 
 #views_slideshow_controls_text_previous_rotating_banner-block_1 a:after {
-  visibility: hidden;
+  visibility: visible !important;
   position: absolute;
   z-index: 100;
   top: 120px;
@@ -125,7 +121,7 @@ li.menu-item > a:focus {
 }
 
 #views_slideshow_controls_text_next_rotating_banner-block_1 a:after {
-  visibility: hidden;
+  visibility: visible !important;
   position: absolute;
   z-index: 100;
   top: 120px;
