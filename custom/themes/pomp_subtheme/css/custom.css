@@ -77,6 +77,63 @@ li.menu-item > a:focus {
   border-bottom: 10px;
 }
 
+#views_slideshow_controls_text_rotating_banner-block_1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 50;
+  height: 270px;
+  width: 970px;
+}
+
+#views_slideshow_controls_text_rotating_banner-block_1:hover a:after {
+  visibility: visible !important;
+}
+
+#views_slideshow_controls_text_pause_rotating_banner-block_1 a {
+  display: none;
+}
+
+#views_slideshow_controls_text_previous_rotating_banner-block_1 a {
+  visibility: hidden;
+}
+
+#views_slideshow_controls_text_previous_rotating_banner-block_1 a:after {
+  position: absolute;
+  z-index: 100;
+  top: 120px;
+  left: 10px;
+  font-family: FontAwesome;
+  font-size: 2em;
+  content: "\f137";
+  color: white;
+  opacity: .7;
+}
+
+#views_slideshow_controls_text_previous_rotating_banner-block_1 a:hover:after {
+  opacity: 1;
+}
+
+#views_slideshow_controls_text_next_rotating_banner-block_1 a {
+  visibility: hidden;
+}
+
+#views_slideshow_controls_text_next_rotating_banner-block_1 a:after {
+  position: absolute;
+  z-index: 100;
+  top: 120px;
+  left: 935px;
+  font-family: FontAwesome;
+  font-size: 2em;
+  content: "\f138";
+  color: white;
+  opacity: .7;
+}
+
+#views_slideshow_controls_text_next_rotating_banner-block_1 a:hover:after {
+  opacity: 1;
+}
+
 /* Filters */
 
 div.view-filters {

@@ -5,6 +5,7 @@ dependencies:
   config:
     - views.view.rotating_banner
   module:
+    - system
     - views
   theme:
     - pomp_subtheme
@@ -21,4 +22,9 @@ settings:
   label_display: '0'
   views_label: ''
   items_per_page: none
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/about\r\n/traditions\r\n/orators\r\n/acknowledgements\r\n"
+    negate: false
+    context_mapping: {  }

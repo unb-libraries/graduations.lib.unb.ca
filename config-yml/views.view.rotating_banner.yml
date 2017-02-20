@@ -67,8 +67,8 @@ display:
           slideshow_type: views_slideshow_cycle
           views_slideshow_cycle:
             effect: fade
-            transition_advanced: 0
-            timeout: '5000'
+            transition_advanced: 1
+            timeout: '10000'
             speed: '700'
             delay: '0'
             sync: 1
@@ -91,10 +91,6 @@ display:
             cleartypenobg: 0
           widgets:
             top:
-              views_slideshow_slide_counter:
-                enable: false
-                weight: '1'
-                hide_on_single_slide: '0'
               views_slideshow_pager:
                 enable: false
                 weight: '1'
@@ -106,16 +102,16 @@ display:
                     field_banner_image_1: 0
                     field_sort_order: 0
                   views_slideshow_pager_fields_hover: 0
+              views_slideshow_slide_counter:
+                enable: false
+                weight: '1'
+                hide_on_single_slide: '0'
               views_slideshow_controls:
                 enable: false
                 weight: '1'
                 hide_on_single_slide: '0'
                 type: views_slideshow_controls_text
             bottom:
-              views_slideshow_slide_counter:
-                enable: false
-                weight: '1'
-                hide_on_single_slide: '0'
               views_slideshow_pager:
                 enable: false
                 weight: '1'
@@ -127,6 +123,10 @@ display:
                     field_banner_image_1: 0
                     field_sort_order: 0
                   views_slideshow_pager_fields_hover: 0
+              views_slideshow_slide_counter:
+                enable: false
+                weight: '1'
+                hide_on_single_slide: '0'
               views_slideshow_controls:
                 enable: true
                 weight: '1'
