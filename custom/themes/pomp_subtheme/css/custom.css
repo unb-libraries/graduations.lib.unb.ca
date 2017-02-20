@@ -112,7 +112,7 @@ li.menu-item > a:focus {
   font-size: 2em;
   content: "\f137";
   color: white;
-  opacity: .7 !important;
+  opacity: .7;
 }
 
 #views_slideshow_controls_text_previous_rotating_banner-block_1 a:hover:after {
@@ -134,7 +134,7 @@ li.menu-item > a:focus {
   font-size: 2em;
   content: "\f138";
   color: white;
-  opacity: .7 !important;
+  opacity: .7;
 }
 
 #views_slideshow_controls_text_next_rotating_banner-block_1 a:hover:after {
