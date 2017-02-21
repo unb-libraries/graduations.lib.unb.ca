@@ -129,7 +129,7 @@ li.menu-item > a:focus {
   position: absolute;
   z-index: 100;
   top: 45%;
-  left: 96.5%;
+  right: 1%;
   font-family: FontAwesome;
   font-size: 2em;
   content: "\f138";
