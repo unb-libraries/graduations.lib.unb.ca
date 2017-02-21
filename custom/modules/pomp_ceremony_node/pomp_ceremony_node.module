@@ -24,3 +24,13 @@ function pomp_ceremony_node_theme($existing, $type, $theme, $path) {
     ),
   );
 }
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+
+function pomp_ceremony_node_preprocess_node__honorary_ceremony(&$variables) {
+  $node = $variables['elements']['#node'];
+
+  $variables['cerem_title'] = $node->field_ceremony_year->value;
+}
