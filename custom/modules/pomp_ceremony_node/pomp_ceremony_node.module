@@ -32,5 +32,10 @@ function pomp_ceremony_node_theme($existing, $type, $theme, $path) {
 function pomp_ceremony_node_preprocess_node__honorary_ceremony(&$variables) {
   $node = $variables['elements']['#node'];
 
-  $variables['cerem_title'] = $node->field_ceremony_year->value;
+  $year = $node->field_ceremony_year->value;
+  $year_str = (string)$year;
+  $variables['year'] = $year_str;
+  $camp_id = $node->field_list_campus[0]->getValue()['target_id'];
+  $variables['campus'] = taxonomy_term_load($camp_id)->getName();
+  $variables['ceremony'] = $node->field_ceremony_type->value;
 }
