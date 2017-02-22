@@ -10,7 +10,7 @@ id: node.honorary_degree.field_ref_degree_ceremony
 field_name: field_ref_degree_ceremony
 entity_type: node
 bundle: honorary_degree
-label: ref_degree_ceremony
+label: 'Ceremony:'
 description: ''
 required: false
 translatable: false

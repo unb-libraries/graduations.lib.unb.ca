@@ -18,18 +18,12 @@ dependencies:
     - node.type.honorary_degree
   module:
     - image
-    - path
     - text
 id: node.honorary_degree.default
 targetEntityType: node
 bundle: honorary_degree
 mode: default
 content:
-  created:
-    type: datetime_timestamp
-    weight: 2
-    settings: {  }
-    third_party_settings: {  }
   field_citation:
     weight: 26
     settings:
@@ -110,36 +104,10 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-  path:
-    type: path
-    weight: 5
-    settings: {  }
-    third_party_settings: {  }
-  promote:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 3
-    third_party_settings: {  }
-  sticky:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 4
-    third_party_settings: {  }
-  title:
-    type: string_textfield
-    weight: 0
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  uid:
-    type: entity_reference_autocomplete
-    weight: 1
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  sticky: true
+  title: true
+  uid: true

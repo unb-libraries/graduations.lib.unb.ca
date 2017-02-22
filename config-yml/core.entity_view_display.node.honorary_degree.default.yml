@@ -102,8 +102,5 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-  links:
-    weight: 0
-    settings: {  }
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  links: true

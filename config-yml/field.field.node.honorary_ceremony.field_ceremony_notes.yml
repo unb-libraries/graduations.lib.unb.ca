@@ -11,7 +11,7 @@ id: node.honorary_ceremony.field_ceremony_notes
 field_name: field_ceremony_notes
 entity_type: node
 bundle: honorary_ceremony
-label: ceremony_notes
+label: 'Notes:'
 description: ''
 required: false
 translatable: false

@@ -10,7 +10,7 @@ id: node.honorary_degree.field_list_gender
 field_name: field_list_gender
 entity_type: node
 bundle: honorary_degree
-label: 'List gender:'
+label: 'Gender:'
 description: ''
 required: false
 translatable: false
