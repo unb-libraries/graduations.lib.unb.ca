@@ -53,4 +53,8 @@ function pomp_ceremony_node_preprocess_node__honorary_ceremony(&$variables) {
   $variables['degrees_count'] = count($node->get('field_ref_ceremony_degree'));
   $degrees_table = views_embed_view('list_ceremony_degrees', 'block_1', $node->id());
   $variables['degrees_output'] = \Drupal::service('renderer')->render($degrees_table);
+
+  $variables['addresses_count'] = count($node->get('field_ref_ceremony_address'));
+  $addresses_table = views_embed_view('list_ceremony_addresses', 'block_1', $node->id());
+  $variables['addresses_output'] = \Drupal::service('renderer')->render($addresses_table);
 }
