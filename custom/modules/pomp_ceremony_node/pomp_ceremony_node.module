@@ -5,6 +5,14 @@
  * Contains pomp_ceremony_node.module
  */
 
+ use Drupal\Component\Serialization\Json;
+ use Drupal\Core\Routing\RouteMatchInterface;
+ use Drupal\field_collection\Entity\FieldCollectionItem;
+ use Drupal\node\Entity\Node;
+ use Drupal\views\Views;
+ use Drupal\Core\Link;
+ use Drupal\Core\Url;
+
 /**
 * Implements hook_theme().
 */
@@ -31,6 +39,7 @@ function pomp_ceremony_node_theme($existing, $type, $theme, $path) {
 
 function pomp_ceremony_node_preprocess_node__honorary_ceremony(&$variables) {
   $node = $variables['elements']['#node'];
+  $variables['id'] = $node->id();
 
   $year = $node->field_ceremony_year->value;
   $year_str = (string)$year;
@@ -40,4 +49,8 @@ function pomp_ceremony_node_preprocess_node__honorary_ceremony(&$variables) {
   $variables['campus'] = taxonomy_term_load($camp_id)->getName();
 
   $variables['ceremony'] = $node->field_ceremony_type->value;
+
+  $variables['degrees_count'] = count($node->get('field_ref_ceremony_degree'));
+  $degrees_table = views_embed_view('list_ceremony_degrees', 'block_1', $node->id());
+  $variables['degrees_output'] = \Drupal::service('renderer')->render($degrees_table);
 }
