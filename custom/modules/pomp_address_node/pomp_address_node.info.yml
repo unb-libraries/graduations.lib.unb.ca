@@ -1,0 +1,9 @@
+
+name: POMP Address Node
+type: module
+description: Address node formatting
+core: 8.x
+package: POMP
+
+dependencies:
+  - drupal:views
