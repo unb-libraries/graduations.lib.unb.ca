@@ -371,7 +371,7 @@ display:
             alter_text: true
             text: '{{ field_list_campus }} {{ field_ceremony_type }}'
             make_link: true
-            path: '/ceremony/{{ nid }}'
+            path: '/node/{{ nid }}'
             absolute: false
             external: false
             replace_spaces: false
