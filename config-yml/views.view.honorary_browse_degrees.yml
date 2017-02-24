@@ -252,7 +252,7 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: true
+            make_link: false
             path: '/degree/{{ nid }}'
             absolute: false
             external: false
@@ -291,7 +291,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: false
+            link_to_entity: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -445,7 +445,7 @@ display:
             alter_text: true
             text: '{{ field_ceremony_year }} {{ field_list_campus }} {{ field_ceremony_type }}'
             make_link: true
-            path: '/ceremony/{{ field_ref_degree_ceremony }}'
+            path: '/node/{{ field_ref_degree_ceremony }}'
             absolute: false
             external: false
             replace_spaces: false

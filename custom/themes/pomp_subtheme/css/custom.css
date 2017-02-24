@@ -180,8 +180,20 @@ input#edit-preview {
 
 div.field-content blockquote {
   font-size: 14px;
-  left-margin: 2.5em;
-  right-margin: 2.5em;
+  margin-left: 2.5em ;
+  margin-right: 2.5em;
+  -webkit-margin-before: 2.5em;
+  -webkit-margin-after: 2.5em;
+
+}
+
+div.view-content blockquote {
+  font-size: 14px;
+  margin-left: 2.5em ;
+  margin-right: 2.5em;
+  -webkit-margin-before: 2.5em;
+  -webkit-margin-after: 2.5em;
+
 }
 
 div#block-pomp-subtheme-content a:link, a:visited {
@@ -228,16 +240,6 @@ h1.js-quickedit-page-title.page-title {
   padding: 0px !important;
 }
 
-/* Orations */
-
-div.field--name-field-address-content blockquote {
-  left-margin: 2.5em;
-  right-margin: 2.5em;
-  -webkit-margin-start: 2.5em;
-  -webkit-margin-end: 2.5em;
-  font-size: 14px;
-}
-
 /* Footer */
 
 div.region.region-footer {
@@ -270,7 +272,7 @@ a.btn-btt {
 .browse-degree table {
   font-size: 14px !important;
   table-layout: fixed !important;
-  width: 1000px !important;
+  width: 100% !important;
   border: none !important;
 }
 
@@ -281,7 +283,7 @@ a.btn-btt {
 }
 
 .browse-degree tr td:first-child {
-  width: 800px !important;
+  width: 80% !important;
   vertical-align: top !important;
   text-align: left !important;
 }
