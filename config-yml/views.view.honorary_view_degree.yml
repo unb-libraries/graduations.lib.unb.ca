@@ -801,7 +801,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<table>\n  <tr>\n    <td>\n      <strong>{{ title }} </strong><span>{{ field_list_degree }}</span>\n       <p>Awarded at {{ field_ceremony_type }}</p>\n    </td>\n    <td>\n    </td>\n  </tr>\n</table>\n<b>Orator:</b> {{ field_orator }} <br><br> \n<b>Citation:</b> \n{{ field_citation }}\n"
+            text: "{{ field_citation }}\n"
             make_link: false
             path: ''
             absolute: false
