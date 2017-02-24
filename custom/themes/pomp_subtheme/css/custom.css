@@ -193,10 +193,6 @@ div#block-pomp-subtheme-content a:hover, a:focus {
   color: var(--pred2);
 }
 
-#block-pomp-subtheme-page-title > h1.js-quickedit-page-title {
-  display: none;
-}
-
 /* Browse-search */
 
 section.featured > div.container {
