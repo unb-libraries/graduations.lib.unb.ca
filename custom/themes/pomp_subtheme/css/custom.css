@@ -98,9 +98,6 @@ li.menu-item > a:focus {
 }
 
 #views_slideshow_controls_text_previous_rotating_banner-block_1 a:after {
-}
-
-#views_slideshow_controls_text_previous_rotating_banner-block_1 a:after {
   visibility: visible !important;
   position: absolute;
   z-index: 100;
@@ -203,6 +200,10 @@ div#block-pomp-subtheme-content a:link, a:visited {
 div#block-pomp-subtheme-content a:hover, a:focus {
   text-decoration: underline;
   color: var(--pred2);
+}
+
+.template-ceremony {
+  font-size: 16px !important;
 }
 
 /* Browse-search */

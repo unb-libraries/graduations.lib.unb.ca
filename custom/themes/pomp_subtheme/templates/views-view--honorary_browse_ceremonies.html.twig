@@ -70,6 +70,8 @@
   </div>
 {% endif %}
 
+<br>
+
 {% if attachment_before %}
  <div class="attachment attachment-before">
    {{ attachment_before }}
@@ -77,7 +79,6 @@
 {% endif %}
 
 {% if rows %}
-<br>
  <div class="view-content">
    {{ rows }}
  </div>
@@ -87,9 +88,11 @@
  </div>
 {% endif %}
 
+<br>
+
 {% if footer %}
 <div class="view-footer">
-  <br>{{ footer }}
+  {{ footer }}
 </div>
 {% endif %}
 
