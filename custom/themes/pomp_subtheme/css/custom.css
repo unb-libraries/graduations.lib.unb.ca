@@ -30,17 +30,19 @@ input, select {
 
 div.site-name a {
   font-size: 40px;
-}
-
-div.site-name a:link, a:visited {
-  color: var(--pgray3);
+  font-family: 'oswaldregular';
 }
 
 div#block-pomp-subtheme-branding > div.site-name > a:hover, a:focus {
   color: var(--pred2) !important;
+  text-decoration: none;
 }
 
 /* Menu. */
+
+#main-menu ul.menu {
+  border: none !important;
+}
 
 li.menu-item a {
   height: 45px !important;
