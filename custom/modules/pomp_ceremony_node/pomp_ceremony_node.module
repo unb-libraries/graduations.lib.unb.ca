@@ -42,19 +42,17 @@ function pomp_ceremony_node_preprocess_node__honorary_ceremony(&$variables) {
   $variables['id'] = $node->id();
 
   $year = $node->field_ceremony_year->value;
-  $year_str = (string)$year;
-  $variables['year'] = $year_str;
+  $variables['year'] = (string)$year;
 
   $camp_id = $node->field_list_campus[0]->getValue()['target_id'];
   $variables['campus'] = taxonomy_term_load($camp_id)->getName();
 
   $variables['ceremony'] = $node->field_ceremony_type->value;
+  $variables['notes'] = $node->field_ceremony_notes->value;
 
-  $variables['degrees_count'] = count($node->get('field_ref_ceremony_degree'));
   $degrees_table = views_embed_view('list_ceremony_degrees', 'block_1', $node->id());
   $variables['degrees_output'] = \Drupal::service('renderer')->render($degrees_table);
 
-  $variables['addresses_count'] = count($node->get('field_ref_ceremony_address'));
   $addresses_table = views_embed_view('list_ceremony_addresses', 'block_1', $node->id());
   $variables['addresses_output'] = \Drupal::service('renderer')->render($addresses_table);
 }
