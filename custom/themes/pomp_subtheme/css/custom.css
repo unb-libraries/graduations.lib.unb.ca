@@ -138,6 +138,12 @@ li.menu-item > a:focus {
   opacity: 1;
 }
 
+/* Main content */
+
+#main > div {
+  padding: 0px !important;
+}
+
 /* Filters */
 
 div.view-filters {
@@ -171,6 +177,21 @@ div#edit-actions {
 
 input#edit-preview {
   display: none;
+}
+
+/* Back to ceremony link */
+
+.template-ceremony-link div span a:before {
+  font-family: FontAwesome;
+  content: "\f137   ";
+}
+
+.template-ceremony-link div span a:hover {
+  text-decoration: none !important;
+}
+
+.template-ceremony-link div span a:focus {
+  text-decoration: none !important;
 }
 
 /* Content */
@@ -228,17 +249,6 @@ section.featured > div.container {
 
 #block-exposedformsearch-ceremonypage-1 {
   margin-left: 10px;
-}
-
-/* Search-ceremony */
-
-h1.js-quickedit-page-title.page-title {
-}
-
-/* Main content */
-
-#main > div {
-  padding: 0px !important;
 }
 
 /* Footer */
