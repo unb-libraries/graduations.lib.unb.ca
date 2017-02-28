@@ -69,6 +69,13 @@ li.menu-item > a:focus, li.menu-item > a:hover {
   padding: 10px 20px 10px 10px !important;
 }
 
+#main-menu .container ul.menu li:first-child > a {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    -webkit-border-top-left-radius: 0px;
+    -webkit-border-bottom-left-radius: 0px;
+}
+
 /* Slideshow */
 
 #slideshow {
