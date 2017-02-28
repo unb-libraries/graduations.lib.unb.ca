@@ -6,6 +6,7 @@ body {
   --pgray3: #555555;
   --pred1:  #C01700;
   --pred2:  #880404;
+  --pred3:  #A01300;
 }
 
 /* Global */
@@ -49,14 +50,14 @@ li.menu-item a {
   color: white !important;
 }
 
-li.menu-item > a:focus {
+li.menu-item > a:focus, li.menu-item > a:hover {
   text-decoration: none !important;
-  background-color: #a01300;
-  background: -webkit-linear-gradient(top, #c01700, #a01300);
+  background-color: var(--pred3) !important;
+  background: -webkit-linear-gradient(top, var(--pred1), var(--pred3)) !important;
 }
 
 #main-menu .container ul.menu ul.menu li {
-  width: 300px !important;
+  width: 220px !important;
 }
 
 #main-menu {
