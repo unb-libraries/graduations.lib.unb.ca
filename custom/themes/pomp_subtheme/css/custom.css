@@ -205,23 +205,23 @@ input#edit-preview {
 }
 
 /* Content */
-
+/*
 div.field-content blockquote {
   font-size: 14px;
   margin-left: 2.5em ;
   margin-right: 2.5em;
-  -webkit-margin-before: 2.5em;
-  -webkit-margin-after: 2.5em;
-
 }
 
 div.view-content blockquote {
   font-size: 14px;
   margin-left: 2.5em ;
   margin-right: 2.5em;
-  -webkit-margin-before: 2.5em;
-  -webkit-margin-after: 2.5em;
-
+}
+*/
+#block-pomp-subtheme-content blockquote {
+  margin-left: 2.5em;
+  margin-right: 2.5em;
+  font-size: 14px
 }
 
 div#block-pomp-subtheme-content a:link, a:visited {
