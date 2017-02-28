@@ -39,7 +39,7 @@ function pomp_degree_node_preprocess_node__honorary_degree(&$variables) {
   $deg_id = $node->field_list_degree[0]->getValue()['target_id'];
   $degree = taxonomy_term_load($deg_id);
   $variables['degree'] = $degree->getName();
-  $variables['degree_full'] = $degree->get('field_full_name')->getValue();
+  $variables['degree_full'] = $degree->get('field_full_name')->value;
 
   $ceremony = views_embed_view('list_ceremony', 'block_1', 'all', $node->id());
   $variables['ceremony_output'] = \Drupal::service('renderer')->render($ceremony);
