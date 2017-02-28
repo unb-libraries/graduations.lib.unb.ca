@@ -204,20 +204,6 @@ input#edit-preview {
   text-decoration: none !important;
 }
 
-/* Content */
-/*
-div.field-content blockquote {
-  font-size: 14px;
-  margin-left: 2.5em ;
-  margin-right: 2.5em;
-}
-
-div.view-content blockquote {
-  font-size: 14px;
-  margin-left: 2.5em ;
-  margin-right: 2.5em;
-}
-*/
 #block-pomp-subtheme-content blockquote {
   margin-left: 2.5em;
   margin-right: 2.5em;
