@@ -36,6 +36,7 @@ div.site-name a {
 
 div#block-pomp-subtheme-branding > div.site-name > a:hover, a:focus {
   color: var(--pred2) !important;
+  color: #880404 !important;
   text-decoration: none;
 }
 
@@ -52,7 +53,7 @@ li.menu-item a {
 
 li.menu-item > a:focus, li.menu-item > a:hover {
   text-decoration: none !important;
-  background-color: var(--pred3) !important;
+  background-color: #A01300 !important;
   background: -webkit-linear-gradient(top, var(--pred1), var(--pred3)) !important;
 }
 
@@ -158,6 +159,7 @@ li.menu-item > a:focus, li.menu-item > a:hover {
 
 div.view-filters {
   background-color: var(--pgray1);
+  background-color: #F0F0F0;
   margin-top: 10px;
   margin-bottom: 20px;
   padding: 0px 14px;
@@ -212,11 +214,13 @@ input#edit-preview {
 
 div#block-pomp-subtheme-content a:link, a:visited {
   color: var(--pred1);
+  color: #C01700;
 }
 
 div#block-pomp-subtheme-content a:hover, a:focus {
   text-decoration: underline;
   color: var(--pred2);
+  color: #880404;
 }
 
 .template-ceremony {
@@ -241,6 +245,7 @@ section.featured > div.container {
   padding: 20px;
   width: 570px;
   background-color: var(--pgray1);
+  background-color: #F0F0F0;
 }
 
 #block-exposedformsearch-ceremonypage-1 {
@@ -252,6 +257,7 @@ section.featured > div.container {
 div.region.region-footer {
   padding-top: 20px;
   border-top: 1px dotted var(--pgray2);
+  border-top: 1px dotted #DADADA;
   font-size: 12px;
 }
 
@@ -261,11 +267,13 @@ div.region.region-footer > div {
 
 footer#footer a:link, a:visited {
   color: var(--pred1);
+  color: #C01700;
 }
 
 footer#block-honoraryfooter > a:hover, a:focus {
   text-decoration: underline;
   color: var(--pred2);
+  color: #880404;
 }
 
 /* Back to top button */
@@ -372,6 +380,7 @@ div.floated-fig {
   margin: 10px;
   padding: 10px;
   background: var(--pgray1);
+  background: #F0F0F0;
 }
 
 .view-degree figure {
