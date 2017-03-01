@@ -207,6 +207,7 @@ input#edit-preview {
 }
 
 #block-pomp-subtheme-content blockquote {
+  margin-top: 20px;
   margin-left: 2.5em;
   margin-right: 2.5em;
   font-size: 14px
