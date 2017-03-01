@@ -643,7 +643,7 @@ display:
           expose:
             label: ''
           plugin_id: standard
-      title: 'Browse Graduation Ceremonies'
+      title: 'BROWSE GRADUATION CEREMONIES'
       header:
         result:
           id: result

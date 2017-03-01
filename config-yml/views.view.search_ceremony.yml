@@ -1102,7 +1102,7 @@ display:
           expose:
             label: ''
           plugin_id: standard
-      title: Search
+      title: SEARCH
       header: {  }
       footer: {  }
       empty: {  }

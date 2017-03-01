@@ -1134,7 +1134,7 @@ display:
         operator: AND
         groups:
           1: AND
-      title: 'Browse Honorary Degrees'
+      title: 'BROWSE HONORARY DEGREES'
     cache_metadata:
       max-age: -1
       contexts:

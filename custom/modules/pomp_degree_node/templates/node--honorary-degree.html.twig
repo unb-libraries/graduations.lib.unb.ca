@@ -4,7 +4,9 @@
   <h1><b>{{ recipient }}</b></h1>
   <h2>Degree conferred: {{ degree_full }} ({{ degree }})</h2>
 
-  <h2>Orator: {{ orator }}</h2>
+  {% if orator %}
+    <h2>Orator: {{ orator }}</h2>
+  {% endif %}
 
   {{ citation_output }}
 </div>
