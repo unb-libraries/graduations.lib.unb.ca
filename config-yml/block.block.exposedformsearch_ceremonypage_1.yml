@@ -12,7 +12,7 @@ dependencies:
 id: exposedformsearch_ceremonypage_1
 theme: pomp_subtheme
 region: featured
-weight: 0
+weight: -8
 provider: null
 plugin: 'views_exposed_filter_block:search_ceremony-page_1'
 settings:
