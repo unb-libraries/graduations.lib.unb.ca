@@ -1,8 +1,8 @@
 {
     "authors": [
         {
-            "name": "",
-            "role": ""
+            "name": "UNB Libraries libsupport@unb.ca",
+            "role": "Creator"
         }
     ],
     "autoload": {
@@ -15,6 +15,7 @@
     },
     "description": "Project definition for honorary.lib.unb.ca",
     "extra": {
+        "enable-patching": true,
         "installer-paths": {
             "core": [
                 "type:drupal-core"
@@ -45,7 +46,7 @@
           }
         }
     },
-    "license": "GPL-2.0+",
+    "license": "MIT",
     "minimum-stability": "dev",
     "name": "unblibraries/honorary.lib.unb.ca",
     "prefer-stable": true,
