@@ -1,0 +1,73 @@
+uuid: d678fa3e-f13e-4422-b45c-813262e16717
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.honorary_ceremony.field_ceremony_notes
+    - field.field.node.honorary_ceremony.field_ceremony_type
+    - field.field.node.honorary_ceremony.field_ceremony_year
+    - field.field.node.honorary_ceremony.field_list_campus
+    - field.field.node.honorary_ceremony.field_list_season
+    - field.field.node.honorary_ceremony.field_ref_ceremony_address
+    - field.field.node.honorary_ceremony.field_ref_ceremony_degree
+    - node.type.honorary_ceremony
+  module:
+    - text
+    - user
+id: node.honorary_ceremony.search_index
+targetEntityType: node
+bundle: honorary_ceremony
+mode: search_index
+content:
+  field_ceremony_notes:
+    weight: 109
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_ceremony_type:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_ceremony_year:
+    weight: 104
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+  field_list_campus:
+    weight: 106
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_list_season:
+    weight: 105
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_ref_ceremony_address:
+    weight: 108
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_ref_ceremony_degree:
+    weight: 107
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+hidden:
+  links: true

@@ -1,0 +1,18 @@
+uuid: e2f6c4e6-520f-4436-a8bc-81e32770b26f
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_db
+id: pomp_db_search_server
+name: 'POMP DB search server'
+description: ''
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  database_text: ''
+  min_chars: 3
+  partial_matches: true
+  autocomplete:
+    suggest_suffix: true
+    suggest_words: true

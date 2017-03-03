@@ -12,7 +12,7 @@ dependencies:
 id: browse
 theme: pomp_subtheme
 region: featured
-weight: -9
+weight: -8
 provider: null
 plugin: 'block_content:106d8511-32e1-46f0-a0ed-2b1eed1dd40d'
 settings:

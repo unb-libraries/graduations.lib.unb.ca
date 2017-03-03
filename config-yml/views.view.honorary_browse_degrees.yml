@@ -8,7 +8,6 @@ dependencies:
     - field.storage.node.field_image
     - field.storage.node.field_list_campus
     - field.storage.node.field_list_degree
-    - field.storage.node.field_ref_degree_ceremony
     - image.style.degree_thumbnail
     - node.type.honorary_degree
     - taxonomy.vocabulary.campus_voc
@@ -116,7 +115,7 @@ display:
           id: nid
           table: node_field_data
           field: nid
-          relationship: none
+          relationship: reverse__node__field_ref_ceremony_degree
           group_type: group
           admin_label: ''
           label: ''
@@ -164,7 +163,7 @@ display:
           type: number_integer
           settings:
             thousand_separator: ''
-            prefix_suffix: true
+            prefix_suffix: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -177,68 +176,6 @@ display:
           field_api_classes: false
           entity_type: node
           entity_field: nid
-          plugin_id: field
-        field_ref_degree_ceremony:
-          id: field_ref_degree_ceremony
-          table: node__field_ref_degree_ceremony
-          field: field_ref_degree_ceremony
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_entity_id
-          settings: {  }
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
           plugin_id: field
         title:
           id: title
@@ -304,196 +241,6 @@ display:
           field_api_classes: false
           entity_type: node
           entity_field: title
-          plugin_id: field
-        field_ceremony_year:
-          id: field_ceremony_year
-          table: node__field_ceremony_year
-          field: field_ceremony_year
-          relationship: field_ref_degree_ceremony
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: number_integer
-          settings:
-            thousand_separator: ''
-            prefix_suffix: true
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_list_campus:
-          id: field_list_campus
-          table: node__field_list_campus
-          field: field_list_campus
-          relationship: field_ref_degree_ceremony
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: false
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_ceremony_type:
-          id: field_ceremony_type
-          table: node__field_ceremony_type
-          field: field_ceremony_type
-          relationship: field_ref_degree_ceremony
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: true
-          alter:
-            alter_text: true
-            text: '{{ field_ceremony_year }} {{ field_list_campus }} {{ field_ceremony_type }}'
-            make_link: true
-            path: '/node/{{ field_ref_degree_ceremony }}'
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: false
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
           plugin_id: field
         field_list_degree:
           id: field_list_degree
@@ -622,6 +369,196 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        field_ceremony_year_1:
+          id: field_ceremony_year_1
+          table: node__field_ceremony_year
+          field: field_ceremony_year
+          relationship: reverse__node__field_ref_ceremony_degree
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_list_campus_1:
+          id: field_list_campus_1
+          table: node__field_list_campus
+          field: field_list_campus
+          relationship: reverse__node__field_ref_ceremony_degree
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_ceremony_type_1:
+          id: field_ceremony_type_1
+          table: node__field_ceremony_type
+          field: field_ceremony_type
+          relationship: reverse__node__field_ref_ceremony_degree
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: true
+            text: '{{ field_ceremony_year_1 }} {{ field_list_campus_1 }} {{ field_ceremony_type_1 }}'
+            make_link: true
+            path: '/node/{{ nid }}'
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         nothing:
           id: nothing
           table: views
@@ -633,7 +570,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<table>\n  <tr>\n    <td>\n      <strong>{{ title }} </strong><span>{{ field_list_degree }}</span>\n       <p>Awarded at the {{ field_ceremony_type }}</p>\n    </td>\n    <td>\n      <figure>\n        {{ field_image }}\n      </figure>\n    </td>\n  </tr>\n</table>\n"
+            text: "<table>\n  <tr>\n    <td>\n      <strong>{{ title }} </strong><span>{{ field_list_degree }}</span>\n       <p>Awarded at the {{ field_ceremony_type_1 }}</p>\n    </td>\n    <td>\n      <figure>\n        {{ field_image }}\n      </figure>\n    </td>\n  </tr>\n</table>\n"
             make_link: false
             path: ''
             absolute: false
@@ -755,7 +692,7 @@ display:
           id: field_ceremony_year_value
           table: node__field_ceremony_year
           field: field_ceremony_year_value
-          relationship: field_ref_degree_ceremony
+          relationship: reverse__node__field_ref_ceremony_degree
           group_type: group
           admin_label: ''
           operator: '>='
@@ -796,7 +733,7 @@ display:
           id: field_ceremony_year_value_1
           table: node__field_ceremony_year
           field: field_ceremony_year_value
-          relationship: field_ref_degree_ceremony
+          relationship: reverse__node__field_ref_ceremony_degree
           group_type: group
           admin_label: ''
           operator: '<='
@@ -837,7 +774,7 @@ display:
           id: field_list_campus_target_id
           table: node__field_list_campus
           field: field_list_campus_target_id
-          relationship: field_ref_degree_ceremony
+          relationship: reverse__node__field_ref_ceremony_degree
           group_type: group
           admin_label: ''
           operator: or
@@ -1119,15 +1056,16 @@ display:
           content: 'No records match filter criteria.'
           plugin_id: text_custom
       relationships:
-        field_ref_degree_ceremony:
-          id: field_ref_degree_ceremony
-          table: node__field_ref_degree_ceremony
-          field: field_ref_degree_ceremony
+        reverse__node__field_ref_ceremony_degree:
+          id: reverse__node__field_ref_ceremony_degree
+          table: node_field_data
+          field: reverse__node__field_ref_ceremony_degree
           relationship: none
           group_type: group
-          admin_label: 'field_ref_degree_ceremony: Content'
+          admin_label: field_ref_ceremony_degree
           required: false
-          plugin_id: standard
+          entity_type: node
+          plugin_id: entity_reverse
       arguments: {  }
       display_extenders: {  }
       filter_groups:
@@ -1151,7 +1089,6 @@ display:
         - 'config:field.storage.node.field_image'
         - 'config:field.storage.node.field_list_campus'
         - 'config:field.storage.node.field_list_degree'
-        - 'config:field.storage.node.field_ref_degree_ceremony'
   page_1:
     display_plugin: page
     id: page_1
@@ -1176,4 +1113,3 @@ display:
         - 'config:field.storage.node.field_image'
         - 'config:field.storage.node.field_list_campus'
         - 'config:field.storage.node.field_list_degree'
-        - 'config:field.storage.node.field_ref_degree_ceremony'

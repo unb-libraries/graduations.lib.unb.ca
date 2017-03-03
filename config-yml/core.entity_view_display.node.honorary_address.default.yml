@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.honorary_address.field_address_content
     - field.field.node.honorary_address.field_address_type
     - field.field.node.honorary_address.field_delivered_by
-    - field.field.node.honorary_address.field_ref_address_ceremony
     - node.type.honorary_address
   module:
     - text
@@ -43,13 +42,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-  field_ref_address_ceremony:
-    weight: 101
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
   links:
     weight: 100
     settings: {  }
