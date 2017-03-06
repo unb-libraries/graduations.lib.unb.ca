@@ -45,7 +45,7 @@ display:
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
-          text_input_required: 'Select any filter and click on Apply to see results'
+          text_input_required: 'Type any keywords and click on Search to see results.'
           text_input_required_format: full_html
       pager:
         type: full
