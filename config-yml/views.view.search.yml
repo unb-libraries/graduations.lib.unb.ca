@@ -3,6 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_ceremony_type
+    - field.storage.node.field_ceremony_year
+    - field.storage.node.field_list_campus
     - search_api.index.pomp_ceremonies_index
   module:
     - search_api
@@ -47,7 +50,7 @@ display:
       pager:
         type: full
         options:
-          items_per_page: 5
+          items_per_page: 20
           offset: 0
           id: 0
           total_pages: null
@@ -66,21 +69,383 @@ display:
             offset_label: Offset
           quantity: 9
       style:
-        type: default
-      row:
-        type: search_api
+        type: html_list
         options:
-          view_modes:
-            'entity:node':
-              honorary_ceremony: default
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          type: ul
+          wrapper_class: item-list
+          class: ''
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
       fields:
-        field_ceremony_year:
-          table: search_api_index_pomp_ceremonies_index
-          field: field_ceremony_year
-          id: field_ceremony_year
-          entity_type: null
-          entity_field: null
+        nid:
+          id: nid
+          table: search_api_datasource_pomp_ceremonies_index_entity_node
+          field: nid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: false
+          fallback_handler: search_api_numeric
+          fallback_options:
+            set_precision: false
+            precision: 0
+            decimal: .
+            format_plural: false
+            format_plural_string: "1\x03@count"
+            prefix: ''
+            suffix: ''
+            link_to_item: false
+            multi_separator: ', '
+            format_plural_values:
+              - '1'
+              - '@count'
+          entity_type: node
           plugin_id: search_api_field
+        field_list_campus:
+          id: field_list_campus
+          table: search_api_datasource_pomp_ceremonies_index_entity_node
+          field: field_list_campus
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_entity_view
+          settings:
+            view_mode: default
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: false
+          fallback_handler: search_api_entity
+          fallback_options:
+            link_to_item: false
+            multi_separator: ', '
+            display_methods:
+              campus_voc:
+                display_method: label
+              degree_vox:
+                display_method: label
+                view_mode: default
+              gender_voc:
+                display_method: label
+              season_voc:
+                display_method: label
+          entity_type: node
+          plugin_id: search_api_field
+        field_ceremony_type:
+          id: field_ceremony_type
+          table: search_api_datasource_pomp_ceremonies_index_entity_node
+          field: field_ceremony_type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            multi_separator: ', '
+          entity_type: node
+          plugin_id: search_api_field
+        field_ceremony_year:
+          id: field_ceremony_year
+          table: search_api_datasource_pomp_ceremonies_index_entity_node
+          field: field_ceremony_year
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api_numeric
+          fallback_options:
+            set_precision: false
+            precision: 0
+            decimal: .
+            format_plural: false
+            format_plural_string: "1\x03@count"
+            prefix: ''
+            suffix: ''
+            link_to_item: false
+            multi_separator: ', '
+            format_plural_values:
+              - '1'
+              - '@count'
+          entity_type: node
+          plugin_id: search_api_field
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '{{ field_ceremony_year }} {{ field_list_campus }} {{ field_ceremony_type }}'
+            make_link: true
+            path: '/node/{{ nid }}'
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          plugin_id: custom
+        search_api_excerpt:
+          id: search_api_excerpt
+          table: search_api_index_pomp_ceremonies_index
+          field: search_api_excerpt
           relationship: none
           group_type: group
           admin_label: ''
@@ -117,7 +482,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -125,32 +490,10 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: number_integer
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
+          link_to_item: false
           multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api_numeric
-          fallback_options:
-            set_precision: false
-            precision: 0
-            decimal: .
-            format_plural: false
-            format_plural_string: "1\x03@count"
-            prefix: ''
-            suffix: ''
-            link_to_item: false
-            multi_separator: ', '
-            format_plural_values: {  }
+          multi_separator: ', '
+          plugin_id: search_api
       filters:
         search_api_fulltext:
           id: search_api_fulltext
@@ -192,7 +535,7 @@ display:
           parse_mode: terms
           min_length: null
           fields:
-            title: title
+            rendered_item: rendered_item
           plugin_id: search_api_fulltext
       sorts: {  }
       title: Search
@@ -202,12 +545,19 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+      filter_groups:
+        operator: AND
+        groups: {  }
     cache_metadata:
       max-age: 0
       contexts:
+        - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_ceremony_type'
+        - 'config:field.storage.node.field_ceremony_year'
+        - 'config:field.storage.node.field_list_campus'
   page_1:
     display_plugin: page
     id: page_1
@@ -220,6 +570,10 @@ display:
     cache_metadata:
       max-age: 0
       contexts:
+        - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_ceremony_type'
+        - 'config:field.storage.node.field_ceremony_year'
+        - 'config:field.storage.node.field_list_campus'

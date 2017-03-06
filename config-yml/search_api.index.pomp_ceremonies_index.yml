@@ -12,11 +12,16 @@ name: 'POMP ceremonies index'
 description: ''
 read_only: false
 field_settings:
-  title:
-    label: Title
-    datasource_id: 'entity:node'
-    property_path: title
+  rendered_item:
+    label: 'Rendered HTML output'
+    property_path: rendered_item
     type: text
+    configuration:
+      roles:
+        anonymous: anonymous
+      view_mode:
+        'entity:node':
+          honorary_ceremony: default
 datasource_settings:
   'entity:node':
     bundles:
@@ -28,11 +33,18 @@ datasource_settings:
       selected: {  }
 processor_settings:
   rendered_item: {  }
-  add_url: {  }
-  aggregated_field: {  }
+  tokenizer:
+    fields:
+      - rendered_item
+    spaces: ''
+    overlap_cjk: 1
+    minimum_word_size: '2'
+    weights:
+      preprocess_index: -6
+      preprocess_query: -6
   ignore_character:
     fields:
-      - title
+      - rendered_item
     ignorable: '[''¿¡!?,.:;]'
     strip:
       character_sets:
@@ -61,7 +73,7 @@ processor_settings:
       preprocess_query: -10
   highlight:
     highlight: always
-    highlight_partial: false
+    highlight_partial: true
     excerpt: true
     excerpt_length: 256
     exclude_fields: {  }
@@ -71,10 +83,12 @@ processor_settings:
       postprocess_query: 0
   ignorecase:
     fields:
-      - title
+      - rendered_item
     weights:
       preprocess_index: -10
       preprocess_query: -10
+  add_url: {  }
+  aggregated_field: {  }
 tracker_settings:
   default: {  }
 options:
