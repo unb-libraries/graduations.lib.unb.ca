@@ -184,11 +184,11 @@ div.js-form-item-field-list-campus-target-id {
   display: block;
   clear: both;
 }
-
+/*
 div#edit-actions {
   padding-top: 1em !important;
 }
-
+*/
 /* Contact form */
 
 .contact-message-feedback-form input {
@@ -259,6 +259,18 @@ section.featured > div.container {
 
 #block-browse {
   margin-left: 10px;
+}
+
+div.form-item-search-api-fulltext + div {
+  display: inline-block;
+}
+
+#edit-search-api-fulltext {
+    width: 330px;
+}
+
+#edit-submit-search {
+  width: 80px;
 }
 
 /* Footer */
