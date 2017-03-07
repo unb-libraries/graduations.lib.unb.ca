@@ -283,6 +283,15 @@ div.block-views-exposed-filter-blocksearch-page-1 h2:before {
   content: "Search";
 }
 
+/* Search Results */
+
+li.search-results-item {
+    margin: 0 0 0.75em 1.5em !important;
+    padding: 0 0 6px !important;
+    border-bottom: 1px solid #DADADA;
+    border-bottom: 1px solid var(--pgray2);
+}
+
 /* Footer */
 
 div.region.region-footer {
