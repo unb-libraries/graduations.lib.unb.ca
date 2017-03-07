@@ -161,6 +161,7 @@ table#traditions-gowns th, table#traditions-gowns td,
 table#traditions-hoods th, table#traditions-hoods td {
   border: 1px solid var(--pgray3);
   border: 1px solid #555555;
+  padding: .5em;
 }
 
 /* Filters */
@@ -184,11 +185,7 @@ div.js-form-item-field-list-campus-target-id {
   display: block;
   clear: both;
 }
-/*
-div#edit-actions {
-  padding-top: 1em !important;
-}
-*/
+
 /* Contact form */
 
 .contact-message-feedback-form input {
