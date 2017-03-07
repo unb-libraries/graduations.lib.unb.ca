@@ -164,6 +164,10 @@ table#traditions-hoods th, table#traditions-hoods td {
   padding: .5em;
 }
 
+table#traditions-hoods, table#traditions-gowns {
+  width: 700px !important;
+}
+
 /* Filters */
 
 div.view-filters {
