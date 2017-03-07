@@ -274,6 +274,15 @@ div.form-item-search-api-fulltext + div {
   width: 80px;
 }
 
+div.block-views-exposed-filter-blocksearch-page-1 h2 {
+  visibility: hidden;
+}
+
+div.block-views-exposed-filter-blocksearch-page-1 h2:before {
+  visibility: visible;
+  content: "Search";
+}
+
 /* Footer */
 
 div.region.region-footer {
