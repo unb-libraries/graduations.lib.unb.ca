@@ -155,6 +155,12 @@ li.menu-item > a:focus, li.menu-item > a:hover {
   padding: 0px !important;
 }
 
+/* Page title */
+
+.page-title {
+  margin-top: .45em;
+}
+
 /* "Traditions" page tables */
 
 table#traditions-gowns th, table#traditions-gowns td,
@@ -296,11 +302,7 @@ li.search-results-item:last-child {
     border-bottom: none;
     padding-bottom: 10px;
 }
-/*
-div.item-list ul {
-    padding-top: 10px !important;
-}
-*/
+
 /* Footer */
 
 div.region.region-footer {
