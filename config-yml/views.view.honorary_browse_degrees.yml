@@ -286,8 +286,8 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
+          element_default_classes: false
+          empty: 'No orator on record.'
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -634,7 +634,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<table>\n  <tr>\n    <td>\n      <strong>{{ title }} </strong><span>{{ field_list_degree }}</span>\n       <p>Awarded at the {{ field_ceremony_type_1 }}</p>\n    </td>\n    <td>\n      <figure>\n        {{ field_image }}\n      </figure>\n    </td>\n  </tr>\n</table>\n"
+            text: "<table>\n  <tr>\n    <td>\n      <strong>{{ title }} </strong><span>{{ field_list_degree }}</span>\n       <p>Awarded at the {{ field_ceremony_type_1 }}<br>\n              Orator: {{ field_orator }}</p>\n    </td>\n    <td>\n      <figure>\n        {{ field_image }}\n      </figure>\n    </td>\n  </tr>\n</table>\n"
             make_link: false
             path: ''
             absolute: false
