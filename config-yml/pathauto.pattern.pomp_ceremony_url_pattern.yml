@@ -1,0 +1,22 @@
+uuid: cdb6e8af-052b-4b84-bf85-d505349117d5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: pomp_ceremony_url_pattern
+label: 'Ceremony URL pattern'
+type: 'canonical_entities:node'
+pattern: '/ceremony/[node:nid]'
+selection_criteria:
+  743534d4-cbd1-449f-9429-7b61efc18d42:
+    id: node_type
+    bundles:
+      honorary_ceremony: honorary_ceremony
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 743534d4-cbd1-449f-9429-7b61efc18d42
+selection_logic: and
+weight: -5
+relationships: {  }

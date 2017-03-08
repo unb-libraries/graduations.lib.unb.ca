@@ -1,0 +1,22 @@
+uuid: 4de76ce3-47e7-4e1b-9b2a-4ee10470ce38
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: address_url_pattern
+label: 'Address URL pattern'
+type: 'canonical_entities:node'
+pattern: '/address/[node:nid]'
+selection_criteria:
+  5d14c4a7-e19c-4308-9c67-34c177dccdf1:
+    id: node_type
+    bundles:
+      honorary_address: honorary_address
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 5d14c4a7-e19c-4308-9c67-34c177dccdf1
+selection_logic: and
+weight: -5
+relationships: {  }
