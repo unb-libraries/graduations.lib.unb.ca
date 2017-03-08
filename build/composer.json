@@ -86,7 +86,8 @@
         "cweagans/composer-patches": "~1.0",
         "drupal/views_slideshow": "4.3",
         "malsup/jquery.cycle": "master",
-        "drupal/search_api": "~1.0-beta4"
+        "drupal/search_api": "~1.0-beta4",
+        "drupal/pathauto": "~1.0-rc1"
     },
     "require-dev": {
         "behat/mink": "~1.7",
