@@ -6,7 +6,6 @@ dependencies:
     - field.storage.node.field_ceremony_type
     - field.storage.node.field_ceremony_year
     - field.storage.node.field_list_campus
-    - field.storage.node.field_orator
     - search_api.index.pomp_ceremonies_index
   module:
     - search_api
@@ -623,8 +622,28 @@ display:
             label: ''
           plugin_id: search_api
       title: RESULTS
-      header: {  }
-      footer: {  }
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: 'Displaying @start - @end of @total'
+          plugin_id: result
+      footer:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: 'Displaying @start - @end of @total'
+          plugin_id: result
       empty:
         area_text_custom:
           id: area_text_custom
@@ -653,7 +672,6 @@ display:
         - 'config:field.storage.node.field_ceremony_type'
         - 'config:field.storage.node.field_ceremony_year'
         - 'config:field.storage.node.field_list_campus'
-        - 'config:field.storage.node.field_orator'
   page_1:
     display_plugin: page
     id: page_1
@@ -673,4 +691,3 @@ display:
         - 'config:field.storage.node.field_ceremony_type'
         - 'config:field.storage.node.field_ceremony_year'
         - 'config:field.storage.node.field_list_campus'
-        - 'config:field.storage.node.field_orator'

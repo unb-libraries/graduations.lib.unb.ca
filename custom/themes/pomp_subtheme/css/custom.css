@@ -296,7 +296,11 @@ li.search-results-item:last-child {
     border-bottom: none;
     padding-bottom: 10px;
 }
-
+/*
+div.item-list ul {
+    padding-top: 10px !important;
+}
+*/
 /* Footer */
 
 div.region.region-footer {
