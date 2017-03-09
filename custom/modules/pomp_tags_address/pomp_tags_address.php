@@ -35,6 +35,7 @@ foreach ($nids as $nid) {
   $node = Node::load($nid);
   $node->get('field_address_content')->format = 'full_html';
   $add_type = $node->get('field_address_type')->getValue()[0]['value'];
+  $content = $node->get('field_address_content')->getValue()[0]['value'];
 
   switch ($add_type) {
     case "Oration":
@@ -47,6 +48,10 @@ foreach ($nids as $nid) {
       $node->get('field_list_address_type')->setValue(46);
       break;
   }
+
+  $con_br = str_replace("\n", "<br>", $content);
+  echo $con_br;
+  $node->get('field_address_content')->setValue($con_br);
 
   $node->save();
   $sandbox['progress']++;
