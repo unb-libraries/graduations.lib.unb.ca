@@ -35,7 +35,7 @@ foreach ($nids as $nid) {
   $node = Node::load($nid);
   $citation = $node->get('field_citation')->getValue()[0]['value'];
 
-  $cit_br = str_replace('\n', '<br>', $citation);
+  $cit_br = str_replace("\n", "<br>", $citation);
   $node->get('field_citation')->setValue($cit_br);
   $node->get('field_citation')->format = 'full_html';
 

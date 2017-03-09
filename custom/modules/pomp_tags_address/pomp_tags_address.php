@@ -50,7 +50,6 @@ foreach ($nids as $nid) {
   }
 
   $con_br = str_replace("\n", "<br>", $content);
-  echo $con_br;
   $node->get('field_address_content')->setValue($con_br);
 
   $node->save();
