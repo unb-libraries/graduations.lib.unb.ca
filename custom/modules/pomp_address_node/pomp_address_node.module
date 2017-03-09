@@ -33,7 +33,10 @@ function pomp_address_node_preprocess_node__honorary_address(&$variables) {
   $node = $variables['elements']['#node'];
   $variables['id'] = $node->id();
 
-  $variables['address_type'] = $node->field_address_type->value;
+  $type_id = $node->field_list_address_type[0]->getValue()['target_id'];
+  $type = taxonomy_term_load($type_id);
+  $variables['address_type'] = $type->getName();
+
   $variables['delivered_by'] = $node->field_delivered_by->value;
   $variables['address_content'] = $node->field_address_content->value;
 
