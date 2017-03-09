@@ -1,0 +1,9 @@
+uuid: 94c4f3c9-a4a1-49b8-a3fd-1723c011c52b
+langcode: en
+status: true
+dependencies: {  }
+name: address_type_voc
+vid: address_type_voc
+description: ''
+hierarchy: 0
+weight: 0

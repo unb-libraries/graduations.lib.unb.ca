@@ -34,6 +34,20 @@ $nids = $query->execute();
 foreach ($nids as $nid) {
   $node = Node::load($nid);
   $node->get('field_address_content')->format = 'full_html';
+  $add_type = $node->get('field_address_type')->getValue()[0]['value'];
+
+  switch ($add_type) {
+    case "Oration":
+      $node->get('field_list_address_type')->setValue(44);
+      break;
+    case "Graduation":
+      $node->get('field_list_address_type')->setValue(45);
+      break;
+    case "Valedictory":
+      $node->get('field_list_address_type')->setValue(46);
+      break;
+  }
+
   $node->save();
   $sandbox['progress']++;
   $sandbox['current_nid'] = $node->id();

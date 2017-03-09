@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.honorary_address.field_address_content
     - field.field.node.honorary_address.field_address_type
     - field.field.node.honorary_address.field_delivered_by
+    - field.field.node.honorary_address.field_list_address_type
     - node.type.honorary_address
   module:
     - path
@@ -50,6 +51,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+  field_list_address_type:
+    weight: 37
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
   path:
     type: path
     weight: 30
