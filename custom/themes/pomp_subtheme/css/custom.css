@@ -329,6 +329,10 @@ footer#block-honoraryfooter > a:hover, a:focus {
   color: #880404;
 }
 
+#unb-lib-logo {
+  width: 300px;
+}
+
 /* Back to top button */
 
 a.btn-btt {
