@@ -25,10 +25,6 @@ input, select {
   height: 36px;
 }
 
-h3 {
-  font-size: 1.1em;
-}
-
 /* Site title */
 
 div.site-name a {
@@ -306,6 +302,12 @@ li.search-results-item:last-child {
 
 li.search-results-item:hover {
   background-color: #F0F0F0 !important;
+}
+
+/* Ceremony Node */
+
+.ceremony-degree-list h3 {
+  font-size: 1.1em;
 }
 
 /* Footer */
