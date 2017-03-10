@@ -468,7 +468,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '{{ field_recipient_name }} {{ field_list_degree }}'
+            text: '{{ field_recipient_name }} ({{ field_list_degree }})'
             make_link: true
             path: '/node/{{ nid }}'
             absolute: false
