@@ -1,0 +1,28 @@
+uuid: 744b89b1-7500-4503-a54f-c75dc794e495
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_list_ceremony_type
+    - node.type.honorary_ceremony
+    - taxonomy.vocabulary.ceremony_voc
+id: node.honorary_ceremony.field_list_ceremony_type
+field_name: field_list_ceremony_type
+entity_type: node
+bundle: honorary_ceremony
+label: 'List ceremony type:'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      ceremony_voc: ceremony_voc
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

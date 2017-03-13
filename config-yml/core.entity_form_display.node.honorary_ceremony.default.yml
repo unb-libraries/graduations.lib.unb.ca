@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.honorary_ceremony.field_ceremony_type
     - field.field.node.honorary_ceremony.field_ceremony_year
     - field.field.node.honorary_ceremony.field_list_campus
+    - field.field.node.honorary_ceremony.field_list_ceremony_type
     - field.field.node.honorary_ceremony.field_list_season
     - field.field.node.honorary_ceremony.field_ref_ceremony_address
     - field.field.node.honorary_ceremony.field_ref_ceremony_degree
@@ -40,6 +41,14 @@ content:
     type: number
   field_list_campus:
     weight: 36
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+  field_list_ceremony_type:
+    weight: 40
     settings:
       match_operator: CONTAINS
       size: 60
