@@ -1,0 +1,9 @@
+uuid: 70025963-8247-4c92-b1ab-919ffa7c1625
+langcode: en
+status: true
+dependencies: {  }
+name: pomp_bool_voc
+vid: pomp_bool_voc
+description: ''
+hierarchy: 0
+weight: 0
