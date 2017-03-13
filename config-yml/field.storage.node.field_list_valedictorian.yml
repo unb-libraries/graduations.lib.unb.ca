@@ -1,17 +1,16 @@
-uuid: 8df92b8b-25fb-46b2-80f8-79002c8d3fa6
+uuid: ddeab3c4-c8d6-4763-b0cc-a42219a79665
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_valedictorian
-field_name: field_valedictorian
+    - taxonomy
+id: node.field_list_valedictorian
+field_name: field_list_valedictorian
 entity_type: node
-type: string
+type: entity_reference
 settings:
-  max_length: 7
-  is_ascii: false
-  case_sensitive: false
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: 1

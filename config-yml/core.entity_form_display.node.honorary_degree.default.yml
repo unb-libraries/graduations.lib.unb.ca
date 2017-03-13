@@ -10,9 +10,9 @@ dependencies:
     - field.field.node.honorary_degree.field_img_caption_2
     - field.field.node.honorary_degree.field_list_degree
     - field.field.node.honorary_degree.field_list_gender
+    - field.field.node.honorary_degree.field_list_valedictorian
     - field.field.node.honorary_degree.field_orator
     - field.field.node.honorary_degree.field_recipient_name
-    - field.field.node.honorary_degree.field_valedictorian
     - image.style.thumbnail
     - node.type.honorary_degree
   module:
@@ -74,6 +74,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+  field_list_valedictorian:
+    weight: 32
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
   field_orator:
     weight: 11
     settings:
@@ -83,13 +91,6 @@ content:
     type: string_textfield
   field_recipient_name:
     weight: 8
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-  field_valedictorian:
-    weight: 10
     settings:
       size: 60
       placeholder: ''

@@ -11,9 +11,9 @@ dependencies:
     - field.field.node.honorary_degree.field_img_caption_2
     - field.field.node.honorary_degree.field_list_degree
     - field.field.node.honorary_degree.field_list_gender
+    - field.field.node.honorary_degree.field_list_valedictorian
     - field.field.node.honorary_degree.field_orator
     - field.field.node.honorary_degree.field_recipient_name
-    - field.field.node.honorary_degree.field_valedictorian
     - node.type.honorary_degree
   module:
     - user
@@ -32,7 +32,7 @@ hidden:
   field_img_caption_2: true
   field_list_degree: true
   field_list_gender: true
+  field_list_valedictorian: true
   field_orator: true
   field_recipent_name: true
   field_recipient_name: true
-  field_valedictorian: true
