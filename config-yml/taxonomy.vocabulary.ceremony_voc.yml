@@ -1,0 +1,9 @@
+uuid: eefacbed-8e95-4cd7-834a-c110d661eaf9
+langcode: en
+status: true
+dependencies: {  }
+name: ceremony_voc
+vid: ceremony_voc
+description: ''
+hierarchy: 0
+weight: 0
