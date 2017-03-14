@@ -14,7 +14,7 @@ process:
     default_value: honorary_degree
   # Map Drupal MACHINE NAME fields to migration field names as declared
   # in source plugin.
-  title: name
+  title: recipient
   field_ref_degree_ceremony: ceremony_id
   field_degree_name: degree
   field_list_degree: list_degree

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.honorary_degree.field_citation
+    - field.field.node.honorary_degree.field_deg_parent
     - field.field.node.honorary_degree.field_degree_notes
     - field.field.node.honorary_degree.field_image
     - field.field.node.honorary_degree.field_img_caption
@@ -30,6 +31,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+  field_deg_parent:
+    weight: 33
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
   field_degree_notes:
     weight: 29
     settings:

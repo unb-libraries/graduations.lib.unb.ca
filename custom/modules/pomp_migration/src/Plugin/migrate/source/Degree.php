@@ -29,10 +29,10 @@ class Degree extends SqlBase {
      * the base node data here, and pull in the relationships in prepareRow()
      * below.
      */
-    $query = $this->select('degrees', 'd')
-                  ->fields('d', ['degree_id', 'ceremony_id', 'degree', 'list_degree',
-                  'name', 'gender', 'list_gender', 'valedictorian', 'orator', 'citation',
-                  'image', 'img_caption', 'img_caption_2', 'notes']);
+    $query = $this->select('pomp_degree', 'd')
+                  ->fields('d', ['id', 'year', 'campus', 'cerem_type',
+                  'recipient', 'degree', 'valedictorian', 'gender', 'image',
+                  'caption', 'caption2', 'orator', 'citation', 'notes']);
     return $query;
   }
 
@@ -45,19 +45,19 @@ class Degree extends SqlBase {
    */
   public function fields() {
     $fields = [
-      'degree_id' => $this->t('Degree ID'),
-      'ceremony_id' => $this->t('Ceremony ID'),
+      'id' => $this->t('Degree ID'),
+      'year' => $this->t('Year'),
+      'campus' => $this->t('Campus'),
+      'cerem_type' => $this->t('Ceremony type'),
+      'recipient' => $this->t('Recipient name'),
       'degree' => $this->t('Degree'),
-      'list_degree' => $this->t('List degree'),
-      'name' => $this->t('Recipient name'),
-      'gender' => $this->t('Recipient gender'),
-      'list_gender' => $this->t('List gender'),
       'valedictorian' => $this->t('Valedictorian'),
+      'gender' => $this->t('Recipient gender'),
+      'image' => $this->t('Image'),
+      'caption' => $this->t('Image caption'),
+      'caption2' => $this->t('Second image caption'),
       'orator' => $this->t('Orator'),
       'citation' => $this->t('Citation'),
-      'image' => $this->t('Image'),
-      'img_caption' => $this->t('Image caption'),
-      'img_caption_2' => $this->t('Second image caption'),
       'notes' => $this->t('Notes')
     ];
 
@@ -69,7 +69,7 @@ class Degree extends SqlBase {
    */
   public function getIds() {
     return [
-      'degree_id' => [
+      'id' => [
         'type' => 'integer',
         'alias' => 'd',
       ],
@@ -87,9 +87,69 @@ class Degree extends SqlBase {
      */
 
     /**
-     * Create temp file and write blob's contents to it (if there is one).
+     * Process fields that will be trabslated into taxonomy term indexes
      */
 
+    $deg = $row->getSourceProperty('degree');
+    switch $deg {
+      case "D.C.L.":
+        $row->setSourceProperty('degree_id', 6);
+        break;
+      case "D.Litt.":
+        $row->setSourceProperty('degree_id', 10);
+        break;
+      case "D.Sc.":
+        $row->setSourceProperty('degree_id', 8);
+        break;
+      case "LL.D.":
+        $row->setSourceProperty('degree_id', 7);
+        break;
+      case "M.A.":
+        $row->setSourceProperty('degree_id', 9);
+        break;
+      case "M.Sc.":
+        $row->setSourceProperty('degree_id', 12);
+        break;
+      case "N/A":
+        $row->setSourceProperty('degree_id', 13);
+        break;
+      case "Ph.D.":
+        $row->setSourceProperty('degree_id', 11);
+        break;
+      default:
+        $row->setSourceProperty('degree_id', 13);
+        break;
+    }
+
+    $val = $row->getSourceProperty('valedictory');
+    switch $val {
+      case "Yes":
+        $row->setSourceProperty('val_id', 72);
+        break;
+      case "No":
+        $row->setSourceProperty('val_id', 73);
+        break;
+      default:
+        $row->setSourceProperty('val_id', 73);
+        break;
+    }
+
+    $gen = $row->getSourceProperty('gender');
+    switch $gen {
+      case "Female":
+        $row->setSourceProperty('gen_id', 1);
+        break;
+      case "Male":
+        $row->setSourceProperty('gen_id', 2);
+        break;
+      case "Unspecified":
+        $row->setSourceProperty('gen_id', 3);
+        break;
+    }
+
+    /**
+     * Create temp file and write blob's contents to it (if there is one).
+     */
 
     $blob = $row->getSourceProperty('image');
 

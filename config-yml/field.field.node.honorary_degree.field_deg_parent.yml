@@ -1,0 +1,23 @@
+uuid: e7f113a6-a1ba-4a19-984b-ce5df5ca9f5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_deg_parent
+    - node.type.honorary_degree
+id: node.honorary_degree.field_deg_parent
+field_name: field_deg_parent
+entity_type: node
+bundle: honorary_degree
+label: deg_parent
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

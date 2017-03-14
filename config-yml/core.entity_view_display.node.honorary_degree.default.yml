@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.honorary_degree.field_citation
+    - field.field.node.honorary_degree.field_deg_parent
     - field.field.node.honorary_degree.field_degree_notes
     - field.field.node.honorary_degree.field_image
     - field.field.node.honorary_degree.field_img_caption
@@ -30,6 +31,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+  field_deg_parent:
+    weight: 17
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
   field_degree_notes:
     weight: 13
     label: above

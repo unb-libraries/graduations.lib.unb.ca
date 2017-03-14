@@ -1,0 +1,23 @@
+uuid: d77e911e-c4c9-4efa-80a3-a210205bda4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_add_parent
+    - node.type.honorary_address
+id: node.honorary_address.field_add_parent
+field_name: field_add_parent
+entity_type: node
+bundle: honorary_address
+label: add_parent
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

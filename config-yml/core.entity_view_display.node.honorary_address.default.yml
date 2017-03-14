@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.honorary_address.body
+    - field.field.node.honorary_address.field_add_parent
     - field.field.node.honorary_address.field_address_content
     - field.field.node.honorary_address.field_address_type
     - field.field.node.honorary_address.field_delivered_by
@@ -23,6 +24,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+  field_add_parent:
+    weight: 108
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
   field_address_content:
     weight: 106
     label: above
