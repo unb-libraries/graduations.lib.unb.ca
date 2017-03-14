@@ -1,0 +1,33 @@
+# Migration configuration for ceremony content.
+id: cerem
+label: Graduation ceremonies
+migration_group: pomp_migration
+source:
+  plugin: cerem
+  key: default
+destination:
+  plugin: entity:node
+process:
+  # Hardcode the destination node type (bundle) as 'honorary_ceremony'.
+  type:
+    plugin: default_value
+    default_value: honorary_ceremony
+  # Map Drupal MACHINE NAME fields to migration field names as declared
+  # in source plugin.
+  title: type
+  field_ceremony_id: ceremony_id
+  field_year: year
+  field_ceremony_year: ceremony_year
+  field_campus: campus
+  field_list_campus: list_campus
+  field_ceremony_type: type
+  field_list_season: list_season
+  # Dependency on module itself.
+dependencies:
+  enforced:
+    module:
+      - pomp_migration
+migration_dependencies:
+  required:
+    - degree
+    - address

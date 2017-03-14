@@ -1,0 +1,84 @@
+<?php
+
+namespace Drupal\honorary_migration\Plugin\migrate\source;
+
+use Drupal\migrate\Plugin\migrate\source\SqlBase;
+use Drupal\migrate\Row;
+
+/**
+ * Source plugin for ceremony content.
+ *
+ * @MigrateSource(
+ *   id = "ceremony"
+ * )
+ */
+class Ceremony extends SqlBase {
+
+  /**
+   * {@inheritdoc}
+   */
+  public function query() {
+    /**
+     * An important point to note is that your query *must* return a single row
+     * for each item to be imported. Here we might be tempted to add a join to
+     * pull in relationships in our tables. Doing this would cause the query to
+     * return multiple rows for a given node, once per related value, thus
+     * processing the same node multiple times, each time with only one of the
+     * multiple values that should be imported. To avoid that, we simply query
+     * the base node data here, and pull in the relationships in prepareRow()
+     * below.
+     */
+    $query = $this->select('grad_ceremonies', 'c')
+                  ->fields('c', ['ceremony_id', 'year', 'year', 'campus',
+                  'list_campus', 'type', 'list_season']);
+    return $query;
+  }
+
+  /**
+   * The names on the left are internal to the migration, the ones on the right
+   * are code-meaningless descriptions. Mapping is done in migration YAML file.
+   *
+   * {@inheritdoc}
+   *
+   */
+  public function fields() {
+    $fields = [
+      'ceremony_id' => $this->t('Ceremony ID'),
+      'year' => $this->t('Year of ceremony'),
+      'ceremony_year' => $this->t('Numeric year'),
+      'campus' => $this->t('Campus location of ceremony'),
+      'list_campus' => $this->t('Index for Campus taxonomy term'),
+      'type' => $this->t('Type of ceremony'),
+      'list_season' => $this->t('Index for Season taxonomy term')
+    ];
+
+    return $fields;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getIds() {
+    return [
+      'ceremony_id' => [
+        'type' => 'integer',
+        'alias' => 'c',
+      ],
+    ];
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function prepareRow(Row $row) {
+    /* Duplicate year as numeric field */
+
+    $num_year = (int)$row->getSourceProperty('year');
+    $row->setSourceProperty('ceremony_year', $num_year);
+
+    /**
+     * Return row as is.
+     */
+    return parent::prepareRow($row);
+  }
+}
