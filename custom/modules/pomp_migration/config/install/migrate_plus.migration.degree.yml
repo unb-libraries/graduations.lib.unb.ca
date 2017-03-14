@@ -15,29 +15,19 @@ process:
   # Map Drupal MACHINE NAME fields to migration field names as declared
   # in source plugin.
   title: recipient
-  field_ref_degree_ceremony: ceremony_id
-  field_degree_name: degree
-  field_list_degree: list_degree
-  field_recipient_name: name
-  field_recipient_gender: gender
-  field_list_gender: list_gender
-  field_valedictorian: valedictorian
+  field_recipient_name: recipient
+  field_deg_parent: deg_parent
+  field_list_degree: deg_id
+  field_list_valedictorian: val_id
+  field_list_gender: gen_id
+  field_image: image
+  field_img_caption: caption
+  field_img_caption_2: caption2
   field_orator: orator
   field_citation: citation
-  field_image: image
-  field_img_caption: img_caption
-  field_img_caption_2: img_caption_2
   field_degree_notes: notes
-  # Get ceremony table for ceremony entity reference.
-  field_ref_degree_ceremony:
-    plugin: migration
-    migration: ceremony
-    source: nid
   # Dependency on module itself.
 dependencies:
   enforced:
     module:
       - pomp_migration
-migration_dependencies:
-  required:
-    - ceremony

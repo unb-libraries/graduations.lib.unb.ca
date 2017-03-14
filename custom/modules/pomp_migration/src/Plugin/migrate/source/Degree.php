@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\honorary_migration\Plugin\migrate\source;
+namespace Drupal\pomp_migration\Plugin\migrate\source;
 
 use Drupal\migrate\Plugin\migrate\source\SqlBase;
 use Drupal\migrate\Row;
@@ -30,9 +30,10 @@ class Degree extends SqlBase {
      * below.
      */
     $query = $this->select('pomp_degree', 'd')
-                  ->fields('d', ['id', 'year', 'campus', 'cerem_type',
-                  'recipient', 'degree', 'valedictorian', 'gender', 'image',
-                  'caption', 'caption2', 'orator', 'citation', 'notes']);
+                  ->fields('d', ['id', 'deg_parent', 'year', 'campus',
+                  'cerem_type', 'recipient', 'degree', 'valedictorian',
+                  'gender', 'image', 'caption', 'caption2', 'orator',
+                  'citation', 'notes']);
     return $query;
   }
 
@@ -46,6 +47,7 @@ class Degree extends SqlBase {
   public function fields() {
     $fields = [
       'id' => $this->t('Degree ID'),
+      'deg_parent' => $this->t('Degree parent'),
       'year' => $this->t('Year'),
       'campus' => $this->t('Campus'),
       'cerem_type' => $this->t('Ceremony type'),
@@ -91,38 +93,38 @@ class Degree extends SqlBase {
      */
 
     $deg = $row->getSourceProperty('degree');
-    switch $deg {
+    switch ($deg) {
       case "D.C.L.":
-        $row->setSourceProperty('degree_id', 6);
+        $row->setSourceProperty('deg_id', 6);
         break;
       case "D.Litt.":
-        $row->setSourceProperty('degree_id', 10);
+        $row->setSourceProperty('deg_id', 10);
         break;
       case "D.Sc.":
-        $row->setSourceProperty('degree_id', 8);
+        $row->setSourceProperty('deg_id', 8);
         break;
       case "LL.D.":
-        $row->setSourceProperty('degree_id', 7);
+        $row->setSourceProperty('deg_id', 7);
         break;
       case "M.A.":
-        $row->setSourceProperty('degree_id', 9);
+        $row->setSourceProperty('deg_id', 9);
         break;
       case "M.Sc.":
-        $row->setSourceProperty('degree_id', 12);
+        $row->setSourceProperty('deg_id', 12);
         break;
       case "N/A":
-        $row->setSourceProperty('degree_id', 13);
+        $row->setSourceProperty('deg_id', 13);
         break;
       case "Ph.D.":
-        $row->setSourceProperty('degree_id', 11);
+        $row->setSourceProperty('deg_id', 11);
         break;
       default:
-        $row->setSourceProperty('degree_id', 13);
+        $row->setSourceProperty('deg_id', 13);
         break;
     }
 
     $val = $row->getSourceProperty('valedictory');
-    switch $val {
+    switch ($val) {
       case "Yes":
         $row->setSourceProperty('val_id', 72);
         break;
@@ -135,7 +137,7 @@ class Degree extends SqlBase {
     }
 
     $gen = $row->getSourceProperty('gender');
-    switch $gen {
+    switch ($gen) {
       case "Female":
         $row->setSourceProperty('gen_id', 1);
         break;
@@ -175,9 +177,9 @@ class Degree extends SqlBase {
        * Build unique, somewhat descriptive file name.
        */
 
-      $name = $row->getSourceProperty('name');
+      $name = $row->getSourceProperty('recipient');
       $degree = $row->getSourceProperty('degree');
-      $id = (string)$row->getSourceProperty('degree_id');
+      $id = (string)$row->getSourceProperty('id');
 
       /**
        * Restrict filename to alphanumeric (and '_') and assign jpg extension.
