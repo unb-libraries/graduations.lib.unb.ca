@@ -1,9 +1,0 @@
-type: module
-name: Honorary Migration
-description: 'Migrate honorary.lib.unb.ca database to D8.'
-package: Custom
-core: 8.x
-dependencies:
-  - drupal:migrate
-  - drupal:migrate_tools
-  - migrate_plus:migrate_plus
