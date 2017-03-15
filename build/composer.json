@@ -10,6 +10,9 @@
             "scripts/composer/ScriptHandler.php"
         ]
     },
+    "config": {
+        "preferred-install": "source"
+    },
     "conflict": {
         "drupal/drupal": "*"
     },
@@ -37,13 +40,13 @@
             ]
         },
         "patches": {
-          "drupal/core": {
-            "Allow for no-link menu items": "https://www.drupal.org/files/issues/allow-menu-items-without-path-1543750-124.patch",
-            "Allow for titles on exposed block filters": "https://www.drupal.org/files/issues/2720101-7-views-exposed-block-title.diff"
-          },
-          "drupal/views_slideshow": {
-            "Eliminate views help error": "https://www.drupal.org/files/issues/Undefined_variable_output_2845199_2.patch"
-          }
+            "drupal/core": {
+                "Allow for no-link menu items": "https://www.drupal.org/files/issues/allow-menu-items-without-path-1543750-124.patch",
+                "Allow for titles on exposed block filters": "https://www.drupal.org/files/issues/2720101-7-views-exposed-block-title.diff"
+            },
+            "drupal/views_slideshow": {
+                "Eliminate views help error": "https://www.drupal.org/files/issues/Undefined_variable_output_2845199_2.patch"
+            }
         }
     },
     "license": "MIT",
@@ -56,38 +59,38 @@
             "url": "https://packages.drupal.org/8"
         },
         {
-            "type": "package",
             "package": {
-                "name": "malsup/jquery.cycle",
-                "version": "master",
-                "type": "drupal-library",
                 "dist": {
-                    "url": "https://malsup.github.io/jquery.cycle.all.js",
-                    "type": "file"
+                    "type": "file",
+                    "url": "https://malsup.github.io/jquery.cycle.all.js"
                 },
+                "name": "malsup/jquery.cycle",
                 "require": {
                     "composer/installers": "^1.0.20"
-                }
-            }
+                },
+                "type": "drupal-library",
+                "version": "master"
+            },
+            "type": "package"
         }
     ],
     "require": {
         "composer/installers": "^1.0.20",
-        "oomphinc/composer-installers-extender": "1.1.1",
+        "cweagans/composer-patches": "~1.0",
         "drupal-composer/drupal-scaffold": "^2.0.1",
         "drupal/config_update": "1.1",
         "drupal/console": "~1.0",
-        "drupal/core": "8.2.6",
+        "drupal/core": "8.2.7",
         "drupal/features": "3.0-beta8",
         "drupal/field_collection": "1.0-alpha1",
-        "drush/drush": "~8.0",
-        "drupal/token_filter": "1.0-beta1",
-        "drupal/zircon": "1.0-rc1",
-        "cweagans/composer-patches": "~1.0",
-        "drupal/views_slideshow": "4.3",
-        "malsup/jquery.cycle": "master",
+        "drupal/pathauto": "~1.0-rc1",
         "drupal/search_api": "~1.0-beta4",
-        "drupal/pathauto": "~1.0-rc1"
+        "drupal/token_filter": "1.0-beta1",
+        "drupal/views_slideshow": "4.3",
+        "drupal/zircon": "1.0-rc1",
+        "drush/drush": "~8.0",
+        "malsup/jquery.cycle": "master",
+        "oomphinc/composer-installers-extender": "1.1.1"
     },
     "require-dev": {
         "behat/mink": "~1.7",
@@ -114,9 +117,6 @@
         "pre-update-cmd": [
             "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
         ]
-    },
-    "config": {
-      "preferred-install": "source"
     },
     "type": "project"
 }
