@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.honorary_address.body
     - field.field.node.honorary_address.field_add_parent
     - field.field.node.honorary_address.field_address_content
-    - field.field.node.honorary_address.field_address_type
     - field.field.node.honorary_address.field_delivered_by
     - field.field.node.honorary_address.field_list_address_type
     - node.type.honorary_address
@@ -44,13 +43,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
-  field_address_type:
-    weight: 32
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
   field_delivered_by:
     weight: 33
     settings:
