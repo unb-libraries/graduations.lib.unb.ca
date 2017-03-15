@@ -3,10 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_ceremony_type
     - field.storage.node.field_ceremony_year
     - field.storage.node.field_image
     - field.storage.node.field_list_campus
+    - field.storage.node.field_list_ceremony_type
     - field.storage.node.field_list_degree
     - field.storage.node.field_orator
     - image.style.degree_thumbnail
@@ -560,10 +560,10 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_ceremony_type_1:
-          id: field_ceremony_type_1
-          table: node__field_ceremony_type
-          field: field_ceremony_type
+        field_list_ceremony_type:
+          id: field_list_ceremony_type
+          table: node__field_list_ceremony_type
+          field: field_list_ceremony_type
           relationship: reverse__node__field_ref_ceremony_degree
           group_type: group
           admin_label: ''
@@ -571,7 +571,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: '{{ field_ceremony_year_1 }} {{ field_list_campus_1 }} {{ field_ceremony_type_1 }}'
+            text: '{{ field_ceremony_year_1 }} {{ field_list_campus_1 }} {{ field_list_ceremony_type }}'
             make_link: true
             path: '/node/{{ nid }}'
             absolute: false
@@ -608,11 +608,11 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: string
+          click_sort_column: target_id
+          type: entity_reference_label
           settings:
-            link_to_entity: false
-          group_column: value
+            link: false
+          group_column: target_id
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -634,7 +634,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<table>\n  <tr>\n    <td>\n      <strong>{{ title }} </strong><span>{{ field_list_degree }}</span>\n       <p>Awarded at the {{ field_ceremony_type_1 }}<br>\n              Orator: {{ field_orator }}</p>\n    </td>\n    <td>\n      <figure>\n        {{ field_image }}\n      </figure>\n    </td>\n  </tr>\n</table>\n"
+            text: "<table>\n  <tr>\n    <td>\n      <strong>{{ title }} </strong><span>{{ field_list_degree }}</span>\n       <p>Awarded at the {{ field_list_ceremony_type }}<br>\n              Orator: {{ field_orator }}</p>\n    </td>\n    <td>\n      <figure>\n        {{ field_image }}\n      </figure>\n    </td>\n  </tr>\n</table>\n"
             make_link: false
             path: ''
             absolute: false
@@ -1148,10 +1148,10 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_ceremony_type'
         - 'config:field.storage.node.field_ceremony_year'
         - 'config:field.storage.node.field_image'
         - 'config:field.storage.node.field_list_campus'
+        - 'config:field.storage.node.field_list_ceremony_type'
         - 'config:field.storage.node.field_list_degree'
         - 'config:field.storage.node.field_orator'
   page_1:
@@ -1173,9 +1173,9 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_ceremony_type'
         - 'config:field.storage.node.field_ceremony_year'
         - 'config:field.storage.node.field_image'
         - 'config:field.storage.node.field_list_campus'
+        - 'config:field.storage.node.field_list_ceremony_type'
         - 'config:field.storage.node.field_list_degree'
         - 'config:field.storage.node.field_orator'

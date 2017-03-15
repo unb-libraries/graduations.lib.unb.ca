@@ -5,9 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.search_index
     - field.field.node.honorary_ceremony.field_ceremony_notes
-    - field.field.node.honorary_ceremony.field_ceremony_type
     - field.field.node.honorary_ceremony.field_ceremony_year
     - field.field.node.honorary_ceremony.field_list_campus
+    - field.field.node.honorary_ceremony.field_list_ceremony_type
     - field.field.node.honorary_ceremony.field_list_season
     - field.field.node.honorary_ceremony.field_ref_ceremony_address
     - field.field.node.honorary_ceremony.field_ref_ceremony_degree
@@ -26,13 +26,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
-  field_ceremony_type:
-    weight: 103
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
   field_ceremony_year:
     weight: 104
     label: above
@@ -70,4 +63,5 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
 hidden:
+  field_list_ceremony_type: true
   links: true

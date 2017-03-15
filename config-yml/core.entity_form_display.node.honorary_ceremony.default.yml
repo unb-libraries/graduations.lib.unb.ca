@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.honorary_ceremony.field_ceremony_notes
-    - field.field.node.honorary_ceremony.field_ceremony_type
     - field.field.node.honorary_ceremony.field_ceremony_year
     - field.field.node.honorary_ceremony.field_list_campus
     - field.field.node.honorary_ceremony.field_list_ceremony_type
@@ -26,13 +25,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
-  field_ceremony_type:
-    weight: 33
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
   field_ceremony_year:
     weight: 34
     settings:
