@@ -1,17 +1,17 @@
 # Migration configuration for honorary address content.
-id: address
-label: Honorary addresses
+id: ceremony
+label: Honorary ceremonies
 migration_group: pomp_migration
 source:
-  plugin: address
+  plugin: ceremony
   key: default
 destination:
   plugin: entity:node
 process:
-  # Hardcode the destination node type (bundle) as 'honorary_address'.
+  # Hardcode the destination node type (bundle) as 'honorary_ceremony'.
   type:
     plugin: default_value
-    default_value: honorary_address
+    default_value: honorary_ceremony
   # Map Drupal MACHINE NAME fields to migration field names as declared
   # in source plugin.
   title: type_id
@@ -25,3 +25,7 @@ dependencies:
   enforced:
     module:
       - pomp_migration
+migration_dependencies:
+  required:
+    - degree
+    - address
