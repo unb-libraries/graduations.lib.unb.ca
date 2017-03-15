@@ -24,7 +24,7 @@ foreach ($cers as $cer) {
   // Fetch degrees that contain the ceremony reference
   $query2 = \Drupal::entityQuery('node')
     ->condition('type', 'honorary_degree')
-    ->condition('field_ref_degree_ceremony', $cer_id_ref, 'IN');
+    ->condition('field_deg_parent', $cer_id_val, '=');
   $degs = $query2->execute();
 
   // Iterate through degrees
@@ -50,7 +50,7 @@ foreach ($cers as $cer) {
   // Process addresses exactly as previously done with degrees
   $query3 = \Drupal::entityQuery('node')
     ->condition('type', 'honorary_address')
-    ->condition('field_ref_address_ceremony', $cer_id_ref, 'IN');
+    ->condition('field_add_parent', $cer_id_val, '=');
   $adds = $query3->execute();
 
   foreach ($adds as $add) {

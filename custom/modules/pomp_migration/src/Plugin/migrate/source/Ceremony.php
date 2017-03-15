@@ -31,7 +31,7 @@ class Ceremony extends SqlBase {
      * below.
      */
     $query = $this->select('pomp_cerem', 'c')
-                  ->fields('a', ['id', 'year', 'campus', 'type', 'notes']);
+                  ->fields('c', ['id', 'year', 'campus', 'type', 'notes']);
     return $query;
   }
 
@@ -73,62 +73,6 @@ class Ceremony extends SqlBase {
     /**
      * prepareRow runs after a row is fetched.
      */
-
-    /**
-     * Process content references.
-     */
-
-    $cer_id = $row->getSourceProperty('id');
-    $degrees = array();
-    $addresses = array();
-
-    // Fetch degrees that contain the ceremony reference.
-    $query = \Drupal::entityQuery('node')
-      ->condition('type', 'honorary_degree')
-      ->condition('field_deg_parent', $cer_id, '=');
-    $degs = $query->execute();
-
-    // Iterate through degrees
-    foreach ($degs as $deg) {
-      // Format degree id as entity reference
-      $deg_node = Node::load($deg);
-      $deg_id = $deg_node->get('nid')->getValue();
-      $deg_id_val = $deg_id[0]['value'];
-      $deg_id_ref = array('target_id' => $deg_id_val);
-
-      // If the ceremony isn't already referencing the degree, add reference.
-      if (!in_array($deg_id_ref, $degrees)) {
-        $degrees->appendItem($deg_id_ref);
-      }
-
-      unset($deg_node);
-    }
-
-    $row->setSourceProperty('degrees', $degrees);
-
-    // Fetch addresses that contain the ceremony reference.
-    $query = \Drupal::entityQuery('node')
-      ->condition('type', 'honorary_address')
-      ->condition('field_add_parent', $cer_id, '=');
-    $adds = $query->execute();
-
-    // Iterate through addresses
-    foreach ($add as $adds) {
-      // Format address id as entity reference.
-      $add_node = Node::load($add);
-      $add_id = $add_node->get('nid')->getValue();
-      $add_id_val = $add_id[0]['value'];
-      $add_id_ref = array('target_id' => $add_id_val);
-
-      // If the ceremony isn't already referencing the address, add reference.
-      if (!in_array($add_id_ref, $addresses)) {
-        $addresses->appendItem($add_id_ref);
-      }
-
-      unset($deg_node);
-    }
-
-    $row->setSourceProperty('addresses', $addresses);
 
     /**
      * Process fields that will be translated into taxonomy term indexes.

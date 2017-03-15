@@ -21,8 +21,6 @@ process:
   field_list_ceremony_type: type_id
   field_list_season: seas_id
   field_list_notes: notes
-  field_ref_ceremony_degree: degrees
-  field_ref_address_degree: addresses
   # Dependency on module itself.
 dependencies:
   enforced:
