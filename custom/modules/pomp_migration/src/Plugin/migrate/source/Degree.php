@@ -83,13 +83,13 @@ class Degree extends SqlBase {
    */
   public function prepareRow(Row $row) {
     /**
-     * prepareRow runs after a row is fetched. It will be use to create a temp
+     * prepareRow runs after a row is fetched. It will be used to create a temp
      * file from the original blob, copy that file to Drupal, and return the
      * reference for our target field to use.
      */
 
     /**
-     * Process fields that will be trabslated into taxonomy term indexes
+     * Process fields that will be translated into taxonomy term indexes
      */
 
     $deg = $row->getSourceProperty('degree');
@@ -111,9 +111,6 @@ class Degree extends SqlBase {
         break;
       case "M.Sc.":
         $row->setSourceProperty('deg_id', 12);
-        break;
-      case "N/A":
-        $row->setSourceProperty('deg_id', 13);
         break;
       case "Ph.D.":
         $row->setSourceProperty('deg_id', 11);

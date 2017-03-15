@@ -1,0 +1,29 @@
+uuid: 54804726-ffad-4367-8a6f-d8cbb19360c4
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - pomp_migration
+_core:
+  default_config_hash: gP8rg9uoTupPdsyJgs5DpZ95SFdi1MCyXiaHhsnJtgw
+id: address
+migration_tags: null
+migration_group: pomp_migration
+label: 'Honorary degrees'
+source:
+  plugin: address
+  key: default
+process:
+  type:
+    plugin: default_value
+    default_value: honorary_address
+  title: type_id
+  field_add_parent: add_parent
+  field_address_type: address_type
+  field_list_address_type: type_id
+  field_delivered_by: delivered_by
+  field_address_content: content
+destination:
+  plugin: 'entity:node'
+migration_dependencies: null

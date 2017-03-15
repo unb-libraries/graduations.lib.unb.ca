@@ -1,0 +1,35 @@
+uuid: f9285392-73ab-4a77-bca0-62ddcf6c450a
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - pomp_migration
+_core:
+  default_config_hash: G_HJblFbJLw7_Z34JUX5dZJHfhwcxsNE-9yGzMrXf7c
+id: degree
+migration_tags: null
+migration_group: pomp_migration
+label: 'Honorary degrees'
+source:
+  plugin: degree
+  key: default
+process:
+  type:
+    plugin: default_value
+    default_value: honorary_degree
+  title: recipient
+  field_recipient_name: recipient
+  field_deg_parent: deg_parent
+  field_list_degree: deg_id
+  field_list_valedictorian: val_id
+  field_list_gender: gen_id
+  field_image: image
+  field_img_caption: caption
+  field_img_caption_2: caption2
+  field_orator: orator
+  field_citation: citation
+  field_degree_notes: notes
+destination:
+  plugin: 'entity:node'
+migration_dependencies: null

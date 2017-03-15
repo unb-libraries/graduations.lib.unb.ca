@@ -29,6 +29,7 @@ module:
   pomp_address_node: 0
   pomp_ceremony_node: 0
   pomp_degree_node: 0
+  pomp_migration: 0
   quickedit: 0
   rdf: 0
   search_api: 0
