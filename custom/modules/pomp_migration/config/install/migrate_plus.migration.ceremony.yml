@@ -1,4 +1,4 @@
-# Migration configuration for honorary address content.
+# Migration configuration for honorary ceremony content.
 id: ceremony
 label: Honorary ceremonies
 migration_group: pomp_migration
@@ -14,12 +14,15 @@ process:
     default_value: honorary_ceremony
   # Map Drupal MACHINE NAME fields to migration field names as declared
   # in source plugin.
+  nid: id
   title: type_id
-  field_add_parent: add_parent
-  field_address_type: address_type
-  field_list_address_type: type_id
-  field_delivered_by: delivered_by
-  field_address_content: content
+  field_ceremony_year: year
+  field_list_campus: camp_id
+  field_list_ceremony_type: type_id
+  field_list_season: seas_id
+  field_list_notes: notes
+  field_ref_ceremony_degree: degrees
+  field_ref_address_degree: addresses
   # Dependency on module itself.
 dependencies:
   enforced:

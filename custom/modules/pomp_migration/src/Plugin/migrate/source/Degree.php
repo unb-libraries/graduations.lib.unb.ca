@@ -7,7 +7,7 @@ use Drupal\migrate\Row;
 use Drupal\file\Entity\File;
 
 /**
- * Source plugin for ceremony content.
+ * Source plugin for degree content.
  *
  * @MigrateSource(
  *   id = "degree"
