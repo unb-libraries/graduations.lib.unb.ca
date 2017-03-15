@@ -47,7 +47,9 @@ function pomp_ceremony_node_preprocess_node__honorary_ceremony(&$variables) {
   $camp_id = $node->field_list_campus[0]->getValue()['target_id'];
   $variables['campus'] = taxonomy_term_load($camp_id)->getName();
 
-  $variables['ceremony'] = $node->field_ceremony_type->value;
+  $type_id = $node->field_list_ceremony_type[0]->getValue()['target_id'];
+  $variables['ceremony'] = taxonomy_term_load($type_id)->getName();
+
   $variables['notes'] = $node->field_ceremony_notes->value;
 
   $degrees_table = views_embed_view('list_ceremony_degrees', 'block_1', $node->id());
