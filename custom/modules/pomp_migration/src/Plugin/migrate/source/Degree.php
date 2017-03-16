@@ -146,6 +146,11 @@ class Degree extends SqlBase {
         break;
     }
 
+    $name = $row->getSourceProperty('recipient');
+    $degree = $row->getSourceProperty('degree');
+    $title = $name . " (" . $degree . ")";
+    $row->setSourceProperty('node_title', $title);
+
     /**
      * Create temp file and write blob's contents to it (if there is one).
      */
@@ -174,8 +179,6 @@ class Degree extends SqlBase {
        * Build unique, somewhat descriptive file name.
        */
 
-      $name = $row->getSourceProperty('recipient');
-      $degree = $row->getSourceProperty('degree');
       $id = (string)$row->getSourceProperty('id');
 
       /**
@@ -199,9 +202,6 @@ class Degree extends SqlBase {
 
       $row->setSourceProperty('image', $file);
     }
-
-    $title = $name . " " . $degree;
-    $row->setSourceProperty('node_title', $title);
 
     return parent::prepareRow($row);
   }

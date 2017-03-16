@@ -96,7 +96,7 @@ class Address extends SqlBase {
 
     $speaker = $row->getSourceProperty('delivered_by');
     $year = $row->getSourceProperty('year');
-    $title = $speaker . "(" . (string)$year . " " . $type . ")";
+    $title = $speaker . " (" . (string)$year . " " . $type . ")";
     $row->setSourceProperty('node_title', $title);
 
     return parent::prepareRow($row);
