@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains pmportal_lexical_item.install.
+ * Contains script to finalize html tags in degree orations.
  */
 
 use Drupal\node\Entity\Node;
