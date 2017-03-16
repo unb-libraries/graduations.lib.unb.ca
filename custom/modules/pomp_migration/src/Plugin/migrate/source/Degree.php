@@ -200,6 +200,9 @@ class Degree extends SqlBase {
       $row->setSourceProperty('image', $file);
     }
 
+    $title = $name . " " . $degree;
+    $row->setSourceProperty('node_title', $title);
+
     return parent::prepareRow($row);
   }
 }

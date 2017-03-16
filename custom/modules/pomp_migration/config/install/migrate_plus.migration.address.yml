@@ -14,7 +14,7 @@ process:
     default_value: honorary_address
   # Map Drupal MACHINE NAME fields to migration field names as declared
   # in source plugin.
-  title: type_id
+  title: node_title
   field_add_parent: add_parent
   field_address_type: address_type
   field_list_address_type: type_id

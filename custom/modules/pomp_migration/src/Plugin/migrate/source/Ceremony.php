@@ -184,6 +184,10 @@ class Ceremony extends SqlBase {
         break;
     }
 
+    $year = $row->getSourceProperty('year');
+    $title = (string)$year . " " . $camp . " " . $type;
+    $row->setSourceProperty('node_title', $title);
+
     return parent::prepareRow($row);
   }
 }
