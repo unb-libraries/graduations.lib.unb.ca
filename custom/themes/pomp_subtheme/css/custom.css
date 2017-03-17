@@ -450,6 +450,10 @@ div.floated-fig {
   background: #F0F0F0;
 }
 
+div.photo-full {
+  float: left !important;
+}
+
 .view-degree figure {
   display: table !important;
   width: 200px !important;
@@ -463,4 +467,9 @@ div.floated-fig {
 .view-degree figcaption {
   display: table-row !important;
   font-size: 12px;
+}
+
+.photo-full figcaption {
+  display: block !important;
+  font-size: 13px;
 }
