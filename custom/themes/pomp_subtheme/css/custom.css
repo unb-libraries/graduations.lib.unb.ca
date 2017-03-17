@@ -167,7 +167,7 @@ table#traditions-hoods th, table#traditions-hoods td {
 }
 
 table#traditions-hoods, table#traditions-gowns {
-  width: 700px !important;
+  width: 80% !important;
 }
 
 /* Filters */
@@ -258,7 +258,7 @@ section.featured > div.container {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  width: 570px;
+  width: 50%;
   background-color: #F0F0F0;
 }
 
@@ -375,7 +375,7 @@ a.btn-btt {
 .view-degree table {
   font-size: 14px !important;
   table-layout: fixed !important;
-  width: 1000px !important;
+  width: 100% !important;
   border: none !important;
 }
 
@@ -386,7 +386,7 @@ a.btn-btt {
 }
 
 .view-degree tr td:first-child {
-  width: 800px !important;
+  width: 80% !important;
   vertical-align: top !important;
   text-align: left !important;
 }
@@ -406,7 +406,7 @@ a.btn-btt {
 .view-degree table {
   font-size: 14px !important;
   table-layout: fixed !important;
-  width: 600px !important;
+  width: 60% !important;
   border: none !important;
 }
 
@@ -421,7 +421,7 @@ a.btn-btt {
 }
 
 .view-degree tr td:first-child {
-  width: 400px !important;
+  width: 40% !important;
   vertical-align: top !important;
   text-align: left !important;
 }
