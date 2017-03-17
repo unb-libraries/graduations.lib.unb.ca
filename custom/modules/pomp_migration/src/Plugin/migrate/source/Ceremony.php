@@ -176,7 +176,7 @@ class Ceremony extends SqlBase {
 
     $camp = $row->getSourceProperty('campus');
     switch ($camp) {
-      case "Saint Johh":
+      case "Saint John":
         $row->setSourceProperty('camp_id', 5);
         break;
       default:
