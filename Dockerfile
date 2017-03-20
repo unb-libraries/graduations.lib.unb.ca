@@ -44,7 +44,7 @@ ENV DRUPAL_BUILD_TMPROOT ${TMP_DRUPAL_BUILD_DIR}/webroot
 RUN /scripts/buildDrupalTree.sh
 
 # Install Newrelic.
-# RUN /scripts/installNewRelic.sh
+RUN /scripts/installNewRelic.sh
 
 # Copy configuration.
 COPY ./config-yml ${TMP_DRUPAL_BUILD_DIR}/config-yml

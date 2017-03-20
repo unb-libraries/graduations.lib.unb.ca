@@ -179,15 +179,6 @@ div.view-filters {
   padding: 0px 14px;
 }
 
-input#edit-submit-honorary-browse-ceremonies,
-input#edit-submit-honorary-browse-degrees {
-  display: inline;
-}
-
-input#edit-reset {
-  display: inline;
-  margin-left: 4px;
-}
 /* Break filter form on year and campus */
 
 div.js-form-item-field-ceremony-year-value {
@@ -450,10 +441,6 @@ div.floated-fig {
   background: #F0F0F0;
 }
 
-div.photo-full {
-  float: left !important;
-}
-
 .view-degree figure {
   display: table !important;
   width: 200px !important;
@@ -467,9 +454,4 @@ div.photo-full {
 .view-degree figcaption {
   display: table-row !important;
   font-size: 12px;
-}
-
-.photo-full figcaption {
-  display: block !important;
-  font-size: 13px;
 }
