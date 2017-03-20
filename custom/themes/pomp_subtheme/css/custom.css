@@ -191,14 +191,22 @@ div.js-form-item-field-list-campus-target-id {
   clear: both;
 }
 
+input#edit-submit-honorary-browse-degrees {
+  display: inline !important;
+}
+
 /* Contact form */
 
 .contact-message-feedback-form input {
   width: 330px;
 }
 
-input#edit-preview {
-  display: none;
+input#edit-submit-honorary-browse-degrees, input#edit-reset {
+  display: inline;
+}
+
+input#edit-reset {
+  margin-left: 4px;
 }
 
 /* Back to ceremony link */
