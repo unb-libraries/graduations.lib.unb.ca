@@ -411,6 +411,10 @@ a.btn-btt {
   float: left !important;
 }
 
+.photo-full figure {
+  width: 100% !important;
+}
+
 /* Rules related to "View address" view. */
 
 .view-address .views-field-title b {
@@ -454,17 +458,17 @@ div.floated-fig {
   float: right;
   margin: 10px;
   padding: 10px;
-  background: #F0F0F0;
 }
 
-.view-degree figure {
+.floated-fig figure {
   display: table !important;
-  width: 200px !important;
-  margin: 10px !important;
-  -webkit-margin-before: auto !important;
+  width: 200px;
+  -webkit-margin-before: 0px !important;
   -webkit-margin-after: 0px !important;
-  -webkit-margin-start: auto !important;
+  -webkit-margin-start: 0px !important;
   -webkit-margin-end: 0px !important;
+  background-color: #F0F0F0 !important;
+  border: 10px solid #F0F0F0 !important;
 }
 
 .view-degree figcaption {
@@ -482,6 +486,12 @@ div.floated-fig {
 
   .menu-item {
     background-color: #555555 !important;
+  }
+
+  .floated-fig {
+    float: none !important;
+    margin-left: 0px !important;
+    padding-left: 0px !important;
   }
 }
 
