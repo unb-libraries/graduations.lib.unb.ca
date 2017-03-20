@@ -475,4 +475,8 @@ div.floated-fig {
     height: 100%;
     border: 0px;
   }
+
+  .menu-item {
+    background-color: #555555 !important;
+  }
 }
