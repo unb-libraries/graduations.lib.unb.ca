@@ -407,6 +407,10 @@ a.btn-btt {
   vertical-align: top !important;
 }
 
+.photo-full {
+  float: left !important;
+}
+
 /* Rules related to "View address" view. */
 
 .view-address .views-field-title b {
