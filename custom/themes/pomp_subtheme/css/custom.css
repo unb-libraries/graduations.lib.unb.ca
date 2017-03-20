@@ -278,11 +278,15 @@ div.form-item-search-api-fulltext + div {
   display: inline-block;
 }
 
-#edit-search-api-fulltext {
-    width: 330px;
+div.js-form-item-search-api-fulltext {
+  width: 80%;
 }
 
-#edit-submit-search {
+input#edit-search-api-fulltext {
+    width: 100%;
+}
+
+input#edit-submit-search {
   width: 80px;
 }
 
