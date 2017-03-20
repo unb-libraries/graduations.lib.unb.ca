@@ -480,3 +480,9 @@ div.floated-fig {
     background-color: #555555 !important;
   }
 }
+
+@media(max-width: 498px) {
+  div.js-form-item-search-api-fulltext {
+    width: 100%;
+  }
+}
