@@ -1,0 +1,14 @@
+uuid: b4d7c9e5-c74f-4dc0-a33c-2aef7638db8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.pomp_content_editor
+  module:
+    - user
+id: user_remove_role_action.pomp_content_editor
+label: 'Remove the POMP Content Editor role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: pomp_content_editor

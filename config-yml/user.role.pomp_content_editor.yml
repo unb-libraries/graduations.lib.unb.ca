@@ -1,0 +1,19 @@
+uuid: 9e5ae087-f4ce-4cdf-bc03-dda84317200d
+langcode: en
+status: true
+dependencies: {  }
+id: pomp_content_editor
+label: 'POMP Content Editor'
+weight: 3
+is_admin: null
+permissions:
+  - 'use text format full_html'
+  - 'create honorary_address content'
+  - 'delete any honorary_address content'
+  - 'edit any honorary_address content'
+  - 'create honorary_ceremony content'
+  - 'delete any honorary_ceremony content'
+  - 'edit any honorary_ceremony content'
+  - 'create honorary_degree content'
+  - 'delete any honorary_degree content'
+  - 'edit any honorary_degree content'

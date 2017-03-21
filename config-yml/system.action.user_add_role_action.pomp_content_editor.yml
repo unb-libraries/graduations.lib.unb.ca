@@ -1,0 +1,14 @@
+uuid: ddb98423-2675-49c9-8430-3ef84367c40d
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.pomp_content_editor
+  module:
+    - user
+id: user_add_role_action.pomp_content_editor
+label: 'Add the POMP Content Editor role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: pomp_content_editor
