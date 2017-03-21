@@ -343,6 +343,14 @@ footer#block-honoraryfooter > a:hover, a:focus {
   color: #880404;
 }
 
+#footer-logo {
+  float: right;
+}
+
+#footer-menu {
+  float: left;
+}
+
 #unb-lib-logo {
   width: 300px;
 }
@@ -486,6 +494,11 @@ div.floated-fig {
 
   .menu-item {
     background-color: #555555 !important;
+  }
+
+  #footer-logo {
+    float: left;
+    padding-top: 10px;
   }
 }
 
