@@ -322,6 +322,10 @@ li.search-results-item:hover {
   font-size: 1.1em;
 }
 
+.list-addresses {
+  padding-left: 20px !important;
+}
+
 /* Footer */
 
 div.region.region-footer {
