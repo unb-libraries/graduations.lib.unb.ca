@@ -359,6 +359,24 @@ footer#block-honoraryfooter > a:hover, a:focus {
   width: 300px;
 }
 
+#block-useraccountmenu a:link, a:visited {
+  color: #C01700 !important;
+}
+
+#block-useraccountmenu > a:hover, a:focus {
+  text-decoration: underline !important;
+  color: #880404 !important;
+}
+
+#block-useraccountmenu ul {
+  text-align: left !important;
+}
+
+#block-useraccountmenu li {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
 /* Back to top button */
 
 a.btn-btt {
