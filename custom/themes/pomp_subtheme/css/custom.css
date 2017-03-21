@@ -487,15 +487,15 @@ div.floated-fig {
   .menu-item {
     background-color: #555555 !important;
   }
+}
 
+@media(max-width: 498px) {
   .floated-fig {
     float: none !important;
     margin-left: 0px !important;
     padding-left: 0px !important;
   }
-}
 
-@media(max-width: 498px) {
   div.js-form-item-search-api-fulltext {
     width: 100%;
   }
