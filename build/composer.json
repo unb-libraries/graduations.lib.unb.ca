@@ -90,6 +90,9 @@
         "drupal/zircon": "1.0-rc1",
         "drush/drush": "~8.0",
         "malsup/jquery.cycle": "master",
+        "drupal/authorization": "1.x-dev",
+        "drupal/externalauth": "1.0",
+        "drupal/ldap": "3.x-dev",
         "oomphinc/composer-installers-extender": "1.1.1"
     },
     "require-dev": {
