@@ -43,12 +43,13 @@ div#block-pomp-subtheme-branding > div.site-name > a:hover, a:focus {
   border: none !important;
 }
 
-li.menu-item a {
+#block-pomp-subtheme-honorarymainmenu li.menu-item a {
   height: 45px !important;
   color: white !important;
 }
 
-li.menu-item > a:focus, li.menu-item > a:hover {
+#block-pomp-subtheme-honorarymainmenu li.menu-item > a:focus,
+#block-pomp-subtheme-honorarymainmenu li.menu-item > a:hover {
   text-decoration: none !important;
   background-color: #A01300 !important;
   background: -webkit-linear-gradient(top, #C01700, #A01300) !important;
@@ -156,6 +157,7 @@ li.menu-item > a:focus, li.menu-item > a:hover {
 
 .page-title {
   margin-top: .45em;
+  text-transform: uppercase;
 }
 
 /* "Traditions" page tables */
@@ -326,6 +328,12 @@ li.search-results-item:hover {
   padding-left: 20px !important;
 }
 
+a[href="/user/register"],
+a[href="/user/password"],
+a[href="/user/login"] {
+  visibility: hidden;
+}
+
 /* Footer */
 
 div.region.region-footer {
@@ -359,11 +367,14 @@ footer#block-honoraryfooter > a:hover, a:focus {
   width: 300px;
 }
 
-#block-useraccountmenu a:link, a:visited {
+#block-useraccountmenu a:link,
+#block-useraccountmenu a:visited {
+  visibility: visible !important;
   color: #C01700 !important;
 }
 
-#block-useraccountmenu > a:hover, a:focus {
+#block-useraccountmenu a:hover,
+#block-useraccountmenu a:focus {
   text-decoration: underline !important;
   color: #880404 !important;
 }
@@ -514,7 +525,7 @@ div.floated-fig {
     border: 0px;
   }
 
-  .menu-item {
+  #block-pomp-subtheme-honorarymainmenu .menu-item {
     background-color: #555555 !important;
   }
 
