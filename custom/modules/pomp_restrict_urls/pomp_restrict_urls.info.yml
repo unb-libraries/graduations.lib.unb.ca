@@ -1,0 +1,5 @@
+type: module
+name: Pomp Restricl URLs
+description: 'Restrict URLs to admins'
+package: POMP
+core: 8.x

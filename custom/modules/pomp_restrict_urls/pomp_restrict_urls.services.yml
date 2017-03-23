@@ -1,0 +1,5 @@
+services:
+  pomp_restrict_urls.route_subscriber:
+    class: Drupal\pomp_restrict_urls\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
