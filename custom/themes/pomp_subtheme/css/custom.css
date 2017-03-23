@@ -25,6 +25,10 @@ input, select {
   height: 36px;
 }
 
+#edit-name--description, #edit-pass--description {
+  display: none;
+}
+
 /* Site title */
 
 div.site-name a {
