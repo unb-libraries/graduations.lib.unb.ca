@@ -14,9 +14,7 @@
  */
 #}
 
-{#% debug(primary) %#}
-
-{% if primary %}
+{% if primary and not primary['entity.user.edit_form'] %}
   <h2 id="primary-tabs-title" class="visually-hidden">{{ 'Primary tabs'|t }}</h2>
   <nav role="navigation" class="is-horizontal is-collapsible" aria-labelledby="primary-tabs-title" data-drupal-nav-tabs>
     <ul class="tabs primary clearfix" data-drupal-nav-tabs-target>{{ primary }}</ul>
