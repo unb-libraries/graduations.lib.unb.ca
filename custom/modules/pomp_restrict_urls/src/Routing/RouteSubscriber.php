@@ -1,4 +1,5 @@
 <?php
+
 namespace Drupal\pomp_restrict_urls\Routing;
 
 use Drupal\Core\Routing\RouteSubscriberBase;
@@ -17,5 +18,9 @@ class RouteSubscriber extends RouteSubscriberBase {
     if ($route = $collection->get('entity.user.edit_form')) {
       $route->setRequirement('_permission', 'access administration pages');
     }
+    if ($route = $collection->get('user.pass')) {
+      $route->setRequirement('_permission', 'access administration pages');
+    }
   }
+
 }
