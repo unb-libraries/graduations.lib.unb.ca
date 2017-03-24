@@ -26,7 +26,17 @@ input, select {
 }
 
 #edit-name--description, #edit-pass--description {
-  display: none;
+  visibility: hidden;
+}
+
+#edit-name--description:before {
+  visibility: visible !important;
+  content: "Enter your UNB login ID.";
+}
+
+#edit-pass--description:before {
+  visibility: visible !important;
+  content: "Enter your password.";
 }
 
 /* Site title */
