@@ -1,0 +1,22 @@
+uuid: d28b1d3c-d073-4fa5-8acd-26dc88c0382e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.honorary_address
+id: node.honorary_address.promote
+field_name: promote
+entity_type: node
+bundle: honorary_address
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

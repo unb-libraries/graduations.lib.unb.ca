@@ -10,7 +10,7 @@ id: node.honorary_ceremony.field_ref_ceremony_address
 field_name: field_ref_ceremony_address
 entity_type: node
 bundle: honorary_ceremony
-label: 'Addresses delivered:'
+label: 'Addresses Delivered'
 description: ''
 required: false
 translatable: false

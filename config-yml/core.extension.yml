@@ -30,6 +30,7 @@ module:
   pomp_address_node: 0
   pomp_ceremony_node: 0
   pomp_degree_node: 0
+  pomp_restrict_urls: 0
   quickedit: 0
   rdf: 0
   search_api: 0

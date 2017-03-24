@@ -3,8 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.honorary_address.body
-    - field.field.node.honorary_address.field_add_parent
     - field.field.node.honorary_address.field_address_content
     - field.field.node.honorary_address.field_delivered_by
     - field.field.node.honorary_address.field_list_address_type
@@ -17,20 +15,6 @@ targetEntityType: node
 bundle: honorary_address
 mode: default
 content:
-  body:
-    weight: 105
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-  field_add_parent:
-    weight: 108
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
   field_address_content:
     weight: 106
     label: above

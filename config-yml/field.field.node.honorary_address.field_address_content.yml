@@ -11,7 +11,7 @@ id: node.honorary_address.field_address_content
 field_name: field_address_content
 entity_type: node
 bundle: honorary_address
-label: address_content
+label: 'Address Content'
 description: ''
 required: false
 translatable: false

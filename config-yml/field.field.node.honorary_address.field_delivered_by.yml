@@ -9,7 +9,7 @@ id: node.honorary_address.field_delivered_by
 field_name: field_delivered_by
 entity_type: node
 bundle: honorary_address
-label: delivered_by
+label: 'Delivered By'
 description: ''
 required: false
 translatable: false

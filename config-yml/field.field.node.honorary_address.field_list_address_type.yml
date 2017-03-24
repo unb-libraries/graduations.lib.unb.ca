@@ -10,7 +10,7 @@ id: node.honorary_address.field_list_address_type
 field_name: field_list_address_type
 entity_type: node
 bundle: honorary_address
-label: 'List address type:'
+label: 'Address Type'
 description: ''
 required: false
 translatable: false

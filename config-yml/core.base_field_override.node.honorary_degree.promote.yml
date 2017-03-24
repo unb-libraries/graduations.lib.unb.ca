@@ -1,0 +1,22 @@
+uuid: cdb0be67-a769-44d2-80fe-2e9879011545
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.honorary_degree
+id: node.honorary_degree.promote
+field_name: promote
+entity_type: node
+bundle: honorary_degree
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
