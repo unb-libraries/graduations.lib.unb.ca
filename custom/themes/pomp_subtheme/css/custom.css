@@ -217,7 +217,9 @@ input#edit-submit-honorary-browse-degrees {
   width: 330px;
 }
 
-input#edit-submit-honorary-browse-degrees, input#edit-reset {
+input#edit-submit-honorary-browse-degrees,
+input#edit-submit-honorary-browse-ceremonies,
+input#edit-reset {
   display: inline;
 }
 
