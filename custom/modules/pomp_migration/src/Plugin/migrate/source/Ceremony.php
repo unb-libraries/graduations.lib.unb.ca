@@ -166,7 +166,7 @@ class Ceremony extends SqlBase {
         break;
       case "Spring Convocation":
         $row->setSourceProperty('type_id', 70);
-        $row->setSourceProperty('seas_id', 42);
+        $row->setSourceProperty('seas_id', 15);
         break;
       default:
         $row->setSourceProperty('type_id', 61);
