@@ -1,0 +1,29 @@
+uuid: a4ea2ba8-eff3-4f42-b387-b1cb5c758737
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - pomp_migration
+_core:
+  default_config_hash: '-3qKyYwWw7S2MgUJaaUPXHiskJcXyALwzMhq1ehoC4M'
+id: address
+migration_tags: null
+migration_group: pomp_migration
+label: 'Honorary addresses'
+source:
+  plugin: address
+  key: default
+process:
+  type:
+    plugin: default_value
+    default_value: honorary_address
+  title: node_title
+  field_add_parent: add_parent
+  field_address_type: address_type
+  field_list_address_type: type_id
+  field_delivered_by: delivered_by
+  field_address_content: content
+destination:
+  plugin: 'entity:node'
+migration_dependencies: null

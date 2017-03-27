@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.honorary_address.field_add_parent
     - field.field.node.honorary_address.field_address_content
     - field.field.node.honorary_address.field_delivered_by
     - field.field.node.honorary_address.field_list_address_type
@@ -39,4 +40,5 @@ content:
     weight: 100
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_add_parent: true

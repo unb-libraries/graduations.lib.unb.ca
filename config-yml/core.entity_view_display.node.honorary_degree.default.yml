@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.honorary_degree.field_citation
+    - field.field.node.honorary_degree.field_deg_parent
     - field.field.node.honorary_degree.field_degree_notes
     - field.field.node.honorary_degree.field_image
     - field.field.node.honorary_degree.field_img_caption
@@ -95,4 +96,5 @@ content:
     third_party_settings: {  }
     type: string
 hidden:
+  field_deg_parent: true
   links: true
