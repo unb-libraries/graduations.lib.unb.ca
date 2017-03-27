@@ -1,0 +1,20 @@
+ldap_user_conf:
+  drupalAcctProvisionServer: unb_libraries_ldap
+  ldapEntryProvisionServer: none
+  drupalAcctProvisionTriggers:
+    2: '2'
+    1: '1'
+  ldapEntryProvisionTriggers:
+    6: 0
+    7: 0
+    8: 0
+    3: 0
+  orphanedDrupalAcctBehavior: ldap_user_orphan_do_not_check
+  orphanedCheckQty: 100
+  orphanedAccountCheckInterval: weekly
+  userConflictResolve: 2
+  manualAccountConflict: 3
+  acctCreation: 4
+  ldapUserSyncMappings: {  }
+_core:
+  default_config_hash: 9_Ip_6OM5tCdko-qYZppFIO0MPpmWytXiCtTbNRTw10
