@@ -21,3 +21,23 @@ ldap_authentication_conf:
   '// TODO': 'This list is made by hand and not in the schema'
 _core:
   default_config_hash: DtS1jQ-2Im-31GrQl420IDc0c2E13ksazd2EutEX1js
+authenticationMode: 1
+sids:
+  unb_libraries_ldap: unb_libraries_ldap
+allowOnlyIfTextInDn: {  }
+excludeIfTextInDn: {  }
+loginUIUsernameTxt: 'Enter your UNB login ID'
+loginUIPasswordTxt: ''
+ldapUserHelpLinkUrl: ''
+ldapUserHelpLinkText: ''
+excludeIfNoAuthorizations: 0
+emailOption: 4
+emailUpdate: 1
+emailTemplateHandling: if_empty
+emailTemplate: ''
+emailTemplateUsageResolveConflict: false
+emailTemplateUsageNeverUpdate: false
+emailTemplateUsagePromptUser: false
+emailTemplateUsageRedirectOnLogin: false
+emailTemplateUsagePromptRegex: ''
+passwordOption: 3

@@ -9,6 +9,7 @@ dependencies:
     - field.storage.node.field_list_ceremony_type
     - field.storage.node.field_list_degree
     - field.storage.node.field_orator
+    - field.storage.node.field_recipient_name
     - image.style.degree_thumbnail
     - node.type.honorary_degree
     - taxonomy.vocabulary.campus_voc
@@ -178,10 +179,10 @@ display:
           entity_type: node
           entity_field: nid
           plugin_id: field
-        title:
-          id: title
-          table: node_field_data
-          field: title
+        field_recipient_name:
+          id: field_recipient_name
+          table: node__field_recipient_name
+          field: field_recipient_name
           relationship: none
           group_type: group
           admin_label: ''
@@ -191,7 +192,7 @@ display:
             alter_text: false
             text: ''
             make_link: false
-            path: '/degree/{{ nid }}'
+            path: ''
             absolute: false
             external: false
             replace_spaces: false
@@ -205,8 +206,8 @@ display:
             target: ''
             nl2br: false
             max_length: 0
-            word_boundary: false
-            ellipsis: false
+            word_boundary: true
+            ellipsis: true
             more_link: false
             more_link_text: ''
             more_link_path: ''
@@ -221,7 +222,7 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: false
+          element_default_classes: true
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -240,8 +241,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
           plugin_id: field
         field_orator:
           id: field_orator
@@ -634,7 +633,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<table>\n  <tr>\n    <td>\n      <strong>{{ title }} </strong><span>{{ field_list_degree }}</span>\n       <p>Awarded at the {{ field_list_ceremony_type }}<br>\n              Orator: {{ field_orator }}</p>\n    </td>\n    <td>\n      <figure>\n        {{ field_image }}\n      </figure>\n    </td>\n  </tr>\n</table>\n"
+            text: "<table>\n  <tr>\n    <td>\n      <strong>{{ field_recipient_name }} </strong><span>{{ field_list_degree }}</span>\n       <p>Awarded at the {{ field_list_ceremony_type }}<br>\n              Orator: {{ field_orator }}</p>\n    </td>\n    <td>\n      <figure>\n        {{ field_image }}\n      </figure>\n    </td>\n  </tr>\n</table>\n"
             make_link: false
             path: ''
             absolute: false
@@ -736,6 +735,7 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
+              pomp_content_editor: '0'
           is_grouped: false
           group_info:
             label: ''
@@ -749,7 +749,7 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           fields:
-            title: title
+            field_recipient_name: field_recipient_name
             field_orator: field_orator
           plugin_id: combine
         field_ceremony_year_value:
@@ -1154,6 +1154,7 @@ display:
         - 'config:field.storage.node.field_list_ceremony_type'
         - 'config:field.storage.node.field_list_degree'
         - 'config:field.storage.node.field_orator'
+        - 'config:field.storage.node.field_recipient_name'
   page_1:
     display_plugin: page
     id: page_1
@@ -1179,3 +1180,4 @@ display:
         - 'config:field.storage.node.field_list_ceremony_type'
         - 'config:field.storage.node.field_list_degree'
         - 'config:field.storage.node.field_orator'
+        - 'config:field.storage.node.field_recipient_name'

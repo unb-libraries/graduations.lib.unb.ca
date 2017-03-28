@@ -18,3 +18,22 @@ ldap_user_conf:
   ldapUserSyncMappings: {  }
 _core:
   default_config_hash: 9_Ip_6OM5tCdko-qYZppFIO0MPpmWytXiCtTbNRTw10
+drupalAcctProvisionServer: unb_libraries_ldap
+ldapEntryProvisionServer: null
+drupalAcctProvisionTriggers:
+  drupal_on_login: drupal_on_login
+  drupal_on_update_create: drupal_on_update_create
+ldapEntryProvisionTriggers:
+  ldap_on_update_create: '0'
+  ldap_on_login: '0'
+  ldap_on_delete: '0'
+  drupal_on_manual_creation: '0'
+orphanedDrupalAcctBehavior: ldap_user_orphan_do_not_check
+orphanedCheckQty: null
+orphanedAccountCheckInterval: always
+userConflictResolve: 2
+manualAccountConflict: 3
+acctCreation: 4
+ldapUserSyncMappings:
+  drupal: {  }
+  ldap: {  }
