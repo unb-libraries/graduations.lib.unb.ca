@@ -1,5 +1,5 @@
 pomp_deg_linking.edit_degrees:
-  route_name: pomp_deg_linking.edit_degrees_form
+  route_name: pomp_deg_linking.edit_degrees
   title: 'Link Degrees'
   base_route: entity.node.canonical
   weight: 100
