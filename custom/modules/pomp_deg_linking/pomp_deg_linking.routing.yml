@@ -4,4 +4,4 @@ pomp_deg_linking.edit_courses_form:
     _title: 'Link Honorary Degrees'
     _form: '\Drupal\pomp_deg_linking\Form\EditDegreesForm'
   requirements:
-    _custom_access: '\Drupal\pomp_deg_linking\Controller\DegreeLinkingController::checkAccess'
+    _custom_access: '\Drupal\pomp_deg_linking\Controller\PompDegLinkingCheckTypeController::checkAccess'
