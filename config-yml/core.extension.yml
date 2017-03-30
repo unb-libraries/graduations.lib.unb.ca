@@ -33,6 +33,7 @@ module:
   path: 0
   pomp_address_node: 0
   pomp_ceremony_node: 0
+  pomp_deg_linking: 0
   pomp_degree_node: 0
   pomp_restrict_urls: 0
   quickedit: 0
