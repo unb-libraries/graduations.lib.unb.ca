@@ -5,11 +5,10 @@ namespace Drupal\pomp_deg_linking\Form;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\views\Views;
-
-/* use Drupal\Core\Url; */
+use Drupal\Core\Url;
 
 /**
- * ManageProjectModulesForm object.
+ * EditDegreesForm object.
  */
 class EditDegreesForm extends FormBase {
 
@@ -27,11 +26,30 @@ class EditDegreesForm extends FormBase {
     $form = [];
 
     // List existing degrees.
-    $view = Views::getView('list_ceremony_degrees');
+    $view = Views::getView('edit_ceremony_degrees');
     $view->setDisplay('block_1');
     $view->setArguments([$node]);
     $render = $view->render();
-    $form['list_ceremony_degrees_view'] = $render;
+    $form['edit_ceremony_degrees_view'] = $render;
+
+    // Add degrees.
+    $form['add_degree_button'] = [
+      '#type' => 'link',
+      '#title' => t('Add New Degree'),
+      '#url' => Url::fromRoute(
+        'pomp_deg_linking.add_degree',
+        [
+          'node' => is_numeric($node) ? $node : NULL,
+        ]
+      ),
+      '#attributes' => [
+        'class' => ['button', 'use-ajax'],
+        'data-dialog-type' => 'modal',
+      ],
+      '#attached' => [
+        'library' => ['core/drupal.dialog.ajax'],
+      ],
+    ];
 
     return $form;
   }
