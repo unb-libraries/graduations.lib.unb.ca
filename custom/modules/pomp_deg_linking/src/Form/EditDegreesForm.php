@@ -4,9 +4,9 @@ namespace Drupal\pomp_deg_linking\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\views\Views;
 
 /* use Drupal\Core\Url; */
-/* use Drupal\views\Views; */
 
 /**
  * ManageProjectModulesForm object.
@@ -25,6 +25,15 @@ class EditDegreesForm extends FormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state, $node = NULL) {
     $form = [];
+
+    // List existing degrees.
+    $view = Views::getView('list_ceremony_degrees');
+    $view->setDisplay('block_1');
+    $view->setArguments([$node]);
+    $render = $view->render();
+    $form['list_ceremony_degrees_view'] = $render;
+
+    return $form;
   }
 
   /**
