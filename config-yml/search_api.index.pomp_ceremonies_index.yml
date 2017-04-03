@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_ceremony_year
     - search_api.server.pomp_db_search_server
   module:
     - search_api
@@ -22,6 +23,14 @@ field_settings:
       view_mode:
         'entity:node':
           honorary_ceremony: default
+  field_ceremony_year:
+    label: Year
+    datasource_id: 'entity:node'
+    property_path: field_ceremony_year
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_ceremony_year
 datasource_settings:
   'entity:node':
     bundles:
@@ -32,6 +41,13 @@ datasource_settings:
       default: true
       selected: {  }
 processor_settings:
+  add_url: {  }
+  ignorecase:
+    fields:
+      - rendered_item
+    weights:
+      preprocess_index: -8
+      preprocess_query: -7
   rendered_item: {  }
   tokenizer:
     fields:
@@ -42,6 +58,7 @@ processor_settings:
     weights:
       preprocess_index: -5
       preprocess_query: -4
+  aggregated_field: {  }
   highlight:
     highlight: always
     highlight_partial: true
@@ -52,14 +69,6 @@ processor_settings:
     suffix: '</strong>'
     weights:
       postprocess_query: 0
-  ignorecase:
-    fields:
-      - rendered_item
-    weights:
-      preprocess_index: -8
-      preprocess_query: -7
-  add_url: {  }
-  aggregated_field: {  }
 tracker_settings:
   default: {  }
 options:

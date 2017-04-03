@@ -557,6 +557,18 @@ display:
             rendered_item: rendered_item
           plugin_id: search_api_fulltext
       sorts:
+        field_ceremony_year:
+          id: field_ceremony_year
+          table: search_api_index_pomp_ceremonies_index
+          field: field_ceremony_year
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: true
+          expose:
+            label: Year
+          plugin_id: search_api
         search_api_relevance:
           id: search_api_relevance
           table: search_api_index_pomp_ceremonies_index
@@ -565,9 +577,9 @@ display:
           group_type: group
           admin_label: ''
           order: DESC
-          exposed: false
+          exposed: true
           expose:
-            label: ''
+            label: Relevance
           plugin_id: search_api
       title: RESULTS
       header:
@@ -611,11 +623,14 @@ display:
         operator: AND
         groups: {  }
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
       tags:
         - 'config:field.storage.node.field_ceremony_year'
         - 'config:field.storage.node.field_list_campus'
@@ -630,11 +645,14 @@ display:
       path: search
       exposed_block: true
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
       tags:
         - 'config:field.storage.node.field_ceremony_year'
         - 'config:field.storage.node.field_list_campus'

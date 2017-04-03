@@ -196,11 +196,12 @@ div.view-filters {
 }
 
 .form-item-sort-by {
-  display: none;
+  display: none !important;
 }
 
-label[for="edit-sort-order"]:after {
-  content: ":";
+label[for="edit-sort-order"]:after,
+label[for="edit-sort-by"]:after {
+  content: " (year):";
 }
 
 /* Break filter form on year and campus */
@@ -285,7 +286,7 @@ section.featured > div.container {
 #block-exposedformsearchpage-1, #block-browse {
   margin-top: 10px;
   width: 50%;
-  height: 10em;
+  height: 19em;
   padding: 1.2em;
   background-color: #F0F0F0;
 }
