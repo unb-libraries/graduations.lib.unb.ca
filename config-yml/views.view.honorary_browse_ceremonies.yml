@@ -615,21 +615,9 @@ display:
           group_type: group
           admin_label: ''
           order: DESC
-          exposed: false
+          exposed: true
           expose:
-            label: ''
-          plugin_id: standard
-        field_campus_value:
-          id: field_campus_value
-          table: node__field_campus
-          field: field_campus_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
+            label: Year
           plugin_id: standard
         field_list_ceremony_type_target_id:
           id: field_list_ceremony_type_target_id
@@ -642,6 +630,18 @@ display:
           exposed: false
           expose:
             label: ''
+          plugin_id: standard
+        field_list_campus_target_id:
+          id: field_list_campus_target_id
+          table: node__field_list_campus
+          field: field_list_campus_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: Campus
           plugin_id: standard
       title: 'BROWSE GRADUATION CEREMONIES'
       header:
@@ -692,6 +692,8 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
         - user
         - 'user.node_grants:view'
         - user.permissions
@@ -714,6 +716,8 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
         - user
         - 'user.node_grants:view'
         - user.permissions

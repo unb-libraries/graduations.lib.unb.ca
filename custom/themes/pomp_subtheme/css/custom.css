@@ -195,6 +195,14 @@ div.view-filters {
   padding: 0px 14px;
 }
 
+.form-item-sort-by {
+  display: none;
+}
+
+label[for="edit-sort-order"]:after {
+  content: ":";
+}
+
 /* Break filter form on year and campus */
 
 div.js-form-item-field-ceremony-year-value {
