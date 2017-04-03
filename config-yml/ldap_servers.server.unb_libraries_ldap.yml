@@ -10,9 +10,9 @@ port: 636
 tls: false
 followrefs: null
 weight: null
-bind_method: 4
-binddn: ''
-bindpw: ''
+bind_method: anon_user
+binddn: null
+bindpw: null
 basedn: 'dc=lib,dc=unb,dc=ca'
 user_attr: uid
 account_name_attr: ''
