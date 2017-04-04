@@ -6,11 +6,3 @@ pomp_deg_linking.edit_degrees:
   requirements:
     _permission: 'access content'
     _custom_access: '\Drupal\pomp_deg_linking\Controller\PompDegLinkingCheckTypeController::checkType'
-
-pomp_deg_linking.add_degree:
-  path: '/ceremony/{node}/degrees/add'
-  defaults:
-    _title: 'Add Honorary Degree'
-    _entity_form: honorary_degree.add
-  requirements:
-    _entity_create_access: honorary_degree

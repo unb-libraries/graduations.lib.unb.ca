@@ -36,12 +36,7 @@ class EditDegreesForm extends FormBase {
     $form['add_degree_button'] = [
       '#type' => 'link',
       '#title' => t('Add New Degree'),
-      '#url' => Url::fromRoute(
-        'pomp_deg_linking.add_degree',
-        [
-          'node' => is_numeric($node) ? $node : NULL,
-        ]
-      ),
+      '#url' => Url::fromUri("internal:/node/add/honorary_degree"),
       '#attributes' => [
         'class' => ['button', 'use-ajax'],
         'data-dialog-type' => 'modal',
