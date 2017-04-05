@@ -46,6 +46,8 @@ class EditDegreesForm extends FormBase {
       ],
     ];
 
+    \Drupal::state()->set('parent_cer', $node);
+
     return $form;
   }
 

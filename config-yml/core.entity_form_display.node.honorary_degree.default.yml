@@ -25,74 +25,80 @@ bundle: honorary_degree
 mode: default
 content:
   field_citation:
-    weight: 8
+    weight: 9
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
   field_degree_notes:
-    weight: 9
+    weight: 10
     settings:
       size: 255
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
   field_image:
-    weight: 4
+    weight: 5
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
   field_img_caption:
-    weight: 5
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-  field_img_caption_2:
     weight: 6
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-  field_list_degree:
-    weight: 1
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-  field_list_gender:
-    weight: 3
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-  field_list_valedictorian:
-    weight: 2
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-  field_orator:
+  field_img_caption_2:
     weight: 7
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-  field_recipient_name:
-    weight: 0
+  field_list_degree:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_list_gender:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_list_valedictorian:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_orator:
+    weight: 8
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+  field_recipient_name:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  title:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
 hidden:
   created: true
   field_deg_parent: true
   path: true
   promote: true
   sticky: true
-  title: true
   uid: true

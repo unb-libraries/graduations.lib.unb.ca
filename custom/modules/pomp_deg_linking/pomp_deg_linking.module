@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * @file
+ * Contains pomp_deg_linking.module
+ */
+
+use Drupal\node\Entity\Node;
+use \Drupal\Core\Form\FormStateInterface;
+
+/***
+ * Implements hook_form_FORM_ID_alter()
+ */
+function pomp_deg_linking_form_node_honorary_degree_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  foreach (array_keys($form['actions']) as $action) {
+      if ($action != 'preview' && isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit') {
+        $form['actions'][$action]['#submit'][] = 'link_deg_cer';
+      }
+    }
+  $form_state->set('#title', 'New Degree');
+}
+
+function link_deg_cer(&$form, FormStateInterface $form_state) {
+  $cer_id = \Drupal::state()->get('parent_cer');
+
+  if ($cer_id) {
+    \Drupal::state()->delete('parent_cer');
+    $deg_id = $form_state->get('nid');
+    $deg_id_ref = array('target_id' => $deg_id);
+
+    $query = \Drupal::entityQuery('node')
+      ->condition('type', 'honorary_ceremony')
+      ->condition('nid', $cer_id);
+    $cers = $query->execute();
+
+    foreach ($cers as $cer) {
+      $cer_node = Node::load($cer);
+      $ref_cer_deg = $cer_node->get('field_ref_ceremony_degree')->getValue();
+      $cer_node->field_ref_ceremony_degree->appendItem($deg_id_ref);
+      $cer_node->save();
+      unset($cer_node);
+    }
+  }
+
+}
