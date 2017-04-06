@@ -88,17 +88,11 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-  title:
-    type: string_textfield
-    weight: 0
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
 hidden:
   created: true
   field_deg_parent: true
   path: true
   promote: true
   sticky: true
+  title: true
   uid: true

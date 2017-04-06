@@ -2,32 +2,48 @@
 
 /**
  * @file
- * Contains pomp_deg_linking.module
+ * Contains pomp_deg_linking.module.
  */
 
 use Drupal\node\Entity\Node;
 use \Drupal\Core\Form\FormStateInterface;
 
-/***
- * Implements hook_form_FORM_ID_alter()
+/**
+ * Implements hook_form_FORM_ID_alter().
  */
 function pomp_deg_linking_form_node_honorary_degree_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   foreach (array_keys($form['actions']) as $action) {
-      if ($action != 'preview' && isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit') {
-        $form['actions'][$action]['#submit'][] = 'link_deg_cer';
-      }
+    if ($action != 'preview' && isset($form['actions'][$action]['#type']) &&
+    $form['actions'][$action]['#type'] === 'submit') {
+      $form['actions'][$action]['#submit'][] = 'pomp_deg_linking_link';
+      array_unshift($form['actions'][$action]['#submit'], 'pomp_deg_linking_title');
     }
-  $form_state->set('#title', 'New Degree');
+  }
 }
 
-function link_deg_cer(&$form, FormStateInterface $form_state) {
+/**
+ * Method added as submit handler.
+ */
+function pomp_deg_linking_title(&$form, FormStateInterface $form_state) {
+  $recipient = $form_state->getValue('field_recipient_name')[0]['value'];
+  $degree_id = $form_state->getValue('field_list_degree')[0]['target_id'];
+  $degree = taxonomy_term_load($degree_id)->getName();
+  $title = $recipient . ' (' . $degree . ')';
+  kint($recipient);
+  $form_state->setValue('title', $title);
+}
+
+/**
+ * Method added as submit handler.
+ */
+function pomp_deg_linking_link(&$form, FormStateInterface $form_state) {
   $usr = \Drupal::currentUser()->id();
   $ses = \Drupal::service('session_manager')->getId();
   $pomp_deg_linking_parent_cer = 'parent_cer' . $usr . $ses;
   $cer_id = \Drupal::state()->get($pomp_deg_linking_parent_cer);
+  \Drupal::state()->delete($pomp_deg_linking_parent_cer);
 
   if ($cer_id) {
-    \Drupal::state()->delete($pomp_deg_linking_parent_cer);
     $deg_id = $form_state->get('nid');
     $deg_id_ref = array('target_id' => $deg_id);
 
@@ -44,5 +60,4 @@ function link_deg_cer(&$form, FormStateInterface $form_state) {
       unset($cer_node);
     }
   }
-
 }
