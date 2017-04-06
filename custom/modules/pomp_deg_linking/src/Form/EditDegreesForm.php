@@ -46,7 +46,10 @@ class EditDegreesForm extends FormBase {
       ],
     ];
 
-    \Drupal::state()->set('parent_cer', $node);
+    $usr = \Drupal::currentUser()->id();
+    $ses = \Drupal::service('session_manager')->getId();
+    $pomp_deg_linking_parent_cer = 'parent_cer' . $usr . $ses;
+    \Drupal::state()->set($pomp_deg_linking_parent_cer, $node);
 
     return $form;
   }

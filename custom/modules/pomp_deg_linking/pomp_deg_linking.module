@@ -21,10 +21,13 @@ function pomp_deg_linking_form_node_honorary_degree_form_alter(&$form, FormState
 }
 
 function link_deg_cer(&$form, FormStateInterface $form_state) {
-  $cer_id = \Drupal::state()->get('parent_cer');
+  $usr = \Drupal::currentUser()->id();
+  $ses = \Drupal::service('session_manager')->getId();
+  $pomp_deg_linking_parent_cer = 'parent_cer' . $usr . $ses;
+  $cer_id = \Drupal::state()->get($pomp_deg_linking_parent_cer);
 
   if ($cer_id) {
-    \Drupal::state()->delete('parent_cer');
+    \Drupal::state()->delete($pomp_deg_linking_parent_cer);
     $deg_id = $form_state->get('nid');
     $deg_id_ref = array('target_id' => $deg_id);
 
