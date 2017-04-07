@@ -44,7 +44,7 @@ function pomp_add_linking_title(&$form, FormStateInterface $form_state) {
 function pomp_add_linking_link(&$form, FormStateInterface $form_state) {
   $usr = \Drupal::currentUser()->id();
   $ses = \Drupal::service('session_manager')->getId();
-  $pomp_add_linking_parent_cer = 'parent_cer' . $usr . $ses;
+  $pomp_add_linking_parent_cer = 'pomp_add_linking_parent_cer' . $usr . $ses;
   $cer_id = \Drupal::state()->get($pomp_add_linking_parent_cer);
   \Drupal::state()->delete($pomp_add_linking_parent_cer);
 

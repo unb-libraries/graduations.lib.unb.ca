@@ -22,7 +22,7 @@ class PompAddLinkingCheckTypeController extends ControllerBase {
    */
   public function checkType($node) {
     $actual_node = Node::load($node);
-    return AccessResult::allowedIf($actual_node->bundle() === 'honorary_address');
+    return AccessResult::allowedIf($actual_node->bundle() === 'honorary_ceremony');
   }
 
 }
