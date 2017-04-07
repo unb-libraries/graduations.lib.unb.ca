@@ -1,0 +1,68 @@
+<?php
+
+/**
+ * @file
+ * Contains pomp_add_linking.module.
+ */
+
+use Drupal\node\Entity\Node;
+use \Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function pomp_add_linking_form_node_honorary_address_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  foreach (array_keys($form['actions']) as $action) {
+    if ($action != 'preview' && isset($form['actions'][$action]['#type']) &&
+    $form['actions'][$action]['#type'] === 'submit') {
+      $form['actions'][$action]['#submit'][] = 'pomp_add_linking_link';
+      array_unshift($form['actions'][$action]['#submit'], 'pomp_add_linking_title');
+    }
+  }
+}
+
+/**
+ * Method added as submit handler.
+ */
+function pomp_add_linking_title(&$form, FormStateInterface $form_state) {
+  $delivered_by = $form_state->getValue('field_delivered_by')[0]['value'];
+
+  $usr = \Drupal::currentUser()->id();
+  $ses = \Drupal::service('session_manager')->getId();
+  $pomp_add_linking_year = 'pomp_add_linking_year' . $usr . $ses;
+  $year = \Drupal::state()->get($pomp_add_linking_year);
+
+  $add_type_id = $form_state->getValue('field_list_address_type')[0]['target_id'];
+  $add_type = taxonomy_term_load($add_type_id)->getName();
+  $title = $delivered_by . ' (' . $year . ' ' . $add_type . ')';
+  $form_state->setValue('title', $title);
+}
+
+/**
+ * Method added as submit handler.
+ */
+function pomp_add_linking_link(&$form, FormStateInterface $form_state) {
+  $usr = \Drupal::currentUser()->id();
+  $ses = \Drupal::service('session_manager')->getId();
+  $pomp_add_linking_parent_cer = 'parent_cer' . $usr . $ses;
+  $cer_id = \Drupal::state()->get($pomp_add_linking_parent_cer);
+  \Drupal::state()->delete($pomp_add_linking_parent_cer);
+
+  if ($cer_id) {
+    $add_id = $form_state->get('nid');
+    $add_id_ref = array('target_id' => $add_id);
+
+    $query = \Drupal::entityQuery('node')
+      ->condition('type', 'honorary_ceremony')
+      ->condition('nid', $cer_id);
+    $cers = $query->execute();
+
+    foreach ($cers as $cer) {
+      $cer_node = Node::load($cer);
+      $ref_cer_add = $cer_node->get('field_ref_ceremony_address')->getValue();
+      $cer_node->field_ref_ceremony_address->appendItem($add_id_ref);
+      $cer_node->save();
+      unset($cer_node);
+    }
+  }
+}

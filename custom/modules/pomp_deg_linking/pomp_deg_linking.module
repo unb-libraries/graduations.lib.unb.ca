@@ -29,7 +29,6 @@ function pomp_deg_linking_title(&$form, FormStateInterface $form_state) {
   $degree_id = $form_state->getValue('field_list_degree')[0]['target_id'];
   $degree = taxonomy_term_load($degree_id)->getName();
   $title = $recipient . ' (' . $degree . ')';
-  kint($recipient);
   $form_state->setValue('title', $title);
 }
 
