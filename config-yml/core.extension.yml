@@ -31,6 +31,7 @@ module:
   options: 0
   page_cache: 0
   path: 0
+  pomp_add_linking: 0
   pomp_address_node: 0
   pomp_ceremony_node: 0
   pomp_deg_linking: 0
