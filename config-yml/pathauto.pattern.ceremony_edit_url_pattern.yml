@@ -1,0 +1,22 @@
+uuid: 7be42da9-8550-4fa9-a267-9ee13e987c51
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: ceremony_edit_url_pattern
+label: 'Ceremony edit URL pattern'
+type: 'canonical_entities:node'
+pattern: '/ceremony/[node:nid]/edit'
+selection_criteria:
+  e79b969f-39b1-4b5b-9378-c565d62c284d:
+    id: node_type
+    bundles:
+      honorary_ceremony: honorary_ceremony
+    negate: false
+    context_mapping:
+      node: node
+    uuid: e79b969f-39b1-4b5b-9378-c565d62c284d
+selection_logic: and
+weight: -5
+relationships: {  }

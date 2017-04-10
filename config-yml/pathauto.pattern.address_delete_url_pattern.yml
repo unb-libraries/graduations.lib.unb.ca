@@ -1,0 +1,22 @@
+uuid: b6eb072e-2b1a-487d-ac85-7b7a56e517c5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: address_delete_url_pattern
+label: 'Address delete URL pattern'
+type: 'canonical_entities:node'
+pattern: '/address/[node:nid]/delete'
+selection_criteria:
+  22167e61-ca1e-4ff7-88d8-3670be8af74c:
+    id: node_type
+    bundles:
+      honorary_address: honorary_address
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 22167e61-ca1e-4ff7-88d8-3670be8af74c
+selection_logic: and
+weight: -5
+relationships: {  }

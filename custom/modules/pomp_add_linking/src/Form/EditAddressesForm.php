@@ -55,7 +55,6 @@ class EditAddressesForm extends FormBase {
     $actual_node = Node::load($node);
     $year = $actual_node->get('field_ceremony_year')->getValue()[0]['value'];
     $pomp_add_linking_year = 'pomp_add_linking_year' . $usr . $ses;
-    kint($year);
     \Drupal::state()->set($pomp_add_linking_year, $year);
 
     return $form;

@@ -1,0 +1,22 @@
+uuid: be19ce27-4d7d-42b9-838d-8620caa1f6a5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: ceremony_delete_url_pattern
+label: 'Ceremony delete URL pattern'
+type: 'canonical_entities:node'
+pattern: '/ceremony/[node:nid]/delete'
+selection_criteria:
+  5ce90365-2747-49e3-92b0-b5a04a30226f:
+    id: node_type
+    bundles:
+      honorary_ceremony: honorary_ceremony
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 5ce90365-2747-49e3-92b0-b5a04a30226f
+selection_logic: and
+weight: -5
+relationships: {  }
