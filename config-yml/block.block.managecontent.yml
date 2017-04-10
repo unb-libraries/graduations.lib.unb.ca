@@ -1,0 +1,33 @@
+uuid: d6a6b1ac-119f-4ed0-961b-b60fee07aca1
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:0d1e8218-7a12-42c7-a089-45b95259c21c'
+  module:
+    - block_content
+    - user
+  theme:
+    - pomp_subtheme
+id: managecontent
+theme: pomp_subtheme
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:0d1e8218-7a12-42c7-a089-45b95259c21c'
+settings:
+  id: 'block_content:0d1e8218-7a12-42c7-a089-45b95259c21c'
+  label: 'Manage content'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      pomp_content_editor: pomp_content_editor
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
