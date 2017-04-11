@@ -46,7 +46,10 @@
             },
             "drupal/views_slideshow": {
                 "Eliminate views help error": "https://www.drupal.org/files/issues/Undefined_variable_output_2845199_2.patch"
-            }
+            },
+            "drupal/zircon": {
+                "Correct monokai typo": "https://www.drupal.org/files/issues/monokai_css-2656702-2.patch"
+            },
         }
     },
     "license": "MIT",
