@@ -49,7 +49,7 @@
             },
             "drupal/zircon": {
                 "Correct monokai typo": "https://www.drupal.org/files/issues/monokai_css-2656702-2.patch"
-            },
+            }
         }
     },
     "license": "MIT",
