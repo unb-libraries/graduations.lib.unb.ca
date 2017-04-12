@@ -46,24 +46,10 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
-  field_ref_ceremony_address:
-    weight: 5
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-  field_ref_ceremony_degree:
-    weight: 4
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
 hidden:
   created: true
+  field_ref_ceremony_address: true
+  field_ref_ceremony_degree: true
   path: true
   promote: true
   sticky: true

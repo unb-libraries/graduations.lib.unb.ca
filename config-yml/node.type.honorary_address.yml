@@ -8,7 +8,7 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: honorary_address
+name: Address
 type: honorary_address
 description: ''
 help: ''

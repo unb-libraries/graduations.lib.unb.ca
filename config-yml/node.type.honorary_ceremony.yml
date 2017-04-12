@@ -8,7 +8,7 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: honorary_ceremony
+name: 'Graduation Ceremony'
 type: honorary_ceremony
 description: ''
 help: ''

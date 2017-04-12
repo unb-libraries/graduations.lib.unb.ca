@@ -353,6 +353,12 @@ li.search-results-item:hover {
   padding-left: 20px !important;
 }
 
+/* Ceremony Edit */
+
+#edit-field-ceremony-notes-0-format {
+  display: none;
+}
+
 /* Footer */
 
 div.region.region-footer {
