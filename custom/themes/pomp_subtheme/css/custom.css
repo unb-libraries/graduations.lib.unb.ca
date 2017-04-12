@@ -355,8 +355,25 @@ li.search-results-item:hover {
 
 /* Ceremony Edit */
 
-#edit-field-ceremony-notes-0-format {
-  display: none;
+div[data-drupal-selector="edit-field-ceremony-notes-0-format"] {
+  display: none !important;
+}
+
+/* Address Edit */
+
+div[data-drupal-selector="edit-field-address-content-0-format"] {
+  display: none !important;
+}
+
+/* Degree Edit */
+
+div[data-drupal-selector="edit-field-citation-0-format"] {
+  display: none !important;
+}
+
+/* Drupal Modal */
+
+#drupal-modal {
 }
 
 /* Footer */

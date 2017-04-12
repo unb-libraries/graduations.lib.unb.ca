@@ -5,7 +5,6 @@
  * Contains pomp_cer_title.module.
  */
 
-use Drupal\node\Entity\Node;
 use \Drupal\Core\Form\FormStateInterface;
 
 /**
