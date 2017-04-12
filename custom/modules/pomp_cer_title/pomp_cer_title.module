@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * Contains pomp_cer_title.module.
+ */
+
+use Drupal\node\Entity\Node;
+use \Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function pomp_cer_title_form_node_honorary_ceremony_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  foreach (array_keys($form['actions']) as $action) {
+    if ($action != 'preview' && isset($form['actions'][$action]['#type']) &&
+    $form['actions'][$action]['#type'] === 'submit') {
+      array_unshift($form['actions'][$action]['#submit'], 'pomp_cer_title');
+    }
+  }
+}
+
+/**
+ * Method added as submit handler.
+ */
+function pomp_cer_title(&$form, FormStateInterface $form_state) {
+  $year = $form_state->getValue('field_ceremony_year')[0]['value'];
+
+  $cer_campus_id = $form_state->getValue('field_list_campus')[0]['target_id'];
+  $cer_campus = taxonomy_term_load($cer_campus_id)->getName();
+
+  $cer_type_id = $form_state->getValue('field_list_ceremony_type')[0]['target_id'];
+  $cer_type = taxonomy_term_load($cer_type_id)->getName();
+
+  $title = $year . ' ' . $cer_campus . ' ' . $cer_type;
+  $form_state->setValue('title', $title);
+}
