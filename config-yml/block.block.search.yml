@@ -12,7 +12,7 @@ dependencies:
 id: search
 theme: pomp_subtheme
 region: '-1'
-weight: -8
+weight: -9
 provider: null
 plugin: 'block_content:f71e02a5-58ab-4ecb-bde1-8c00e31df1bf'
 settings:

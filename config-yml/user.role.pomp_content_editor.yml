@@ -18,3 +18,5 @@ permissions:
   - 'delete any honorary_degree content'
   - 'edit any honorary_degree content'
   - 'edit any static_page content'
+  - 'create static_page content'
+  - 'delete any static_page content'

@@ -94,7 +94,7 @@
         "drush/drush": "~8.0",
         "malsup/jquery.cycle": "master",
         "drupal/externalauth": "1.0",
-        "drupal/ldap": "3.x-dev",
+        "drupal/ldap": "~3.0-beta1",
         "drupal/google_analytics": "~2.1",
         "oomphinc/composer-installers-extender": "1.1.1"
     },
