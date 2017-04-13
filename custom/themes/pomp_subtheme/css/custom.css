@@ -371,11 +371,6 @@ div[data-drupal-selector="edit-field-citation-0-format"] {
   display: none !important;
 }
 
-/* Drupal Modal */
-
-#drupal-modal {
-}
-
 /* Footer */
 
 div.region.region-footer {
@@ -574,6 +569,9 @@ div.floated-fig {
   #footer-logo {
     float: left;
     padding-top: 10px;
+  }
+
+  #drupal-modal {
   }
 }
 

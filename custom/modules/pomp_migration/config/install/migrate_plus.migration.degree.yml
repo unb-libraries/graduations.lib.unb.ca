@@ -16,7 +16,7 @@ process:
   # in source plugin.
   title: node_title
   field_recipient_name: recipient
-  field_deg_parent: deg_parent
+  field_deg_parent2: deg_parent
   field_list_degree: deg_id
   field_list_valedictorian: val_id
   field_list_gender: gen_id
