@@ -33,7 +33,9 @@ $nids = $query->execute();
 // Iterate through rows, load node, save node.
 foreach ($nids as $nid) {
   $node = Node::load($nid);
-  $node->get('field_citation')->format = 'full_html';
+  $cit = $node->get('field_citation')->getValue();
+  $cit_tags = str_replace('<br/ >', '', $cit);
+  $node->get('field_citation')->setValue($cit_tags);
   $node->save();
   $sandbox['progress']++;
   $sandbox['current_nid'] = $node->id();
