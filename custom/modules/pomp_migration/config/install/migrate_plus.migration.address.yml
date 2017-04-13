@@ -15,7 +15,7 @@ process:
   # Map Drupal MACHINE NAME fields to migration field names as declared
   # in source plugin.
   title: node_title
-  field_add_parent2: add_parent
+  field_add_parent: add_parent
   field_address_type: address_type
   field_list_address_type: type_id
   field_delivered_by: delivered_by
