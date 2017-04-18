@@ -419,7 +419,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: "<div>\n  {{ field_image }}\n  {{ field_citation | nl2br }}<br><br>\n  <strong>\n    Citations may be reproduced for research purposes only. Publication in whole or in part requires        written permission from the author.\n  </strong>\n</div>"
+            text: "<div>\n  {{ field_image }}\n  {{ field_citation  | raw  }}<br><br>\n  <strong>\n    Citations may be reproduced for research purposes only. Publication in whole or in part requires        written permission from the author.\n  </strong>\n</div>"
             make_link: false
             path: ''
             absolute: false

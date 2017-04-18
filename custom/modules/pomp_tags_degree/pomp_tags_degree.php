@@ -14,7 +14,6 @@ $count_nids = $count_query->execute();
 $num_nodes = count($count_nids);
 
 // Set batch size to ALL records.
-
 $batch_size = $num_nodes;
 
 // Set up the batch if this is the first run.
@@ -34,7 +33,7 @@ $nids = $query->execute();
 foreach ($nids as $nid) {
   $node = Node::load($nid);
   $cit = $node->get('field_citation')->value;
-  $cit_br = str_replace('<br />', '', $cit);
+  $cit_br = str_replace('<br /><br />', '<br />', $cit);
   $node->get('field_citation')->value = $cit_br;
   $node->get('field_citation')->format = 'full_html';
   $node->save();
@@ -49,4 +48,3 @@ $sandbox['#finished'] = empty($sandbox['max']) ? 1 : ($sandbox['progress'] / $sa
 
 // To display a message to the user when the update is completed, return it.
 return t('All nodes iterated through and saved.');
-?>

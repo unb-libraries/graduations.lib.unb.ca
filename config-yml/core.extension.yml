@@ -36,6 +36,7 @@ module:
   pomp_ceremony_node: 0
   pomp_deg_linking: 0
   pomp_degree_node: 0
+  pomp_migration: 0
   pomp_restrict_urls: 0
   quickedit: 0
   rdf: 0
