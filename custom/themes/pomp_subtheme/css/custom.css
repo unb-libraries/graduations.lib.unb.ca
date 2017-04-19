@@ -39,6 +39,14 @@ input, select {
   content: "Enter your password.";
 }
 
+div[aria-describedby='drupal-modal'] {
+    width: 70% !important;
+}
+
+div[aria-describedby='drupal-modal'] input {
+    width: 80% !important;
+}
+
 /* Site title */
 
 div.site-name a {
