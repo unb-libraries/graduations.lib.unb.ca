@@ -377,6 +377,10 @@ div[data-drupal-selector="edit-body-0-format"] {
   display: none !important;
 }
 
+input[data-drupal-selector="edit-title-0-value"] {
+  width: 33% !important;
+}
+
 /* Footer */
 
 div.region.region-footer {
