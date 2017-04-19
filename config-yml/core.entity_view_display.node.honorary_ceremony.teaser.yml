@@ -21,6 +21,7 @@ mode: teaser
 content:
   links:
     weight: 100
+    region: content
 hidden:
   field_ceremony_notes: true
   field_ceremony_year: true

@@ -14,9 +14,12 @@ mode: teaser
 content:
   links:
     weight: 100
+    region: content
 hidden:
   body: true
+  field_add_parent: true
   field_address_content: true
   field_address_type: true
   field_delivered_by: true
+  field_list_address_type: true
   field_ref_address_ceremony: true

@@ -20,6 +20,7 @@ content:
     weight: 10
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_address_content:
     weight: 36
     settings:
@@ -27,6 +28,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
   field_delivered_by:
     weight: 33
     settings:
@@ -34,11 +36,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_list_address_type:
     weight: 37
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 5
@@ -47,6 +51,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
 hidden:
   field_add_parent: true
   path: true

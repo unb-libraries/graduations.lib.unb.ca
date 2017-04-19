@@ -25,27 +25,32 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
   field_ceremony_year:
     weight: 0
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
+    region: content
   field_list_campus:
     weight: 1
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_list_ceremony_type:
     weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_list_season:
     weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
 hidden:
   created: true
   field_ref_ceremony_address: true

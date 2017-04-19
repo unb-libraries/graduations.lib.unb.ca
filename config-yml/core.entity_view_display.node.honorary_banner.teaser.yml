@@ -14,4 +14,8 @@ mode: teaser
 content:
   links:
     weight: 100
-hidden: {  }
+    region: content
+hidden:
+  field_banner_image: true
+  field_link_path: true
+  field_sort_order: true
