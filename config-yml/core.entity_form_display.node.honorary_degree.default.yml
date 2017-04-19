@@ -33,12 +33,12 @@ content:
     type: text_textarea
     region: content
   field_degree_notes:
-    weight: 10
+    weight: 26
     settings:
-      size: 255
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
+    type: text_textarea
     region: content
   field_image:
     weight: 5

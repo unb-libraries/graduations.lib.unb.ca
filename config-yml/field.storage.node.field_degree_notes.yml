@@ -1,18 +1,16 @@
-uuid: 73e32939-1cfa-43b5-b6da-9aff96ba250c
+uuid: 59613a5b-bfc1-45a4-89b2-05d0590f20ab
 langcode: en
 status: true
 dependencies:
   module:
     - node
+    - text
 id: node.field_degree_notes
 field_name: field_degree_notes
 entity_type: node
-type: string
-settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
-module: core
+type: text_long
+settings: {  }
+module: text
 locked: false
 cardinality: 1
 translatable: true
