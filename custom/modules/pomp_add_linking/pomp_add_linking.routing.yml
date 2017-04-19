@@ -4,5 +4,5 @@ pomp_add_linking.edit_addresses:
     _title: 'Honorary Addresses'
     _form: '\Drupal\pomp_add_linking\Form\EditAddressesForm'
   requirements:
-    _permission: 'access content'
+    _role: 'pomp_content_editor'
     _custom_access: '\Drupal\pomp_add_linking\Controller\PompAddLinkingCheckTypeController::checkType'
