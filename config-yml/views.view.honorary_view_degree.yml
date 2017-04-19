@@ -419,7 +419,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: "<div>\n  {{ field_image }}\n  {{ field_citation  | raw  }}<br><br>\n  <strong>\n    Citations may be reproduced for research purposes only. Publication in whole or in part requires        written permission from the author.\n  </strong>\n</div>"
+            text: "{{ field_citation  | raw  }}<br><br>\n<strong>\n  Citations may be reproduced for research purposes only. Publication in whole or in part requires        \n  written permission from the author.\n</strong>"
             make_link: false
             path: ''
             absolute: false
@@ -544,7 +544,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "{{ field_citation }}\n"
+            text: "<div>\n  {{ field_image }}\n  {{ field_citation }}\n</div>"
             make_link: false
             path: ''
             absolute: false
