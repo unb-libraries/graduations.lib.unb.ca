@@ -371,6 +371,12 @@ div[data-drupal-selector="edit-field-citation-0-format"] {
   display: none !important;
 }
 
+/* Page Edit */
+
+div[data-drupal-selector="edit-body-0-format"] {
+  display: none !important;
+}
+
 /* Footer */
 
 div.region.region-footer {
