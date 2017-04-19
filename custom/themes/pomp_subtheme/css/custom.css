@@ -39,6 +39,10 @@ input, select {
   content: "Enter your password.";
 }
 
+#edit-preview {
+  display: none !important;
+}
+
 div[aria-describedby='drupal-modal'] {
     width: 70% !important;
 }
@@ -365,6 +369,16 @@ li.search-results-item:hover {
 
 div[data-drupal-selector="edit-field-ceremony-notes-0-format"] {
   display: none !important;
+}
+
+#node-honorary-ceremony-edit-form >
+div.js-form-item.form-item.js-form-type-vertical-tabs.form-type-vertical-tabs.js-form-item-.form-item-.form-no-label
+{
+  display: none;
+}
+
+input#edit-submit {
+  display: inline-block;
 }
 
 /* Address Edit */
