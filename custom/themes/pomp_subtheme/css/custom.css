@@ -51,6 +51,10 @@ div[aria-describedby='drupal-modal'] input {
     width: 80% !important;
 }
 
+section#main {
+  padding-top: 10px;
+}
+
 /* Site title */
 
 div.site-name a {
