@@ -86,8 +86,8 @@ div#block-pomp-subtheme-branding > div.site-name > a:hover, a:focus {
 }
 
 #main-menu {
-  margin-bottom: 10px;
   font-size: 12px;
+  margin-bottom: 0px !important;
 }
 
 #main-menu .container ul.menu li > a {
@@ -104,6 +104,7 @@ div#block-pomp-subtheme-branding > div.site-name > a:hover, a:focus {
 /* Slideshow */
 
 #slideshow {
+  margin-top: 10px;
   margin-bottom: 0px;
 }
 
