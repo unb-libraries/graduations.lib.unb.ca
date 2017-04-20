@@ -17,12 +17,12 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
   field_address_content:
-    weight: 36
+    weight: 4
     settings:
       rows: 5
       placeholder: ''
@@ -30,7 +30,7 @@ content:
     type: text_textarea
     region: content
   field_delivered_by:
-    weight: 33
+    weight: 2
     settings:
       size: 60
       placeholder: ''
@@ -38,14 +38,14 @@ content:
     type: string_textfield
     region: content
   field_list_address_type:
-    weight: 37
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 0
     settings:
       match_operator: CONTAINS
       size: 60
