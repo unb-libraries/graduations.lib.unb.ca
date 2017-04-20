@@ -221,12 +221,6 @@ label[for="edit-sort-by"] {
   visibility: hidden;
 }
 
-label[for="edit-sort-order"]:before,
-label[for="edit-sort-by"]:before {
-  visibility: visible;
-  content: "Sort (by year)";
-}
-
 /* Break filter form on year and campus */
 
 div.js-form-item-field-ceremony-year-value {

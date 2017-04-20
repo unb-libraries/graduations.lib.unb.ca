@@ -57,8 +57,8 @@ display:
           reset_button_label: 'Clear Filters'
           exposed_sorts_label: 'Sort by'
           expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_asc_label: 'Oldest First'
+          sort_desc_label: 'Newest First'
       pager:
         type: full
         options:
