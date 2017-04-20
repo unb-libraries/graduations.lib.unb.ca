@@ -723,7 +723,7 @@ display:
           exposed: true
           expose:
             operator_id: combine_op
-            label: 'Search degree recipient or orator/speaker:'
+            label: 'Search degree recipient or orator/speaker'
             description: ''
             use_operator: false
             operator: combine_op
@@ -768,7 +768,7 @@ display:
           exposed: true
           expose:
             operator_id: field_ceremony_year_value_op
-            label: 'From (year):'
+            label: 'From (year)'
             description: ''
             use_operator: false
             operator: field_ceremony_year_value_op
@@ -780,6 +780,7 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
+              pomp_content_editor: '0'
           is_grouped: false
           group_info:
             label: ''
@@ -809,7 +810,7 @@ display:
           exposed: true
           expose:
             operator_id: field_ceremony_year_value_1_op
-            label: 'To (year):'
+            label: 'To (year)'
             description: ''
             use_operator: false
             operator: field_ceremony_year_value_1_op
@@ -821,6 +822,7 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
+              pomp_content_editor: '0'
           is_grouped: false
           group_info:
             label: ''
@@ -849,7 +851,7 @@ display:
           exposed: true
           expose:
             operator_id: field_list_campus_target_id_op
-            label: 'Campus:'
+            label: Campus
             description: ''
             use_operator: false
             operator: field_list_campus_target_id_op
@@ -861,6 +863,7 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
+              pomp_content_editor: '0'
             reduce: true
           is_grouped: false
           group_info:
@@ -897,7 +900,7 @@ display:
           exposed: true
           expose:
             operator_id: field_list_season_target_id_op
-            label: 'Graduation ceremony:'
+            label: 'Graduation ceremony'
             description: ''
             use_operator: false
             operator: field_list_season_target_id_op
@@ -909,6 +912,7 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
+              pomp_content_editor: '0'
             reduce: true
           is_grouped: false
           group_info:
@@ -945,7 +949,7 @@ display:
           exposed: true
           expose:
             operator_id: field_list_gender_target_id_op
-            label: 'Gender:'
+            label: Gender
             description: ''
             use_operator: false
             operator: field_list_gender_target_id_op
@@ -957,6 +961,7 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
+              pomp_content_editor: '0'
             reduce: true
           is_grouped: false
           group_info:
@@ -998,7 +1003,7 @@ display:
           exposed: true
           expose:
             operator_id: field_list_degree_target_id_op
-            label: 'Degree:'
+            label: Degree
             description: ''
             use_operator: false
             operator: field_list_degree_target_id_op
@@ -1010,6 +1015,7 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
+              pomp_content_editor: '0'
             reduce: true
           is_grouped: false
           group_info:
@@ -1071,6 +1077,18 @@ display:
           entity_field: type
           plugin_id: bundle
       sorts:
+        field_ceremony_year_value:
+          id: field_ceremony_year_value
+          table: node__field_ceremony_year
+          field: field_ceremony_year_value
+          relationship: reverse__node__field_ref_ceremony_degree
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: true
+          expose:
+            label: 'Sort (by year)'
+          plugin_id: standard
         title:
           id: title
           table: node_field_data
@@ -1144,6 +1162,8 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
         - user
         - 'user.node_grants:view'
         - user.permissions
@@ -1170,6 +1190,8 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
         - user
         - 'user.node_grants:view'
         - user.permissions
