@@ -42,10 +42,7 @@
         "patches": {
             "drupal/core": {
                 "Allow for no-link menu items": "https://www.drupal.org/files/issues/allow-menu-items-without-path-1543750-124.patch",
-                "Allow for titles on exposed block filters": "https://www.drupal.org/files/issues/2720101-7-views-exposed-block-title.diff"
-            },
-            "drupal/views_slideshow": {
-                "Eliminate views help error": "https://www.drupal.org/files/issues/Undefined_variable_output_2845199_2.patch"
+                "Allow for titles on exposed block filters": "https://www.drupal.org/files/issues/2720101-24-views-exposed-block-title-test.diff"
             },
             "drupal/zircon": {
                 "Correct monokai typo": "https://www.drupal.org/files/issues/monokai_css-2656702-2.patch"
