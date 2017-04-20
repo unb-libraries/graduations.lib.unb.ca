@@ -474,6 +474,10 @@ div.js-form-item.form-item.js-form-type-vertical-tabs.form-type-vertical-tabs.js
   display: none;
 }
 
+article.node--type-static-page img {
+  padding: 20px;
+}
+
 /* Footer */
 
 div.region.region-footer {
