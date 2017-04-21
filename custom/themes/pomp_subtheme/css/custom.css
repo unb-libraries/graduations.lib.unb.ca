@@ -59,6 +59,10 @@ th {
   padding-bottom: 10px !important;
 }
 
+select:focus option:checked {
+  background: linear-gradient(#C01700,  #C01700) !important;
+}
+
 /* Site title */
 
 div.site-name a {
@@ -249,6 +253,7 @@ input#edit-submit-honorary-browse-degrees {
 
 input#edit-submit-honorary-browse-degrees,
 input#edit-submit-honorary-browse-ceremonies,
+input#edit-submit-browse-content,
 input#edit-reset {
   display: inline;
 }
@@ -413,10 +418,6 @@ li.search-results-item:hover {
 
 tr.pomp-browse-content-row:nth-child(odd) {
   background-color: #F0F0F0 !important;
-}
-
-select:focus option:checked {
-    background: linear-gradient(#C01700,  #C01700);
 }
 
 #views-exposed-form-browse-content-page-1 input:not([type="submit"]) {
