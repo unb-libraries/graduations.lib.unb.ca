@@ -415,6 +415,14 @@ tr.pomp-browse-content-row:nth-child(odd) {
   background-color: #F0F0F0 !important;
 }
 
+select:focus option:checked {
+    background: linear-gradient(#C01700,  #C01700);
+}
+
+#views-exposed-form-browse-content-page-1 input:not([type="submit"]) {
+  width: 330px;
+}
+
 /* Ceremony Node */
 
 .ceremony-degree-list h3 {
