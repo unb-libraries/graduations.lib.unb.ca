@@ -55,6 +55,10 @@ section#main {
   padding-top: 10px;
 }
 
+th {
+  padding-bottom: 10px !important;
+}
+
 /* Site title */
 
 div.site-name a {
@@ -395,6 +399,19 @@ li.search-results-item:last-child {
 }
 
 li.search-results-item:hover {
+  background-color: #F0F0F0 !important;
+}
+
+/* Browse Content */
+
+.pomp-browse-content-row td {
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: inherit !important;
+}
+
+tr.pomp-browse-content-row:nth-child(odd) {
   background-color: #F0F0F0 !important;
 }
 
