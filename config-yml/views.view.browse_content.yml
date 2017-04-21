@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - node.type.honorary_banner
+    - user.role.administrator
+    - user.role.pomp_content_editor
   module:
     - node
     - user
@@ -23,9 +25,11 @@ display:
     position: 0
     display_options:
       access:
-        type: perm
+        type: role
         options:
-          perm: 'access content'
+          role:
+            administrator: administrator
+            pomp_content_editor: pomp_content_editor
       cache:
         type: tag
         options: {  }
@@ -705,7 +709,7 @@ display:
         - 'languages:language_interface'
         - url.query_args
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags: {  }
   page_1:
     display_plugin: page
@@ -722,5 +726,5 @@ display:
         - 'languages:language_interface'
         - url.query_args
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags: {  }
