@@ -38,11 +38,7 @@ class EditDegreesForm extends FormBase {
       '#title' => t('Add New Degree'),
       '#url' => Url::fromUri("internal:/node/add/honorary_degree"),
       '#attributes' => [
-        'class' => ['button', 'use-ajax'],
-        'data-dialog-type' => 'modal',
-      ],
-      '#attached' => [
-        'library' => ['core/drupal.dialog.ajax'],
+        'class' => ['button'],
       ],
     ];
 

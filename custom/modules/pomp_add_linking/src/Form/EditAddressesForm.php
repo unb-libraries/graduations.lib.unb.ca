@@ -39,11 +39,7 @@ class EditAddressesForm extends FormBase {
       '#title' => t('Add New Address'),
       '#url' => Url::fromUri("internal:/node/add/honorary_address"),
       '#attributes' => [
-        'class' => ['button', 'use-ajax'],
-        'data-dialog-type' => 'modal',
-      ],
-      '#attached' => [
-        'library' => ['core/drupal.dialog.ajax'],
+        'class' => ['button'],
       ],
     ];
 
