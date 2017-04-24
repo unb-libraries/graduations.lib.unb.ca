@@ -23,24 +23,59 @@ Feature: Core
       When I visit "admin/people"
       Then I should see the link "Joe User"
 
-#    Scenario: Login as a user created during this scenario
-#      Given users:
-#      | name      | status |
-#      | Test user |      1 |
-#      When I am logged in as "Test user"
-#      Then I should see the link "Log out"
+    Scenario: Login as a user created during this scenario
+      Given users:
+      | name      | status |
+      | Test user |      1 |
+      When I am logged in as "Test user"
+      Then I should see the link "Log out"
+
+    Scenario: Not logged in
+      Given I am not logged in
+      Then I should see the link "Log in"
+
+    Scenario: Browsing existing ceremonies while not logged in
+      Given I am not logged in
+      When I visit "ceremonies"
+      Then I should see "Displaying 1 - 25"
+
+    Scenario: Attempt to add a ceremony while not logged in
+      Given I am not logged in
+      When I am on "node/add/honorary_ceremony"
+      Then I should see "ACCESS DENIED"
+      And I should not see "CREATE"
+
+    Scenario: Add a ceremony while logged in
+      Given I am logged in as a user with the "administrator" role
+      When I am on "node/add/honorary_ceremony"
+      Then I should see "CREATE"
+      And I should not see "ACCESS DENIED"
+
+    Scenario: Attempt to add a degree while not logged in
+      Given I am not logged in
+      When I am on "node/add/honorary_degree"
+      Then I should see "ACCESS DENIED"
+      And I should not see "CREATE"
+
+    Scenario: Add a degree while logged in
+      Given I am logged in as a user with the "administrator" role
+      When I am on "node/add/honorary_degree"
+      Then I should see "CREATE"
+      And I should not see "ACCESS DENIED"
+
+    Scenario: Attempt to add an address while not logged in
+      Given I am not logged in
+      When I am on "node/add/honorary_address"
+      Then I should see "ACCESS DENIED"
+      And I should not see "CREATE"
+
+    Scenario: Add an address while logged in
+      Given I am logged in as a user with the "administrator" role
+      When I am on "node/add/honorary_address"
+      Then I should see "CREATE"
+      And I should not see "ACCESS DENIED"
 
     Scenario: Create a term
       Given I am logged in as a user with the "administrator" role
       When I am viewing a "tags" term with the name "My tag"
       Then I should see the heading "My tag"
-
-#    Scenario: Create many terms
-#      Given "tags" terms:
-#      | name    |
-#      | Tag one |
-#      | Tag two |
-#      And I am logged in as a user with the "administrator" role
-#      When I go to "admin/structure/taxonomy/manage/tags/overview"
-#      Then I should see "Tag one"
-#      And I should see "Tag two"
