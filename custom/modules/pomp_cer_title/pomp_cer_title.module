@@ -20,6 +20,18 @@ function pomp_cer_title_form_node_honorary_ceremony_form_alter(&$form, FormState
 }
 
 /**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function pomp_cer_title_form_node_honorary_ceremony_edit_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  foreach (array_keys($form['actions']) as $action) {
+    if ($action != 'preview' && isset($form['actions'][$action]['#type']) &&
+    $form['actions'][$action]['#type'] === 'submit') {
+      array_unshift($form['actions'][$action]['#submit'], 'pomp_cer_title');
+    }
+  }
+}
+
+/**
  * Method added as submit handler.
  */
 function pomp_cer_title(&$form, FormStateInterface $form_state) {

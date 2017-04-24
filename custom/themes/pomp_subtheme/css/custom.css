@@ -444,11 +444,11 @@ tr.pomp-browse-content-row:nth-child(odd) {
 }
 
 /* Ceremony Node */
-/*
-.ceremony-item-list h3 {
+
+.ceremony-degree-list h3 {
   font-size: 1.1em;
 }
-*/
+
 .list-addresses {
   padding-left: 20px !important;
 }
