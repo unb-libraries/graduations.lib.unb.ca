@@ -52,7 +52,11 @@ div[aria-describedby='drupal-modal'] input {
 }
 
 section#main {
-  padding-top: 10px;
+  padding-top: 20px;
+}
+
+.node__content {
+  padding-top: 20px;
 }
 
 th {
@@ -61,6 +65,10 @@ th {
 
 select:focus option:checked {
   background: linear-gradient(#C01700,  #C01700) !important;
+}
+
+.page-title {
+  margin: 0px !important;
 }
 
 /* Site title */
@@ -184,6 +192,17 @@ div#block-pomp-subtheme-branding > div.site-name > a:hover, a:focus {
 
 #views_slideshow_controls_text_next_rotating_banner-block_1 a:hover:after {
   opacity: 1;
+}
+
+/* Task Menu */
+
+.tabs a.is-active {
+    background-color: #C01700 !important;
+    color: white !important;
+}
+
+.tabs a:visited {
+  color: inherit;
 }
 
 /* Main content */
@@ -425,11 +444,11 @@ tr.pomp-browse-content-row:nth-child(odd) {
 }
 
 /* Ceremony Node */
-
-.ceremony-degree-list h3 {
+/*
+.ceremony-item-list h3 {
   font-size: 1.1em;
 }
-
+*/
 .list-addresses {
   padding-left: 20px !important;
 }

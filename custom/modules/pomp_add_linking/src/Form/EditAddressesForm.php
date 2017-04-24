@@ -27,11 +27,11 @@ class EditAddressesForm extends FormBase {
     $form = [];
 
     // List existing addresses.
-    $view = Views::getView('list_ceremony_addresses');
+    $view = Views::getView('edit_ceremony_addresses');
     $view->setDisplay('block_1');
     $view->setArguments([$node]);
     $render = $view->render();
-    $form['list_ceremony_addresses_view'] = $render;
+    $form['edit_ceremony_addresses_view'] = $render;
 
     // Add addresses.
     $form['add_address_button'] = [

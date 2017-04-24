@@ -1,7 +1,6 @@
 pomp_add_linking.edit_addresses:
   path: '/ceremony/{node}/addresses/edit'
   defaults:
-    _title: 'Honorary Addresses'
     _form: '\Drupal\pomp_add_linking\Form\EditAddressesForm'
   requirements:
     _role: 'pomp_content_editor'
