@@ -24,8 +24,7 @@ RUN apk --update add postfix && \
   rm -f /var/cache/apk/*
 COPY package-conf/postfix/main.cf /etc/postfix/main.cf
 
-RUN apk update && apk --update add php7-ldap@testing && \
-#  ln -s /usr/lib/php7/ldap.so /usr/lib/php7.1/ldap.so && \
+RUN apk update && apk --update add php7-ldap && \
   rm -f /var/cache/apk/* && \
   echo "TLS_REQCERT never" > /etc/openldap/ldap.conf
 
