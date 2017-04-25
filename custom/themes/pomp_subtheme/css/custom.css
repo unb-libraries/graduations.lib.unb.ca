@@ -428,7 +428,8 @@ li.search-results-item:hover {
 
 /* Browse Content */
 
-.pomp-browse-content-row table {
+#block-pomp-subtheme-content > div > div > div.view-content >
+table.views-table.views-view-table.cols-5.sticky-enabled {
   width: 100%;
 }
 
