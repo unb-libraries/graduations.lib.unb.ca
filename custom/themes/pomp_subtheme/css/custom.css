@@ -458,10 +458,6 @@ tr.pomp-browse-content-row:nth-child(odd) {
   font-size: 1.1em;
 }
 
-.list-addresses {
-  padding-left: 20px !important;
-}
-
 /* Ceremony Edit */
 
 div[data-drupal-selector="edit-field-ceremony-notes-0-format"] {

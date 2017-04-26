@@ -57,15 +57,11 @@ display:
       style:
         type: html_list
         options:
-          grouping:
-            -
-              field: title_1
-              rendered: true
-              rendered_strip: false
+          grouping: {  }
           row_class: ''
           default_row_class: true
           type: ul
-          wrapper_class: item-list
+          wrapper_class: ''
           class: ''
       row:
         type: fields
