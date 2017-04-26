@@ -87,7 +87,7 @@
         "drupal/google_analytics": "~2.1",
         "drupal/ldap": "~3.0-beta1",
         "drupal/pathauto": "~1.0-rc1",
-        "drupal/search_api": "~1.0-beta4",
+        "drupal/search_api": "~1.0",
         "drupal/token_filter": "1.0-beta1",
         "drupal/views_slideshow": "4.4",
         "drupal/zircon": "1.0-rc1",
