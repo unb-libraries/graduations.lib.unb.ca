@@ -16,5 +16,6 @@ function graduations_install() {
   include_once DRUPAL_ROOT . '/core/profiles/standard/standard.install';
   standard_install();
 
+  \Drupal::entityManager()->getStorage("shortcut_set")->load("default")->delete();
   // Can add code in here to make nodes, terms, etc.
 }
