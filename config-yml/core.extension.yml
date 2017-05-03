@@ -57,7 +57,7 @@ module:
   menu_link_content: 1
   pathauto: 1
   views: 10
-  honorary: 1000
+  graduations: 1000
 theme:
   stable: 0
   classy: 0
@@ -65,6 +65,6 @@ theme:
   seven: 0
   zircon: 0
   pomp_subtheme: 0
-profile: honorary
+profile: graduations
 _core:
   default_config_hash: m2GVq11UAOVuNgj8x0t5fMOPujpvQQ_zxLoaly1BMEU
