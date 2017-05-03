@@ -16,7 +16,7 @@
     "conflict": {
         "drupal/drupal": "*"
     },
-    "description": "Project definition for honorary.lib.unb.ca",
+    "description": "Project definition for graduations.lib.unb.ca",
     "extra": {
         "enable-patching": true,
         "installer-paths": {
@@ -51,7 +51,7 @@
     },
     "license": "MIT",
     "minimum-stability": "dev",
-    "name": "unblibraries/honorary.lib.unb.ca",
+    "name": "unblibraries/graduations.lib.unb.ca",
     "prefer-stable": true,
     "repositories": [
         {

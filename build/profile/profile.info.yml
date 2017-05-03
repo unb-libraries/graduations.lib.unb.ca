@@ -1,6 +1,6 @@
-name: honorary.lib.unb.ca Profile
+name: graduations.lib.unb.ca Profile
 type: profile
-description: 'Install honorary.lib.unb.ca.'
+description: 'Install graduations.lib.unb.ca.'
 version: 8.x-1.0
 core: 8.x
 

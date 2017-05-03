@@ -1,12 +1,12 @@
 {
-  "name": "honorary.lib.unb.ca_local",
+  "name": "graduations.lib.unb.ca_local",
   "version": "1.0.0",
   "main": "Gruntfile.js",
   "author": "libsupport@unb.ca",
   "private": true,
   "license": "MIT",
   "config": {
-    "siteuri": "honorary.lib.unb.ca",
+    "siteuri": "graduations.lib.unb.ca",
     "upstream_image": "unblibraries/drupal:alpine-nginx-php7-8.x-composer",
     "devhost": "devserver.docker.remote"
   },

@@ -1,7 +1,7 @@
-# honorary.lib.unb.ca
+# graduations.lib.unb.ca
 ## Site repository.
 
-honorary.lib.unb.ca site build repository.
+graduations.lib.unb.ca site build repository.
 
 ## Getting Started
 ### Requirements

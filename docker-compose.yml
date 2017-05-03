@@ -10,13 +10,13 @@ services:
     expose:
      - "3306"
 
-  honorary.lib.unb.ca:
+  graduations.lib.unb.ca:
     build:
       context: .
       args:
         - COMPOSER_DEPLOY_DEV=dev
     restart: always
-    container_name: honorary.lib.unb.ca
+    container_name: graduations.lib.unb.ca
     expose:
       - "80"
     ports:

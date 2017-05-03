@@ -12,7 +12,7 @@
  *
  * @see system_install()
  */
-function honorary_install() {
+function graduations_install() {
   include_once DRUPAL_ROOT . '/core/profiles/standard/standard.install';
   standard_install();
 

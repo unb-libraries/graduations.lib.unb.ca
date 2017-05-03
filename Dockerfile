@@ -1,17 +1,17 @@
 FROM unblibraries/drupal:alpine-nginx-php7-8.x-composer
 MAINTAINER UNB Libraries <libsupport@unb.ca>
 
-LABEL name="honorary.lib.unb.ca"
+LABEL name="graduations.lib.unb.ca"
 LABEL vcs-ref=""
-LABEL vcs-url="https://github.com/unb-libraries/honorary.lib.unb.ca"
+LABEL vcs-url="https://github.com/unb-libraries/graduations.lib.unb.ca"
 
 ARG COMPOSER_DEPLOY_DEV=no-dev
 
 # Universal environment variables.
 ENV DEPLOY_ENV prod
 ENV DRUPAL_DEPLOY_CONFIGURATION TRUE
-ENV DRUPAL_SITE_ID honorary
-ENV DRUPAL_SITE_URI honorary.lib.unb.ca
+ENV DRUPAL_SITE_ID graduations
+ENV DRUPAL_SITE_URI graduations.lib.unb.ca
 ENV DRUPAL_SITE_UUID 52bca593-2542-4a35-9ebd-1da0d40bf67b
 ENV DRUPAL_CONFIGURATION_EXPORT_SKIP devel
 
