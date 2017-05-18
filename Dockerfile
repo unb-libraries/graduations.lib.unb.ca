@@ -20,7 +20,7 @@ ENV NEWRELIC_PHP_VERSION 7.2.0.191
 ENV NEWRELIC_PHP_ARCH musl
 
 # Add Mail Sending
-RUN apk --update add postfix && \
+RUN  apk update && apk --update add postfix && \
   rm -f /var/cache/apk/*
 COPY package-conf/postfix/main.cf /etc/postfix/main.cf
 
