@@ -22,9 +22,12 @@ ENV NEWRELIC_PHP_ARCH musl
 # Add LDAP, Mail Sending, rsyslog
 RUN apk update && apk --update add rsyslog postfix php7-ldap bash && \
   rm -f /var/cache/apk/* && \
-  echo "TLS_REQCERT never" > /etc/openldap/ldap.conf
+  echo "TLS_REQCERT never" > /etc/openldap/ldap.conf && \
+  touch /var/log/nginx/access.log && touch /var/log/nginx/error.log
 
-# Add nginx and PHP conf.
+# Add package conf.
+COPY package-conf/postfix/main.cf /etc/postfix/main.cf
+COPY package-conf/rsyslog/21-logzio-nginx.conf /etc/rsyslog.d/21-logzio-nginx.conf
 COPY package-conf/nginx/app.conf /etc/nginx/conf.d/app.conf
 COPY package-conf/php/app-php.ini /etc/php7/conf.d/zz_app.ini
 COPY package-conf/php/app-php-fpm.conf /etc/php7/php-fpm.d/zz_app.conf
