@@ -93,7 +93,7 @@
         "drupal/pathauto": "~1.0-rc1",
         "drupal/search_api": "~1.0",
         "drupal/token_filter": "1.0-beta1",
-        "drupal/views_slideshow": "4.4",
+        "drupal/views_slideshow": "4.5",
         "drupal/zircon": "1.0-rc1",
         "drush/drush": "~8.1",
         "malsup/jquery.cycle": "master",
