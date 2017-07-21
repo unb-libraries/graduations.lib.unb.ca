@@ -4,6 +4,5 @@ description: 'Migrate pomp_raw database to D8.'
 package: POMP
 core: 8.x
 dependencies:
-  - drupal:migrate
-  - drupal:migrate_tools
-  - migrate_plus:migrate_plus
+  - migrate_tools
+  - migrate_plus

@@ -6,7 +6,7 @@
  */
 
 use Drupal\node\Entity\Node;
-use \Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Implements hook_form_FORM_ID_alter().
@@ -63,7 +63,7 @@ function pomp_add_linking_link(&$form, FormStateInterface $form_state) {
 
   if ($cer_id) {
     $add_id = $form_state->get('nid');
-    $add_id_ref = array('target_id' => $add_id);
+    $add_id_ref = ['target_id' => $add_id];
 
     $query = \Drupal::entityQuery('node')
       ->condition('type', 'honorary_ceremony')
@@ -73,8 +73,12 @@ function pomp_add_linking_link(&$form, FormStateInterface $form_state) {
     foreach ($cers as $cer) {
       $cer_node = Node::load($cer);
       $ref_cer_add = $cer_node->get('field_ref_ceremony_address')->getValue();
-      $cer_node->field_ref_ceremony_address->appendItem($add_id_ref);
-      $cer_node->save();
+
+      if (!in_array($add_id_ref, $ref_cer_add)) {
+        $cer_node->field_ref_ceremony_address->appendItem($add_id_ref);
+        $cer_node->save();
+      }
+
       unset($cer_node);
     }
   }
