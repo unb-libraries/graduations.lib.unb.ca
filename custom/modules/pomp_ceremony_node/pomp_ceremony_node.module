@@ -2,47 +2,37 @@
 
 /**
  * @file
- * Contains pomp_ceremony_node.module
+ * Contains pomp_ceremony_node.module.
  */
 
- use Drupal\Component\Serialization\Json;
- use Drupal\Core\Routing\RouteMatchInterface;
- use Drupal\field_collection\Entity\FieldCollectionItem;
- use Drupal\node\Entity\Node;
- use Drupal\views\Views;
- use Drupal\Core\Link;
- use Drupal\Core\Url;
-
 /**
-* Implements hook_theme().
-*/
-
+ * Implements hook_theme().
+ */
 function pomp_ceremony_node_theme($existing, $type, $theme, $path) {
-  return array(
-    'node__honorary_ceremony' => array(
-      'arguments' => array(
+  return [
+    'node__honorary_ceremony' => [
+      'arguments' => [
         'view' => NULL,
         'field' => NULL,
         'row' => NULL,
         'output' => NULL,
-      ),
+      ],
       'template' => 'node--honorary-ceremony',
       'path' => drupal_get_path('module', 'pomp_ceremony_node') . '/templates',
       'base hook' => 'node__honorary_ceremony',
-    ),
-  );
+    ],
+  ];
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
-
 function pomp_ceremony_node_preprocess_node__honorary_ceremony(&$variables) {
   $node = $variables['elements']['#node'];
   $variables['id'] = $node->id();
 
   $year = $node->field_ceremony_year->value;
-  $variables['year'] = (string)$year;
+  $variables['year'] = (string) $year;
 
   $camp_id = $node->field_list_campus[0]->getValue()['target_id'];
   $variables['campus'] = taxonomy_term_load($camp_id)->getName();
@@ -57,4 +47,34 @@ function pomp_ceremony_node_preprocess_node__honorary_ceremony(&$variables) {
 
   $addresses_table = views_embed_view('list_ceremony_addresses', 'block_1', $node->id());
   $variables['addresses_output'] = \Drupal::service('renderer')->render($addresses_table);
+}
+
+/**
+ * Implements hook_node_delete().
+ */
+function pomp_ceremony_node_node_delete($node) {
+
+  if ($node->bundle() == 'honorary_ceremony') {
+    $degrees = $node->get('field_ref_ceremony_degree')->getValue();
+
+    foreach ($degrees as $degree) {
+
+      $deg_node = Node::load($degree['target_id']);
+      $deg_node->delete();
+    }
+
+    unset($degree);
+    unset($degrees);
+
+    $addresses = $node->get('field_ref_ceremony_address')->getValue();
+
+    foreach ($addresses as $address) {
+
+      $add_node = Node::load($address['target_id']);
+      $add_node->delete();
+    }
+
+    unset($address);
+    unset($addresses);
+  }
 }
