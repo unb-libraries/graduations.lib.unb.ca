@@ -15,10 +15,6 @@ ENV DRUPAL_SITE_URI graduations.lib.unb.ca
 ENV DRUPAL_SITE_UUID 52bca593-2542-4a35-9ebd-1da0d40bf67b
 ENV DRUPAL_CONFIGURATION_EXPORT_SKIP devel
 
-# Newrelic.
-ENV NEWRELIC_PHP_VERSION 7.2.0.191
-ENV NEWRELIC_PHP_ARCH musl
-
 # Add LDAP, Mail Sending, rsyslog
 RUN apk update && apk --update add rsyslog postfix php7-ldap bash && \
   rm -f /var/cache/apk/* && \
