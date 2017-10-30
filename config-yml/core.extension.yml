@@ -26,6 +26,7 @@ module:
   ldap_servers: 0
   ldap_user: 0
   link: 0
+  login_return_page: 0
   menu_ui: 0
   node: 0
   options: 0
