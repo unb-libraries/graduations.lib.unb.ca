@@ -28,9 +28,7 @@
       "readyEvent": "",
       "readySelector": "",
       "delay": 0,
-      "hideSelectors": [
-        "#views_slideshow_cycle_main_banner-block_1"
-      ],
+      "hideSelectors": [],
       "removeSelectors": [],
       "hoverSelector": "",
       "clickSelector": "",
