@@ -28,11 +28,6 @@ Feature: Core
       Given I am not logged in
       Then I should see the link "Log in"
 
-    Scenario: Browsing existing ceremonies while not logged in
-      Given I am not logged in
-      When I visit "ceremonies"
-      Then I should see "Displaying 1 - 25"
-
     Scenario: Attempt to add a ceremony while not logged in
       Given I am not logged in
       When I am on "node/add/honorary_ceremony"
