@@ -51,7 +51,7 @@
         }
     },
     "license": "MIT",
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "name": "unblibraries/graduations.lib.unb.ca",
     "repositories": [
         {
