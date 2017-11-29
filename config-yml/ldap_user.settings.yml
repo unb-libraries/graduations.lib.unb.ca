@@ -31,9 +31,11 @@ ldapEntryProvisionTriggers:
 orphanedDrupalAcctBehavior: ldap_user_orphan_do_not_check
 orphanedCheckQty: null
 orphanedAccountCheckInterval: always
-userConflictResolve: 2
-manualAccountConflict: 3
-acctCreation: 4
+userConflictResolve: resolve
+manualAccountConflict: conflict_show_option
+acctCreation: user_settings_for_ldap
 ldapUserSyncMappings:
   drupal: {  }
   ldap: {  }
+userUpdateCronQuery: none
+userUpdateCronInterval: monthly
