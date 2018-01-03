@@ -32,7 +32,6 @@ Feature: Core
       Given I am not logged in
       When I am on "node/add/honorary_ceremony"
       Then I should see "ACCESS DENIED"
-      And I should not see "CREATE"
 
     Scenario: Add a ceremony while logged in
       Given I am logged in as a user with the "administrator" role
@@ -44,7 +43,6 @@ Feature: Core
       Given I am not logged in
       When I am on "node/add/honorary_degree"
       Then I should see "ACCESS DENIED"
-      And I should not see "CREATE"
 
     Scenario: Add a degree while logged in
       Given I am logged in as a user with the "administrator" role
@@ -56,7 +54,6 @@ Feature: Core
       Given I am not logged in
       When I am on "node/add/honorary_address"
       Then I should see "ACCESS DENIED"
-      And I should not see "CREATE"
 
     Scenario: Add an address while logged in
       Given I am logged in as a user with the "administrator" role
