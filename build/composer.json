@@ -106,7 +106,7 @@
         "drupal/login_return_page": "1.x-dev",
         "drupal/pathauto": "1.0",
         "drupal/redis": "1.0-rc2",
-        "drupal/search_api": "1.5",
+        "drupal/search_api": "1.6",
         "drupal/token_filter": "1.0-beta1",
         "drupal/views_slideshow": "4.6",
         "drupal/zircon": "1.0-rc1",
