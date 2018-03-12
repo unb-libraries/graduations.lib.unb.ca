@@ -104,7 +104,7 @@
         "drupal/google_analytics": "2.2",
         "drupal/ldap": "3.x-dev",
         "drupal/login_return_page": "1.x-dev",
-        "drupal/pathauto": "1.0",
+        "drupal/pathauto": "1.1",
         "drupal/redis": "1.0-rc2",
         "drupal/search_api": "1.7",
         "drupal/token_filter": "1.0-beta1",
