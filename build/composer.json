@@ -52,7 +52,7 @@
     },
     "license": "MIT",
     "minimum-stability": "dev",
-    "name": "unb-libraries/graduations.lib.unb.ca",
+    "name": "unb-libraries/graduations.lib.unb.ca-drupal8",
     "repositories": [
         {
             "type": "composer",
