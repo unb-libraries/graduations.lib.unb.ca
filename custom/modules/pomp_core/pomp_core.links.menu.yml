@@ -1,0 +1,78 @@
+pomp_core.home:
+  title: 'Home'
+  description: 'Home'
+  parent: main
+  menu_name: main
+  url: internal:/
+  weight: 10
+pomp_core.browse-search:
+  title: 'Browse/Search'
+  description: 'Browse/Search'
+  parent: main
+  menu_name: main
+  url: internal:/
+  expanded: TRUE
+  weight: 20
+pomp_core.browse-ceremonies:
+  title: 'Browse Graduation Ceremonies'
+  description: 'Browse Graduation Ceremonies'
+  parent: pomp_core.browse-search
+  menu_name: main
+  url: internal:/ceremonies
+  weight: 10
+pomp_core.browse-honorary:
+  title: 'Browse Honorary Degrees'
+  description: 'Browse Honorary Degrees'
+  parent: pomp_core.browse-search
+  menu_name: main
+  url: internal:/degrees
+  weight: 20
+pomp_core.pomp_search:
+  title: 'Search'
+  description: 'Search'
+  parent: pomp_core.browse-search
+  menu_name: main
+  url: internal:/search
+  weight: 30
+pomp_core.about:
+  title: 'About'
+  description: 'About'
+  parent: main
+  menu_name: main
+  url: internal:/about
+  weight: 30
+pomp_core.traditions:
+  title: 'Traditions'
+  description: 'Traditions'
+  parent: main
+  menu_name: main
+  url: internal:/traditions
+  weight: 40
+pomp_core.orators:
+  title: 'University Orators'
+  description: 'University Orators'
+  parent: main
+  menu_name: main
+  url: internal:/orators
+  weight: 50
+pomp_core.acknowledgements:
+  title: 'Acknowledgements'
+  description: 'Acknowledgements'
+  parent: main
+  menu_name: main
+  url: internal:/acknowledgements
+  weight: 60
+pomp_core.contact:
+  title: 'Contact'
+  description: 'Contact'
+  parent: main
+  menu_name: main
+  url: internal:/contact
+  weight: 70
+pomp_core.archives:
+  title: 'Archives'
+  description: 'Archives'
+  parent: main
+  menu_name: main
+  url: internal:/archives
+  weight: 80
