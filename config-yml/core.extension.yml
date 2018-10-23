@@ -36,6 +36,7 @@ module:
   pomp_address_node: 0
   pomp_cer_title: 0
   pomp_ceremony_node: 0
+  pomp_core: 0
   pomp_deg_linking: 0
   pomp_degree_node: 0
   pomp_restrict_urls: 0
@@ -65,6 +66,7 @@ theme:
   seven: 0
   zircon: 0
   pomp_subtheme: 0
+  bootstrap: 0
 profile: honorary
 _core:
   default_config_hash: m2GVq11UAOVuNgj8x0t5fMOPujpvQQ_zxLoaly1BMEU
