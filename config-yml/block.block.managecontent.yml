@@ -2,10 +2,7 @@ uuid: 62e6a8a6-6999-48e0-bf9d-a0a13db7a70a
 langcode: en
 status: true
 dependencies:
-  content:
-    - 'block_content:basic:4fdb9913-2fca-4092-8622-f304cb9c3592'
   module:
-    - block_content
     - user
   theme:
     - pomp_subtheme
