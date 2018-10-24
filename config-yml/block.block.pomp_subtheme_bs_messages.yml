@@ -1,0 +1,22 @@
+uuid: 8a7a76b9-7e02-4828-8e41-d5aa8fa15001
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - pomp_subtheme_bs
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: pomp_subtheme_bs_messages
+theme: pomp_subtheme_bs
+region: header
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

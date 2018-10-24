@@ -67,6 +67,7 @@ theme:
   zircon: 0
   pomp_subtheme: 0
   bootstrap: 0
+  pomp_subtheme_bs: 0
 profile: honorary
 _core:
   default_config_hash: m2GVq11UAOVuNgj8x0t5fMOPujpvQQ_zxLoaly1BMEU
