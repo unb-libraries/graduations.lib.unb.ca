@@ -12,8 +12,8 @@ _core:
   default_config_hash: rx9IrdDv7Ldc4kpalZAxdhIPZfYIeOMh1N-qKoQZwHo
 id: pomp_subtheme_bs_main_menu
 theme: pomp_subtheme_bs
-region: navigation
-weight: 0
+region: navigation_collapsible
+weight: -7
 provider: null
 plugin: 'system_menu_block:main'
 settings:

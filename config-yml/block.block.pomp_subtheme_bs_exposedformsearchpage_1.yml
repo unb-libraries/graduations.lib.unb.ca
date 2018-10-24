@@ -11,8 +11,8 @@ dependencies:
     - pomp_subtheme_bs
 id: pomp_subtheme_bs_exposedformsearchpage_1
 theme: pomp_subtheme_bs
-region: navigation
-weight: -9
+region: highlighted
+weight: -7
 provider: null
 plugin: 'views_exposed_filter_block:search-page_1'
 settings:
