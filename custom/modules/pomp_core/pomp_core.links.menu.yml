@@ -74,5 +74,5 @@ pomp_core.archives:
   description: 'Archives'
   parent: main
   menu_name: main
-  url: internal:/archives
+  url: https://www.lib.unb.ca/archives/
   weight: 80
