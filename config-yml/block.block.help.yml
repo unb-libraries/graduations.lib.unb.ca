@@ -1,0 +1,20 @@
+uuid: 15c5d362-155d-425b-8d91-c0b3fc5e170a
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - bootstrap
+id: help
+theme: bootstrap
+region: help
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

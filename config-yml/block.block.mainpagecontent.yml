@@ -1,0 +1,20 @@
+uuid: ca59d836-2075-49fa-ae0d-24e8e2a5e2a6
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bootstrap
+id: mainpagecontent
+theme: bootstrap
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

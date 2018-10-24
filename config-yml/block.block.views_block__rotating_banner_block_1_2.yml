@@ -1,0 +1,30 @@
+uuid: 91cd4abe-4578-4ec2-af06-9b3852bbc574
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.rotating_banner
+  module:
+    - system
+    - views
+  theme:
+    - bootstrap
+id: views_block__rotating_banner_block_1_2
+theme: bootstrap
+region: header
+weight: 0
+provider: null
+plugin: 'views_block:rotating_banner-block_1'
+settings:
+  id: 'views_block:rotating_banner-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/about\r\n/traditions\r\n/orators\r\n/acknowledgements\r\n/cattley\r\n/effervescences"
+    negate: false
+    context_mapping: {  }

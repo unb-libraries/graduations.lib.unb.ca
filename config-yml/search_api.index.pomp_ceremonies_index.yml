@@ -13,6 +13,14 @@ name: 'POMP ceremonies index'
 description: ''
 read_only: false
 field_settings:
+  field_ceremony_year:
+    label: Year
+    datasource_id: 'entity:node'
+    property_path: field_ceremony_year
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_ceremony_year
   rendered_item:
     label: 'Rendered HTML output'
     property_path: rendered_item
@@ -23,14 +31,6 @@ field_settings:
       view_mode:
         'entity:node':
           honorary_ceremony: default
-  field_ceremony_year:
-    label: Year
-    datasource_id: 'entity:node'
-    property_path: field_ceremony_year
-    type: integer
-    dependencies:
-      config:
-        - field.storage.node.field_ceremony_year
 datasource_settings:
   'entity:node':
     bundles:
@@ -42,6 +42,17 @@ datasource_settings:
       selected: {  }
 processor_settings:
   add_url: {  }
+  aggregated_field: {  }
+  highlight:
+    highlight: always
+    highlight_partial: true
+    excerpt: true
+    excerpt_length: 384
+    exclude_fields: {  }
+    prefix: '<strong>'
+    suffix: '</strong>'
+    weights:
+      postprocess_query: 0
   ignorecase:
     fields:
       - rendered_item
@@ -58,17 +69,6 @@ processor_settings:
     weights:
       preprocess_index: -5
       preprocess_query: -4
-  aggregated_field: {  }
-  highlight:
-    highlight: always
-    highlight_partial: true
-    excerpt: true
-    excerpt_length: 384
-    exclude_fields: {  }
-    prefix: '<strong>'
-    suffix: '</strong>'
-    weights:
-      postprocess_query: 0
 tracker_settings:
   default: {  }
 options:
