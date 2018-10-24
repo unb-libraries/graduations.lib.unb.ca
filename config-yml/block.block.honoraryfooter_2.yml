@@ -1,0 +1,20 @@
+uuid: 82cc138d-00fd-4915-8f36-6f6cbd347dc7
+langcode: en
+status: true
+dependencies:
+  module:
+    - pomp_core
+  theme:
+    - bootstrap
+id: honoraryfooter_2
+theme: bootstrap
+region: footer
+weight: -6
+provider: null
+plugin: pomp_footer
+settings:
+  id: pomp_footer
+  label: 'Honorary Footer'
+  provider: pomp_core
+  label_display: '0'
+visibility: {  }
