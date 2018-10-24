@@ -7,7 +7,7 @@ dependencies:
 id: pagetitle
 theme: bootstrap
 region: content
-weight: 0
+weight: -4
 provider: null
 plugin: page_title_block
 settings:
