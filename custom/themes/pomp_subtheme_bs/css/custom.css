@@ -8,6 +8,17 @@ red 2:  #880404;
 red 3:  #A01300;
 /*
 
+/* Font Awesome */
+
+@font-face {
+  font-family: 'FontAwsome';
+  src: url('./webagency_images/fonts/fontawsome-webfont.eot');
+  src: url('./webagency_images/fonts/fontawsome-webfont.woff') format('woff');
+  src: url('./webagency_images/fonts/fontawsome-webfont.svg') format('svg');
+  src: url('./webagency_images/fonts/fontawsome-webfont.ttf') format('truetype');
+  src: url('./webagency_images/fonts/FontAwsome.otf') format('otf');
+}
+
 /* Global */
 
 body {
