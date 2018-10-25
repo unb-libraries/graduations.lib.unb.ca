@@ -83,6 +83,12 @@ div#block-pomp-subtheme-branding > div.site-name > a:hover, a:focus {
   text-decoration: none;
 }
 
+/* Branding */
+
+.region.region-branding {
+  display: grid;
+}
+
 /* Menu. */
 
 #main-menu ul.menu {
