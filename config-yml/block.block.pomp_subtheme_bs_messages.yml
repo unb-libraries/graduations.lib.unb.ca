@@ -10,8 +10,8 @@ _core:
   default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
 id: pomp_subtheme_bs_messages
 theme: pomp_subtheme_bs
-region: navigation
-weight: -8
+region: branding
+weight: -6
 provider: null
 plugin: system_messages_block
 settings:

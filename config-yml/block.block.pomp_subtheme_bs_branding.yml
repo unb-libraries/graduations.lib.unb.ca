@@ -10,8 +10,8 @@ _core:
   default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
 id: pomp_subtheme_bs_branding
 theme: pomp_subtheme_bs
-region: navigation
-weight: -7
+region: branding
+weight: -5
 provider: null
 plugin: system_branding_block
 settings:
