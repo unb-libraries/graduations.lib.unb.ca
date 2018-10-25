@@ -2,6 +2,7 @@
 gray 1: #F0F0F0;
 gray 2: #DADADA;
 gray 3: #555555;
+gray 4: #333333;
 red 1:  #C01700;
 red 2:  #880404;
 red 3:  #A01300;
@@ -73,10 +74,14 @@ select:focus option:checked {
 
 /* Site title */
 
-div.site-name a {
-  font-size: 40px;
-  font-family: 'oswaldregular';
+.region.region-branding a.name {
+  font-size: 36px;
 }
+
+.region.region-branding p.navbar-text {
+  margin-top: 0px;
+}
+
 
 div#block-pomp-subtheme-branding > div.site-name > a:hover, a:focus {
   color: #880404 !important;
@@ -87,44 +92,36 @@ div#block-pomp-subtheme-branding > div.site-name > a:hover, a:focus {
 
 .region.region-branding {
   display: grid;
+  margin-left: 16px;
 }
 
 /* Menu. */
 
-#main-menu ul.menu {
-  border: none !important;
+#navbar {
+  margin-top: 10px;
+  background-color: #333333;
 }
 
-#block-pomp-subtheme-honorarymainmenu li.menu-item a {
-  height: 45px !important;
+#navbar ul {
+  background-color: #333333;
+}
+
+#navbar a,
+#navbar a:hover,
+#navbar a:focus,
+#navbar a:visited,
+#navbar a:link,
+#navbar a:active {
   color: white !important;
-}
-
-#block-pomp-subtheme-honorarymainmenu li.menu-item > a:focus,
-#block-pomp-subtheme-honorarymainmenu li.menu-item > a:hover {
-  text-decoration: none !important;
-  background-color: #A01300 !important;
-  background: -webkit-linear-gradient(top, #C01700, #A01300) !important;
-}
-
-#main-menu .container ul.menu ul.menu li {
-  width: 220px !important;
-}
-
-#main-menu {
   font-size: 12px;
-  margin-bottom: 0px !important;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
-#main-menu .container ul.menu li > a {
-  padding: 10px 20px 10px 10px !important;
-}
-
-#main-menu .container ul.menu li:first-child > a {
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-    -webkit-border-top-left-radius: 0px;
-    -webkit-border-bottom-left-radius: 0px;
+#navbar li a:hover,
+#navbar li a:focus,
+#navbar li a.is-active {
+  background-color: #C01700;
 }
 
 /* Slideshow */
@@ -719,7 +716,7 @@ div.floated-fig {
     border: 0px;
   }
 
-  #block-pomp-subtheme-honorarymainmenu .menu-item {
+  #block-pomp-subtheme-bs-main-menu .menu-item {
     background-color: #555555 !important;
   }
 
