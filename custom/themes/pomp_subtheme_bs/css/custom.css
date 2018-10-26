@@ -12,11 +12,11 @@ red 3:  #A01300;
 
 @font-face {
   font-family: 'FontAwsome';
-  src: url('./webagency_images/fonts/fontawsome-webfont.eot');
-  src: url('./webagency_images/fonts/fontawsome-webfont.woff') format('woff');
-  src: url('./webagency_images/fonts/fontawsome-webfont.svg') format('svg');
-  src: url('./webagency_images/fonts/fontawsome-webfont.ttf') format('truetype');
-  src: url('./webagency_images/fonts/FontAwsome.otf') format('otf');
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.eot');
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff') format('woff');
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.svg') format('svg');
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.ttf') format('truetype');
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/FontAwesome.otf') format('otf');
 }
 
 /* Global */
