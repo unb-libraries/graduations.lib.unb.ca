@@ -1,0 +1,6 @@
+pomp_core.intro:
+  path: '/intro'
+  defaults:
+    _title: 'INTRODUCTION'
+  requirements:
+    _permission: 'access content'
