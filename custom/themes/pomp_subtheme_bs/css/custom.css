@@ -11,7 +11,7 @@ red 3:  #A01300;
 /* Font Awesome */
 
 @font-face {
-  font-family: 'FontAwsome';
+  font-family: 'FontAwesome';
   src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.eot');
   src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff') format('woff');
   src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.svg') format('svg');
