@@ -163,7 +163,7 @@ div#block-pomp-subtheme-branding > div.site-name > a:hover, a:focus {
   top: 45%;
   left: 1%;
   font-family: 'Glyphicons Halflings';
-  font-size: 3em;
+  font-size: 2em;
   content: '\e251';
   color: white;
   opacity: .7;
@@ -187,8 +187,8 @@ div#block-pomp-subtheme-branding > div.site-name > a:hover, a:focus {
   top: 45%;
   right: 1%;
   font-family: 'Glyphicons Halflings';
-  font-size: 3em;
-  content: '\e251';
+  font-size: 2em;
+  content: '\e250';
   color: white;
   opacity: .7;
 }
@@ -288,7 +288,7 @@ input#edit-reset {
 
 .template-ceremony-link div span a:before {
   font-family: 'Glyphicons Halflings';
-  content: "\e260   ";
+  content: "\e251   ";
 }
 
 .template-ceremony-link div span a:hover {
