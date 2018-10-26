@@ -8,17 +8,6 @@ red 2:  #880404;
 red 3:  #A01300;
 /*
 
-/* Font Awesome */
-
-@font-face {
-  font-family: 'FontAwesome';
-  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.eot');
-  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff') format('woff');
-  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.svg') format('svg');
-  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.ttf') format('truetype');
-  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/FontAwesome.otf') format('otf');
-}
-
 /* Global */
 
 body {
@@ -173,9 +162,9 @@ div#block-pomp-subtheme-branding > div.site-name > a:hover, a:focus {
   z-index: 100;
   top: 45%;
   left: 1%;
-  font-family: FontAwesome;
-  font-size: 2em;
-  content: "\f137";
+  font-family: 'Glyphicons Halflings';
+  font-size: 3em;
+  content: '\e251';
   color: white;
   opacity: .7;
 }
@@ -197,9 +186,9 @@ div#block-pomp-subtheme-branding > div.site-name > a:hover, a:focus {
   z-index: 100;
   top: 45%;
   right: 1%;
-  font-family: FontAwesome;
-  font-size: 2em;
-  content: "\f138";
+  font-family: 'Glyphicons Halflings';
+  font-size: 3em;
+  content: '\e251';
   color: white;
   opacity: .7;
 }
@@ -298,8 +287,8 @@ input#edit-reset {
 /* Back to ceremony link */
 
 .template-ceremony-link div span a:before {
-  font-family: FontAwesome;
-  content: "\f137   ";
+  font-family: 'Glyphicons Halflings';
+  content: "\e260   ";
 }
 
 .template-ceremony-link div span a:hover {
