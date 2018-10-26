@@ -11,7 +11,7 @@ dependencies:
 id: pomp_subtheme_bs_useraccountmenu
 theme: pomp_subtheme_bs
 region: footer
-weight: -7
+weight: -4
 provider: null
 plugin: 'system_menu_block:account'
 settings:

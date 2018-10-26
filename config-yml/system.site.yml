@@ -5,7 +5,7 @@ slogan: 'Graduation Ceremonies 1828 - Present'
 page:
   403: ''
   404: ''
-  front: /node/1916
+  front: /node/3
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en

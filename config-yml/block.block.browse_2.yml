@@ -1,25 +1,23 @@
-uuid: 9dba6b86-e0e8-4a84-836c-653c406c419e
+uuid: e129de58-7220-497d-add4-c76361f334aa
 langcode: en
 status: true
 dependencies:
   module:
+    - pomp_core
     - system
   theme:
     - pomp_subtheme_bs
-id: pomp_subtheme_bs_browse
+id: browse_2
 theme: pomp_subtheme_bs
 region: highlighted
-weight: -6
+weight: 0
 provider: null
-plugin: 'block_content:106d8511-32e1-46f0-a0ed-2b1eed1dd40d'
+plugin: pomp_browse
 settings:
-  id: 'block_content:106d8511-32e1-46f0-a0ed-2b1eed1dd40d'
+  id: pomp_browse
   label: Browse
-  provider: block_content
+  provider: pomp_core
   label_display: visible
-  status: true
-  info: ''
-  view_mode: full
 visibility:
   request_path:
     id: request_path
