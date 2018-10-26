@@ -288,7 +288,7 @@ input#edit-reset {
 
 .template-ceremony-link div span a:before {
   font-family: 'Glyphicons Halflings';
-  content: "\e251   ";
+  content: "\e251 ";
 }
 
 .template-ceremony-link div span a:hover {
