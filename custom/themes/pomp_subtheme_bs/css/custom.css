@@ -26,6 +26,20 @@ input, select {
   height: 36px;
 }
 
+/* Hyperlinks */
+.dialog-off-canvas-main-canvas a,
+.dialog-off-canvas-main-canvas a:visited {
+  color: #C01700;
+}
+
+.dialog-off-canvas-main-canvas a:active,
+.dialog-off-canvas-main-canvas a:focus,
+.dialog-off-canvas-main-canvas a:focus-within,
+.dialog-off-canvas-main-canvas a:hover {
+  text-decoration: underline;
+  color: #880404;
+}
+
 #edit-name--description, #edit-pass--description {
   visibility: hidden;
 }
@@ -98,7 +112,8 @@ div#block-pomp-subtheme-branding > div.site-name > a:hover, a:focus {
 /* Menu. */
 
 #navbar {
-  margin-top: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
   background-color: #333333;
 }
 
@@ -214,11 +229,16 @@ div#block-pomp-subtheme-branding > div.site-name > a:hover, a:focus {
   padding: 0px !important;
 }
 
+article.contextual-region.static-page.full.clearfix {
+  margin-top: 10px;
+}
+
 /* Page title */
 
-.page-title {
-  margin-top: .45em;
-  text-transform: uppercase;
+h1.js-quickedit-page-title.page-header {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 30px;
 }
 
 /* "Traditions" page tables */
