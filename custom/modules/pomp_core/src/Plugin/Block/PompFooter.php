@@ -40,7 +40,7 @@ class PompFooter extends BlockBase {
 
       <div id="footer-logo">
         <a href="https://www.lib.unb.ca/">
-          <img alt="UNB Libraries Logo" data-align="right" data-entity-type="file" data-entity-uuid="287fcb32-b0dc-42d9-8d6b-ca14f575fff2" id="unb-lib-logo" src="/sites/default/files/inline-images/UNB-Libraries-Fton-Red-Black_0_0.png" />
+          <img alt="UNB Libraries Logo" id="unb-lib-logo" src="/themes/custom/pomp_subtheme_bs/images/UNB-Libraries-Fton-Red-Black.png" />
         </a>
       </div>
     ';
