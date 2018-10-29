@@ -20,6 +20,14 @@ div {
   border-radius: 0px !important;
 }
 
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
 input, select {
   display: block;
   width: 160px;
@@ -386,7 +394,12 @@ label[for='edit-search-api-fulltext'] {
 
 #block-browse-2 .block-title {
   margin-top: 0px;
+  margin-bottom: 10px;
   font-size: 14px;
+}
+
+#block-browse-2 p {
+  margin-bottom: 0px;
 }
 
 /* Search Results */
@@ -504,6 +517,9 @@ article.node--type-static-page img {
 
 /* Footer */
 
+footer.footer.container {
+  border-top: none;
+}
 div.region.region-footer {
   padding-top: 20px;
   border-top: 1px dotted #DADADA;
