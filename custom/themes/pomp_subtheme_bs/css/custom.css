@@ -28,13 +28,27 @@ h2 {
   font-size: 20px;
 }
 
-input, select {
-  display: block;
-  width: 160px;
-  height: 36px;
+div.view-filters input, select {
+  display: block !important;
+  width: 176px !important;
+  height: 36px !important;
+}
+
+div.view-filters label {
+  display: block !important;
+  width: 176px !important;
+}
+
+div.view-filters {
+  padding: 20px !important;
+}
+
+div.view-filters #edit-actions {
+  margin-top: 10px;
 }
 
 /* Hyperlinks */
+
 .dialog-off-canvas-main-canvas a,
 .dialog-off-canvas-main-canvas a:visited {
   color: #C01700;
@@ -370,6 +384,7 @@ section.featured > div.container {
 }
 
 label[for='edit-search-api-fulltext'] {
+  margin-right: 10px;
   font-weight: normal;
 }
 
@@ -389,7 +404,7 @@ label[for='edit-search-api-fulltext'] {
 
 #edit-submit-search {
   margin-right: 0px;
-  width: 100px;
+  width: 90px;
 }
 
 #block-browse-2 .block-title {
