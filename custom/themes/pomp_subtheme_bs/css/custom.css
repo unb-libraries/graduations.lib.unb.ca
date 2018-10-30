@@ -628,6 +628,13 @@ a.btn-btt {
 
 /* Browse degrees */
 
+#main .container .content .views-row {
+    border-top: 1px solid #dadada;
+    border-top-style: dotted;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+
 .browse-degree table {
   font-size: 14px !important;
   table-layout: fixed !important;
