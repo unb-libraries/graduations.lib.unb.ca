@@ -30,21 +30,22 @@ h2 {
 
 div.view-filters input, select {
   display: block !important;
-  width: 176px !important;
+  width: 240px !important;
   height: 36px !important;
 }
 
 div.view-filters label {
   display: block !important;
-  width: 176px !important;
+  width: 280px !important;
+  margin-bottom: 4px !important;
 }
 
 div.view-filters {
-  padding: 20px !important;
+  padding: 16px !important;
 }
 
 div.view-filters #edit-actions {
-  margin-top: 10px;
+  margin-top: 24px;
 }
 
 /* Hyperlinks */
@@ -60,6 +61,30 @@ div.view-filters #edit-actions {
 .dialog-off-canvas-main-canvas a:hover {
   text-decoration: underline;
   color: #880404;
+}
+
+button, button:active {
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.dialog-off-canvas-main-canvas button,
+.dialog-off-canvas-main-canvas button:visited {
+  background-color: #C01700;
+  border-color: #C01700;
+  color: white;
+  font-weight: 300;
+}
+
+.dialog-off-canvas-main-canvas button:active,
+.dialog-off-canvas-main-canvas button:focus,
+.dialog-off-canvas-main-canvas button:focus-within,
+.dialog-off-canvas-main-canvas button:hover {
+  background-color: #880404 !important;
+  border-color: #880404 !important;
+  color: white !important;
+
 }
 
 #edit-name--description, #edit-pass--description {
@@ -277,6 +302,10 @@ table#traditions-hoods, table#traditions-gowns {
 
 /* Filters */
 
+form.views-exposed-form > div.form--inline.form-inline.clearfix > div {
+  margin-bottom: 10px;
+}
+
 div.view-filters {
   background-color: #F0F0F0;
   margin-top: 10px;
@@ -291,6 +320,10 @@ div.view-filters {
 label[for="edit-sort-order"],
 label[for="edit-sort-by"] {
   display: none;
+}
+
+#views-exposed-form-search-page-1 #edit-sort-order {
+  width: 180px !important;
 }
 
 /* Break filter form on year and campus */
@@ -384,7 +417,7 @@ section.featured > div.container {
 }
 
 label[for='edit-search-api-fulltext'] {
-  margin-right: 10px;
+  margin-right: 6px;
   font-weight: normal;
 }
 
@@ -399,12 +432,12 @@ label[for='edit-search-api-fulltext'] {
 }
 
 #edit-search-api-fulltext {
-  width: 340px;
+  width: 320px;
 }
 
 #edit-submit-search {
   margin-right: 0px;
-  width: 90px;
+  width: 44px;
 }
 
 #block-browse-2 .block-title {
@@ -619,7 +652,9 @@ a.btn-btt {
 }
 
 #edit-combine {
-  width: 330px !important;
+  width: 55.5vw !important;
+  max-width: 562px;
+  min-width: 240px;
 }
 
 /* View degree */

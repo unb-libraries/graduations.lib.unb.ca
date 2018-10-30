@@ -27,7 +27,7 @@ class PompFooter extends BlockBase {
         <a href="/degrees">Browse Honorary Degrees</a> |
         <a href="/about">About</a> |
         <a href="/traditions">Traditions</a> |
-        <a href="/orators">Orators</a> |
+        <a href="/orators">Orators</a> |<br>
         <a href="/acknowledgements">Acknowledgements</a> |
         <a href="/contact">Contact Us</a>
         <br>
