@@ -10,7 +10,7 @@ dependencies:
 id: managecontent_2
 theme: pomp_subtheme_bs
 region: footer
-weight: 0
+weight: -6
 provider: null
 plugin: pomp_content_man
 settings:

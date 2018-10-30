@@ -9,7 +9,7 @@ dependencies:
 id: honoraryfooter_2
 theme: pomp_subtheme_bs
 region: footer
-weight: -6
+weight: -5
 provider: null
 plugin: pomp_footer
 settings:
