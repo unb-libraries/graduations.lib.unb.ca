@@ -87,6 +87,21 @@ button, button:active {
 
 }
 
+.pagination .pager__item a,
+.pagination .pager__item a:visited {
+  color: #C01700;
+}
+
+.pagination .pager__item a:active,
+.pagination .pager__item a:focus,
+.pagination .pager__item a:focus-within,
+.pagination .pager__item a:hover {
+  background-color: #880404 !important;
+  border-color: #880404 !important;
+  color: white !important;
+
+}
+
 #edit-name--description, #edit-pass--description {
   visibility: hidden;
 }
