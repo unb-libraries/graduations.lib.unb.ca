@@ -96,9 +96,8 @@ button, button:active {
 .pagination .pager__item a:focus,
 .pagination .pager__item a:focus-within,
 .pagination .pager__item a:hover,
-.pagination .pager__item a.active {
+.pagination .pager__item li.active {
   background-color: #C01700 !important;
-  border-color: #C01700 !important;
   color: white !important;
 
 }
