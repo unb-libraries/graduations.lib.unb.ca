@@ -628,7 +628,7 @@ a.btn-btt {
 
 /* Browse degrees */
 
-#main .container .content .views-row {
+.region-content .view-content .views-row {
     border-top: 1px solid #dadada;
     border-top-style: dotted;
     margin-bottom: 20px;
