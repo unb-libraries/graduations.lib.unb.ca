@@ -155,7 +155,7 @@ select:focus option:checked {
 }
 
 .region.region-branding p.navbar-text {
-  margin-top: 0px;
+  margin-top: 6px;
 }
 
 
@@ -168,13 +168,23 @@ div#block-pomp-subtheme-branding > div.site-name > a:hover, a:focus {
 
 .region.region-branding {
   display: grid;
-  margin-left: 16px;
 }
 
 /* Menu. */
+.navbar-brand {
+  padding-left: 0px;
+  padding-top: initial;
+  padding-bottom: initial;
+  padding-right: initial;
+  height: initial;
+}
+
+.navbar-text {
+  margin-left: 0px;
+}
 
 #navbar {
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 10px;
   background-color: #333333;
 }
