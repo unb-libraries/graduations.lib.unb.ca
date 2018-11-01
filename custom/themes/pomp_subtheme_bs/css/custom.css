@@ -177,6 +177,17 @@ div#block-pomp-subtheme-branding > div.site-name > a:hover, a:focus {
 }
 
 /* Menu. */
+button.navbar-toggle[data-toggle='collapse'] {
+  background-color: #555555;
+}
+
+button.navbar-toggle[data-toggle='collapse']:hover,
+button.navbar-toggle[data-toggle='collapse']:active,
+button.navbar-toggle[data-toggle='collapse']:focus {
+  background-color: #DADADA !important;
+  border-color: initial !important;
+}
+
 .navbar-brand {
   padding-left: 0px;
   padding-top: initial;
@@ -206,8 +217,8 @@ div#block-pomp-subtheme-branding > div.site-name > a:hover, a:focus {
 #navbar a:link,
 #navbar a:active {
   color: white !important;
-  font-size: 12px;
-  font-weight: 300;
+  font-size: 1em;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
