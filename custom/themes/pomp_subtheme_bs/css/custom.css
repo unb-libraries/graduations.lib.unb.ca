@@ -11,8 +11,14 @@ red 3:  #A01300;
 /* Global */
 
 body {
-  font-family: sans-serif;
   background: white;
+  color: #555555 !important;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body h2 {
+  color: #555555 !important;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
 div {
@@ -432,47 +438,84 @@ section.featured > div.container {
 }
 
 #block-pomp-subtheme-bs-exposedformsearchpage-1 {
-  float: left;
   margin-top: 10px;
   width: 70%;
-  height: 8em;
+  height: 9em;
   padding: 1.2em;
   background-color: #F0F0F0;
-  border-right: 5px solid white;
 }
 
-label[for='edit-search-api-fulltext'] {
-  margin-right: 6px;
-  font-weight: normal;
+#block-browse-2 {
+  margin-top: 10px;
+  width: 30%;
+  height: 9em;
+  padding: 1.2em;
+  background-color: #F0F0F0;
+}
+
+#block-pomp-subtheme-bs-exposedformsearchpage-1 {
+  float: left;
+  border-right: 5px solid white;
 }
 
 #block-browse-2 {
   float: right;
-  margin-top: 10px;
-  width: 30%;
-  height: 8em;
-  padding: 1.2em;
-  background-color: #F0F0F0;
   border-left: 5px solid white;
 }
 
-#edit-search-api-fulltext {
-  width: 320px;
-}
-
-#edit-submit-search {
-  margin-right: 0px;
-  width: 44px;
+div.form-item-search-api-fulltext + div {
+  display: inline-block;
 }
 
 #block-browse-2 .block-title {
   margin-top: 0px;
-  margin-bottom: 10px;
-  font-size: 14px;
+  font-weight: 400;
 }
 
-#block-browse-2 p {
-  margin-bottom: 0px;
+
+div.js-form-item-search-api-fulltext {
+  width: 60%;
+}
+
+input#edit-search-api-fulltext {
+    width: 100%;
+}
+
+input#edit-submit-search {
+  width: 80px;
+}
+
+div.block-views-exposed-filter-blocksearch-page-1 h2 {
+  visibility: hidden;
+}
+
+label[for="edit-search-api-fulltext"] {
+  font-size: 20px !important;
+  margin: 0 0 15px !important;
+  line-height: 1.3 !important;
+  font-weight: 400 !important;
+  box-sizing: border-box;
+  display: block;
+}
+
+#views-exposed-form-search-page-1 > div >
+div.js-form-item.form-item.js-form-type-textfield.form-type-textfield {
+  margin-top: 0em !important;
+}
+
+#views-exposed-form-search-page-1 > div >
+div.js-form-item.form-item.js-form-type-select.form-type-select {
+  display: inline-block;
+  margin-top: 40px;
+}
+
+#views-exposed-form-search-page-1 #edit-actions {
+  margin-top: 40px;
+}
+
+div#block-exposedformsearchpage-1 div#edit-actions {
+  clear: none;
+  margin-top: 60px;
 }
 
 /* Search Results */
