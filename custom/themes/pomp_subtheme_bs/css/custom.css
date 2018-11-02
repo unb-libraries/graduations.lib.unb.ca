@@ -753,8 +753,9 @@ a.btn-btt {
 
 #edit-combine {
   width: 55.5vw !important;
-  max-width: 562px;
+  max-width: 522px;
   min-width: 240px;
+  margin-right: 42px;
 }
 
 /* View degree */
