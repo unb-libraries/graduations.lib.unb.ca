@@ -194,6 +194,7 @@ button.navbar-toggle[data-toggle='collapse']:focus {
   padding-bottom: initial;
   padding-right: initial;
   height: initial;
+  line-height: 36px;
 }
 
 .navbar-text {
