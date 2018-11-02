@@ -643,6 +643,9 @@ article.node--type-static-page img {
 }
 
 /* Footer */
+.menu.menu--account.nav.navbar-nav.navbar-left a {
+  padding-left: 0px;
+}
 
 footer.footer.container {
   border-top: none;
