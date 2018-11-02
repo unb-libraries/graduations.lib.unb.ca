@@ -445,8 +445,14 @@ a:hover, a:focus {
 
 /* Browse-search */
 
-label[for='edit-field-list-season-target-id']{
+#views-exposed-form-honorary-browse-ceremonies-page-1
+label[for='edit-field-list-season-target-id'] {
   margin-right: 262px !important;
+}
+
+#views-exposed-form-honorary-browse-degrees-page-1
+label[for='edit-combine'] {
+  width: 282px !important;
 }
 
 section.featured > div.container {
