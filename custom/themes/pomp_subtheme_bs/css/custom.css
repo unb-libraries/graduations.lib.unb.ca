@@ -445,6 +445,10 @@ a:hover, a:focus {
 
 /* Browse-search */
 
+label[for='edit-field-list-season-target-id']{
+  margin-right: 262px !important;
+}
+
 section.featured > div.container {
   padding: 0px !important;
 }
