@@ -23,6 +23,9 @@
 {% if region == 'branding' %}
   {% set classes = classes|merge(['container']) %}
 {% endif %}
+{% if region == 'highlighted' %}
+  {% set classes = classes|merge(['row']) %}
+{% endif %}
 {% if content %}
   <div{{ attributes.addClass(classes) }}>
     {{ content }}

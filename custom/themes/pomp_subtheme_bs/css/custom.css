@@ -156,6 +156,10 @@ select:focus option:checked {
 
 /* Site title */
 
+.region.region-branding.container {
+  margin-top: 10px;
+}
+
 .region.region-branding a.name {
   font-size: 36px;
 }
@@ -366,7 +370,7 @@ label[for="edit-sort-by"] {
 }
 
 #views-exposed-form-search-page-1 #edit-sort-order {
-  width: 180px !important;
+  width: 160px !important;
 }
 
 /* Break filter form on year and campus */
@@ -445,6 +449,11 @@ a:hover, a:focus {
 
 /* Browse-search */
 
+.region.region-highlighted.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
 #views-exposed-form-honorary-browse-ceremonies-page-1
 label[for='edit-field-list-season-target-id'] {
   margin-right: 262px !important;
@@ -461,7 +470,6 @@ section.featured > div.container {
 
 #block-pomp-subtheme-bs-exposedformsearchpage-1 {
   margin-top: 10px;
-  width: 70%;
   height: 9em;
   padding: 1.2em;
   background-color: #F0F0F0;
@@ -469,19 +477,16 @@ section.featured > div.container {
 
 #block-browse-2 {
   margin-top: 10px;
-  width: 30%;
   height: 9em;
   padding: 1.2em;
   background-color: #F0F0F0;
 }
 
 #block-pomp-subtheme-bs-exposedformsearchpage-1 {
-  float: left;
   border-right: 5px solid white;
 }
 
 #block-browse-2 {
-  float: right;
   border-left: 5px solid white;
 }
 
