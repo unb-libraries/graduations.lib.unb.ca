@@ -54,6 +54,17 @@ div.view-filters #edit-actions {
   margin-top: 24px;
 }
 
+.region.region-content {
+   margin-top: 30px;
+}
+
+img.align-right {
+    margin: 12px 0 12px 12px;
+}
+img.align-left {
+    margin: 12px 12px 12px 0;
+}
+
 /* Hyperlinks */
 
 .dialog-off-canvas-main-canvas a,
