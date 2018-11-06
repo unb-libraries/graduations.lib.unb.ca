@@ -43,7 +43,8 @@ filters:
     provider: token_filter
     status: true
     weight: 0
-    settings: {  }
+    settings:
+      replace_empty: ''
   filter_html_image_secure:
     id: filter_html_image_secure
     provider: filter
