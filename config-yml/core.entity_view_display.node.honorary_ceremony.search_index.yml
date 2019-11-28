@@ -71,3 +71,4 @@ content:
 hidden:
   field_list_ceremony_type: true
   links: true
+  search_api_excerpt: true

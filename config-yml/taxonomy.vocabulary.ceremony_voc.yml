@@ -5,5 +5,4 @@ dependencies: {  }
 name: ceremony_voc
 vid: ceremony_voc
 description: ''
-hierarchy: 0
 weight: 0

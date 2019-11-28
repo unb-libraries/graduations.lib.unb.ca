@@ -5,5 +5,4 @@ dependencies: {  }
 name: address_type_voc
 vid: address_type_voc
 description: ''
-hierarchy: 0
 weight: 0

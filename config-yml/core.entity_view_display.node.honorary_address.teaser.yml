@@ -23,3 +23,4 @@ hidden:
   field_delivered_by: true
   field_list_address_type: true
   field_ref_address_ceremony: true
+  search_api_excerpt: true

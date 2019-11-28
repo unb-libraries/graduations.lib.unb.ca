@@ -5,5 +5,4 @@ dependencies: {  }
 name: gender_voc
 vid: gender_voc
 description: ''
-hierarchy: 0
 weight: 0

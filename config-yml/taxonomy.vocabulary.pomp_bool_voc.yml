@@ -5,5 +5,4 @@ dependencies: {  }
 name: pomp_bool_voc
 vid: pomp_bool_voc
 description: ''
-hierarchy: 0
 weight: 0

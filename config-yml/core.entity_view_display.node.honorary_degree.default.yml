@@ -107,3 +107,4 @@ content:
 hidden:
   field_deg_parent: true
   links: true
+  search_api_excerpt: true
