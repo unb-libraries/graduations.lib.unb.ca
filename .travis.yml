@@ -1,54 +1,27 @@
 language: php
-sudo: required
 
 services:
   - docker
 
 php:
-  - '7.1'
-
-cache:
-  directories:
-    - $HOME/.composer/cache
+  - '7.2'
 
 git:
   depth: 1
 
-env:
-  global:
-    - SERVICE_NAME=graduations.lib.unb.ca
-    - AMAZON_ECR_REGION=us-east-1
-    - DEPLOY_BRANCHES=dev,prod
-    - DEPLOYMENT_FINISHED_MARKER=99_report_as_complete
-    - DOCKER_UPSTREAM_IMAGE=unblibraries/drupal:alpine-nginx-php7-8.x-composer
-    - OLD_IMAGES_TO_KEEP=2
-    - SERVICE_DEPLOY_PORT=80
-    - SERVICE_TEST_UP_PATH=/user
-
 before_install:
-  - git clone git://github.com/unb-libraries/CargoDock.git CargoDock
-  - CargoDock/travis/installDockerCompose.sh
-  - CargoDock/aws/installAuthAws.sh
-  - cp docker-compose.yml.travis docker-compose.yml
-  - CargoDock/travis/setDockerComposeEnv.sh
-
-before_script:
-  - CargoDock/travis/buildInstanceTheme.sh
-  - CargoDock/travis/buildInstanceForTesting.sh
-  - CargoDock/travis/waitForDeploy.sh
-  - CargoDock/travis/checkStartupForErrors.sh
+  - composer install
+  - vendor/unb-libraries/dockworker/scripts/travis/init.sh
 
 script:
-  - CargoDock/travis/testInstance.sh
-
-after_success:
-  - CargoDock/travis/buildImagePushToRepo.sh
-  - CargoDock/travis/cleanupOldImages.sh
-  - CargoDock/travis/triggerKubeDeploy.sh
+  - set -e
+  - vendor/bin/dockworker local:build-test
+  - vendor/unb-libraries/dockworker/scripts/kubectl/init.sh
+  - vendor/bin/dockworker image:deploy $TRAVIS_BRANCH
 
 notifications:
   slack:
     rooms:
-      secure: Z0M4huYen8b56vYC12tXyDIbZgNKgxJe7MVk7B3p0O/EppGK66tzispbVJ2B1bb6jleBoRM4kgCx12YnXHFKGyY520EFJ62gHBbQkkhtA/cSwFx9oWrFH5GOuv5HjC0436zBv+J4Q8t9acPayGXE6peiBSHAOnTVDiI4h2Jk7tco+zwQxMTLKXDR3FjdfLwiYStXrbhgMun0OentJ+EidSiXQbiAkLq9pZsVBFoCrZ+QBcnDECSuQXWmGub7UIC6qqgWsbfuLOMPn03pjTwM7/yPtekxnjqbV1bPzhO19mvWQjpm9oMdRS1XHSScPs6ed0WAEexO4N8yyFMNKQPgS782pytTAxxMxC3toOdPsT/NHje83ICAm1L+ZaKbGkhiRgS1vBuvJ1nXBijhIBnpMyP+Mh1XEC1C0kH3eTryrJTeuP9rg1ApHnkaE8o4Tui2Pn8FZnqRj78FkxoMwFz6jf70pOFZ+1P1DWnLQc+kdkxgu0S1AksOiUaPNQv7jsjsxqjGgRsTdBZbRcl8g/f9S55+CGDqtOlWObu7JJqku/fIsIJ96q/aHrLX4ow/mGKATYofZb45xjU8h5l/njvPswTkZDCpH5wu0dLhdciZKu7ldyUnv1Qelp5SClnkyJQ5GcWzV7Uh7Gchv+htf4fTdI+jdPhTh39tG9/y24mr8hc=
+      secure: JHg4M0EMOZfdh4pj2zawl4zGhKn50WPdCysOjbpDfv6vWwZ5FHw8yEfovuiALdV5XKRTZmGUo8FPuXjD9gtjjwLBnnaEP5buR23w9ZAqXD7bs0oHL9U2Rx3/sk+/G66ZOrs19By3KW0hAWJLheVo76l3SH4LeEy3IJB4O7cyyj/qEEQ9zjS6yDgMU90CfmVq+/cvdUDPqgJ9AeFjmDlY27HwvgPLSgrqm7bP1hb+DD7Xy9D0wc+Cze3PLtcGw0Y4ba8q/a9Py4uAeOSYSJ1w5IH6ETLXFxQNL9TFh9z0EJyE0wBz8AWxNdlfeC7tycc770BQX2hi/YlqgD9AmRed0tFR+z2qvrRnJcJn9yap0swqLFHy+wkM32iYby9/kVlN1fdw3hmVtnJ+S+j7/kJhtcMKDLCuhsLb7AiTXFJ6+2CkqPGVGNC9iT+m91jBV/e2gSz1FEmdIyQ+jDuSyZcVeDfCp5FRbyg7T84aFX8aFGQz5T3efh3ldqut10fidHOSXGBdDKFMPynIPHh6aKTfNgbQffCgJiMdRolQjCAjaXd7taRvX2ZLqi7bxU5YKjrTLtQwUXE56t/uX6ap03ps+QD/DG9NHjBdkLbtLoyHwTvYgFlWQnDdeAWra1Zc4wOEzC9WSLcEyEKYKynY+52nZ4LnHU1Sn9UcFDxBwATFaiU=
     on_start: always
     on_success: always

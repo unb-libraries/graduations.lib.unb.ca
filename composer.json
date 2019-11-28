@@ -1,6 +1,7 @@
 {
   "license": "MIT",
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "name": "unb-libraries/graduations.lib.unb.ca",
   "description": "Scaffold and provision local development for graduations.lib.unb.ca",
   "config": {
@@ -8,25 +9,15 @@
       "*": "dist"
     }
   },
-  "repositories": [
-    {
-      "type": "git",
-      "url": "https://github.com/unb-libraries/dockworker.git"
-    },
-    {
-      "type": "git",
-      "url": "https://github.com/unb-libraries/unb_lib_theme.git"
-    }
-  ],
   "require": {
     "unb-libraries/unb_lib_theme": "dev-8.x-bootstrap-3.x"
   },
   "require-dev": {
-    "unb-libraries/dockworker": "^8.0.0"
+    "unb-libraries/dockworker-drupal": "~3"
   },
   "scripts": {
     "post-update-cmd": [
-      "vendor/bin/dockworker git:setup-hooks"
+      "vendor/bin/dockworker dockworker:git:setup-hooks"
     ]
   }
 }
