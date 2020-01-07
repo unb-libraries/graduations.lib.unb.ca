@@ -33,6 +33,7 @@ module:
   options: 0
   page_cache: 0
   path: 0
+  path_alias: 0
   pomp_add_linking: 0
   pomp_address_node: 0
   pomp_cer_title: 0
