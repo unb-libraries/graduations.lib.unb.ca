@@ -93,7 +93,7 @@
         "drupal/login_return_page": "1.x-dev",
         "drupal/pathauto": "1.6",
         "drupal/redis": "1.4",
-        "drupal/search_api": "1.15",
+        "drupal/search_api": "1.16",
         "drupal/search_api_autocomplete": "1.2",
         "drupal/search_api_solr": "3.4",
         "drupal/token_filter": "1.1",
