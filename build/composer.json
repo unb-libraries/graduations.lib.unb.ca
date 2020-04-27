@@ -91,7 +91,7 @@
         "drupal/health_check": "1.2",
         "drupal/ldap": "3.x-dev",
         "drupal/login_return_page": "1.x-dev",
-        "drupal/pathauto": "1.6",
+        "drupal/pathauto": "1.7",
         "drupal/redis": "1.4",
         "drupal/search_api": "1.16",
         "drupal/search_api_autocomplete": "1.2",
