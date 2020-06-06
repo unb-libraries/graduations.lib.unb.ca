@@ -5,7 +5,7 @@ dependencies:
   module:
     - search_api_db
 id: pomp_db_search_server
-name: 'POMP DB search server'
+name: drupal-solr-lib-unb-ca
 description: ''
 backend: search_api_db
 backend_config:

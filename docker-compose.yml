@@ -23,14 +23,14 @@ services:
       - ./env/redis.env
 
   drupal-solr-lib-unb-ca:
-    image: unblibraries/solr-drupal:8.x-3.x
+    image: unblibraries/solr-drupal:8.x-4.x
     expose:
       - "8983"
     networks:
       - graduations.lib.unb.ca
     entrypoint:
       - docker-entrypoint-multiple.sh
-      - graduations_lib_unb_ca:/solr-conf
+      - ceremonies.graduations.lib.unb.ca:/solr-conf
 
   graduations.lib.unb.ca:
     build:

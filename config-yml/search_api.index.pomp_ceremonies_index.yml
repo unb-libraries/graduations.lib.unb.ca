@@ -9,7 +9,7 @@ dependencies:
     - search_api
     - node
 id: pomp_ceremonies_index
-name: 'POMP ceremonies index'
+name: ceremonies.graduations.lib.unb.ca
 description: ''
 read_only: false
 field_settings:
