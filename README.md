@@ -1,6 +1,9 @@
 ![graduations.lib.unb.ca screenshot](https://github.com/unb-libraries/graduations.lib.unb.ca/raw/prod/.dockworker/screenshot.png "graduations.lib.unb.ca screenshot")
 # [graduations.lib.unb.ca](https://graduations.lib.unb.ca/) : Instance Repository
-[![Build Status](https://travis-ci.com/unb-libraries/graduations.lib.unb.ca.svg?branch=prod)](https://travis-ci.com/unb-libraries/graduations.lib.unb.ca) [![GitHub license](https://img.shields.io/github/license/unb-libraries/graduations.lib.unb.ca)](https://github.com/unb-libraries/graduations.lib.unb.ca/blob/dev/LICENSE) ![GitHub repo size](https://img.shields.io/github/repo-size/unb-libraries/graduations.lib.unb.ca)
+[![Build Status](https://travis-ci.com/unb-libraries/graduations.lib.unb.ca.svg?token=svPMGz2VyFgGszm9Zkfb&branch=prod)](https://travis-ci.com/unb-libraries/graduations.lib.unb.ca)
+[![GitHub license](https://img.shields.io/github/license/unb-libraries/graduations.lib.unb.ca)](https://github.com/unb-libraries/graduations.lib.unb.ca/blob/prod/LICENSE)
+![GitHub repo size](https://img.shields.io/github/languages/code-size/unb-libraries/graduations.lib.unb.ca)
+[![Docker image size](https://img.shields.io/docker/image-size/unblibraries/graduations.lib.unb.ca/prod?label=docker%20image%20size)](https://hub.docker.com/repository/docker/unblibraries/graduations.lib.unb.ca)
 
 This repository contains all assets used to test, build, and deploy the [graduations.lib.unb.ca](https://graduations.lib.unb.ca) Drupal application. This repository extends the [unb-libraries/docker-drupal](https://github.com/unb-libraries/docker-drupal) base image, which deploys nginx and php-fpm in the service container.
 
