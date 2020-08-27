@@ -24,6 +24,8 @@ services:
 
   drupal-solr-lib-unb-ca:
     image: unblibraries/solr-drupal:8.x-4.x
+    env_file:
+      - ./env/solr.env
     expose:
       - "8983"
     networks:
@@ -35,8 +37,6 @@ services:
   graduations.lib.unb.ca:
     build:
       context: .
-      args:
-        - COMPOSER_DEPLOY_DEV=dev
     restart: always
     container_name: graduations.lib.unb.ca
     expose:
@@ -48,6 +48,7 @@ services:
     networks:
       - graduations.lib.unb.ca
     volumes:
+      - /app/html/sites/default
       - ./config-yml:/app/configuration
       - ./custom/modules:/app/html/modules/custom
       - ./custom/themes:/app/html/themes/custom
