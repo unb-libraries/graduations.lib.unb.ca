@@ -9,7 +9,7 @@ ENV DRUPAL_SITE_URI graduations.lib.unb.ca
 ENV DRUPAL_SITE_UUID 52bca593-2542-4a35-9ebd-1da0d40bf67b
 
 # Build application.
-COPY ./build /build
+COPY ./build/ /build/
 RUN ${RSYNC_MOVE} /build/scripts/container/ /scripts/ && \
   /scripts/addOsPackages.sh && \
   /scripts/initOpenLdap.sh && \

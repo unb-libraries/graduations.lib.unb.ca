@@ -1,4 +1,4 @@
-![graduations.lib.unb.ca screenshot](https://github.com/unb-libraries/graduations.lib.unb.ca/raw/prod/screenshot.png "graduations.lib.unb.ca screenshot")
+![graduations.lib.unb.ca screenshot](https://github.com/unb-libraries/graduations.lib.unb.ca/raw/prod/.dockworker/screenshot.png "graduations.lib.unb.ca screenshot")
 # [graduations.lib.unb.ca](https://graduations.lib.unb.ca/) : Instance Repository
 [![Build Status](https://travis-ci.com/unb-libraries/graduations.lib.unb.ca.svg?branch=prod)](https://travis-ci.com/unb-libraries/graduations.lib.unb.ca) [![GitHub license](https://img.shields.io/github/license/unb-libraries/graduations.lib.unb.ca)](https://github.com/unb-libraries/graduations.lib.unb.ca/blob/dev/LICENSE) ![GitHub repo size](https://img.shields.io/github/repo-size/unb-libraries/graduations.lib.unb.ca)
 
