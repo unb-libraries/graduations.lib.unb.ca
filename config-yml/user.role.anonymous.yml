@@ -10,6 +10,7 @@ weight: 0
 is_admin: false
 permissions:
   - 'access content'
-  - 'use text format restricted_html'
-  - 'use text format full_html'
   - 'access site-wide contact form'
+  - 'use text format full_html'
+  - 'use text format restricted_html'
+  - 'view sp metadata'
