@@ -4,3 +4,4 @@ composer.lock
 build/scripts/local
 tests/features/bootstrap
 vendor
+custom/modules/pomp_migration/dump

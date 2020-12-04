@@ -24,5 +24,3 @@ $query = \Drupal::entityQuery('node')
   ->condition('type', 'honorary_address')
   ->execute();
 entity_delete_multiple('node', $query);
-
-?>
