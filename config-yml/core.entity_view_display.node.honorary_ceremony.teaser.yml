@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.honorary_ceremony.field_ceremony_notes
     - field.field.node.honorary_ceremony.field_ceremony_year
+    - field.field.node.honorary_ceremony.field_files
     - field.field.node.honorary_ceremony.field_list_campus
     - field.field.node.honorary_ceremony.field_list_ceremony_type
     - field.field.node.honorary_ceremony.field_list_season
@@ -25,6 +26,7 @@ content:
 hidden:
   field_ceremony_notes: true
   field_ceremony_year: true
+  field_files: true
   field_list_campus: true
   field_list_ceremony_type: true
   field_list_season: true

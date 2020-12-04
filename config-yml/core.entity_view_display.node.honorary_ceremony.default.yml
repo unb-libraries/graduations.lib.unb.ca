@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.honorary_ceremony.field_ceremony_notes
     - field.field.node.honorary_ceremony.field_ceremony_year
+    - field.field.node.honorary_ceremony.field_files
     - field.field.node.honorary_ceremony.field_list_campus
     - field.field.node.honorary_ceremony.field_list_ceremony_type
     - field.field.node.honorary_ceremony.field_list_season
@@ -12,6 +13,7 @@ dependencies:
     - field.field.node.honorary_ceremony.field_ref_ceremony_degree
     - node.type.honorary_ceremony
   module:
+    - file
     - text
     - user
 id: node.honorary_ceremony.default
@@ -34,6 +36,14 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_integer
+    region: content
+  field_files:
+    weight: 111
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
     region: content
   field_list_campus:
     weight: 106
