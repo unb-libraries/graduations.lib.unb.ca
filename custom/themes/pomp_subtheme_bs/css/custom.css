@@ -633,13 +633,16 @@ div.js-form-item.form-item.js-form-type-vertical-tabs.form-type-vertical-tabs.js
   margin-top: 1rem;
 }
 
-#node-honorary-ceremony-edit-form .select-wrapper {
-  width: 240px;
-  height: 4rem;
+#node-honorary-ceremony-edit-form .form-control {
+  display: inline-block;
 }
 
-#node-honorary-ceremony-edit-form .control-label {
-  width: 15%;
+#node-honorary-ceremony-edit-form .select-wrapper {
+  width: 240px;
+}
+
+#node-honorary-ceremony-edit-form .control-label:not([content="Description"]) {
+  width: 120px;
 }
 
 #node-honorary-ceremony-edit-form .control-label + input {
