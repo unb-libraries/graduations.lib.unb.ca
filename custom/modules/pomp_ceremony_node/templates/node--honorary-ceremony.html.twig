@@ -5,8 +5,8 @@
     {{ notes | raw }}
   {% endif %}
 
-  <h2>Attached files:</h2>
-  {% if elements.field_files %}
+  {% if elements.field_files['#items'] %}
+    <h2>Attached files:</h2>
     {{ elements.field_files }}
   {% endif %}
 

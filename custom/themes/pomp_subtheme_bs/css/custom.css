@@ -629,6 +629,10 @@ div.js-form-item.form-item.js-form-type-vertical-tabs.form-type-vertical-tabs.js
   display: none;
 }
 
+#node-honorary-ceremony-edit-form button[id^="edit-field-files"] {
+  margin-top: 3rem;
+}
+
 input#edit-submit {
   display: inline-block;
 }
