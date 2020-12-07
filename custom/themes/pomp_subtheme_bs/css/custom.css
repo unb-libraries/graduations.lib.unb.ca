@@ -629,19 +629,19 @@ div.js-form-item.form-item.js-form-type-vertical-tabs.form-type-vertical-tabs.js
   display: none;
 }
 
-#node-honorary-ceremony-edit-form {
+.node-form {
   margin-top: 1rem;
 }
 
-#node-honorary-ceremony-edit-form .form-control {
+.node-form .form-control {
   display: inline-block;
 }
 
-#node-honorary-ceremony-edit-form .select-wrapper {
+.node-form .select-wrapper {
   width: 240px;
 }
 
-#node-honorary-ceremony-edit-form .control-label:not([content="Description"]) {
+.node-form .control-label {
   width: 120px;
 }
 
