@@ -5,8 +5,13 @@
     {{ notes | raw }}
   {% endif %}
 
+  <h2>Attached files:</h2>
+  {% if elements.field_files %}
+    {{ elements.field_files }}
+  {% endif %}
+
   <h2>Honorary degrees awarded:</h2>
-  {{ degrees_output }}<br>
+  {{ degrees_output }}
   <h2>Addresses delivered:</h2>
   {{ addresses_output }}
 </div>
