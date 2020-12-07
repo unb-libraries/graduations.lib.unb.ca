@@ -629,6 +629,23 @@ div.js-form-item.form-item.js-form-type-vertical-tabs.form-type-vertical-tabs.js
   display: none;
 }
 
+#node-honorary-ceremony-edit-form {
+  margin-top: 1rem;
+}
+
+#node-honorary-ceremony-edit-form .select-wrapper {
+  width: 240px;
+  height: 4rem;
+}
+
+#node-honorary-ceremony-edit-form .control-label {
+  width: 15%;
+}
+
+#node-honorary-ceremony-edit-form .control-label + input {
+  width: 240px;
+}
+
 #node-honorary-ceremony-edit-form button[id^="edit-field-files"] {
   margin-top: 3rem;
 }
