@@ -1,0 +1,21 @@
+uuid: d8d27f1f-c88f-4179-afa0-7e313230ac58
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_citation
+    - node.type.profesor_emeritus
+  module:
+    - text
+id: node.profesor_emeritus.field_citation
+field_name: field_citation
+entity_type: node
+bundle: profesor_emeritus
+label: Citation
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
