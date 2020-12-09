@@ -1,4 +1,4 @@
-uuid: e257c327-2350-4f1d-9ccd-48c9ab57292a
+uuid: e699c65b-59ce-4ac0-b004-307c3194682d
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ id: node.profesor_emeritus.field_image
 field_name: field_image
 entity_type: node
 bundle: profesor_emeritus
-label: Image
+label: Photo
 description: ''
 required: false
 translatable: true
