@@ -9,7 +9,7 @@
 * Implements hook_theme().
 */
 
-function pomp_degree_node_theme($existing, $type, $theme, $path) {
+function pomp_emeritus_node_theme($existing, $type, $theme, $path) {
   return array(
     'node__honorary_degree' => array(
       'arguments' => array(
