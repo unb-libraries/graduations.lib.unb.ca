@@ -1,19 +1,20 @@
-uuid: 7370b69f-fbb9-4ace-92e3-b03fc0f26136
+uuid: 5463a13f-403a-4129-962f-48520b6dabf4
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.profesor_emeritus.field_citation
-    - field.field.node.profesor_emeritus.field_image
-    - field.field.node.profesor_emeritus.field_recipient_name
-    - image.style.large
-    - node.type.profesor_emeritus
+    - field.field.node.professor_emeritus.field_citation
+    - field.field.node.professor_emeritus.field_emeritus_parent
+    - field.field.node.professor_emeritus.field_image
+    - field.field.node.professor_emeritus.field_recipient_name
+    - image.style.thumbnail
+    - node.type.professor_emeritus
   module:
     - image
     - text
-id: node.profesor_emeritus.default
+id: node.professor_emeritus.default
 targetEntityType: node
-bundle: profesor_emeritus
+bundle: professor_emeritus
 mode: default
 content:
   field_citation:
@@ -24,11 +25,18 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
+  field_emeritus_parent:
+    weight: 26
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
   field_image:
     weight: 1
     settings:
-      preview_image_style: large
       progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
     region: content

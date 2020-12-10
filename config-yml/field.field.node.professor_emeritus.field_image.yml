@@ -1,16 +1,16 @@
-uuid: e699c65b-59ce-4ac0-b004-307c3194682d
+uuid: 0440038f-4723-46b9-853f-b34c64aa7bd1
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_image
-    - node.type.profesor_emeritus
+    - node.type.professor_emeritus
   module:
     - image
-id: node.profesor_emeritus.field_image
+id: node.professor_emeritus.field_image
 field_name: field_image
 entity_type: node
-bundle: profesor_emeritus
+bundle: professor_emeritus
 label: Photo
 description: ''
 required: false

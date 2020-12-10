@@ -1,16 +1,16 @@
-uuid: d8d27f1f-c88f-4179-afa0-7e313230ac58
+uuid: 8309651d-7c10-4590-a964-2469394b3d2f
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_citation
-    - node.type.profesor_emeritus
+    - node.type.professor_emeritus
   module:
     - text
-id: node.profesor_emeritus.field_citation
+id: node.professor_emeritus.field_citation
 field_name: field_citation
 entity_type: node
-bundle: profesor_emeritus
+bundle: professor_emeritus
 label: Citation
 description: ''
 required: false

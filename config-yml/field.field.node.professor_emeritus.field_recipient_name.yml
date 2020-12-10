@@ -1,14 +1,14 @@
-uuid: be926e48-e73d-4e1d-8845-65315e75f5ec
+uuid: b124306b-1daf-425f-a404-7d768b322843
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_recipient_name
-    - node.type.profesor_emeritus
-id: node.profesor_emeritus.field_recipient_name
+    - node.type.professor_emeritus
+id: node.professor_emeritus.field_recipient_name
 field_name: field_recipient_name
 entity_type: node
-bundle: profesor_emeritus
+bundle: professor_emeritus
 label: Recipient
 description: ''
 required: false

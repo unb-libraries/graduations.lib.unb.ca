@@ -1,7 +1,6 @@
-
-name: POMP Degree Node
+name: POMP Emeritus Node
 type: module
-description: Degree node formatting
+description: Profesor Emeritus node formatting
 core: 8.x
 package: POMP
 

@@ -1,0 +1,29 @@
+uuid: 728cfff4-621d-4e56-b863-849c284f003d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.professor_emeritus.field_citation
+    - field.field.node.professor_emeritus.field_emeritus_parent
+    - field.field.node.professor_emeritus.field_image
+    - field.field.node.professor_emeritus.field_recipient_name
+    - node.type.professor_emeritus
+  module:
+    - user
+id: node.professor_emeritus.teaser
+targetEntityType: node
+bundle: professor_emeritus
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_citation: true
+  field_emeritus_parent: true
+  field_image: true
+  field_recipient_name: true
+  search_api_excerpt: true

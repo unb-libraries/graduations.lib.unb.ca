@@ -1,4 +1,4 @@
-uuid: 58c96ac6-5120-4d1e-b7a3-98e344879b66
+uuid: cd8f6d3c-c584-4432-8806-2996a7b9949d
 langcode: en
 status: true
 dependencies:
@@ -9,8 +9,8 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
-name: 'Profesor Emeritus'
-type: profesor_emeritus
+name: 'Professor Emeritus'
+type: professor_emeritus
 description: ''
 help: ''
 new_revision: true
