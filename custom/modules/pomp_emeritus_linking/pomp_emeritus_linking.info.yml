@@ -1,5 +1,5 @@
 name: pomp_emeritus_linking
 type: module
-description: Link professor emeriti to grad ceremony.
+description: Link professors emeriti to grad ceremony.
 core: 8.x
 package: POMP
