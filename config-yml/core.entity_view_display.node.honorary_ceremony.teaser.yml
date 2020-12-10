@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.honorary_ceremony.field_list_season
     - field.field.node.honorary_ceremony.field_ref_ceremony_address
     - field.field.node.honorary_ceremony.field_ref_ceremony_degree
+    - field.field.node.honorary_ceremony.field_ref_ceremony_emeritus
     - node.type.honorary_ceremony
   module:
     - user
@@ -32,4 +33,5 @@ hidden:
   field_list_season: true
   field_ref_ceremony_address: true
   field_ref_ceremony_degree: true
+  field_ref_ceremony_emeritus: true
   search_api_excerpt: true
