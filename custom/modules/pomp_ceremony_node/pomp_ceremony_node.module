@@ -51,10 +51,13 @@ function pomp_ceremony_node_preprocess_node__honorary_ceremony(&$variables) {
 
 /**
  * Implements hook_node_delete().
+ * Delete all dependant content on ceremony delete.
  */
 function pomp_ceremony_node_node_delete($node) {
 
+  // Only apply to graduation ceremony nodes.
   if ($node->bundle() == 'honorary_ceremony') {
+    // Delete dependant honorary degrees.
     $degrees = $node->get('field_ref_ceremony_degree')->getValue();
 
     foreach ($degrees as $degree) {
@@ -66,6 +69,7 @@ function pomp_ceremony_node_node_delete($node) {
     unset($degree);
     unset($degrees);
 
+    // Delete dependant addresses.
     $addresses = $node->get('field_ref_ceremony_address')->getValue();
 
     foreach ($addresses as $address) {
@@ -76,5 +80,17 @@ function pomp_ceremony_node_node_delete($node) {
 
     unset($address);
     unset($addresses);
+
+    // Delete dependant professor emeriti.
+    $addresses = $node->get('field_ref_ceremony_emeritus')->getValue();
+
+    foreach ($emeriti as $emeritus) {
+
+      $emeritus_node = Node::load($emeritus['target_id']);
+      $emeritus_node->delete();
+    }
+
+    unset($emeritus);
+    unset($emeriti);
   }
 }
