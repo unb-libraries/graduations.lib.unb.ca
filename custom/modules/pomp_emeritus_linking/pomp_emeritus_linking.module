@@ -11,7 +11,7 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Implements hook_form_FORM_ID_alter().
  */
-function pomp_emeritus_linking_form_node_profesor_emeritus_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+function pomp_emeritus_linking_form_node_professor_emeritus_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   foreach (array_keys($form['actions']) as $action) {
     if ($action != 'preview' && isset($form['actions'][$action]['#type']) &&
     $form['actions'][$action]['#type'] === 'submit') {
@@ -24,7 +24,7 @@ function pomp_emeritus_linking_form_node_profesor_emeritus_form_alter(&$form, Fo
 /**
  * Implements hook_form_FORM_ID_alter().
  */
-function pomp_emeritus_linking_form_node_profesor_emeritus_edit_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+function pomp_emeritus_linking_form_node_professor_emeritus_edit_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   foreach (array_keys($form['actions']) as $action) {
     if ($action != 'preview' && isset($form['actions'][$action]['#type']) &&
     $form['actions'][$action]['#type'] === 'submit') {
