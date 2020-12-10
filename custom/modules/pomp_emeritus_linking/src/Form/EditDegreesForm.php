@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\pomp_deg_linking\Form;
+namespace Drupal\pomp_emeritus_linking\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -16,7 +16,7 @@ class EditDegreesForm extends FormBase {
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'pomp_deg_linking_edit_degrees_form';
+    return 'pomp_emeritus_linking_edit_emeriti_form';
   }
 
   /**
@@ -26,17 +26,17 @@ class EditDegreesForm extends FormBase {
     $form = [];
 
     // List existing degrees.
-    $view = Views::getView('edit_ceremony_degrees');
+    $view = Views::getView('edit_ceremony_emeriti');
     $view->setDisplay('block_1');
     $view->setArguments([$node]);
     $render = $view->render();
-    $form['edit_ceremony_degrees_view'] = $render;
+    $form['edit_ceremony_emeriti_view'] = $render;
 
     // Add degrees.
-    $form['add_degree_button'] = [
+    $form['add_emeritus_button'] = [
       '#type' => 'link',
-      '#title' => t('Add New Degree'),
-      '#url' => Url::fromUri("internal:/node/add/honorary_degree"),
+      '#title' => t('Add New Professor Emeritus'),
+      '#url' => Url::fromUri("internal:/node/add/professor_emeritus"),
       '#attributes' => [
         'class' => ['button'],
       ],
@@ -44,8 +44,8 @@ class EditDegreesForm extends FormBase {
 
     $usr = \Drupal::currentUser()->id();
     $ses = \Drupal::service('session_manager')->getId();
-    $pomp_deg_linking_parent_cer = 'parent_cer' . $usr . $ses;
-    \Drupal::state()->set($pomp_deg_linking_parent_cer, $node);
+    $pomp_emeritus_linking_parent_cer = 'parent_cer' . $usr . $ses;
+    \Drupal::state()->set($pomp_emeritus_linking_parent_cer, $node);
 
     return $form;
   }
