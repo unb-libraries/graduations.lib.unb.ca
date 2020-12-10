@@ -2,11 +2,6 @@
   <h1 class='template-ceremony'>{{ ceremony_output }}</h1>
 
   <h1><b>{{ recipient }}</b></h1>
-  <h2>Degree conferred: {{ degree_full }} ({{ degree }})</h2>
-
-  {% if orator %}
-    <h2>Orator: {{ orator }}</h2>
-  {% endif %}
 
   <br>{{ citation_output | raw }}
 </div>
