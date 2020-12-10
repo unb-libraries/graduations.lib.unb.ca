@@ -40,6 +40,6 @@ function pomp_address_node_preprocess_node__honorary_address(&$variables) {
   $variables['delivered_by'] = $node->field_delivered_by->value;
   $variables['address_content'] = $node->field_address_content->value;
 
-  $ceremony = views_embed_view('list_ceremony', 'block_1', $node->id(), 'all');
+  $ceremony = views_embed_view('list_ceremony', 'block_1', $node->id(), 'all', 'all');
   $variables['ceremony_output'] = \Drupal::service('renderer')->render($ceremony);
 }

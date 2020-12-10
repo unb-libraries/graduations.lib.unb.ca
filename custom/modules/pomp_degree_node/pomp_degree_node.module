@@ -41,7 +41,7 @@ function pomp_degree_node_preprocess_node__honorary_degree(&$variables) {
   $variables['degree'] = $degree->getName();
   $variables['degree_full'] = $degree->get('field_full_name')->value;
 
-  $ceremony = views_embed_view('list_ceremony', 'block_1', 'all', $node->id());
+  $ceremony = views_embed_view('list_ceremony', 'block_1', 'all', $node->id(), 'all');
   $variables['ceremony_output'] = \Drupal::service('renderer')->render($ceremony);
 
   $citation = views_embed_view('honorary_view_degree', 'page_1', $node->id());
