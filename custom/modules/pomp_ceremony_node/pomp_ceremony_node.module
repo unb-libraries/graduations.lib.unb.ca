@@ -82,7 +82,7 @@ function pomp_ceremony_node_node_delete($node) {
     unset($addresses);
 
     // Delete dependant professor emeriti.
-    $addresses = $node->get('field_ref_ceremony_emeritus')->getValue();
+    $emeriti = $node->get('field_ref_ceremony_emeritus')->getValue();
 
     foreach ($emeriti as $emeritus) {
 
