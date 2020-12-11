@@ -47,6 +47,9 @@ function pomp_ceremony_node_preprocess_node__honorary_ceremony(&$variables) {
 
   $addresses_table = views_embed_view('list_ceremony_addresses', 'block_1', $node->id());
   $variables['addresses_output'] = \Drupal::service('renderer')->render($addresses_table);
+
+  $emeriti_table = views_embed_view('list_ceremony_emeriti', 'block_1', $node->id());
+  $variables['emeriti_output'] = \Drupal::service('renderer')->render($emeriti_table);
 }
 
 /**

@@ -8,9 +8,9 @@ use Drupal\views\Views;
 use Drupal\Core\Url;
 
 /**
- * EditDegreesForm object.
+ * EditEmeritiForm object.
  */
-class EditDegreesForm extends FormBase {
+class EditEmeritiForm extends FormBase {
 
   /**
    * {@inheritdoc}

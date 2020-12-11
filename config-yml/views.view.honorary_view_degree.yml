@@ -543,7 +543,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div>\n  {{ field_image }}\n  {{ field_citation }}\n</div>"
+            text: "<div>\r\n  {{ field_image }}<br>\r\n  {{ field_citation }}\r\n</div>"
             make_link: false
             path: ''
             absolute: false

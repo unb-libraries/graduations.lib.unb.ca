@@ -1,0 +1,5 @@
+pomp_emeritus_linking.edit_emeriti:
+  route_name: pomp_emeritus_linking.edit_emeriti
+  title: 'Professors Emeriti'
+  base_route: entity.node.canonical
+  weight: 100

@@ -1,8 +1,8 @@
-pomp_emeritus_linking.edit_degrees:
-  path: '/ceremony/{node}/emeritus/edit'
+pomp_emeritus_linking.edit_emeriti:
+  path: '/ceremony/{node}/professor_emeritus/edit'
   defaults:
     _title: ''
-    _form: '\Drupal\pomp_emeritus_linking\Form\EditEmeritusForm'
+    _form: '\Drupal\pomp_emeritus_linking\Form\EditEmeritiForm'
   requirements:
     _role: 'pomp_content_editor'
-    _custom_access: '\Drupal\pomp_deg_linking\Controller\PompEmeritusLinkingCheckTypeController::checkType'
+    _custom_access: '\Drupal\pomp_emeritus_linking\Controller\PompEmeritusLinkingCheckTypeController::checkType'
