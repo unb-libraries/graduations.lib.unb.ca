@@ -1,13 +1,13 @@
-uuid: 200dfdc3-f88c-456b-95ce-262b50bc41bb
+uuid: 2b401b10-adaa-4cbd-9637-d38f0080d1e0
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.faculty_awards
-id: node.faculty_awards.promote
+    - node.type.faculty_award
+id: node.faculty_award.promote
 field_name: promote
 entity_type: node
-bundle: faculty_awards
+bundle: faculty_award
 label: 'Promoted to front page'
 description: ''
 required: false

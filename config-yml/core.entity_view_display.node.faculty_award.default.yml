@@ -1,0 +1,29 @@
+uuid: b332c591-c86e-4ff6-b2f2-b37f96f9bca7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.faculty_award.field_recipient_name
+    - node.type.faculty_award
+  module:
+    - user
+id: node.faculty_award.default
+targetEntityType: node
+bundle: faculty_award
+mode: default
+content:
+  field_recipient_name:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  search_api_excerpt: true

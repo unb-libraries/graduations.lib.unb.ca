@@ -1,4 +1,4 @@
-uuid: 4a2ce8d5-96ae-4782-abdd-13d4ffbe2df7
+uuid: 9603d459-8ddb-4a18-896b-a049f68ea74b
 langcode: en
 status: true
 dependencies:
@@ -8,8 +8,8 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: 'Faculty Awards and Honours'
-type: faculty_awards
+name: 'Faculty Award/Honour'
+type: faculty_award
 description: ''
 help: ''
 new_revision: false

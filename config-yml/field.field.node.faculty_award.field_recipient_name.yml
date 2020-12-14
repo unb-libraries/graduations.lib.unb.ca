@@ -1,0 +1,19 @@
+uuid: 515f9e31-103a-4042-999e-a9e2b24eec2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recipient_name
+    - node.type.faculty_award
+id: node.faculty_award.field_recipient_name
+field_name: field_recipient_name
+entity_type: node
+bundle: faculty_award
+label: Recipient
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

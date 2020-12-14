@@ -1,34 +1,31 @@
-uuid: 574b50cc-e31d-410c-9231-8722734a0840
+uuid: d78b04b8-894e-45d7-88bd-1bb54d375d0d
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.faculty_awards.body
-    - node.type.faculty_awards
+    - field.field.node.faculty_award.field_recipient_name
+    - node.type.faculty_award
   module:
     - path
-    - text
-id: node.faculty_awards.default
+id: node.faculty_award.default
 targetEntityType: node
-bundle: faculty_awards
+bundle: faculty_award
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 121
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
     weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_recipient_name:
+    weight: 122
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   path:
     type: path
     weight: 30

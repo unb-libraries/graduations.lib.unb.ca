@@ -1,0 +1,23 @@
+uuid: c0080d7f-05a5-4ccf-8d39-4f796e61524d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.faculty_award.field_recipient_name
+    - node.type.faculty_award
+  module:
+    - user
+id: node.faculty_award.teaser
+targetEntityType: node
+bundle: faculty_award
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_recipient_name: true
+  search_api_excerpt: true
