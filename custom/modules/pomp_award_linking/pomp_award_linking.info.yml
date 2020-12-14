@@ -1,0 +1,5 @@
+name: pomp_award_linking
+type: module
+description: Link faculty awards to grad ceremony.
+core: 8.x
+package: POMP

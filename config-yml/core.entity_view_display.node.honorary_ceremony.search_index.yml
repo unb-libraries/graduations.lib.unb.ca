@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.honorary_ceremony.field_list_ceremony_type
     - field.field.node.honorary_ceremony.field_list_season
     - field.field.node.honorary_ceremony.field_ref_ceremony_address
+    - field.field.node.honorary_ceremony.field_ref_ceremony_award
     - field.field.node.honorary_ceremony.field_ref_ceremony_degree
     - field.field.node.honorary_ceremony.field_ref_ceremony_emeritus
     - node.type.honorary_ceremony
@@ -73,6 +74,7 @@ content:
 hidden:
   field_files: true
   field_list_ceremony_type: true
+  field_ref_ceremony_award: true
   field_ref_ceremony_emeritus: true
   links: true
   search_api_excerpt: true

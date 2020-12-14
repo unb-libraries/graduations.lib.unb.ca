@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.honorary_ceremony.field_list_ceremony_type
     - field.field.node.honorary_ceremony.field_list_season
     - field.field.node.honorary_ceremony.field_ref_ceremony_address
+    - field.field.node.honorary_ceremony.field_ref_ceremony_award
     - field.field.node.honorary_ceremony.field_ref_ceremony_degree
     - field.field.node.honorary_ceremony.field_ref_ceremony_emeritus
     - node.type.honorary_ceremony
@@ -60,6 +61,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_ref_ceremony_award:
+    weight: 27
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_ref_ceremony_emeritus:
     weight: 26

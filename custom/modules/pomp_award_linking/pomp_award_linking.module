@@ -1,0 +1,76 @@
+faculty_award<?php
+
+/**
+ * @file
+ * Contains pomp_award_linking.module.
+ */
+
+use Drupal\node\Entity\Node;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function pomp_award_linking_form_node_faculty_award_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  foreach (array_keys($form['actions']) as $action) {
+    if ($action != 'preview' && isset($form['actions'][$action]['#type']) &&
+    $form['actions'][$action]['#type'] === 'submit') {
+      $form['actions'][$action]['#submit'][] = 'pomp_award_linking_link';
+      array_unshift($form['actions'][$action]['#submit'], 'pomp_award_linking_title');
+    }
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function pomp_award_linking_form_node_faculty_award_edit_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  foreach (array_keys($form['actions']) as $action) {
+    if ($action != 'preview' && isset($form['actions'][$action]['#type']) &&
+    $form['actions'][$action]['#type'] === 'submit') {
+      $form['actions'][$action]['#submit'][] = 'pomp_award_linking_link';
+      array_unshift($form['actions'][$action]['#submit'], 'pomp_award_linking_title');
+    }
+  }
+}
+
+/**
+ * Method added as submit handler.
+ */
+function pomp_award_linking_title(&$form, FormStateInterface $form_state) {
+  $title = $form_state->getValue('field_recipient_name')[0]['value'];
+  $form_state->setValue('title', $title);
+}
+
+/**
+ * Method added as submit handler.
+ */
+function pomp_award_linking_link(&$form, FormStateInterface $form_state) {
+  $usr = \Drupal::currentUser()->id();
+  $ses = \Drupal::service('session_manager')->getId();
+  $pomp_award_linking_parent_cer = 'parent_cer' . $usr . $ses;
+  $cer_id = \Drupal::state()->get($pomp_award_linking_parent_cer);
+  \Drupal::state()->delete($pomp_award_linking_parent_cer);
+
+  if ($cer_id) {
+    $award_id = $form_state->get('nid');
+    $award_id_ref = ['target_id' => $award_id];
+
+    $query = \Drupal::entityQuery('node')
+      ->condition('type', 'honorary_ceremony')
+      ->condition('nid', $cer_id);
+    $cers = $query->execute();
+
+    foreach ($cers as $cer) {
+      $cer_node = Node::load($cer);
+      $ref_cer_award = $cer_node->get('field_ref_ceremony_award')->getValue();
+
+      if (!in_array($award_id_ref, $ref_cer_award)) {
+        $cer_node->field_ref_ceremony_award->appendItem($award_id_ref);
+        $cer_node->save();
+      }
+
+      unset($cer_node);
+    }
+  }
+}
