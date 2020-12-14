@@ -50,6 +50,9 @@ function pomp_ceremony_node_preprocess_node__honorary_ceremony(&$variables) {
 
   $emeriti_table = views_embed_view('list_ceremony_emeriti', 'block_1', $node->id());
   $variables['emeriti_output'] = \Drupal::service('renderer')->render($emeriti_table);
+
+  $awards_table = views_embed_view('list_ceremony_awards', 'block_1', $node->id());
+  $variables['awards_output'] = \Drupal::service('renderer')->render($awards_table);
 }
 
 /**
@@ -95,5 +98,17 @@ function pomp_ceremony_node_node_delete($node) {
 
     unset($emeritus);
     unset($emeriti);
+
+    // Delete dependant faculty awards.
+    $awards = $node->get('field_ref_ceremony_award')->getValue();
+
+    foreach ($awards as $award) {
+
+      $award_node = Node::load($award['target_id']);
+      $award_node->delete();
+    }
+
+    unset($award);
+    unset($awards);
   }
 }
