@@ -24,15 +24,6 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-  field_emeritus_parent:
-    weight: 3
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-    region: content
   field_image:
     weight: 2
     label: above
@@ -51,5 +42,6 @@ content:
     type: string
     region: content
 hidden:
+  field_emeritus_parent: true
   links: true
   search_api_excerpt: true
