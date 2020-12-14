@@ -1,0 +1,8 @@
+name: POMP Award Node
+type: module
+description: Faculty Award/Honour node formatting
+core: 8.x
+package: POMP
+
+dependencies:
+  - drupal:views
