@@ -1,0 +1,22 @@
+uuid: 200dfdc3-f88c-456b-95ce-262b50bc41bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.faculty_awards
+id: node.faculty_awards.promote
+field_name: promote
+entity_type: node
+bundle: faculty_awards
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

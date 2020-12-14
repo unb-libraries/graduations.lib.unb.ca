@@ -1,0 +1,22 @@
+uuid: 88c09a02-de68-4510-8f5a-58af9cf666f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.honorary_banner
+id: node.honorary_banner.promote
+field_name: promote
+entity_type: node
+bundle: honorary_banner
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,22 @@
+uuid: 84b18e4f-8f9e-4eb4-963d-7b0ea4c7058c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.professor_emeritus
+id: node.professor_emeritus.promote
+field_name: promote
+entity_type: node
+bundle: professor_emeritus
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
