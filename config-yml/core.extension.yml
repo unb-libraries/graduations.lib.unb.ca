@@ -33,6 +33,8 @@ module:
   path_alias: 0
   pomp_add_linking: 0
   pomp_address_node: 0
+  pomp_award_linking: 0
+  pomp_award_node: 0
   pomp_cer_title: 0
   pomp_ceremony_node: 0
   pomp_core: 0

@@ -1,4 +1,4 @@
-Awardpomp_award_linking.edit_awards:
+pomp_award_linking.edit_awards:
   path: '/ceremony/{node}/faculty_award/edit'
   defaults:
     _title: ''
