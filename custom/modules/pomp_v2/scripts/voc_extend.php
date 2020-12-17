@@ -22,11 +22,22 @@ $address_types = [
   "Founder's Day Address",
 ];
 
+// Graduate award types for new content type as per POMP-125.
+$gradaward_types =[
+  'Douglas Gold Medal',
+  'Governor General’s Gold Medal',
+  'Governor General’s Silver Medal',
+  'Lieutenant Governor of New Brunswick’s Silver Medal',
+];
+
 // Add ceremony types.
 addTerms('ceremony_voc', $ceremony_types);
 
 // Add address types.
 addTerms('address_type_voc', $address_types);
+
+// Add graduate award types.
+addTerms('gradaward_type_voc', $gradaward_types);
 
 /**
  * Add multiple terms to a given vocabulary.
@@ -37,10 +48,23 @@ addTerms('address_type_voc', $address_types);
  *   An array containing the names of the terms to add.
  */
 function addTerms($vid, $terms) {
+
   foreach ($terms as $term) {
-    Term::create([
-      'vid' => $vid,
-      'name' => $term,
-    ])->save();
+    $found = \Drupal::entityQuery('taxonomy_term')
+      ->condition('vid', $vid)
+      ->condition('name', $term)
+      ->execute();
+
+    if (!$found) {
+      Term::create([
+        'vid' => $vid,
+        'name' => $term,
+      ])->save();
+
+      echo "[+] [$term]->[$vid]\n";
+    }
+    else {
+      echo "[-] [$term] exists in [$vid]\n";
+    }
   }
 }

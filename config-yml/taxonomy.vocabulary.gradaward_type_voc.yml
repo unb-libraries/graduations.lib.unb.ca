@@ -1,0 +1,8 @@
+uuid: 78fc0f69-934b-4be1-80ae-9f49d1070d23
+langcode: en
+status: true
+dependencies: {  }
+name: gradaward_type_voc
+vid: gradaward_type_voc
+description: ''
+weight: 0
