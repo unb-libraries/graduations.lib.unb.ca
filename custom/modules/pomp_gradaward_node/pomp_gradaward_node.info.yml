@@ -1,0 +1,8 @@
+name: POMP Graduate Award Node
+type: module
+description: Graduate Award node formatting
+core: 8.x
+package: POMP
+
+dependencies:
+  - drupal:views

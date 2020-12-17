@@ -2,25 +2,25 @@
 
 /**
  * @file
- * Contains pomp_award_node.module
+ * Contains pomp_gradaward_node.module
  */
 
 /**
 * Implements hook_theme().
 */
 
-function pomp_award_node_theme($existing, $type, $theme, $path) {
+function pomp_gradaward_node_theme($existing, $type, $theme, $path) {
   return array(
-    'node__faculty_award' => array(
+    'node__graduate_award' => array(
       'arguments' => array(
         'view' => NULL,
         'field' => NULL,
         'row' => NULL,
         'output' => NULL,
       ),
-      'template' => 'node--faculty-award',
-      'path' => drupal_get_path('module', 'pomp_award_node') . '/templates',
-      'base hook' => 'node__faculty_award',
+      'template' => 'node--graduate-award',
+      'path' => drupal_get_path('module', 'pomp_gradaward_node') . '/templates',
+      'base hook' => 'node__graduate_award',
     ),
   );
 }
@@ -29,12 +29,10 @@ function pomp_award_node_theme($existing, $type, $theme, $path) {
  * Implements hook_preprocess_hook().
  */
 
-function pomp_award_node_preprocess_node__faculty_award(&$variables) {
+function pomp_gradaward_node_preprocess_node__graduate_award(&$variables) {
   $node = $variables['elements']['#node'];
   $variables['id'] = $node->id();
-
   $variables['recipient'] = $node->field_recipient_name->value;
-
-  $ceremony = views_embed_view('list_ceremony', 'block_1', 'all', 'all', 'all', $node->id(), 'all');
+  $ceremony = views_embed_view('list_ceremony', 'block_1', 'all', 'all', 'all', 'all', $node->id());
   $variables['ceremony_output'] = \Drupal::service('renderer')->render($ceremony);
 }

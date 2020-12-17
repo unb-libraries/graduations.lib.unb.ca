@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.honorary_ceremony.field_ref_ceremony_award
     - field.field.node.honorary_ceremony.field_ref_ceremony_degree
     - field.field.node.honorary_ceremony.field_ref_ceremony_emeritus
+    - field.field.node.honorary_ceremony.field_ref_ceremony_gradaward
     - node.type.honorary_ceremony
   module:
     - file
@@ -74,6 +75,16 @@ content:
     region: content
   field_ref_ceremony_emeritus:
     weight: 26
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_ref_ceremony_gradaward:
+    weight: 28
     settings:
       match_operator: CONTAINS
       match_limit: 10

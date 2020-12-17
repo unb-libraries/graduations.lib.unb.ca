@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.honorary_ceremony.field_ref_ceremony_award
     - field.field.node.honorary_ceremony.field_ref_ceremony_degree
     - field.field.node.honorary_ceremony.field_ref_ceremony_emeritus
+    - field.field.node.honorary_ceremony.field_ref_ceremony_gradaward
     - node.type.honorary_ceremony
   module:
     - user
@@ -36,4 +37,5 @@ hidden:
   field_ref_ceremony_award: true
   field_ref_ceremony_degree: true
   field_ref_ceremony_emeritus: true
+  field_ref_ceremony_gradaward: true
   search_api_excerpt: true
