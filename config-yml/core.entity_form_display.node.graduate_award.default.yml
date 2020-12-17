@@ -1,0 +1,43 @@
+uuid: 78bc06e8-dd20-4763-b25e-c97acb2b3618
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.graduate_award.field_gradaward_parent
+    - field.field.node.graduate_award.field_list_gradaward_type
+    - field.field.node.graduate_award.field_recipient_name
+    - node.type.graduate_award
+id: node.graduate_award.default
+targetEntityType: node
+bundle: graduate_award
+mode: default
+content:
+  field_list_gradaward_type:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_recipient_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 2
+    region: content
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_gradaward_parent: true
+  path: true
+  promote: true
+  sticky: true
+  title: true
+  uid: true

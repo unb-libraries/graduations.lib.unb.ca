@@ -1,0 +1,27 @@
+uuid: 5d7dba80-24c0-49af-9204-043fd77f1e5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.graduate_award.field_gradaward_parent
+    - field.field.node.graduate_award.field_list_gradaward_type
+    - field.field.node.graduate_award.field_recipient_name
+    - node.type.graduate_award
+  module:
+    - user
+id: node.graduate_award.teaser
+targetEntityType: node
+bundle: graduate_award
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_gradaward_parent: true
+  field_list_gradaward_type: true
+  field_recipient_name: true
+  search_api_excerpt: true
