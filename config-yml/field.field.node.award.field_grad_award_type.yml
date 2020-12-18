@@ -1,0 +1,29 @@
+uuid: c0b0dc05-0f7c-4311-9d84-e2113b4b1ec2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_grad_award_type
+    - node.type.award
+    - taxonomy.vocabulary.grad_award_type
+id: node.award.field_grad_award_type
+field_name: field_grad_award_type
+entity_type: node
+bundle: award
+label: 'Graduate Award Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      grad_award_type: grad_award_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

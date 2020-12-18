@@ -1,0 +1,8 @@
+uuid: 57099ba8-7bb1-4051-a94a-3b05d4c6bd05
+langcode: en
+status: true
+dependencies: {  }
+name: 'Ceremony Type'
+vid: ceremony_type
+description: ''
+weight: 0

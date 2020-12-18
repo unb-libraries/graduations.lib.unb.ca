@@ -1,0 +1,8 @@
+uuid: 9b712d40-feaa-4a6a-be42-a0be3d520b62
+langcode: en
+status: true
+dependencies: {  }
+name: 'Graduate Award Type'
+vid: grad_award_type
+description: ''
+weight: 0

@@ -1,0 +1,23 @@
+uuid: 35508800-fab8-4346-ac57-70626ec1f6b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recipient_valedictorian
+    - node.type.award
+id: node.award.field_recipient_valedictorian
+field_name: field_recipient_valedictorian
+entity_type: node
+bundle: award
+label: 'Recipient Valedictorian'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

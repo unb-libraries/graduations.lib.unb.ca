@@ -1,0 +1,8 @@
+uuid: c4a3017a-c445-4236-a641-8d5fc1177172
+langcode: en
+status: true
+dependencies: {  }
+name: 'Award Type'
+vid: award_type
+description: ''
+weight: 0

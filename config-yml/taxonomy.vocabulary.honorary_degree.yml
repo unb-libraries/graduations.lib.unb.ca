@@ -1,0 +1,8 @@
+uuid: c40f3132-337c-4efa-b646-217a4f21b1dd
+langcode: en
+status: true
+dependencies: {  }
+name: 'Honorary Degree'
+vid: honorary_degree
+description: ''
+weight: 0

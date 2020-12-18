@@ -1,0 +1,29 @@
+uuid: 658b2431-28fc-4580-8226-e9017a5332d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_honorary_degree
+    - node.type.award
+    - taxonomy.vocabulary.honorary_degree
+id: node.award.field_honorary_degree
+field_name: field_honorary_degree
+entity_type: node
+bundle: award
+label: 'Honorary Degree'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      honorary_degree: honorary_degree
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

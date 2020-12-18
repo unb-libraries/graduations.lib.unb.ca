@@ -1,0 +1,19 @@
+uuid: b90e2952-5c1d-457d-949d-722f31d7b95f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image_caption2
+    - node.type.award
+id: node.award.field_image_caption2
+field_name: field_image_caption2
+entity_type: node
+bundle: award
+label: 'Second Image Caption'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
