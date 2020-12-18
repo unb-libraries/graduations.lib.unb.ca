@@ -1,0 +1,27 @@
+uuid: ed595984-424f-4a63-adc0-40be23d9feae
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.address.field_address_speaker
+    - field.field.node.address.field_address_text
+    - field.field.node.address.field_address_type
+    - node.type.address
+  module:
+    - user
+id: node.address.teaser
+targetEntityType: node
+bundle: address
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_address_speaker: true
+  field_address_text: true
+  field_address_type: true
+  search_api_excerpt: true

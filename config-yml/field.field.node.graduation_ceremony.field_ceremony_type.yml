@@ -1,0 +1,29 @@
+uuid: b9c11c15-32ff-4400-9b29-5e223bb64196
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ceremony_type
+    - node.type.graduation_ceremony
+    - taxonomy.vocabulary.ceremony_type
+id: node.graduation_ceremony.field_ceremony_type
+field_name: field_ceremony_type
+entity_type: node
+bundle: graduation_ceremony
+label: 'Ceremony Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      ceremony_type: ceremony_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

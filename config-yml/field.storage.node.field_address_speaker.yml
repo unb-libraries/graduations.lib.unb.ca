@@ -1,0 +1,21 @@
+uuid: f1438b4d-1751-4b01-8148-d9f1f8705f79
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_address_speaker
+field_name: field_address_speaker
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

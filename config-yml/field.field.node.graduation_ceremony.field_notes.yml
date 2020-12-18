@@ -1,0 +1,21 @@
+uuid: ba289496-0397-45b3-9f6b-ca65771a8473
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_notes
+    - node.type.graduation_ceremony
+  module:
+    - text
+id: node.graduation_ceremony.field_notes
+field_name: field_notes
+entity_type: node
+bundle: graduation_ceremony
+label: 'Ceremony Notes'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

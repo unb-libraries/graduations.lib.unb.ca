@@ -1,0 +1,17 @@
+uuid: 916efffd-e9df-4ad9-bf61-5e0d2cca4a6c
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Address
+type: address
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

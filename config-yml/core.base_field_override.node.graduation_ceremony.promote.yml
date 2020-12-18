@@ -1,0 +1,22 @@
+uuid: 2dd3632f-a715-49b1-b949-ca9e73285d5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.graduation_ceremony
+id: node.graduation_ceremony.promote
+field_name: promote
+entity_type: node
+bundle: graduation_ceremony
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

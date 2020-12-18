@@ -1,0 +1,28 @@
+uuid: babc6b06-1f0c-4202-b693-96cec3cf8714
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_awards
+    - node.type.award
+    - node.type.graduation_ceremony
+id: node.graduation_ceremony.field_awards
+field_name: field_awards
+entity_type: node
+bundle: graduation_ceremony
+label: Awards
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      award: award
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

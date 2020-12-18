@@ -1,0 +1,29 @@
+uuid: dec06e94-da9d-4a51-8a96-5fc378b4ab11
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_address_type
+    - node.type.address
+    - taxonomy.vocabulary.address_type
+id: node.address.field_address_type
+field_name: field_address_type
+entity_type: node
+bundle: address
+label: 'Address Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      address_type: address_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,8 @@
+uuid: ea102ea7-5cd1-425a-981d-d939556b4069
+langcode: en
+status: true
+dependencies: {  }
+name: 'Address Type'
+vid: address_type
+description: ''
+weight: 0

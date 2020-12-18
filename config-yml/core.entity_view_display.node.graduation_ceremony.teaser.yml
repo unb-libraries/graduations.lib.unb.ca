@@ -1,0 +1,35 @@
+uuid: 11fe2ebc-f52e-453b-a00b-7dd146c26ed7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.graduation_ceremony.field_addresses
+    - field.field.node.graduation_ceremony.field_awards
+    - field.field.node.graduation_ceremony.field_campus
+    - field.field.node.graduation_ceremony.field_ceremony_files
+    - field.field.node.graduation_ceremony.field_ceremony_type
+    - field.field.node.graduation_ceremony.field_notes
+    - field.field.node.graduation_ceremony.field_season
+    - node.type.graduation_ceremony
+  module:
+    - user
+id: node.graduation_ceremony.teaser
+targetEntityType: node
+bundle: graduation_ceremony
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_addresses: true
+  field_awards: true
+  field_campus: true
+  field_ceremony_files: true
+  field_ceremony_type: true
+  field_notes: true
+  field_season: true
+  search_api_excerpt: true

@@ -1,0 +1,28 @@
+uuid: 39e8d078-fe83-431f-9689-bcd35f3e5248
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_addresses
+    - node.type.address
+    - node.type.graduation_ceremony
+id: node.graduation_ceremony.field_addresses
+field_name: field_addresses
+entity_type: node
+bundle: graduation_ceremony
+label: Addresses
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      address: address
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

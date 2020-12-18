@@ -1,0 +1,29 @@
+uuid: 737eb541-3d19-4600-8bd6-581d4ed706ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_season
+    - node.type.graduation_ceremony
+    - taxonomy.vocabulary.season
+id: node.graduation_ceremony.field_season
+field_name: field_season
+entity_type: node
+bundle: graduation_ceremony
+label: Season
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      season: season
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
