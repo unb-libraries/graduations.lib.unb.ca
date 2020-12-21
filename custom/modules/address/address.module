@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains address.module.
+ */
+
+/**
+ * Implements hook_inline_entity_form_entity_form_alter().
+ */
+
+function address_inline_entity_form_entity_form_alter(&$entity_form, $form_state) {
+  // Only apply callback function if the entity is an address.
+  if ($entity_form['#entity_type'] == 'node' && $entity_form['#bundle'] == 'address') {
+    // Callback function to run when IEF is building an address entity.
+    $entity_form['#entity_builders'][] = 'address_title';
+  }
+}
+
+function address_title($entity_type, $entity, $entity_form, &$form_state) {
+  $type = $entity->get('field_address_type')->entity->getName();
+  $speaker = $entity->get('field_address_speaker')->getString();
+  $entity->setTitle("$type delivered by $speaker");
+}

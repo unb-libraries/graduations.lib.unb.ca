@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.graduation_ceremony.field_campus
     - field.field.node.graduation_ceremony.field_ceremony_files
     - field.field.node.graduation_ceremony.field_ceremony_type
+    - field.field.node.graduation_ceremony.field_ceremony_year
     - field.field.node.graduation_ceremony.field_notes
     - field.field.node.graduation_ceremony.field_season
     - node.type.graduation_ceremony
@@ -30,6 +31,7 @@ hidden:
   field_campus: true
   field_ceremony_files: true
   field_ceremony_type: true
+  field_ceremony_year: true
   field_notes: true
   field_season: true
   search_api_excerpt: true

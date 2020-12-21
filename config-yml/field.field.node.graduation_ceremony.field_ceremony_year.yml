@@ -1,0 +1,23 @@
+uuid: 727f53e3-652b-4e1c-8d77-56a0becc0274
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ceremony_year
+    - node.type.graduation_ceremony
+id: node.graduation_ceremony.field_ceremony_year
+field_name: field_ceremony_year
+entity_type: node
+bundle: graduation_ceremony
+label: Year
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1850
+  max: 2200
+  prefix: ''
+  suffix: ''
+field_type: integer
