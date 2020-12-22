@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains award.module.
+ */
+
+/**
+ * Implements hook_inline_entity_form_entity_form_alter().
+ */
+
+function award_inline_entity_form_entity_form_alter(&$entity_form, $form_state) {
+  // Only apply callback function if the entity is an address.
+  if ($entity_form['#entity_type'] == 'node' && $entity_form['#bundle'] == 'award') {
+    // Callback function to run when IEF is building an address entity.
+    $entity_form['#entity_builders'][] = 'award_title';
+  }
+}
+
+function award_title($entity_type, $entity, $entity_form, &$form_state) {
+  $type = $entity->get('field_award_type')->entity->getName();
+  $recipient = $entity->get('field_recipient')->getString();
+  $entity->setTitle("$type awarded to $recipient");
+}
