@@ -1,0 +1,19 @@
+uuid: a6d7d278-9a1a-4dc8-996f-0e669272d8e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_orator_name
+    - node.type.award
+id: node.award.field_orator_name
+field_name: field_orator_name
+entity_type: node
+bundle: award
+label: Orator
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

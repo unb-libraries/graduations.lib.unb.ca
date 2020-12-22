@@ -69,6 +69,12 @@ $ceremony_types = [
   'Virtual Convocation - Ceremony D',
 ];
 
+// Faculty award options for graduations.lib.unb.ca v2.
+$facaward_types = [
+  'Dr. Allan P. Stuart Memorial for Excellence in Teaching',
+  'University of New Brunswick Award for Excellence in Research',
+];
+
 // Gender options for graduations.lib.unb.ca v2.
 $genders = [
   'Female',
@@ -107,6 +113,9 @@ addTerms('campus', $campi);
 
 // Add ceremony types.
 addTerms('ceremony_type', $ceremony_types);
+
+// Add faculty award types.
+addTerms('faculty_award_type', $facaward_types);
 
 // Add gender options.
 addTerms('gender', $genders);

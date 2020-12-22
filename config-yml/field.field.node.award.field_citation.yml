@@ -1,0 +1,21 @@
+uuid: 52a729de-2ef2-4c28-b8f4-62b1b3aed7a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_citation
+    - node.type.award
+  module:
+    - text
+id: node.award.field_citation
+field_name: field_citation
+entity_type: node
+bundle: award
+label: Citation
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

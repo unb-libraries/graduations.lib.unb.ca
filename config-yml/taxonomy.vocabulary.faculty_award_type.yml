@@ -1,0 +1,8 @@
+uuid: 1bcd56c5-47ad-48b4-9533-df4185900e7b
+langcode: en
+status: true
+dependencies: {  }
+name: 'Faculty Award Type'
+vid: faculty_award_type
+description: ''
+weight: 0
