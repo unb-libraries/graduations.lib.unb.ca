@@ -41,22 +41,25 @@ content:
   field_awards:
     weight: 7
     settings:
+      form_mode: default
+      override_labels: true
+      label_singular: Award
+      label_plural: Awards
+      collapsible: true
+      allow_new: true
       match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      revision: false
+      collapsed: false
+      allow_existing: false
+      allow_duplicate: false
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: inline_entity_form_complex
     region: content
   field_campus:
     weight: 1
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_select
     region: content
   field_ceremony_files:
     weight: 5
@@ -67,13 +70,9 @@ content:
     region: content
   field_ceremony_type:
     weight: 2
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_select
     region: content
   field_ceremony_year:
     weight: 0
@@ -92,13 +91,9 @@ content:
     region: content
   field_season:
     weight: 3
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_select
     region: content
   status:
     type: boolean_checkbox

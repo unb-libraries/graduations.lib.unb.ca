@@ -17,6 +17,14 @@ $address_types = [
   "Valedictory Address",
 ];
 
+// Award types for graduations.lib.unb.ca v2.
+$award_types = [
+  "Faculty Award/Honour",
+  "Graduate Award",
+  "Honorary Degree",
+  "Professor Emeritus",
+];
+
 // Campus options for graduations.lib.unb.ca v2.
 $campi = [
   'Fredericton',
@@ -87,6 +95,9 @@ $honorary_degrees = [
   'N/A',
   'Ph.D.',
 ];
+
+// Add award types.
+addTerms('award_type', $award_types);
 
 // Add address types.
 addTerms('address_type', $address_types);
