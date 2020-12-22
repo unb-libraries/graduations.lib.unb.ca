@@ -27,7 +27,7 @@ function award_inline_entity_form_entity_form_alter(&$entity_form, $form_state) 
       $types[$name] = $tid;
     }
 
-    // Form states — Display/hide fields for graduate award.
+    // Form states — Display exclusive fields for graduate award.
     $disp_grad_award = [
       'visible' => [
         ':input[name*="field_award_type"]' => ['value' => $types['Graduate Award']],
@@ -36,7 +36,7 @@ function award_inline_entity_form_entity_form_alter(&$entity_form, $form_state) 
 
     $entity_form['field_grad_award_type']['#states'] = $disp_grad_award;
 
-    // Form states — Display/hide fields for honorary degree.
+    // Form states — Display exclusive fields for honorary degree.
     $disp_hon_degree = [
       'visible' => [
         ':input[name*="field_award_type"]' => ['value' => $types['Honorary Degree']],
@@ -46,13 +46,9 @@ function award_inline_entity_form_entity_form_alter(&$entity_form, $form_state) 
     $entity_form['field_honorary_degree']['#states'] = $disp_hon_degree;
     $entity_form['field_recipient_valedictorian']['#states'] = $disp_hon_degree;
     $entity_form['field_recipient_gender']['#states'] = $disp_hon_degree;
-    $entity_form['field_image']['#states'] = $disp_hon_degree;
-    $entity_form['field_image_caption']['#states'] = $disp_hon_degree;
-    $entity_form['field_image_caption2']['#states'] = $disp_hon_degree;
     $entity_form['field_orator_name']['#states'] = $disp_hon_degree;
-    $entity_form['field_citation']['#states'] = $disp_hon_degree;
 
-    // Form states — Display fields for faculty award.
+    // Form states — Display exclusive fields for faculty award.
     $disp_fac_award = [
       'visible' => [
         ':input[name*="field_award_type"]' => ['value' => $types['Faculty Award/Honour']],
@@ -60,6 +56,19 @@ function award_inline_entity_form_entity_form_alter(&$entity_form, $form_state) 
     ];
 
     $entity_form['field_faculty_award_type']['#states'] = $disp_fac_award;
+
+    // Form states — Display for group 1: Honorary Degree, Professor Emeritus.
+    $disp_group1 = [
+      'visible' => [
+        [':input[name*="field_award_type"]' => ['value' => $types['Honorary Degree']]],
+        [':input[name*="field_award_type"]' => ['value' => $types['Professor Emeritus']]],
+      ],
+    ];
+
+    $entity_form['field_image']['#states'] = $disp_group1;
+    $entity_form['field_image_caption']['#states'] = $disp_group1;
+    $entity_form['field_image_caption2']['#states'] = $disp_group1;
+    $entity_form['field_citation']['#states'] = $disp_group1;
 
     // Add callback function to run when IEF is building an address entity.
     $entity_form['#entity_builders'][] = 'award_title';
