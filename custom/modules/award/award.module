@@ -5,14 +5,36 @@
  * Contains award.module.
  */
 
+use Drupal\taxonomy\Entity\Term;
+
 /**
  * Implements hook_inline_entity_form_entity_form_alter().
  */
 
 function award_inline_entity_form_entity_form_alter(&$entity_form, $form_state) {
-  // Only apply callback function if the entity is an address.
-  if ($entity_form['#entity_type'] == 'node' && $entity_form['#bundle'] == 'award') {
-    // Callback function to run when IEF is building an address entity.
+  // Only apply changes if the entity is an address.
+  if ($entity_form['#bundle'] == 'award') {
+    // Recover term ids for all award types.
+    $tids = \Drupal::entityQuery('taxonomy_term')
+      ->condition('vid', 'award_type')
+      ->execute();
+
+    // Build associative array with name => tid for award types.
+    $types = [];
+
+    foreach ($tids as $tid) {
+      $name = Term::load($tid)->getName();
+      $types[$name] = $tid;
+    }
+
+    // Form states — Display/hide fields for graduate award.
+    $entity_form['field_grad_award_type']['#states'] = [
+      'visible' => [
+        ':input[name*="field_award_type"]' => ['value' => $types['Graduate Award']],
+      ],
+    ];
+
+    // Add callback function to run when IEF is building an address entity.
     $entity_form['#entity_builders'][] = 'award_title';
   }
 }
