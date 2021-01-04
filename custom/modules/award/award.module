@@ -78,5 +78,30 @@ function award_inline_entity_form_entity_form_alter(&$entity_form, $form_state) 
 function award_title($entity_type, $entity, $entity_form, &$form_state) {
   $type = $entity->get('field_award_type')->entity->getName();
   $recipient = $entity->get('field_recipient')->getString();
-  $entity->setTitle("$type awarded to $recipient");
+
+  switch ($type) {
+    case 'Faculty Award/Honour':
+      // If faculty award...
+      $subtype = $entity->get('field_faculty_award_type')->entity->getName();
+      $title = "$subtype awarded to $recipient";
+      break;
+
+    case 'Graduate Award':
+      // If graduate award...
+      $subtype = $entity->get('field_grad_award_type')->entity->getName();
+      $title = "$subtype awarded to $recipient";
+      break;
+
+    case 'Honorary Degree':
+      // If honorary degree...
+      $subtype = $entity->get('field_honorary_degree')->entity->getName();
+      $title = "Honorary Degree awarded to $recipient ($subtype)";
+      break;
+
+    default:
+      $title = "$type awarded to $recipient";
+      break;
+  }
+
+  $entity->setTitle($title);
 }
