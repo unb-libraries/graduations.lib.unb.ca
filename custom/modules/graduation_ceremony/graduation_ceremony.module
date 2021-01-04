@@ -6,10 +6,10 @@
  */
 
 /**
- * Implements hook_entity_presave().
+ * Implements hook_ENTITY_TYPE_presave().
  */
 
-function graduation_ceremony_entity_presave($entity) {
+function graduation_ceremony_graduation_ceremony_entity_presave($entity) {
   // Auto-generate entity title on presave.
   $year = $entity->get('field_ceremony_year')->getString();
   $campus = $entity->get('field_campus')->entity->getName();
