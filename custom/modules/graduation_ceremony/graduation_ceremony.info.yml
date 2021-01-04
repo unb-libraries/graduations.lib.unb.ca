@@ -1,0 +1,5 @@
+name: graduation_ceremony
+type: module
+description: Custom support module for graduation_ceremony content type.
+core: 8.x
+package: Custom

@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Contains graduation_ceremony.module.
+ */
+
+/**
+ * Implements hook_entity_presave().
+ */
+
+function graduation_ceremony_entity_presave($entity) {
+  // Auto-generate entity title on presave.
+  $year = $entity->get('field_ceremony_year')->getString();
+  $campus = $entity->get('field_campus')->entity->getName();
+  $type = $entity->get('field_ceremony_type')->entity->getName();
+  $entity->setTitle("$year $campus $type");
+}
