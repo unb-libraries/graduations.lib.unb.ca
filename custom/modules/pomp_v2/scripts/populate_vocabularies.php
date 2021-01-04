@@ -102,6 +102,13 @@ $honorary_degrees = [
   'Ph.D.',
 ];
 
+// Graduation ceremony season options for graduations.lib.unb.ca v2.
+$seasons = [
+  'Fall',
+  'Special',
+  'Spring',
+];
+
 // Add award types.
 addTerms('award_type', $award_types);
 
@@ -125,6 +132,9 @@ addTerms('grad_award_type', $gradaward_types);
 
 // Add honorary degrees.
 addTerms('honorary_degree', $honorary_degrees);
+
+// Add seasons.
+addTerms('season', $seasons);
 
 /**
  * Add multiple terms to a given vocabulary.
