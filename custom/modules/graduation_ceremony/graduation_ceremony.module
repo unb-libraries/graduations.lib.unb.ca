@@ -16,3 +16,36 @@ function graduation_ceremony_graduation_ceremony_entity_presave($entity) {
   $type = $entity->get('field_ceremony_type')->entity->getName();
   $entity->setTitle("$year $campus $type");
 }
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function graduation_ceremony_preprocess_node__graduation_ceremony(&$variables) {
+  // Pass additional variables to graduation_ceremony templates.
+  // Retrieve ceremony node and id.
+  $ceremony_node = $variables['elements']['#node'];
+  $nid = $ceremony_node->id();
+  // Get view output for nid parameter passed to contextual filter.
+  $honorary_x_ceremony = views_embed_view('honorary_x_ceremony', 'block_1', $nid);
+  $variables['honorary_x_ceremony'] = $honorary_x_ceremony;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function graduation_ceremony_theme($existing, $type, $theme, $path) {
+  // Use custom template to display node type.
+  return [
+    'node__graduation_ceremony' => [
+      'arguments' => [
+        'view' => NULL,
+        'field' => NULL,
+        'row' => NULL,
+        'output' => NULL,
+      ],
+      'template' => 'node--graduation-ceremony',
+      'path' => drupal_get_path('module', 'graduation_ceremony') . '/templates',
+      'base hook' => 'node__graduation_ceremony',
+    ],
+  ];
+}
