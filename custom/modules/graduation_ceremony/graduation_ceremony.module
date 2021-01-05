@@ -22,9 +22,22 @@ function graduation_ceremony_graduation_ceremony_entity_presave($entity) {
  */
 function graduation_ceremony_preprocess_node__graduation_ceremony(&$variables) {
   // Pass additional variables to graduation_ceremony templates.
+  // Pass honorary degrees for ceremony.
   // Retrieve ceremony node and id.
   $ceremony_node = $variables['elements']['#node'];
   $nid = $ceremony_node->id();
+  // Retrieve term ids for all award types.
+  $award_tids = [];
+  $award_types = [
+    'Faculty Award/Honour',
+    'Graduate Award',
+    'Honorary Degree',
+    'Professor Emeritus',
+  ];
+
+  foreach ($award_types as $award_type) {
+    // code...
+  }
   // Get view output for nid parameter passed to contextual filter.
   $honorary_x_ceremony = views_embed_view('honorary_x_ceremony', 'block_1', $nid);
   $variables['honorary_x_ceremony'] = $honorary_x_ceremony;
