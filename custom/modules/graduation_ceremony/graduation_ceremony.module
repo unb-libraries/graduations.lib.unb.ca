@@ -56,6 +56,9 @@ function graduation_ceremony_preprocess_node__graduation_ceremony(&$variables) {
   // Pass graduate awards for ceremony.
   $graduate_x_ceremony = views_embed_view('awards_x_ceremony', 'block_1', $nid, $award_tids['Graduate Award']);
   $variables['graduate_x_ceremony'] = $graduate_x_ceremony;
+  // Pass addresses for ceremony.
+  $addresses_x_ceremony = views_embed_view('addresses_x_ceremony', 'block_1', $nid);
+  $variables['addresses_x_ceremony'] = $addresses_x_ceremony;
 }
 
 /**
