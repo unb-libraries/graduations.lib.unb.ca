@@ -136,6 +136,57 @@ addTerms('honorary_degree', $honorary_degrees);
 // Add seasons.
 addTerms('season', $seasons);
 
+// Update honorary degree descriptions.
+foreach ($honorary_degrees as $honorary_degree) {
+  // Search for degree by name.
+  $found = \Drupal::entityQuery('taxonomy_term')
+    ->condition('vid', 'honorary_degree')
+    ->condition('name', $honorary_degree)
+    ->execute();
+
+  if ($found) {
+    // Get found term and description.
+    $term = Term::load(reset($found));
+
+    switch ($honorary_degree) {
+      case 'D.C.L.':
+        $term->setDescription('Doctor of Civil Law');
+        $term->save();
+        break;
+
+      case 'D.Litt.':
+        $term->setDescription('Doctor of Letters');
+        $term->save();
+        break;
+
+      case 'D.Sc.':
+        $term->setDescription('Doctor of Science');
+        $term->save();
+        break;
+
+      case 'LL.D.':
+        $term->setDescription('Doctor of Laws');
+        $term->save();
+        break;
+
+      case 'M.A.':
+        $term->setDescription('Master of Arts');
+        $term->save();
+        break;
+
+      case 'M.Sc.':
+        $term->setDescription('Master of Science');
+        $term->save();
+        break;
+
+      case 'Ph.D.':
+        $term->setDescription('Doctor of Philosophy');
+        $term->save();
+        break;
+    }
+  }
+}
+
 /**
  * Add multiple terms to a given vocabulary.
  *
