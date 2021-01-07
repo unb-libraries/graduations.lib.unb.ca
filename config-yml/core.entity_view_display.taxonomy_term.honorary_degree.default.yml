@@ -1,0 +1,22 @@
+uuid: d689c7c7-c9fb-41de-8e2f-6a6d07638bb1
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.honorary_degree
+  module:
+    - text
+id: taxonomy_term.honorary_degree.default
+targetEntityType: taxonomy_term
+bundle: honorary_degree
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  search_api_excerpt: true
