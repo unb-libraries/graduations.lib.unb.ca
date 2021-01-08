@@ -15,6 +15,7 @@ function award_preprocess_node__award(&$variables) {
   // Retrieve award nid.
   $award_node = $variables['elements']['#node'];
   $nid = $award_node->id();
+
   // Query for parent ceremony.
   $ceremony_q = \Drupal::entityQuery('node')
     ->condition('type', 'graduation_ceremony')
@@ -33,6 +34,17 @@ function award_preprocess_node__award(&$variables) {
   // Pass ceremony title.
   $variables['ceremony_title'] = $ceremony_title;
   $debug = $ceremony_title;
+
+  // Pass honorary degree name and description.
+  $degree_id = $award_node->field_honorary_degree->getString();
+  $degree_term = Term::load($degree_id);
+  $degree_short = $degree_term->getName();
+  $degree_description = $degree_term->getDescription();
+  $variables['degree_short'] = $degree_short;
+  $variables['degree_description'] = $degree_description;
+
+  // Pass orator.
+  $variables['orator'] = $award_node->field_orator_name->getString();
 }
 
 /**

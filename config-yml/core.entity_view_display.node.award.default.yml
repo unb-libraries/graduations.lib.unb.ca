@@ -99,7 +99,7 @@ content:
     region: content
   field_orator_name:
     weight: 112
-    label: above
+    label: visually_hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
