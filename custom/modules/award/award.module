@@ -64,6 +64,17 @@ function award_preprocess_node__award(&$variables) {
     $faculty_award = $fac_award_term->getName();
     $variables['faculty_award'] = $faculty_award;
   }
+
+  // Pass graduate award type.
+  if ($award_node->field_grad_award_type) {
+    $grad_award_id = $award_node->field_grad_award_type->getString();
+  }
+
+  if ($grad_award_id) {
+    $grad_award_term = Term::load($grad_award_id);
+    $grad_award = $grad_award_term->getName();
+    $variables['grad_award'] = $grad_award;
+  }
 }
 
 /**

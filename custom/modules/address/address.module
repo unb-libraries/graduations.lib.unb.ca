@@ -5,10 +5,47 @@
  * Contains address.module.
  */
 
+use Drupal\taxonomy\Entity\Term;
+
+/**
+* Implements hook_preprocess_hook().
+*/
+function address_preprocess_node__address(&$variables) {
+  // Pass additional variables to address templates.
+  // Retrieve address nid.
+  $address_node = $variables['elements']['#node'];
+  $nid = $address_node->id();
+  // Query for parent ceremony.
+  $ceremony_q = \Drupal::entityQuery('node')
+   ->condition('type', 'graduation_ceremony')
+   ->condition('field_addresses', $nid)
+   ->execute();
+
+  // Get ceremony id.
+  $ceremony_id = $ceremony_q ? reset($ceremony_q) : NULL;
+  // Pass ceremony id.
+  $variables['ceremony_id'] = $ceremony_id;
+  // Get ceremony object.
+  $ceremony = \Drupal::entityTypeManager()
+   ->getStorage('node')
+   ->load($ceremony_id);
+  // Get ceremony title.
+  if ($ceremony) {
+   $ceremony_title = $ceremony->title->getString();
+   // Pass ceremony title.
+   $variables['ceremony_title'] = $ceremony_title;
+   $debug = $ceremony_title;
+  }
+
+  // Pass speaker.
+  if ($address_node->field_address_speaker) {
+    $variables['speaker'] = $address_node->field_address_speaker->getString();
+  }
+}
+
 /**
  * Implements hook_inline_entity_form_entity_form_alter().
  */
-
 function address_inline_entity_form_entity_form_alter(&$entity_form, $form_state) {
   // Only apply callback function if the entity is an address.
   if ($entity_form['#bundle'] == 'address') {
@@ -21,4 +58,24 @@ function address_title($entity_type, $entity, $entity_form, &$form_state) {
   $type = $entity->get('field_address_type')->entity->getName();
   $speaker = $entity->get('field_address_speaker')->getString();
   $entity->setTitle("$type delivered by $speaker");
+}
+
+/**
+ * Implements hook_theme().
+ */
+function address_theme($existing, $type, $theme, $path) {
+  // Use custom template to display node type.
+  return [
+    'node__address' => [
+      'arguments' => [
+        'view' => NULL,
+        'field' => NULL,
+        'row' => NULL,
+        'output' => NULL,
+      ],
+      'template' => 'node--address',
+      'path' => drupal_get_path('module', 'address') . '/templates',
+      'base hook' => 'node__address',
+    ],
+  ];
 }

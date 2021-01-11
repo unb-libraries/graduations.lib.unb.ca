@@ -17,7 +17,7 @@ mode: default
 content:
   field_address_speaker:
     weight: 104
-    label: above
+    label: visually_hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -25,23 +25,23 @@ content:
     region: content
   field_address_text:
     weight: 102
-    label: above
+    label: visually_hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_address_type:
     weight: 103
-    label: above
+    label: visually_hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   links:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   search_api_excerpt: true
