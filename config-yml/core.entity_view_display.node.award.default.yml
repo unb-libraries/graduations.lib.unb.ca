@@ -36,14 +36,14 @@ content:
     region: content
   field_citation:
     weight: 113
-    label: above
+    label: visually_hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_faculty_award_type:
     weight: 114
-    label: above
+    label: visually_hidden
     settings:
       link: true
     third_party_settings: {  }
@@ -51,7 +51,7 @@ content:
     region: content
   field_grad_award_type:
     weight: 103
-    label: above
+    label: visually_hidden
     settings:
       link: true
     third_party_settings: {  }
@@ -67,7 +67,7 @@ content:
     region: content
   field_image:
     weight: 109
-    label: above
+    label: visually_hidden
     settings:
       image_style: ''
       image_link: ''
@@ -76,7 +76,7 @@ content:
     region: content
   field_image_caption:
     weight: 104
-    label: above
+    label: visually_hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -84,7 +84,7 @@ content:
     region: content
   field_image_caption2:
     weight: 105
-    label: above
+    label: visually_hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }

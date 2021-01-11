@@ -15,14 +15,14 @@ function award_preprocess_node__award(&$variables) {
   // Retrieve award nid.
   $award_node = $variables['elements']['#node'];
   $nid = $award_node->id();
-
   // Query for parent ceremony.
   $ceremony_q = \Drupal::entityQuery('node')
     ->condition('type', 'graduation_ceremony')
     ->condition('field_awards', $nid)
     ->execute();
+
   // Get ceremony id.
-  $ceremony_id = reset($ceremony_q);
+  $ceremony_id = $ceremony_q ? reset($ceremony_q) : NULL;
   // Pass ceremony id.
   $variables['ceremony_id'] = $ceremony_id;
   // Get ceremony object.
@@ -30,21 +30,40 @@ function award_preprocess_node__award(&$variables) {
     ->getStorage('node')
     ->load($ceremony_id);
   // Get ceremony title.
-  $ceremony_title = $ceremony->title->getString();
-  // Pass ceremony title.
-  $variables['ceremony_title'] = $ceremony_title;
-  $debug = $ceremony_title;
+  if ($ceremony) {
+    $ceremony_title = $ceremony->title->getString();
+    // Pass ceremony title.
+    $variables['ceremony_title'] = $ceremony_title;
+    $debug = $ceremony_title;
+  }
 
   // Pass honorary degree name and description.
-  $degree_id = $award_node->field_honorary_degree->getString();
-  $degree_term = Term::load($degree_id);
-  $degree_short = $degree_term->getName();
-  $degree_description = $degree_term->getDescription();
-  $variables['degree_short'] = $degree_short;
-  $variables['degree_description'] = $degree_description;
+  if ($award_node->field_honorary_degree) {
+    $degree_id = $award_node->field_honorary_degree->getString();
+  }
 
+  if ($degree_id) {
+    $degree_term = Term::load($degree_id);
+    $degree_short = $degree_term->getName();
+    $degree_description = $degree_term->getDescription();
+    $variables['degree_short'] = $degree_short;
+    $variables['degree_description'] = $degree_description;
+  }
   // Pass orator.
-  $variables['orator'] = $award_node->field_orator_name->getString();
+  if ($award_node->field_orator_name) {
+    $variables['orator'] = $award_node->field_orator_name->getString();
+  }
+
+  // Pass faculty award type.
+  if ($award_node->field_faculty_award_type) {
+    $fac_award_id = $award_node->field_faculty_award_type->getString();
+  }
+
+  if ($fac_award_id) {
+    $fac_award_term = Term::load($fac_award_id);
+    $faculty_award = $fac_award_term->getName();
+    $variables['faculty_award'] = $faculty_award;
+  }
 }
 
 /**

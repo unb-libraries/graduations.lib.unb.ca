@@ -80,9 +80,36 @@
   </h2>
 
   <h2 class="h1">{{ content.field_recipient }}</h2>
-  <h2>{{ "Degree conferred: #{degree_description} (#{degree_short})"}}</h2>
+
+  {% if degree_description %}
+    <h2>{{ "Degree conferred: #{degree_description} (#{degree_short})"}}</h2>
+  {%- endif -%}
+
+  {% if faculty_award %}
+    <h2>{{ "Faculty award: #{faculty_award}"}}</h2>
+  {%- endif -%}
 
   {%- if orator -%}
     <h2>{{ "Orator: #{orator}" }}</h2>
+  {%- endif -%}
+
+  {%- if content.field_citation['#items'] -%}
+
+    {%- if content.field_image['#items'] -%}
+      <div class="floated-fig">
+        <figure>
+          {{ content.field_image }}
+          <figcaption>{{ content.field_image_caption }}</figcaption>
+          <figcaption>{{ content.field_image_caption2 }}</figcaption>
+        </figure>
+      </div>
+    {% endif %}
+
+    {{ content.field_citation }}
+    <br>
+    <strong>
+      Citations may be reproduced for research purposes only. Publication in whole or in part requires
+      written permission from the author.
+    </strong>
   {%- endif -%}
 </div>
