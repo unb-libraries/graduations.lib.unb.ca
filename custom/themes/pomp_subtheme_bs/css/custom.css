@@ -400,6 +400,10 @@ div.js-form-item-field-ceremony-year-value {
   clear: both;
 }
 
+div.js-form-item-field-season-target-id {
+  margin-right: 25%;
+}
+
 div.js-form-item-field-list-campus-target-id {
   display: block;
   clear: both;

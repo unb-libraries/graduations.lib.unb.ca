@@ -1,0 +1,5 @@
+name: browse_ceremonies
+type: module
+description: Custom support module for view browse_graduation_ceremonies
+core: 8.x
+package: Custom
