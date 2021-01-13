@@ -911,9 +911,40 @@ display:
           plugin_id: numeric
       sorts: {  }
       title: 'Browse Honorary Degrees and Awards'
-      header: {  }
-      footer: {  }
-      empty: {  }
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: 'Displaying @start - @end of @total'
+          plugin_id: result
+      footer:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: 'Displaying @start - @end of @total'
+          plugin_id: result
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content: 'No records match filter criteria.'
+          plugin_id: text_custom
       relationships:
         reverse__node__field_awards:
           id: reverse__node__field_awards

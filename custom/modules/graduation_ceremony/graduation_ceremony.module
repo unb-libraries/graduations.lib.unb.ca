@@ -5,16 +5,22 @@
  * Contains graduation_ceremony.module.
  */
 
+use Drupal\node\Entity\Node;
+use Drupal\taxonomy\Entity\Term;
+
 /**
  * Implements hook_ENTITY_TYPE_presave().
  */
 
-function graduation_ceremony_graduation_ceremony_entity_presave($entity) {
-  // Auto-generate entity title on presave.
-  $year = $entity->get('field_ceremony_year')->getString();
-  $campus = $entity->get('field_campus')->entity->getName();
-  $type = $entity->get('field_ceremony_type')->entity->getName();
-  $entity->setTitle("$year $campus $type");
+function graduation_ceremony_node_presave($entity) {
+  // If the entity is a graduation_ceremony...
+  if ($entity->getType() == 'graduation_ceremony') {
+    // Auto-generate entity title on presave.
+    $year = $entity->get('field_ceremony_year')->getString();
+    $campus = $entity->get('field_campus')->entity->getName();
+    $type = $entity->get('field_ceremony_type')->entity->getName();
+    $entity->setTitle("$year $campus $type");
+  }
 }
 
 /**
@@ -43,22 +49,46 @@ function graduation_ceremony_preprocess_node__graduation_ceremony(&$variables) {
     $award_tids[$award_type] = $term->id();
   }
 
-  // Pass honorary degrees for ceremony.
-  // Get view output for nid and tid parameter passed to contextual filter.
-  $honorary_x_ceremony = views_embed_view('awards_x_ceremony', 'block_1', $nid, $award_tids['Honorary Degree']);
-  $variables['honorary_x_ceremony'] = $honorary_x_ceremony;
-  // Pass professors emeriti for ceremony.
-  $emeriti_x_ceremony = views_embed_view('awards_x_ceremony', 'block_1', $nid, $award_tids['Professor Emeritus']);
-  $variables['emeriti_x_ceremony'] = $emeriti_x_ceremony;
-  // Pass faculty awards for ceremony.
-  $faculty_x_ceremony = views_embed_view('awards_x_ceremony', 'block_1', $nid, $award_tids['Faculty Award/Honour']);
-  $variables['faculty_x_ceremony'] = $faculty_x_ceremony;
-  // Pass graduate awards for ceremony.
-  $graduate_x_ceremony = views_embed_view('awards_x_ceremony', 'block_1', $nid, $award_tids['Graduate Award']);
-  $variables['graduate_x_ceremony'] = $graduate_x_ceremony;
-  // Pass addresses for ceremony.
-  $addresses_x_ceremony = views_embed_view('addresses_x_ceremony', 'block_1', $nid);
-  $variables['addresses_x_ceremony'] = $addresses_x_ceremony;
+  // Get awards.
+  $ceremony_awards = $ceremony_node->field_awards->getValue();
+  $awards_found = [];
+
+  // Record each award's type.
+  foreach ($ceremony_awards as $award) {
+    $type_id = Node::load($award['target_id'])->field_award_type->getString();
+    $type = Term::load($type_id)->getName();
+    $awards_found[] = $type;
+  }
+
+  // Pass honorary degrees for ceremony, if any.
+  if (in_array('Honorary Degree', $awards_found)) {
+    // Get view output for nid and tid parameter passed to contextual filter.
+    $honorary_x_ceremony = views_embed_view('awards_x_ceremony', 'block_1', $nid, $award_tids['Honorary Degree']);
+    $variables['honorary_x_ceremony'] = $honorary_x_ceremony;
+  }
+  // Pass professors emeriti for ceremony, if any.
+  if (in_array('Professor Emeritus', $awards_found)) {
+    $emeriti_x_ceremony = views_embed_view('awards_x_ceremony', 'block_1', $nid, $award_tids['Professor Emeritus']);
+    $variables['emeriti_x_ceremony'] = $emeriti_x_ceremony;
+  }
+  // Pass faculty awards for ceremony, if any.
+  if (in_array('Faculty Award/Honour', $awards_found)) {
+    $faculty_x_ceremony = views_embed_view('awards_x_ceremony', 'block_1', $nid, $award_tids['Faculty Award/Honour']);
+    $variables['faculty_x_ceremony'] = $faculty_x_ceremony;
+  }
+  // Pass graduate awards for ceremony, if any.
+  if (in_array('Graduate Award', $awards_found)) {
+    $graduate_x_ceremony = views_embed_view('awards_x_ceremony', 'block_1', $nid, $award_tids['Graduate Award']);
+    $variables['graduate_x_ceremony'] = $graduate_x_ceremony;
+  }
+
+  // Get addresses.
+  $ceremony_addresses = $ceremony_node->field_addresses->getValue();
+  // Pass addresses for ceremony, if any.
+  if (!empty($ceremony_addresses)) {
+    $addresses_x_ceremony = views_embed_view('addresses_x_ceremony', 'block_1', $nid);
+    $variables['addresses_x_ceremony'] = $addresses_x_ceremony;
+  }
 }
 
 /**

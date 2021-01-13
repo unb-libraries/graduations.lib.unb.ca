@@ -84,17 +84,31 @@
   {% endif %}
 
   <h2>Honorary degrees awarded:</h2>
-  {{ honorary_x_ceremony }}
+  {% if honorary_x_ceremony %}
+    {{ honorary_x_ceremony }}
+  {% else %}
+    <ul><li>No honorary degrees on record.</li></ul>
+  {% endif %}
 
-  <h2>Professors emeriti awarded:</h2>
-  {{ emeriti_x_ceremony }}
+  {% if emeriti_x_ceremony %}
+    <h2>Professors emeriti awarded:</h2>
+    {{ emeriti_x_ceremony }}
+  {% endif %}
 
-  <h2>Faculty awards:</h2>
-  {{ faculty_x_ceremony }}
+  {% if faculty_x_ceremony %}
+    <h2>Faculty awards:</h2>
+    {{ faculty_x_ceremony }}
+  {% endif %}
 
-  <h2>Graduate awards:</h2>
-  {{ graduate_x_ceremony }}
+  {% if graduate_x_ceremony %}
+    <h2>Graduate awards:</h2>
+    {{ graduate_x_ceremony }}
+  {% endif %}
 
   <h2>Addresses delivered:</h2>
-  {{ addresses_x_ceremony }}
+  {% if addresses_x_ceremony %}
+    {{ addresses_x_ceremony }}
+  {% else %}
+    <ul><li>No addresses on record.</li></ul>
+  {% endif %}
 </div>
