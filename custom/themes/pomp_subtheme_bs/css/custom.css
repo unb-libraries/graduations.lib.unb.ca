@@ -400,8 +400,12 @@ div.js-form-item-field-ceremony-year-value {
   clear: both;
 }
 
-div.js-form-item-field-season-target-id {
-  margin-right: 25%;
+#views-exposed-form-browse-graduation-ceremonies-page-1 div.js-form-item-field-season-target-id {
+  margin-right: 24%;
+}
+
+#views-exposed-form-browse-awards-page-1 div.js-form-item-field-award-type-target-id {
+  margin-right: 24%;
 }
 
 div.js-form-item-field-list-campus-target-id {

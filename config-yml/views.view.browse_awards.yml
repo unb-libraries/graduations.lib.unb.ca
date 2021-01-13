@@ -12,9 +12,16 @@ dependencies:
     - field.storage.node.field_recipient
     - image.style.degree_thumbnail
     - node.type.award
+    - taxonomy.vocabulary.award_type
+    - taxonomy.vocabulary.campus
+    - taxonomy.vocabulary.season
+  content:
+    - 'taxonomy_term:campus:0ea721cc-c13f-4189-9cff-b946a92f6d0a'
+    - 'taxonomy_term:campus:ed33429e-4deb-4f1a-9eb9-4c3efccaa4b7'
   module:
     - image
     - node
+    - taxonomy
     - user
 id: browse_awards
 label: 'Browse Honorary Degrees and Awards'
@@ -49,7 +56,7 @@ display:
         type: basic
         options:
           submit_button: Apply
-          reset_button: false
+          reset_button: true
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
           expose_sort_order: true
@@ -664,6 +671,244 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
+        combine:
+          id: combine
+          table: views
+          field: combine
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: word
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: combine_op
+            label: 'Search award recipient or orator/speaker'
+            description: ''
+            use_operator: false
+            operator: combine_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: combine
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              pomp_content_editor: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          fields:
+            field_recipient: field_recipient
+            field_orator_name: field_orator_name
+          plugin_id: combine
+        field_campus_target_id:
+          id: field_campus_target_id
+          table: node__field_campus
+          field: field_campus_target_id
+          relationship: reverse__node__field_awards
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            96: 96
+            98: 98
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_campus_target_id_op
+            label: Campus
+            description: ''
+            use_operator: false
+            operator: field_campus_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_campus_target_id
+            required: false
+            remember: true
+            multiple: false
+            remember_roles:
+              anonymous: anonymous
+              authenticated: authenticated
+              administrator: administrator
+              pomp_content_editor: pomp_content_editor
+            reduce: true
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: campus
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_season_target_id:
+          id: field_season_target_id
+          table: node__field_season
+          field: field_season_target_id
+          relationship: reverse__node__field_awards
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_season_target_id_op
+            label: 'Graduation ceremony'
+            description: ''
+            use_operator: false
+            operator: field_season_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_season_target_id
+            required: false
+            remember: true
+            multiple: false
+            remember_roles:
+              anonymous: anonymous
+              authenticated: authenticated
+              administrator: administrator
+              pomp_content_editor: pomp_content_editor
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: season
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_award_type_target_id:
+          id: field_award_type_target_id
+          table: node__field_award_type
+          field: field_award_type_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_award_type_target_id_op
+            label: 'Award type'
+            description: ''
+            use_operator: false
+            operator: field_award_type_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_award_type_target_id
+            required: false
+            remember: true
+            multiple: false
+            remember_roles:
+              anonymous: anonymous
+              authenticated: authenticated
+              administrator: administrator
+              pomp_content_editor: pomp_content_editor
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: award_type
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_ceremony_year_value:
+          id: field_ceremony_year_value
+          table: node__field_ceremony_year
+          field: field_ceremony_year_value
+          relationship: reverse__node__field_awards
+          group_type: group
+          admin_label: ''
+          operator: between
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_ceremony_year_value_op
+            label: 'From (year)'
+            description: ''
+            use_operator: false
+            operator: field_ceremony_year_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_ceremony_year_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              pomp_content_editor: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: numeric
       sorts: {  }
       title: 'Browse Honorary Degrees and Awards'
       header: {  }
@@ -687,7 +932,9 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -711,7 +958,9 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
