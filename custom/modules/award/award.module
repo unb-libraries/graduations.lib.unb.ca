@@ -37,6 +37,10 @@ function award_preprocess_node__award(&$variables) {
     $debug = $ceremony_title;
   }
 
+  // Pass award recipient.
+  $recipient = $award_node->field_recipient->getString();
+  $variables['award_recipient'] = $recipient;
+
   // Pass honorary degree name and description.
   if ($award_node->field_honorary_degree) {
     $degree_id = $award_node->field_honorary_degree->getString();

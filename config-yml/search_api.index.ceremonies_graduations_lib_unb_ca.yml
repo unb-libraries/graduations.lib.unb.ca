@@ -3,27 +3,24 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_campus
+    - field.storage.node.field_ceremony_year
     - search_api.server.pomp_db_search_server
   module:
-    - taxonomy
-    - node
     - search_api
+    - node
 id: ceremonies_graduations_lib_unb_ca
 name: ceremonies.graduations.lib.unb.ca
 description: ''
 read_only: false
 field_settings:
-  name:
-    label: 'Campus » Taxonomy term » Name'
+  field_ceremony_year:
+    label: Year
     datasource_id: 'entity:node'
-    property_path: 'field_campus:entity:name'
-    type: text
+    property_path: field_ceremony_year
+    type: integer
     dependencies:
       config:
-        - field.storage.node.field_campus
-      module:
-        - taxonomy
+        - field.storage.node.field_ceremony_year
   rendered_item:
     label: 'Rendered HTML output'
     property_path: rendered_item
@@ -34,14 +31,6 @@ field_settings:
       view_mode:
         'entity:node':
           graduation_ceremony: default
-  title:
-    label: Title
-    datasource_id: 'entity:node'
-    property_path: title
-    type: text
-    dependencies:
-      module:
-        - node
 datasource_settings:
   'entity:node':
     bundles:

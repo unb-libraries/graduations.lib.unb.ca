@@ -3,9 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_campus
-    - field.storage.node.field_ceremony_type
-    - field.storage.node.field_ceremony_year
     - search_api.index.ceremonies_graduations_lib_unb_ca
   module:
     - search_api
@@ -36,15 +33,17 @@ display:
           skip_access: false
           preserve_facet_query_args: false
       exposed_form:
-        type: basic
+        type: input_required
         options:
-          submit_button: Apply
+          submit_button: Go
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
           expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_asc_label: 'Oldest first'
+          sort_desc_label: 'Newest first'
+          text_input_required: 'Type any keywords and click on Go to see results.'
+          text_input_required_format: full_html
       pager:
         type: mini
         options:
@@ -68,403 +67,20 @@ display:
       row:
         type: fields
       fields:
-        nid:
-          id: nid
+        title:
+          id: title
           table: search_api_datasource_ceremonies_graduations_lib_unb_ca_entity_node
-          field: nid
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: number_integer
-          settings:
-            thousand_separator: ''
-            prefix_suffix: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api_numeric
-          fallback_options:
-            set_precision: false
-            precision: 0
-            decimal: .
-            separator: ','
-            format_plural: false
-            format_plural_string: !!binary MQNAY291bnQ=
-            prefix: ''
-            suffix: ''
-            link_to_item: false
-            use_highlighting: false
-            multi_type: separator
-            multi_separator: ', '
-            format_plural_values:
-              - '1'
-              - '@count'
-          entity_type: node
-          plugin_id: search_api_field
-        field_campus:
-          id: field_campus
-          table: search_api_datasource_ceremonies_graduations_lib_unb_ca_entity_node
-          field: field_campus
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: true
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: false
-          fallback_handler: search_api_entity
-          fallback_options:
-            link_to_item: false
-            use_highlighting: false
-            multi_type: separator
-            multi_separator: ', '
-            display_methods:
-              address_type:
-                display_method: label
-              address_type_voc:
-                display_method: label
-              award_type:
-                display_method: label
-              campus:
-                display_method: label
-              campus_voc:
-                display_method: label
-              ceremony_type:
-                display_method: label
-              ceremony_voc:
-                display_method: label
-              degree_vox:
-                display_method: label
-                view_mode: default
-              faculty_award_type:
-                display_method: label
-              gender:
-                display_method: label
-              gender_voc:
-                display_method: label
-              grad_award_type:
-                display_method: label
-              gradaward_type_voc:
-                display_method: label
-              honorary_degree:
-                display_method: label
-                view_mode: default
-              pomp_bool_voc:
-                display_method: label
-              season:
-                display_method: label
-              season_voc:
-                display_method: label
-          entity_type: node
-          plugin_id: search_api_field
-        field_ceremony_type:
-          id: field_ceremony_type
-          table: search_api_datasource_ceremonies_graduations_lib_unb_ca_entity_node
-          field: field_ceremony_type
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: false
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api_entity
-          fallback_options:
-            link_to_item: false
-            use_highlighting: false
-            multi_type: separator
-            multi_separator: ', '
-            display_methods:
-              address_type:
-                display_method: label
-              address_type_voc:
-                display_method: label
-              award_type:
-                display_method: label
-              campus:
-                display_method: label
-              campus_voc:
-                display_method: label
-              ceremony_type:
-                display_method: label
-              ceremony_voc:
-                display_method: label
-              degree_vox:
-                display_method: label
-                view_mode: default
-              faculty_award_type:
-                display_method: label
-              gender:
-                display_method: label
-              gender_voc:
-                display_method: label
-              grad_award_type:
-                display_method: label
-              gradaward_type_voc:
-                display_method: label
-              honorary_degree:
-                display_method: label
-                view_mode: default
-              pomp_bool_voc:
-                display_method: label
-              season:
-                display_method: label
-              season_voc:
-                display_method: label
-          entity_type: node
-          plugin_id: search_api_field
-        field_ceremony_year:
-          id: field_ceremony_year
-          table: search_api_index_ceremonies_graduations_lib_unb_ca
-          field: field_ceremony_year
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: number_integer
-          settings:
-            thousand_separator: ''
-            prefix_suffix: true
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api_numeric
-          fallback_options:
-            set_precision: false
-            precision: 0
-            decimal: .
-            separator: ','
-            format_plural: false
-            format_plural_string: ''
-            prefix: ''
-            suffix: ''
-            link_to_item: false
-            use_highlighting: false
-            multi_type: separator
-            multi_separator: ', '
-            format_plural_values:
-              - ''
-              - ''
-          entity_type: null
-          entity_field: null
-          plugin_id: search_api_field
-        nothing:
-          id: nothing
-          table: views
-          field: nothing
+          field: title
           relationship: none
           group_type: group
           admin_label: ''
           label: ''
           exclude: false
           alter:
-            alter_text: true
-            text: '{{ field_ceremony_year }} {{ field_campus }} {{ field_ceremony_type }}'
-            make_link: true
-            path: '/node/{{ nid }}'
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
             absolute: false
             external: false
             replace_spaces: false
@@ -498,8 +114,30 @@ display:
           empty: ''
           hide_empty: false
           empty_zero: false
-          hide_alter_empty: false
-          plugin_id: custom
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+          entity_type: node
+          plugin_id: search_api_field
         search_api_excerpt:
           id: search_api_excerpt
           table: search_api_index_ceremonies_graduations_lib_unb_ca
@@ -599,7 +237,31 @@ display:
           min_length: null
           fields: {  }
           plugin_id: search_api_fulltext
-      sorts: {  }
+      sorts:
+        field_ceremony_year:
+          id: field_ceremony_year
+          table: search_api_index_ceremonies_graduations_lib_unb_ca
+          field: field_ceremony_year
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: true
+          expose:
+            label: Order
+          plugin_id: search_api
+        search_api_relevance:
+          id: search_api_relevance
+          table: search_api_index_ceremonies_graduations_lib_unb_ca
+          field: search_api_relevance
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: search_api
       title: RESULTS
       header: {  }
       footer: {  }
@@ -614,11 +276,10 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
         - 'user.node_grants:view'
       tags:
-        - 'config:field.storage.node.field_campus'
-        - 'config:field.storage.node.field_ceremony_type'
-        - 'config:field.storage.node.field_ceremony_year'
         - 'config:search_api.index.ceremonies_graduations_lib_unb_ca'
   page_1:
     display_plugin: page
@@ -628,6 +289,7 @@ display:
     display_options:
       display_extenders: {  }
       path: site-search
+      exposed_block: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -635,9 +297,8 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
         - 'user.node_grants:view'
       tags:
-        - 'config:field.storage.node.field_campus'
-        - 'config:field.storage.node.field_ceremony_type'
-        - 'config:field.storage.node.field_ceremony_year'
         - 'config:search_api.index.ceremonies_graduations_lib_unb_ca'

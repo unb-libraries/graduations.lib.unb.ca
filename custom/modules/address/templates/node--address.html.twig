@@ -73,13 +73,11 @@
  */
 #}
 <div id="address">
-  <h2>
-    <a href="{{ ceremony_id }}">
-      <i class="fa fa-caret-left"></i>{{ " #{ceremony_title}" }}
-    </a>
-  </h2>
+  <a href="{{ ceremony_id }}" class="h4">
+    <i class="fa fa-caret-left"></i>{{ " #{ceremony_title}" }}
+  </a>
 
-  <h2 class="h1">{{ content.field_address_type }}</h2>
+  <h1>{{ address_type }}</h1>
 
   <h2>{{ "Delivered by: #{speaker}" }}</h2>
 

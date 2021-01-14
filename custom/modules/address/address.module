@@ -37,6 +37,10 @@ function address_preprocess_node__address(&$variables) {
    $debug = $ceremony_title;
   }
 
+  // Pass address type.
+  $address_type = $address_node->field_address_type->entity->getName();
+  $variables['address_type'] = $address_type;
+
   // Pass speaker.
   if ($address_node->field_address_speaker) {
     $variables['speaker'] = $address_node->field_address_speaker->getString();

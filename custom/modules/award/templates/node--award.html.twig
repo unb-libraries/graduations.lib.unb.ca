@@ -73,13 +73,11 @@
  */
 #}
 <div id="award">
-  <h2>
-    <a href="{{ ceremony_id }}">
-      <i class="fa fa-caret-left"></i>{{ " #{ceremony_title}" }}
-    </a>
-  </h2>
+  <a href="{{ ceremony_id }}" class="h4">
+    <i class="fa fa-caret-left"></i>{{ " #{ceremony_title}" }}
+  </a>
 
-  <h2 class="h1">{{ content.field_recipient }}</h2>
+  <h1 class>{{ award_recipient }}</h2>
 
   {% if degree_description %}
     <h2>{{ "Degree conferred: #{degree_description} (#{degree_short})"}}</h2>

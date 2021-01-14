@@ -31,6 +31,11 @@ function graduation_ceremony_preprocess_node__graduation_ceremony(&$variables) {
   // Retrieve ceremony node and id.
   $ceremony_node = $variables['elements']['#node'];
   $nid = $ceremony_node->id();
+
+  // Pass title.
+  $title = $ceremony_node->title->getString();
+  $variables['title'] = $title;
+
   // Retrieve term ids for all award types.
   $award_tids = [];
   $award_types = [

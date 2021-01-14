@@ -10,7 +10,7 @@ dependencies:
 id: browse_2
 theme: pomp_subtheme_bs
 region: highlighted
-weight: 0
+weight: -5
 provider: null
 plugin: pomp_browse
 settings:

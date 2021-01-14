@@ -393,6 +393,10 @@ label[for="edit-sort-by"] {
   width: 160px !important;
 }
 
+#views-exposed-form-site-search-page-1 #edit-sort-order {
+  width: 160px !important;
+}
+
 /* Break filter form on year and campus */
 
 div.js-form-item-field-ceremony-year-value {
@@ -502,6 +506,15 @@ section.featured > div.container {
   background-color: #F0F0F0;
 }
 
+#block-exposedformsite-searchpage-1 {
+  display: inline-block;
+  float: left;
+  height: 9em;
+  width: 66.6%;
+  padding: 1.2em;
+  background-color: #F0F0F0;
+}
+
 #block-browse-2 {
   height: 9em;
   padding: 1.2em;
@@ -509,6 +522,10 @@ section.featured > div.container {
 }
 
 #block-pomp-subtheme-bs-exposedformsearchpage-1 {
+  border-right: 5px solid white;
+}
+
+#block-exposedformsite-searchpage-1 {
   border-right: 5px solid white;
 }
 
@@ -562,7 +579,17 @@ div.js-form-item.form-item.js-form-type-select.form-type-select {
   margin-top: 40px;
 }
 
+#views-exposed-form-site-search-page-1 > div >
+div.js-form-item.form-item.js-form-type-select.form-type-select {
+  display: inline-block;
+  margin-top: 40px;
+}
+
 #views-exposed-form-search-page-1 #edit-actions {
+  margin-top: 40px;
+}
+
+#views-exposed-form-site-search-page-1 #edit-actions {
   margin-top: 40px;
 }
 
@@ -952,8 +979,6 @@ div.floated-fig {
     padding-top: 10px;
   }
 
-  #drupal-modal {
-  }
 }
 
 @media(max-width: 698px) {

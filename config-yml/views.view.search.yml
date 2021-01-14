@@ -579,7 +579,7 @@ display:
           group_type: group
           admin_label: ''
           order: DESC
-          exposed: true
+          exposed: false
           expose:
             label: Relevance
           plugin_id: search_api
@@ -633,10 +633,12 @@ display:
         - url.query_args
         - 'url.query_args:sort_by'
         - 'url.query_args:sort_order'
+        - 'user.node_grants:view'
       tags:
         - 'config:field.storage.node.field_ceremony_year'
         - 'config:field.storage.node.field_list_campus'
         - 'config:field.storage.node.field_list_ceremony_type'
+        - 'config:search_api.index.pomp_ceremonies_index'
   page_1:
     display_plugin: page
     id: page_1
@@ -655,7 +657,9 @@ display:
         - url.query_args
         - 'url.query_args:sort_by'
         - 'url.query_args:sort_order'
+        - 'user.node_grants:view'
       tags:
         - 'config:field.storage.node.field_ceremony_year'
         - 'config:field.storage.node.field_list_campus'
         - 'config:field.storage.node.field_list_ceremony_type'
+        - 'config:search_api.index.pomp_ceremonies_index'
