@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.award.field_image_caption
     - field.field.node.award.field_image_caption2
     - field.field.node.award.field_notes
+    - field.field.node.award.field_old_nid
     - field.field.node.award.field_orator_name
     - field.field.node.award.field_recipient
     - field.field.node.award.field_recipient_gender
@@ -90,6 +91,13 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
+  field_old_nid:
+    type: number
+    weight: 13
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
   field_orator_name:
     weight: 10
     settings:

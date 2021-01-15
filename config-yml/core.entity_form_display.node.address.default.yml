@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.address.field_address_speaker
     - field.field.node.address.field_address_text
     - field.field.node.address.field_address_type
+    - field.field.node.address.field_old_nid
     - node.type.address
   module:
     - text
@@ -36,6 +37,13 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  field_old_nid:
+    type: number
+    weight: 3
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
 hidden:
   created: true
   path: true

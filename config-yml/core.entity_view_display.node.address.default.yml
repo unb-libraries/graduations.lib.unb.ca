@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.address.field_address_speaker
     - field.field.node.address.field_address_text
     - field.field.node.address.field_address_type
+    - field.field.node.address.field_old_nid
     - node.type.address
   module:
     - text
@@ -16,7 +17,7 @@ bundle: address
 mode: default
 content:
   field_address_speaker:
-    weight: 104
+    weight: 3
     label: visually_hidden
     settings:
       link_to_entity: false
@@ -24,14 +25,14 @@ content:
     type: string
     region: content
   field_address_text:
-    weight: 102
+    weight: 1
     label: visually_hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_address_type:
-    weight: 103
+    weight: 2
     label: visually_hidden
     settings:
       link: false
@@ -39,9 +40,10 @@ content:
     type: entity_reference_label
     region: content
   links:
-    weight: 100
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_old_nid: true
   search_api_excerpt: true

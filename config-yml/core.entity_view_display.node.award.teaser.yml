@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.award.field_image_caption
     - field.field.node.award.field_image_caption2
     - field.field.node.award.field_notes
+    - field.field.node.award.field_old_nid
     - field.field.node.award.field_orator_name
     - field.field.node.award.field_recipient
     - field.field.node.award.field_recipient_gender
@@ -40,6 +41,7 @@ hidden:
   field_image_caption: true
   field_image_caption2: true
   field_notes: true
+  field_old_nid: true
   field_orator_name: true
   field_recipient: true
   field_recipient_gender: true
