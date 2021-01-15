@@ -46,5 +46,4 @@ foreach ($entities as $address_old) {
   ]);
 
   $new_address->save();
-  exit;
 }
