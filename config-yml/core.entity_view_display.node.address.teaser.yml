@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.address.field_address_speaker
     - field.field.node.address.field_address_text
     - field.field.node.address.field_address_type
-    - field.field.node.address.field_old_nid
     - node.type.address
   module:
     - user
@@ -25,5 +24,4 @@ hidden:
   field_address_speaker: true
   field_address_text: true
   field_address_type: true
-  field_old_nid: true
   search_api_excerpt: true

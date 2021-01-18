@@ -2,12 +2,12 @@
 
 /**
  * @file
- * Contains rm_awards.php
- * Remove new Award type data from graduations.lib.unb.ca v2.
+ * Contains rm_ceremonies.php
+ * Remove new Graduation Ceremony type data from graduations.lib.unb.ca v2.
  */
 
 $query = \Drupal::entityQuery('node');
-$query->condition('type', 'award');
+$query->condition('type', 'graduation_ceremony');
 $tids = $query->execute();
 
 $storage_handler = \Drupal::entityTypeManager()->getStorage('node');

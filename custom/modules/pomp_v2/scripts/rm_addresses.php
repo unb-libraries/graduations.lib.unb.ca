@@ -10,6 +10,6 @@ $query = \Drupal::entityQuery('node');
 $query->condition('type', 'address');
 $tids = $query->execute();
 
-$storage_handler = \Drupal::entityTypeManager()->getStorage($entity_type);
+$storage_handler = \Drupal::entityTypeManager()->getStorage('node');
 $entities = $storage_handler->loadMultiple($tids);
 $storage_handler->delete($entities);
