@@ -8,8 +8,8 @@
 
 $query = \Drupal::entityQuery('node');
 $query->condition('type', 'award');
-$tids = $query->execute();
+$nids = $query->execute();
 
 $storage_handler = \Drupal::entityTypeManager()->getStorage('node');
-$entities = $storage_handler->loadMultiple($tids);
+$entities = $storage_handler->loadMultiple($nids);
 $storage_handler->delete($entities);

@@ -11,7 +11,6 @@ use Drupal\taxonomy\Entity\Term;
 /**
  * Implements hook_ENTITY_TYPE_presave().
  */
-
 function graduation_ceremony_node_presave($entity) {
   // If the entity is a graduation_ceremony...
   if ($entity->getType() == 'graduation_ceremony') {
@@ -20,6 +19,38 @@ function graduation_ceremony_node_presave($entity) {
     $campus = $entity->get('field_campus')->entity->getName();
     $type = $entity->get('field_ceremony_type')->entity->getName();
     $entity->setTitle("$year $campus $type");
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_predelete().
+ */
+function graduation_ceremony_node_predelete($entity) {
+  // If the entity is a graduation_ceremony...
+  if ($entity->getType() == 'graduation_ceremony') {
+    // Remove dependent awards and addresses.
+    // Awards.
+    $awards = $entity->field_awards->getValue();
+    $award_nids = [];
+    // Scan multi-value field and put all referenced nids in array.
+    foreach ($awards as $award) {
+      $award_nids[] = $award['target_id'];
+    }
+    // Load and delete.
+    $storage_handler = \Drupal::entityTypeManager()->getStorage('node');
+    $entities = $storage_handler->loadMultiple($award_nids);
+    $storage_handler->delete($entities);
+    // Addresses.
+    $addresses = $entity->field_addresses->getValue();
+    $address_nids = [];
+    // Scan multi-value field and put all referenced nids in array.
+    foreach ($addresses as $address) {
+      $address_nids[] = $address['target_id'];
+    }
+    // Load and delete.
+    $storage_handler = \Drupal::entityTypeManager()->getStorage('node');
+    $entities = $storage_handler->loadMultiple($address_nids);
+    $storage_handler->delete($entities);
   }
 }
 
