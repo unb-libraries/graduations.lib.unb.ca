@@ -909,7 +909,19 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: numeric
-      sorts: {  }
+      sorts:
+        field_ceremony_year_value:
+          id: field_ceremony_year_value
+          table: node__field_ceremony_year
+          field: field_ceremony_year_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: true
+          expose:
+            label: 'Sort (by year)'
+          plugin_id: standard
       title: 'Browse Honorary Degrees and Awards'
       header:
         result:
@@ -965,6 +977,8 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
         - user
         - 'user.node_grants:view'
         - user.permissions
@@ -991,6 +1005,8 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
         - user
         - 'user.node_grants:view'
         - user.permissions

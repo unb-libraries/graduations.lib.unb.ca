@@ -408,10 +408,6 @@ div.js-form-item-field-ceremony-year-value {
   margin-right: 24%;
 }
 
-#views-exposed-form-browse-awards-page-1 div.js-form-item-field-award-type-target-id {
-  margin-right: 24%;
-}
-
 div.js-form-item-field-list-campus-target-id {
   display: block;
   clear: both;
@@ -858,8 +854,7 @@ a.btn-btt {
 }
 
 #edit-combine {
-  width: 55.5vw !important;
-  max-width: 522px;
+  width: 64.3vw !important;
   min-width: 240px;
   margin-right: 42px;
 }
