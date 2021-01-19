@@ -21,7 +21,7 @@ pomp_core.browse-ceremonies:
   url: internal:/ceremonies
   weight: 10
 pomp_core.browse-honorary:
-  title: 'Browse Honorary Degrees'
+  title: 'Browse Honorary Degrees and Awards'
   description: 'Browse Honorary Degrees and Awards'
   parent: pomp_core.browse-search
   menu_name: main
