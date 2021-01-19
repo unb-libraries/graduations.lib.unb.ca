@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
-    - node
+    - system
   theme:
     - pomp_subtheme_bs
 _core:
@@ -20,13 +20,8 @@ settings:
   provider: core
   label_display: '0'
 visibility:
-  node_type:
-    id: node_type
-    bundles:
-      article: article
-      honorary_banner: honorary_banner
-      page: page
-      static_page: static_page
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/ceremonies*\r\n/awards*"
     negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
+    context_mapping: {  }
