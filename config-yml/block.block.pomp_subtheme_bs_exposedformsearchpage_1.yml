@@ -1,11 +1,10 @@
 uuid: 88286669-9961-4e9e-a9ef-447e56651d2b
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.search
   module:
-    - system
     - views
   theme:
     - pomp_subtheme_bs
@@ -21,9 +20,4 @@ settings:
   provider: views
   label_display: '0'
   views_label: ''
-visibility:
-  request_path:
-    id: request_path
-    pages: "/search*\r\n<front>"
-    negate: false
-    context_mapping: {  }
+visibility: {  }

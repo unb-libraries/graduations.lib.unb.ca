@@ -21,7 +21,7 @@ class PompBrowse extends BlockBase {
   public function build() {
     $text = '
       <p><a href="/ceremonies">Browse Graduation Ceremonies</a></p>
-      <p><a href="/degrees">Browse Honorary Degrees</a></p>
+      <p><a href="/awards">Browse Honorary Degrees</a></p>
     ';
 
     return [
