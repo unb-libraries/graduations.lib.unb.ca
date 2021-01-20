@@ -1,4 +1,4 @@
-name: admin_toolbar
+name: graduations_toolbar
 type: module
 description: Admin toolbar module for graduations.lib.unb.ca
 core: 8.x

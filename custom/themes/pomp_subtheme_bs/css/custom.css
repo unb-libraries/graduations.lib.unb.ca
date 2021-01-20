@@ -963,6 +963,13 @@ div.floated-fig {
   margin-bottom: .5rem;
 }
 
+/* Admin Toolbar Vertical Orientation */
+.toolbar-tray-vertical .custom-editor-menu {
+  /* Add space between long menu title text and toggle icon */
+  margin-right: .25rem;
+}
+
+
 @media(max-width: 991px) {
   #block-pomp-subtheme-bs-exposedformsearchpage-1,
   #block-browse-2 {
