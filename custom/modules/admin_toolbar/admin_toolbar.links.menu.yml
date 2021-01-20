@@ -1,0 +1,16 @@
+admin_toolbar.admin:
+  title: 'Graduations'
+  description: 'Manage content admin features.'
+  route_name: <front>
+  parent: system.admin
+  weight: -100
+  options:
+    attributes:
+      class:
+        - custom-editor-menu
+admin_toolbar.graduation_ceremony.add:
+  title: 'New Gradutaion Ceremony'
+  description: 'Manage site content.'
+  url: internal:/node/add/graduation_ceremony
+  parent: voi_admin.admin
+  weight: 10

@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Contains browse_awards.module.
+ */
+
+/**
+* Implements hook_form_FORM_ID_alter().
+*/
+function browse_awards_form_views_exposed_form_alter(&$form, $form_state, $form_id) {
+  // If these are the exposed filters for view's page 1...
+  if ($form['#id'] == 'views-exposed-form-browse-awards-page-1') {
+    // Override default label of maximum year field.
+    $form['field_ceremony_year_value']['max']['#title'] = t('To (year)');
+  }
+}
