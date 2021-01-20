@@ -67,7 +67,7 @@ function migrate_ceremonies($nids) {
     // Migrate awards, returns formatted ids.
     $new_awards = migrate_awards($award_nids);
 
-    // Create new address.
+    // Create new ceremony.
     $new_ceremony = Node::create([
       'type' => 'graduation_ceremony',
       'field_ceremony_year' => $ceremony_old->field_ceremony_year->getString(),
@@ -80,7 +80,10 @@ function migrate_ceremonies($nids) {
       'field_season' => [
         ['target_id' => $season_tid]
       ],
-      'field_notes' => $ceremony_old->field_ceremony_notes->getString(),
+      'field_notes' => [
+        'format' => 'full_html',
+        'value' => $ceremony_old->field_ceremony_notes->getValue()[0]['value'],
+      ],
       'field_addresses' => $new_addresses,
       'field_awards' => $new_awards,
     ]);
@@ -89,6 +92,7 @@ function migrate_ceremonies($nids) {
     $title = $new_ceremony->getTitle();
     echo "\nCreated ceremony [$title]";
   }
+  echo "\n";
 }
 
 function migrate_addresses($nids) {
@@ -117,10 +121,10 @@ function migrate_addresses($nids) {
       'field_address_type' => [
         ['target_id' => $type_tid]
       ],
-      'field_address_speaker' => $address_old->field_delivered_by,
+      'field_address_speaker' => $speaker,
       'field_address_text' => [
         'format' => 'full_html',
-        'value' => $address_old->field_address_content->getString(),
+        'value' => $address_old->field_address_content->getValue()[0]['value'],
       ],
     ]);
 
@@ -187,14 +191,17 @@ function migrate_awards($nids) {
         ['target_id' => $gender_tid]
       ],
       'field_image' => $image,
-      'field_image_caption' => $award_old->field_img_caption->getString(),
-      'field_image_caption2' => $award_old->field_img_caption_2->getString(),
-      'field_orator_name' => $award_old->field_orator->getString(),
+      'field_image_caption' => $award_old->field_img_caption,
+      'field_image_caption2' => $award_old->field_img_caption_2,
+      'field_orator_name' => $award_old->field_orator,
       'field_citation' => [
         'format' => 'full_html',
-        'value' => $award_old->field_citation->getString(),
+        'value' => $award_old->field_citation->getValue()[0]['value'],
       ],
-      'field_notes' => $award_old->field_degree_notes->getString(),
+      'field_notes' => [
+        'format' => 'full_html',
+        'value' => $award_old->field_degree_notes->getValue()[0]['value'],
+      ],
     ]);
 
     $new_award->save();

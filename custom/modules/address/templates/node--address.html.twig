@@ -73,6 +73,7 @@
  */
 #}
 <div id="address">
+  <br>
   <a href="{{ ceremony_id }}" class="h4">
     <i class="fa fa-caret-left"></i>{{ " #{ceremony_title}" }}
   </a>
@@ -84,4 +85,10 @@
   {% if content.field_address_text['#items'] %}
     {{ content.field_address_text }}
   {%- endif -%}
+  <br>
+
+  <strong>
+    Addresses may be reproduced for research purposes only. Publication in whole or in part requires
+    written permission from the author.
+  </strong>
 </div>

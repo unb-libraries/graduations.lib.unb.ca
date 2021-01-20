@@ -55,7 +55,7 @@ div.view-filters #edit-actions {
 }
 
 .region.region-content {
-   margin-top: 30px;
+   margin-top: 2rem !important;
 }
 
 img.align-right {
@@ -351,7 +351,6 @@ article.contextual-region.static-page.full.clearfix {
 
 h1.js-quickedit-page-title.page-header {
   display: inline-block;
-  margin-top: 20px;
   font-size: 30px;
 }
 
@@ -384,7 +383,7 @@ div.view-filters {
   display: none !important;
 }
 
-label[for="edit-sort-order"],
+label[for^="edit-sort-order"],
 label[for="edit-sort-by"] {
   display: none;
 }
@@ -393,7 +392,7 @@ label[for="edit-sort-by"] {
   width: 160px !important;
 }
 
-#views-exposed-form-site-search-page-1 #edit-sort-order {
+#views-exposed-form-site-search-page-1 select[id^="edit-sort-order"] {
   width: 160px !important;
 }
 
@@ -477,6 +476,12 @@ a:hover, a:focus {
 
 /* Browse-search */
 
+.view-header,
+.view-footer {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .region.region-highlighted.row {
   margin-left: 0px;
   margin-right: 0px;
@@ -543,7 +548,8 @@ div.js-form-item-search-api-fulltext {
   width: 60%;
 }
 
-input#edit-search-api-fulltext {
+input#edit-search-api-fulltext,
+input#edit-search-api-fulltext--2 {
     width: 100%;
 }
 
@@ -555,7 +561,7 @@ div.block-views-exposed-filter-blocksearch-page-1 h2 {
   visibility: hidden;
 }
 
-label[for="edit-search-api-fulltext"] {
+label[for^="edit-search-api-fulltext"] {
   font-size: 20px !important;
   margin: 0 0 15px !important;
   line-height: 1.3 !important;
@@ -585,7 +591,7 @@ div.js-form-item.form-item.js-form-type-select.form-type-select {
   margin-top: 40px;
 }
 
-#views-exposed-form-site-search-page-1 #edit-actions {
+#views-exposed-form-site-search-page-1 [id^="edit-actions"] {
   margin-top: 40px;
 }
 
@@ -965,6 +971,13 @@ div.floated-fig {
     border: 0px;
   }
 
+  #block-exposedformsite-searchpage-1,
+  #block-browse-2 {
+    width: 100%;
+    height: 100%;
+    border: 0px;
+  }
+
   #block-pomp-subtheme-bs-main-menu .menu-item {
     background-color: #555555 !important;
   }
@@ -976,6 +989,12 @@ div.floated-fig {
 
 }
 
+@media(max-width: 768px) {
+  #block-exposedformsite-searchpage-1 {
+    float: none;
+  }
+}
+
 @media(max-width: 698px) {
   #views-exposed-form-search-page-1 > div >
   div.js-form-item.form-item.js-form-type-select.form-type-select.js-form-item-sort-order.form-item-sort-order {
@@ -984,6 +1003,11 @@ div.floated-fig {
 
   #edit-actions {
     clear: left !important;
+  }
+
+  #views-exposed-form-site-search-page-1 > div >
+  div.js-form-item.form-item.js-form-type-select.form-type-select.js-form-item-sort-order.form-item-sort-order {
+    display: block !important;
   }
 }
 

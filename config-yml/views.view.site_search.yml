@@ -42,15 +42,20 @@ display:
           expose_sort_order: true
           sort_asc_label: 'Oldest first'
           sort_desc_label: 'Newest first'
-          text_input_required: 'Type any keywords and click on Go to see results.'
+          text_input_required: '<p>Type any keywords and click on Go to see results.</p>'
           text_input_required_format: full_html
       pager:
-        type: mini
+        type: full
         options:
           items_per_page: 20
           offset: 0
           id: 0
           total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« First'
+            last: 'Last »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -59,11 +64,16 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          tags:
-            previous: ‹‹
-            next: ››
+          quantity: 9
       style:
         type: html_list
+        options:
+          grouping: {  }
+          row_class: search-results-item
+          default_row_class: true
+          type: ul
+          wrapper_class: item-list
+          class: ''
       row:
         type: fields
       fields:
@@ -262,9 +272,29 @@ display:
           expose:
             label: ''
           plugin_id: search_api
-      title: RESULTS
-      header: {  }
-      footer: {  }
+      title: SEARCH
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: 'Displaying @start - @end of @total'
+          plugin_id: result
+      footer:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: 'Displaying @start - @end of @total'
+          plugin_id: result
       empty: {  }
       relationships: {  }
       arguments: {  }
