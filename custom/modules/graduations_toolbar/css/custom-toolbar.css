@@ -42,3 +42,9 @@
 .toolbar-icon.toolbar-icon-system-admin-content {
   display: none;
 }
+
+/* Hide default admin account toolbar links */
+#toolbar-item-user-tray li[class^='account'],
+.toolbar-icon.toolbar-icon-system-admin-content {
+  display: none;
+}

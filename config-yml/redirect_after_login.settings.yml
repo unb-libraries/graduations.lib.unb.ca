@@ -1,0 +1,6 @@
+login_redirection:
+  anonymous: null
+  authenticated: /
+  administrator: /
+  pomp_content_editor: /
+exclude_urls: ''

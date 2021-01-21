@@ -26,6 +26,7 @@ module:
   fontawesome: 0
   google_analytics: 0
   graduation_ceremony: 0
+  graduations_access: 0
   graduations_toolbar: 0
   health_check: 0
   help: 0
@@ -54,6 +55,7 @@ module:
   pomp_restrict_urls: 0
   quickedit: 0
   rdf: 0
+  redirect_after_login: 0
   redis: 0
   samlauth: 0
   search_api: 0

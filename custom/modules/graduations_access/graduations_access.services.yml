@@ -1,0 +1,5 @@
+services:
+  graduations_access.graduations_route_subscriber:
+    class: Drupal\graduations_access\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
