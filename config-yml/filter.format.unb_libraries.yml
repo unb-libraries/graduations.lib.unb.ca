@@ -1,15 +1,13 @@
-uuid: 9db9491f-9ca8-4336-8734-5b57c7ce1c8b
+uuid: 98e38ef0-174e-4f4e-b42e-4e25b0448e22
 langcode: en
 status: true
 dependencies:
   module:
     - editor
     - token_filter
-_core:
-  default_config_hash: hewPmBgni9jlDK_IjLxUx1HsTbinK-hdl0lOwjbteIY
-name: 'Full HTML'
-format: full_html
-weight: -10
+name: 'UNB Libraries'
+format: unb_libraries
+weight: -50
 filters:
   filter_align:
     id: filter_align
@@ -35,19 +33,13 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <s> <sup> <sub> <img id src alt data-entity-type data-entity-uuid data-align data-caption> <table id class> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <p> <h1> <pre> <div id class> <br>'
+      allowed_html: '<a class href hreflang id> <em class> <strong class> <cite class> <blockquote cite class> <code class> <ul class type> <ol class start type> <li class> <dl class> <dt class> <dd class> <h2 class id> <h3 class id> <h4 class id> <h5 class id> <h6 class id> <s> <sup class> <sub class> <img class src alt data-entity-type data-entity-uuid data-align data-caption> <table class> <caption class> <tbody class> <thead class> <tfoot class> <th class> <td class> <tr class> <hr> <p class> <pre> <br> <div class> <small class> <span class>'
       filter_html_help: true
       filter_html_nofollow: false
   token_filter:
     id: token_filter
     provider: token_filter
-    status: true
+    status: false
     weight: 0
     settings:
       replace_empty: '0'
-  filter_html_image_secure:
-    id: filter_html_image_secure
-    provider: filter
-    status: true
-    weight: 9
-    settings: {  }

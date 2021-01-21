@@ -11,6 +11,5 @@ is_admin: false
 permissions:
   - 'access content'
   - 'access site-wide contact form'
-  - 'use text format full_html'
   - 'use text format restricted_html'
   - 'view sp metadata'

@@ -81,7 +81,7 @@ function migrate_ceremonies($nids) {
         ['target_id' => $season_tid]
       ],
       'field_notes' => [
-        'format' => 'full_html',
+        'format' => 'unb_libraries',
         'value' => $ceremony_old->field_ceremony_notes->getValue()[0]['value'],
       ],
       'field_addresses' => $new_addresses,
@@ -123,7 +123,7 @@ function migrate_addresses($nids) {
       ],
       'field_address_speaker' => $speaker,
       'field_address_text' => [
-        'format' => 'full_html',
+        'format' => 'unb_libraries',
         'value' => $address_old->field_address_content->getValue()[0]['value'],
       ],
     ]);
@@ -195,11 +195,11 @@ function migrate_awards($nids) {
       'field_image_caption2' => $award_old->field_img_caption_2,
       'field_orator_name' => $award_old->field_orator,
       'field_citation' => [
-        'format' => 'full_html',
+        'format' => 'unb_libraries',
         'value' => $award_old->field_citation->getValue()[0]['value'],
       ],
       'field_notes' => [
-        'format' => 'full_html',
+        'format' => 'unb_libraries',
         'value' => $award_old->field_degree_notes->getValue()[0]['value'],
       ],
     ]);
