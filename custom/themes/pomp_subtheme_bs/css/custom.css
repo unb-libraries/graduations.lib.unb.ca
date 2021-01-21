@@ -702,6 +702,22 @@ input#edit-submit {
   display: inline-block;
 }
 
+.form-type-checkbox > label {
+  width: auto !important;
+}
+
+.panel-heading a[aria-expanded="true"] svg.fa-caret-right {
+  display: none;
+}
+
+.panel-heading a[aria-expanded="false"] svg.fa-caret-down {
+  display: none;
+}
+
+a[data-toggle="tab"] svg {
+  display: none;
+}
+
 /* Address Edit */
 
 div[data-drupal-selector="edit-field-address-content-0-format"] {

@@ -9,7 +9,7 @@ id: node.award.field_recipient_valedictorian
 field_name: field_recipient_valedictorian
 entity_type: node
 bundle: award
-label: 'Recipient Valedictorian'
+label: 'Is valedictorian?'
 description: ''
 required: false
 translatable: false
