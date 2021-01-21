@@ -18,30 +18,12 @@ Feature: Core
       When I am on "node/add/honorary_ceremony"
       Then I should see "ACCESS DENIED"
 
-    Scenario: Add a ceremony while logged in
-      Given I am logged in as a user with the "administrator" role
-      When I am on "node/add/honorary_ceremony"
-      Then I should see "CREATE"
-      And I should not see "ACCESS DENIED"
-
     Scenario: Attempt to add a degree while not logged in
       Given I am not logged in
       When I am on "node/add/honorary_degree"
       Then I should see "ACCESS DENIED"
 
-    Scenario: Add a degree while logged in
-      Given I am logged in as a user with the "administrator" role
-      When I am on "node/add/honorary_degree"
-      Then I should see "CREATE"
-      And I should not see "ACCESS DENIED"
-
     Scenario: Attempt to add an address while not logged in
       Given I am not logged in
       When I am on "node/add/honorary_address"
       Then I should see "ACCESS DENIED"
-
-    Scenario: Add an address while logged in
-      Given I am logged in as a user with the "administrator" role
-      When I am on "node/add/honorary_address"
-      Then I should see "CREATE"
-      And I should not see "ACCESS DENIED"
