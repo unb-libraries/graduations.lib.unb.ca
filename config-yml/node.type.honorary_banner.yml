@@ -8,7 +8,7 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: honorary_banner
+name: 'Slideshow Image'
 type: honorary_banner
 description: 'For slideshow.'
 help: ''

@@ -34,6 +34,10 @@ h2 {
   font-size: 20px;
 }
 
+div.select-wrapper {
+  width: auto;
+}
+
 div.view-filters input, select {
   display: block !important;
   width: 240px !important;

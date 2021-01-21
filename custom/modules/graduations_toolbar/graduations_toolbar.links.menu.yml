@@ -14,3 +14,15 @@ graduations_toolbar.graduation_ceremony.add:
   url: internal:/node/add/graduation_ceremony
   parent: graduations_toolbar.admin
   weight: 10
+graduations_toolbar.static_page.add:
+  title: 'New Page'
+  description: 'Add new static page.'
+  url: internal:/node/add/static_page
+  parent: graduations_toolbar.admin
+  weight: 20
+graduations_toolbar.content.admin:
+  title: 'Manage Content'
+  description: 'Browse and manage content.'
+  url: internal:/all-content
+  parent: graduations_toolbar.admin
+  weight: 30
