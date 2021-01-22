@@ -1,6 +1,6 @@
 uuid: 3b8b86de-0b54-48fe-a0f3-116f0c9f767a
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - pomp_core

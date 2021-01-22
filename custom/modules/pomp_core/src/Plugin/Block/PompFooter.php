@@ -22,15 +22,6 @@ class PompFooter extends BlockBase {
     $text = '
       <div id="footer-menu">
         <br>
-        <a href="/">Home</a> |
-        <a href="/ceremonies">Browse Ceremonies</a> |
-        <a href="/degrees">Browse Honorary Degrees</a> |
-        <a href="/about">About</a> |
-        <a href="/traditions">Traditions</a> |
-        <a href="/orators">Orators</a> |<br>
-        <a href="/acknowledgements">Acknowledgements</a> |
-        <a href="/contact">Contact Us</a>
-        <br>
         All contents © ' . date('Y') . '
           <a href="https://www.lib.unb.ca/archives/">
             Archives &amp; Special Collections</a>
