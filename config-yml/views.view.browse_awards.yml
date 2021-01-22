@@ -972,7 +972,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: 'No records match filter criteria.'
+          content: 'No awards match the filter criteria.'
           plugin_id: text_custom
       relationships:
         reverse__node__field_awards:
