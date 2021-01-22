@@ -1,0 +1,22 @@
+uuid: d3c75583-4e57-4d41-a9f7-5d4e05512428
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: ceremonies
+label: Ceremonies
+type: 'canonical_entities:node'
+pattern: '/ceremony/[node:nid]'
+selection_criteria:
+  5d377975-6ce8-448b-a368-54016e161802:
+    id: node_type
+    bundles:
+      graduation_ceremony: graduation_ceremony
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 5d377975-6ce8-448b-a368-54016e161802
+selection_logic: and
+weight: -5
+relationships: {  }

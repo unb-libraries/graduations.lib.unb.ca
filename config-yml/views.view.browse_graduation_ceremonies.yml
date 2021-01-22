@@ -45,7 +45,7 @@ display:
         options:
           submit_button: Apply
           reset_button: true
-          reset_button_label: Reset
+          reset_button_label: 'Clear filters'
           exposed_sorts_label: 'Sort by'
           expose_sort_order: true
           sort_asc_label: 'Oldest first'
@@ -285,7 +285,7 @@ display:
           exposed: true
           expose:
             operator_id: field_season_target_id_op
-            label: Season
+            label: 'Graduation ceremony'
             description: ''
             use_operator: false
             operator: field_season_target_id_op

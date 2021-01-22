@@ -91,18 +91,18 @@ button, button:active {
   box-shadow: none !important;
 }
 
-.dialog-off-canvas-main-canvas button,
-.dialog-off-canvas-main-canvas button:visited {
+.dialog-off-canvas-main-canvas button:not(#edit-reset),
+.dialog-off-canvas-main-canvas button:visited:not(#edit-reset) {
   background-color: #C01700;
   border-color: #C01700;
   color: white;
   font-weight: 600;
 }
 
-.dialog-off-canvas-main-canvas button:active,
-.dialog-off-canvas-main-canvas button:focus,
-.dialog-off-canvas-main-canvas button:focus-within,
-.dialog-off-canvas-main-canvas button:hover {
+.dialog-off-canvas-main-canvas button:active:not(#edit-reset),
+.dialog-off-canvas-main-canvas button:focus:not(#edit-reset),
+.dialog-off-canvas-main-canvas button:focus-within:not(#edit-reset),
+.dialog-off-canvas-main-canvas button:hover:not(#edit-reset) {
   background-color: #880404 !important;
   border-color: #880404 !important;
   color: white !important;
@@ -387,9 +387,17 @@ div.view-filters {
   display: none !important;
 }
 
-label[for^="edit-sort-order"],
-label[for="edit-sort-by"] {
-  display: none;
+#block-exposedformsite-searchpage-1 label[for^="edit-sort-order"],
+label[for="edit-sort-by"],
+label[for^="edit-search-api-fulltext"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
 }
 
 #views-exposed-form-search-page-1 #edit-sort-order {
@@ -400,6 +408,16 @@ label[for="edit-sort-by"] {
   width: 160px !important;
 }
 
+#block-exposedformsite-searchpage-1 .block-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 20px;
+  text-transform: lowercase;
+}
+
+#block-exposedformsite-searchpage-1 .block-title::first-letter {
+  text-transform: uppercase;
+}
 /* Break filter form on year and campus */
 
 div.js-form-item-field-ceremony-year-value {
@@ -582,21 +600,17 @@ div.js-form-item.form-item.js-form-type-textfield.form-type-textfield {
 #views-exposed-form-search-page-1 > div >
 div.js-form-item.form-item.js-form-type-select.form-type-select {
   display: inline-block;
-  margin-top: 40px;
 }
 
 #views-exposed-form-site-search-page-1 > div >
 div.js-form-item.form-item.js-form-type-select.form-type-select {
   display: inline-block;
-  margin-top: 40px;
 }
 
 #views-exposed-form-search-page-1 #edit-actions {
-  margin-top: 40px;
 }
 
 #views-exposed-form-site-search-page-1 [id^="edit-actions"] {
-  margin-top: 40px;
 }
 
 div#block-exposedformsearchpage-1 div#edit-actions {
@@ -772,6 +786,12 @@ div.js-form-item.form-item.js-form-type-vertical-tabs.form-type-vertical-tabs.js
 
 article.node--type-static-page img {
   padding: 20px;
+}
+
+/* Contact form */
+
+#edit-copy {
+  width: auto;
 }
 
 /* Content */

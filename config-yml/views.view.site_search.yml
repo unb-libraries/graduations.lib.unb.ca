@@ -215,7 +215,7 @@ display:
           exposed: true
           expose:
             operator_id: search_api_fulltext_op
-            label: Search
+            label: 'Search keywords'
             description: ''
             use_operator: false
             operator: search_api_fulltext_op
@@ -255,7 +255,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          order: ASC
+          order: DESC
           exposed: true
           expose:
             label: Order
