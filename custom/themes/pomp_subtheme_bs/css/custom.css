@@ -899,12 +899,6 @@ a.btn-btt {
   vertical-align: top !important;
 }
 
-#edit-combine {
-  width: 64.3vw !important;
-  min-width: 240px;
-  margin-right: 42px;
-}
-
 /* View degree */
 
 .view-degree table {
@@ -1009,6 +1003,13 @@ div.floated-fig {
   margin-right: .25rem;
 }
 
+@media(min-width: 992px) {
+  #edit-combine {
+    width: 807px !important;
+    min-width: 240px;
+    margin-right: 42px;
+  }
+}
 
 @media(max-width: 991px) {
   #block-pomp-subtheme-bs-exposedformsearchpage-1,

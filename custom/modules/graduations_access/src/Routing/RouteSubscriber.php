@@ -20,7 +20,6 @@ class RouteSubscriber extends RouteSubscriberBase {
       'user.pass',
       'user.register',
       'user.reset',
-      'entity.user.edit_form',
     ];
 
     // Get current user account object.
