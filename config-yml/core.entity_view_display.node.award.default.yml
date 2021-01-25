@@ -36,7 +36,7 @@ content:
     region: content
   field_citation:
     weight: 12
-    label: visually_hidden
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default

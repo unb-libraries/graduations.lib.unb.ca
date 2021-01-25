@@ -901,6 +901,10 @@ a.btn-btt {
 
 /* View degree */
 
+#award h2.h4 {
+  margin-top: 2rem;
+}
+
 .view-degree table {
   font-size: 14px !important;
   table-layout: fixed !important;
@@ -995,6 +999,12 @@ div.floated-fig {
 
 .floated-fig img {
   margin-bottom: .5rem;
+}
+
+.unfloat {
+  float: none !important;
+  margin: 2rem 0 0 0 !important;
+  padding: 0 !important;
 }
 
 /* Admin Toolbar Vertical Orientation */

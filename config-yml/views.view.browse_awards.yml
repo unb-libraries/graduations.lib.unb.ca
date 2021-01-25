@@ -610,7 +610,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<table>\r\n<tr>\r\n<td>\r\n{%- if  field_honorary_degree -%}\r\n<strong>{{ field_recipient }} </strong><span>{{ field_honorary_degree }}</span>\r\n<br><span>Honorary Degree</span>\r\n{%- elseif field_faculty_award_type -%}\r\n<strong>{{ field_recipient }} </strong><br><span>{{ field_faculty_award_type }}</span>\r\n{%- elseif field_grad_award_type -%}\r\n<strong>{{ field_recipient }} </strong><br><span>{{ field_grad_award_type }}</span>\r\n{%- else -%}\r\n<strong>{{ field_recipient }} </strong><br><span>{{ field_award_type }}</span>\r\n{%- endif -%}\r\n<p>Awarded at the {{ title_1 }}<br>\r\nOrator: {{ field_orator_name }}</p>\r\n</td>\r\n<td>\r\n<figure>\r\n{{ field_image }}\r\n</figure>\r\n</td>\r\n</tr>\r\n</table>"
+            text: "<table>\r\n<tr>\r\n<td>\r\n{%- if  field_honorary_degree -%}\r\n<strong>{{ field_recipient }} </strong><span>{{ field_honorary_degree }}</span>\r\n<br><strong>Honorary Degree</strong>\r\n{%- elseif field_faculty_award_type -%}\r\n<strong>{{ field_recipient }} </strong><br><strong>{{ field_faculty_award_type }}</strong>\r\n{%- elseif field_grad_award_type -%}\r\n<strong>{{ field_recipient }} </strong><br><strong>{{ field_grad_award_type }}</strong>\r\n{%- else -%}\r\n<strong>{{ field_recipient }} </strong><br><strong>{{ field_award_type }}</strong>\r\n{%- endif -%}\r\n<p>Awarded at the {{ title_1 }}<br>\r\nOrator: {{ field_orator_name }}</p>\r\n</td>\r\n<td>\r\n<figure>\r\n{{ field_image }}\r\n</figure>\r\n</td>\r\n</tr>\r\n</table>"
             make_link: false
             path: ''
             absolute: false

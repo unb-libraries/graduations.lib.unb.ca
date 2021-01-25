@@ -78,10 +78,10 @@
     <i class="fa fa-caret-left"></i>{{ " #{ceremony_title}" }}
   </a>
 
-  <h1 class>{{ award_recipient }}</h2>
+  <h1>{{ award_recipient }}</h2>
 
   {% if degree_description %}
-    <h2>{{ "Degree conferred: #{degree_description} (#{degree_short})"}}</h2>
+    <p class="h4">{{ "#{degree_description} (#{degree_short})"}}</p>
   {%- endif -%}
 
   {% if faculty_award %}
@@ -108,14 +108,23 @@
       </div>
     {% endif %}
 
-    {% if content.field_citation['#items'] %}
-      {{ content.field_citation }}
-    {%- endif -%}
+    <h2 class="h4"><strong>Citation:</strong></h2>
+    {{ content.field_citation }}
     <br>
 
     <strong>
       Citations may be reproduced for research purposes only. Publication in whole or in part requires
       written permission from the author.
     </strong>
+  {%- else -%}
+    {%- if content.field_image['#items'] -%}
+      <div class="floated-fig unfloat">
+        <figure>
+          {{ content.field_image }}
+          <figcaption>{{ content.field_image_caption }}</figcaption>
+          <figcaption>{{ content.field_image_caption2 }}</figcaption>
+        </figure>
+      </div>
+    {% endif %}
   {%- endif -%}
 </div>

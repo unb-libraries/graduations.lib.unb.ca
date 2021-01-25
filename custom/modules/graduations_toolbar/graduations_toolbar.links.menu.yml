@@ -9,13 +9,13 @@ graduations_toolbar.admin:
       class:
         - custom-editor-menu
 graduations_toolbar.graduation_ceremony.add:
-  title: 'New Graduation Ceremony'
+  title: 'Create New Graduation Ceremony'
   description: 'Add new graduation ceremony.'
   url: internal:/node/add/graduation_ceremony
   parent: graduations_toolbar.admin
   weight: 10
 graduations_toolbar.static_page.add:
-  title: 'New Page'
+  title: 'Create New Page'
   description: 'Add new static page.'
   url: internal:/node/add/static_page
   parent: graduations_toolbar.admin
