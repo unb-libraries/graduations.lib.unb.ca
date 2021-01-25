@@ -20,8 +20,8 @@ class PompBrowse extends BlockBase {
    */
   public function build() {
     $text = '
-      <p><a href="/ceremonies">Browse Graduation Ceremonies</a></p>
-      <p><a href="/awards">Browse Honorary Degrees and Awards</a></p>
+      <p><a href="/ceremonies"><span class="sr-only">Browse </span>Graduation Ceremonies</a></p>
+      <p><a href="/awards"><span class="sr-only">Browse </span>Honorary Degrees and Awards</a></p>
     ';
 
     return [
