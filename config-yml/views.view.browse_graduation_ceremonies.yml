@@ -245,7 +245,7 @@ display:
             operator_list: {  }
             identifier: field_campus_target_id
             required: false
-            remember: true
+            remember: false
             multiple: false
             remember_roles:
               anonymous: anonymous
@@ -293,7 +293,7 @@ display:
             operator_list: {  }
             identifier: field_season_target_id
             required: false
-            remember: true
+            remember: false
             multiple: false
             remember_roles:
               anonymous: anonymous
