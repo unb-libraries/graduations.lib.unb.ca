@@ -74,7 +74,7 @@
 #}
 <div id="award">
   <br>
-  <a href="{{ ceremony_id }}" class="h4">
+  <a href="{{ "/ceremony/#{ceremony_id}" }}" class="h4">
     <i class="fa fa-caret-left"></i>{{ " #{ceremony_title}" }}
   </a>
 
@@ -108,14 +108,17 @@
       </div>
     {% endif %}
 
-    <h2 class="h4"><strong>Citation:</strong></h2>
-    {{ content.field_citation }}
-    <br>
+    {% if content.field_citation['#items'] %}
+      <h2 class="h4"><strong>Citation:</strong></h2>
+      {{ content.field_citation }}
+      <br>
 
-    <strong>
-      Citations may be reproduced for research purposes only. Publication in whole or in part requires
-      written permission from the author.
-    </strong>
+      <strong>
+        Citations may be reproduced for research purposes only. Publication in whole or in part requires
+        written permission from the author.
+      </strong>
+    {% endif %}
+
   {%- else -%}
     {%- if content.field_image['#items'] -%}
       <div class="floated-fig unfloat">
