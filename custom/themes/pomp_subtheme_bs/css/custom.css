@@ -3,8 +3,8 @@ gray 1: #F0F0F0;
 gray 2: #DADADA;
 gray 3: #555555;
 gray 4: #333333;
-red 1:  #C01700;
-red 2:  #880404;
+red 1:  #C01720;
+red 2:  #880414;
 red 3:  #A01300;
 /*
 
@@ -74,7 +74,7 @@ img.align-left {
 
 .dialog-off-canvas-main-canvas a,
 .dialog-off-canvas-main-canvas a:visited {
-  color: #C01700;
+  color: #C01720;
 }
 
 .dialog-off-canvas-main-canvas a:active,
@@ -82,7 +82,7 @@ img.align-left {
 .dialog-off-canvas-main-canvas a:focus-within,
 .dialog-off-canvas-main-canvas a:hover {
   text-decoration: underline;
-  color: #880404;
+  color: #880414;
 }
 
 button, button:active {
@@ -93,8 +93,8 @@ button, button:active {
 
 .dialog-off-canvas-main-canvas button:not(#edit-reset),
 .dialog-off-canvas-main-canvas button:visited:not(#edit-reset) {
-  background-color: #C01700;
-  border-color: #C01700;
+  background-color: #C01720;
+  border-color: #C01720;
   color: white;
   font-weight: 600;
 }
@@ -103,15 +103,15 @@ button, button:active {
 .dialog-off-canvas-main-canvas button:focus:not(#edit-reset),
 .dialog-off-canvas-main-canvas button:focus-within:not(#edit-reset),
 .dialog-off-canvas-main-canvas button:hover:not(#edit-reset) {
-  background-color: #880404 !important;
-  border-color: #880404 !important;
+  background-color: #880414 !important;
+  border-color: #880414 !important;
   color: white !important;
 
 }
 
 .pagination .pager__item a,
 .pagination .pager__item a:visited {
-  color: #C01700;
+  color: #C01720;
 }
 
 .pagination .pager__item a:active,
@@ -119,8 +119,8 @@ button, button:active {
 .pagination .pager__item a:focus-within,
 .pagination .pager__item a:hover,
 .pagination .pager__item.active a {
-  background-color: #C01700 !important;
-  border-color: #C01700 !important;
+  background-color: #C01720 !important;
+  border-color: #C01720 !important;
   color: white !important;
 }
 
@@ -163,7 +163,7 @@ th {
 }
 
 select:focus option:checked {
-  background: linear-gradient(#C01700,  #C01700) !important;
+  background: linear-gradient(#C01720,  #C01720) !important;
 }
 
 .page-title {
@@ -186,7 +186,7 @@ select:focus option:checked {
 
 
 div#block-pomp-subtheme-branding > div.site-name > a:hover, a:focus {
-  color: #880404 !important;
+  color: #880414 !important;
   text-decoration: none;
 }
 
@@ -246,7 +246,7 @@ button.navbar-toggle[data-toggle='collapse']:focus {
 #navbar li a:hover,
 #navbar li a:focus,
 #navbar li a.is-active {
-  background-color: #C01700;
+  background-color: #C01720;
 }
 
 /* Slideshow */
@@ -329,7 +329,7 @@ button.navbar-toggle[data-toggle='collapse']:focus {
 /* Task Menu */
 
 .tabs a.is-active {
-    background-color: #C01700 !important;
+    background-color: #C01720 !important;
     color: white !important;
 }
 
@@ -478,18 +478,18 @@ input#edit-reset {
 }
 
 div#block-pomp-subtheme-content a:link, a:visited {
-  color: #C01700;
+  color: #C01720;
 }
 
 div#block-pomp-subtheme-content a:hover, a:focus {
   text-decoration: underline;
-  color: #880404;
+  color: #880414;
 }
 
 div.clearfix.text-formatted.field.field--type-text-with-summary
 a:hover, a:focus {
   text-decoration: underline;
-  color: #880404;
+  color: #880414;
 }
 
 .template-ceremony {
@@ -820,12 +820,12 @@ div.region.region-footer > div {
 }
 
 footer#footer a:link, a:visited {
-  color: #C01700;
+  color: #C01720;
 }
 
 footer#block-honoraryfooter > a:hover, a:focus {
   text-decoration: underline;
-  color: #880404;
+  color: #880414;
 }
 
 #footer-logo {
@@ -843,13 +843,13 @@ footer#block-honoraryfooter > a:hover, a:focus {
 #block-useraccountmenu a:link,
 #block-useraccountmenu a:visited {
   visibility: visible !important;
-  color: #C01700 !important;
+  color: #C01720 !important;
 }
 
 #block-useraccountmenu a:hover,
 #block-useraccountmenu a:focus {
   text-decoration: underline !important;
-  color: #880404 !important;
+  color: #880414 !important;
 }
 
 #block-useraccountmenu ul {
