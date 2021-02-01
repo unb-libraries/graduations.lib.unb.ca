@@ -676,6 +676,24 @@ tr.pomp-browse-content-row:nth-child(odd) {
   font-size: 1.1em;
 }
 
+#graduation_ceremony .file {
+  display: table-cell;
+}
+
+#graduation_ceremony .file > span {
+  border: none;
+  vertical-align: baseline;
+  font-size: 14px;
+}
+
+#graduation_ceremony .file-size::before {
+  content: "("
+}
+
+#graduation_ceremony .file-size::after {
+  content: ")"
+}
+
 /* Ceremony Edit */
 
 div[data-drupal-selector="edit-field-ceremony-notes-0-format"] {
