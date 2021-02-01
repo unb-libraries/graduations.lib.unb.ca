@@ -80,16 +80,14 @@
 
   <h1>{{ award_recipient }}</h2>
 
-  {% if degree_description %}
+  {% if award_type == 'Honorary Degree' %}
     <p class="h4">{{ "#{degree_description} (#{degree_short})"}}</p>
-  {%- endif -%}
-
-  {% if faculty_award %}
-    <h2>{{ "Faculty award: #{faculty_award}"}}</h2>
-  {%- endif -%}
-
-  {% if grad_award %}
-    <h2>{{ "Graduate award: #{grad_award}"}}</h2>
+  {% elseif award_type == 'Faculty Award/Honour' %}
+    <p class="h4">{{ "Faculty award: #{faculty_award}"}}</p>
+  {% elseif award_type == 'Graduate Award' %}
+    <p class="h4">{{ "Graduate award: #{grad_award}"}}</p>
+  {% elseif award_type == 'Professor Emeritus' %}
+    <p class="h4">Professor Emeritus</p>
   {%- endif -%}
 
   {%- if orator -%}

@@ -37,6 +37,15 @@ function award_preprocess_node__award(&$variables) {
     $debug = $ceremony_title;
   }
 
+  // Pass award type.
+  $award_type_id = $award_node->field_award_type->getString();
+
+  if ($award_type_id) {
+    $award_type_term = Term::load($award_type_id);
+    $award_type = $award_type_term->getName();
+    $variables['award_type'] = $award_type;
+  }
+
   // Pass award recipient.
   $recipient = $award_node->field_recipient->getString();
   $variables['award_recipient'] = $recipient;
