@@ -750,6 +750,14 @@ a[data-toggle="tab"] svg {
   display: none;
 }
 
+.ief-entity-operations > button:not(:first-of-type) {
+  margin-left: 1rem;
+}
+
+.tabledrag-toggle-weight {
+  display: none;
+}
+
 /* Address Edit */
 
 div[data-drupal-selector="edit-field-address-content-0-format"] {

@@ -11,7 +11,7 @@ id: node.graduation_ceremony.field_ceremony_files
 field_name: field_ceremony_files
 entity_type: node
 bundle: graduation_ceremony
-label: Files
+label: 'Ceremony Documents'
 description: ''
 required: false
 translatable: false
