@@ -1,5 +1,0 @@
-name: pomp_cer_title
-type: module
-description: Auto-create ceremony node title.
-core: 8.x
-package: POMP

@@ -1,8 +1,0 @@
-type: module
-name: Pomp Migration
-description: 'Migrate pomp_raw database to D8.'
-package: POMP
-core: 8.x
-dependencies:
-  - migrate_tools
-  - migrate_plus

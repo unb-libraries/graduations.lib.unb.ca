@@ -1,5 +1,0 @@
-pomp_add_linking.edit_addresses:
-  route_name: pomp_add_linking.edit_addresses
-  title: 'Addresses'
-  base_route: entity.node.canonical
-  weight: 100

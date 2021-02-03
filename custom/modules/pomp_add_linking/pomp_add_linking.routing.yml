@@ -1,7 +1,0 @@
-pomp_add_linking.edit_addresses:
-  path: '/ceremony/{node}/addresses/edit'
-  defaults:
-    _form: '\Drupal\pomp_add_linking\Form\EditAddressesForm'
-  requirements:
-    _role: 'pomp_content_editor'
-    _custom_access: '\Drupal\pomp_add_linking\Controller\PompAddLinkingCheckTypeController::checkType'

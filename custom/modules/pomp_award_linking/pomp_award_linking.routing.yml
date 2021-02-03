@@ -1,8 +1,0 @@
-pomp_award_linking.edit_awards:
-  path: '/ceremony/{node}/faculty_award/edit'
-  defaults:
-    _title: ''
-    _form: '\Drupal\pomp_award_linking\Form\EditAwardsForm'
-  requirements:
-    _role: 'pomp_content_editor'
-    _custom_access: '\Drupal\pomp_award_linking\Controller\PompAwardLinkingCheckTypeController::checkType'

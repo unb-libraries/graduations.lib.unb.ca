@@ -1,5 +1,0 @@
-name: pomp_add_linking
-type: module
-description: Link addresses to grad ceremony.
-core: 8.x
-package: POMP

@@ -1,5 +1,0 @@
-name: pomp_deg_linking
-type: module
-description: Link honorary degrees to grad ceremony.
-core: 8.x
-package: POMP

@@ -1,8 +1,0 @@
-name: POMP Emeritus Node
-type: module
-description: Professor Emeritus node formatting
-core: 8.x
-package: POMP
-
-dependencies:
-  - drupal:views

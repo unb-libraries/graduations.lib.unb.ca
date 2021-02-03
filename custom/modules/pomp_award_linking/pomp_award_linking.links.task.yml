@@ -1,5 +1,0 @@
-pomp_award_linking.edit_awards:
-  route_name: pomp_award_linking.edit_awards
-  title: 'Faculty Awards and Honours'
-  base_route: entity.node.canonical
-  weight: 100

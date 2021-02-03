@@ -1,9 +1,0 @@
-
-name: POMP Ceremony Node
-type: module
-description: Ceremony node formatting
-core: 8.x
-package: POMP
-
-dependencies:
-  - drupal:views
