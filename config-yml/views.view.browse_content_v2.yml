@@ -3,9 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - node.type.address
     - node.type.award
     - node.type.graduation_ceremony
-    - node.type.honorary_address
     - node.type.honorary_banner
     - node.type.static_page
     - user.role.administrator
@@ -14,7 +14,7 @@ dependencies:
     - node
     - user
 id: browse_content_v2
-label: 'Browse Content v2'
+label: 'Browse Content'
 module: views
 description: ''
 tag: ''
@@ -604,7 +604,7 @@ display:
           admin_label: ''
           operator: in
           value:
-            honorary_address: honorary_address
+            address: address
             award: award
             graduation_ceremony: graduation_ceremony
             static_page: static_page

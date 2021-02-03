@@ -8,7 +8,7 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: 'Graduation Ceremony v2'
+name: 'Graduation Ceremony'
 type: graduation_ceremony
 description: ''
 help: ''
