@@ -6,9 +6,9 @@
  * Remove old v1 data from graduations.lib.unb.ca v2.
  */
 
-delete_nodes('honorary_ceremony');
 delete_nodes('honorary_address');
 delete_nodes('honorary_degree');
+delete_nodes('honorary_ceremony');
 
 function delete_nodes($type) {
   $query = \Drupal::entityQuery('node');
