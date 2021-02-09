@@ -1,0 +1,25 @@
+uuid: 84a922c8-e7b7-4684-b5c1-de7d0d871b30
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - unb_lib_zircon
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: unb_lib_zircon_branding
+theme: unb_lib_zircon
+region: header
+weight: -5
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'UNB Honorary Degrees Database'
+  provider: system
+  label_display: '0'
+  use_site_logo: false
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

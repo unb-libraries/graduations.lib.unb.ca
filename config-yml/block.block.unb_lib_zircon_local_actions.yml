@@ -1,0 +1,20 @@
+uuid: 5415c9f3-f2cd-425f-a427-a7488cbc9b36
+langcode: en
+status: true
+dependencies:
+  theme:
+    - unb_lib_zircon
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: unb_lib_zircon_local_actions
+theme: unb_lib_zircon
+region: content
+weight: -7
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

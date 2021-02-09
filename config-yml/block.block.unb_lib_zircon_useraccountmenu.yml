@@ -1,0 +1,25 @@
+uuid: 005ea9a4-f060-448c-bf51-1b4a0d8caaec
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - unb_lib_zircon
+id: unb_lib_zircon_useraccountmenu
+theme: unb_lib_zircon
+region: footer
+weight: -4
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,20 @@
+uuid: 8f483c28-58c1-4df5-8250-742b309c94a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - pomp_core
+  theme:
+    - unb_lib_zircon
+id: unb_lib_zircon_honoraryfooter_2
+theme: unb_lib_zircon
+region: footer
+weight: -5
+provider: null
+plugin: pomp_footer
+settings:
+  id: pomp_footer
+  label: 'Honorary Footer'
+  provider: pomp_core
+  label_display: '0'
+visibility: {  }

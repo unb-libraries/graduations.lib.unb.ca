@@ -1,0 +1,27 @@
+uuid: 989be23e-4cd1-4ea8-bc6a-10b89cb03333
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - unb_lib_zircon
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: unb_lib_zircon_page_title
+theme: unb_lib_zircon
+region: content
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/ceremonies*\r\n/awards*\r\n/about\r\n/traditions\r\n/orators\r\n/cattley\r\n/acknowledgments\r\n/contact\r\n/node/*/edit"
+    negate: false
+    context_mapping: {  }

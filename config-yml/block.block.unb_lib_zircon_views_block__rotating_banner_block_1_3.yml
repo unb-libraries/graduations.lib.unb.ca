@@ -1,0 +1,30 @@
+uuid: 0b173118-5991-4729-a416-1e90777f7ae4
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.rotating_banner
+  module:
+    - system
+    - views
+  theme:
+    - unb_lib_zircon
+id: unb_lib_zircon_views_block__rotating_banner_block_1_3
+theme: unb_lib_zircon
+region: header
+weight: -8
+provider: null
+plugin: 'views_block:rotating_banner-block_1'
+settings:
+  id: 'views_block:rotating_banner-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/about\r\n/traditions\r\n/orators\r\n/acknowledgements\r\n/cattley\r\n/effervescences\r\n"
+    negate: false
+    context_mapping: {  }

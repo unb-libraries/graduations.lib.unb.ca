@@ -1,0 +1,26 @@
+uuid: 739e236f-e378-498e-b553-52940e219783
+langcode: en
+status: true
+dependencies:
+  module:
+    - pomp_core
+    - system
+  theme:
+    - unb_lib_zircon
+id: unb_lib_zircon_browse_2
+theme: unb_lib_zircon
+region: header
+weight: -5
+provider: null
+plugin: pomp_browse
+settings:
+  id: pomp_browse
+  label: Browse
+  provider: pomp_core
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/search"
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,22 @@
+uuid: 72144c73-badc-46cc-b07b-90d159fe451e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - unb_lib_zircon
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: unb_lib_zircon_content
+theme: unb_lib_zircon
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

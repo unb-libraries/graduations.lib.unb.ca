@@ -1,0 +1,28 @@
+uuid: 3a3f1cd1-1e0c-4e0a-adac-b1781a845b1f
+langcode: en
+status: false
+dependencies:
+  module:
+    - pomp_core
+    - user
+  theme:
+    - unb_lib_zircon
+id: unb_lib_zircon_managecontent_2
+theme: unb_lib_zircon
+region: footer
+weight: -6
+provider: null
+plugin: pomp_content_man
+settings:
+  id: pomp_content_man
+  label: 'Manage Content'
+  provider: pomp_core
+  label_display: '0'
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      pomp_content_editor: pomp_content_editor
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

@@ -1,0 +1,22 @@
+uuid: 93c03264-6ca4-41e7-9a1e-0e4e56235b48
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - unb_lib_zircon
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: unb_lib_zircon_messages
+theme: unb_lib_zircon
+region: header
+weight: -6
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

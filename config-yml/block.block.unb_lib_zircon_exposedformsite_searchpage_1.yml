@@ -1,0 +1,29 @@
+uuid: eb743693-275e-49f4-b5b7-342e4bbe0129
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.site_search
+  module:
+    - system
+    - views
+  theme:
+    - unb_lib_zircon
+id: unb_lib_zircon_exposedformsite_searchpage_1
+theme: unb_lib_zircon
+region: header
+weight: -7
+provider: null
+plugin: 'views_exposed_filter_block:site_search-page_1'
+settings:
+  id: 'views_exposed_filter_block:site_search-page_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: "/search*\r\n<front>"
+    negate: false
+    context_mapping: {  }

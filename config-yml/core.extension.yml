@@ -73,6 +73,8 @@ theme:
   seven: 0
   bootstrap: 0
   pomp_subtheme_bs: 0
+  bootstrap4: 0
+  unb_lib_zircon: 0
 profile: minimal
 _core:
   default_config_hash: m2GVq11UAOVuNgj8x0t5fMOPujpvQQ_zxLoaly1BMEU
