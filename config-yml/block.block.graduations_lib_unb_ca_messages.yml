@@ -1,0 +1,22 @@
+uuid: d497bae6-c6d9-4489-b8e4-37a98372254b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - graduations_lib_unb_ca
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: graduations_lib_unb_ca_messages
+theme: graduations_lib_unb_ca
+region: header
+weight: -6
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

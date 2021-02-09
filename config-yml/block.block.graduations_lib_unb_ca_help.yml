@@ -1,0 +1,22 @@
+uuid: 6d74f9de-4f2c-45e6-a201-d5d66b2f57e1
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - graduations_lib_unb_ca
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: graduations_lib_unb_ca_help
+theme: graduations_lib_unb_ca
+region: content
+weight: -7
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

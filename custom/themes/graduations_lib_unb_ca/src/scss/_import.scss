@@ -1,3 +1,5 @@
-// Variable overrides.
+// Base theme.
+@import '../../../../../vendor/unb-libraries/unb_lib_zircon/src/scss/style.scss';
 
-// Custom variables.
+// Variable overrides.
+@import 'overrides/variables';

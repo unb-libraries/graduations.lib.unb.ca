@@ -1,0 +1,20 @@
+uuid: cce08709-a005-4565-a801-79a2cd2fdfb3
+langcode: en
+status: true
+dependencies:
+  module:
+    - pomp_core
+  theme:
+    - graduations_lib_unb_ca
+id: graduations_lib_unb_ca_honoraryfooter_2
+theme: graduations_lib_unb_ca
+region: footer
+weight: -5
+provider: null
+plugin: pomp_footer
+settings:
+  id: pomp_footer
+  label: 'Honorary Footer'
+  provider: pomp_core
+  label_display: '0'
+visibility: {  }

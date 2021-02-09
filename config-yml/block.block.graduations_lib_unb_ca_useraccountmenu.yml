@@ -1,0 +1,25 @@
+uuid: 61b410c8-a7bb-4cac-aacf-7affa37d6eb0
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - graduations_lib_unb_ca
+id: graduations_lib_unb_ca_useraccountmenu
+theme: graduations_lib_unb_ca
+region: footer
+weight: -4
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

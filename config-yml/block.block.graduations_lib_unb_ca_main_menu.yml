@@ -1,0 +1,27 @@
+uuid: 6e2b90d5-4e72-4c48-a33c-d5b43316a767
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - graduations_lib_unb_ca
+_core:
+  default_config_hash: rx9IrdDv7Ldc4kpalZAxdhIPZfYIeOMh1N-qKoQZwHo
+id: graduations_lib_unb_ca_main_menu
+theme: graduations_lib_unb_ca
+region: header
+weight: -7
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,29 @@
+uuid: 29225d4c-978d-4d4d-b21d-5876cef81537
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.site_search
+  module:
+    - system
+    - views
+  theme:
+    - graduations_lib_unb_ca
+id: graduations_lib_unb_ca_exposedformsite_searchpage_1
+theme: graduations_lib_unb_ca
+region: header
+weight: -7
+provider: null
+plugin: 'views_exposed_filter_block:site_search-page_1'
+settings:
+  id: 'views_exposed_filter_block:site_search-page_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: "/search*\r\n<front>"
+    negate: false
+    context_mapping: {  }

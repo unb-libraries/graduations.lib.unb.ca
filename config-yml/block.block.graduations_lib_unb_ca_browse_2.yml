@@ -1,0 +1,26 @@
+uuid: dbae78c6-8259-4d2e-af10-c00a0c5d2963
+langcode: en
+status: true
+dependencies:
+  module:
+    - pomp_core
+    - system
+  theme:
+    - graduations_lib_unb_ca
+id: graduations_lib_unb_ca_browse_2
+theme: graduations_lib_unb_ca
+region: header
+weight: -5
+provider: null
+plugin: pomp_browse
+settings:
+  id: pomp_browse
+  label: Browse
+  provider: pomp_core
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/search"
+    negate: false
+    context_mapping: {  }
