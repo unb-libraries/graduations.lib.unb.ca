@@ -9,7 +9,7 @@ _core:
 id: graduations_lib_unb_ca_local_actions
 theme: graduations_lib_unb_ca
 region: content
-weight: -7
+weight: 0
 provider: null
 plugin: local_actions_block
 settings:

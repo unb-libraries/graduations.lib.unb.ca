@@ -9,8 +9,8 @@ dependencies:
     - graduations_lib_unb_ca
 id: graduations_lib_unb_ca_browse_2
 theme: graduations_lib_unb_ca
-region: header
-weight: -5
+region: content
+weight: -4
 provider: null
 plugin: pomp_browse
 settings:

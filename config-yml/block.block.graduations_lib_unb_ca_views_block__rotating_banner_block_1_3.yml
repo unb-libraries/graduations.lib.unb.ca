@@ -11,8 +11,8 @@ dependencies:
     - graduations_lib_unb_ca
 id: graduations_lib_unb_ca_views_block__rotating_banner_block_1_3
 theme: graduations_lib_unb_ca
-region: header
-weight: -8
+region: content
+weight: -6
 provider: null
 plugin: 'views_block:rotating_banner-block_1'
 settings:
