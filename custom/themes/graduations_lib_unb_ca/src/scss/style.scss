@@ -20,3 +20,19 @@ div.views-exposed-form.block-views + div.block {
     margin: 0 !important;
   }
 }
+
+// Page title block.
+div.block-page-title-block {
+  h1 {
+    text-align: left !important;
+  }
+}
+
+// Main content block.
+div.block-system-main-block {
+  background-color: initial !important;
+
+  p {
+    text-align: justify;
+  }
+}
