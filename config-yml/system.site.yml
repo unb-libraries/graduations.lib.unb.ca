@@ -1,11 +1,11 @@
 uuid: 52bca593-2542-4a35-9ebd-1da0d40bf67b
-name: 'POMP AND CIRCUMSTANCE'
+name: 'Pomp And Circumstance'
 mail: libsupport@unb.ca
 slogan: 'Graduation Ceremonies 1828 - Present'
 page:
   403: ''
   404: ''
-  front: /intro
+  front: /node/1916
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en
