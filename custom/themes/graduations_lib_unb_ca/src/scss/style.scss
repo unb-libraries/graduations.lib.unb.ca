@@ -1,12 +1,14 @@
 // Import Sass files.
 @import 'import';
 
+// Broad — Careful here.
+// All exposed filter form 'sort bys'.
+div.form-item-sort-by {
+  display: none;
+}
+
 // Exposed form block.
 div.views-exposed-form.block-views {
-  #edit-sort-by {
-    display: none;
-  }
-
   .form-type-textfield {
     width: 70% !important;
   }
