@@ -1,2 +1,22 @@
 // Import Sass files.
 @import 'import';
+
+// Exposed form block.
+div.views-exposed-form.block-views {
+  #edit-sort-by {
+    display: none;
+  }
+
+  .form-type-textfield {
+    width: 70% !important;
+  }
+}
+
+// Browse block.
+div.views-exposed-form.block-views + div.block {
+  height: 8.5rem !important;
+
+  p {
+    margin: 0 !important;
+  }
+}

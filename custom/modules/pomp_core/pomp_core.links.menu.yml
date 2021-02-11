@@ -10,7 +10,7 @@ pomp_core.browse-search:
   description: 'Browse/Search'
   parent: main
   menu_name: main
-  url: internal:/
+  url: route:<nolink>
   expanded: TRUE
   weight: 20
 pomp_core.browse-ceremonies:
