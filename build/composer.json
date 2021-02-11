@@ -72,6 +72,81 @@
             "type": "package"
         },
         {
+            "type": "package",
+            "package": {
+                "name": "jquery/cycle",
+                "version": "3.0.3",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "jquery.cycle"
+                },
+                "dist": {
+                    "url": "https://github.com/malsup/cycle/archive/3.0.3.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "jquery/hover_intent",
+                "version": "1.10.0",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "jquery.hoverIntent"
+                },
+                "dist": {
+                    "url": "https://github.com/briancherne/jquery-hoverIntent/archive/v1.10.0.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "jquery/json2",
+                "version": "dev-master",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "json2"
+                },
+                "dist": {
+                    "url": "https://github.com/douglascrockford/JSON-js/archive/master.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "jquery/pause",
+                "version": "dev-master",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "jquery.pause"
+                },
+                "dist": {
+                    "url": "https://github.com/tobia/Pause/archive/master.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "unb-libraries/font_awesome",
+                "version": "5.14.0",
+                "type": "drupal-library",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://github.com/FortAwesome/Font-Awesome/archive/5.14.0.zip"
+                },
+                "extra": {
+                    "installer-name": "fontawesome"
+                }
+            }
+        },        
+        {
             "package": {
                 "name": "drupal/login_return_page",
                 "source": {
