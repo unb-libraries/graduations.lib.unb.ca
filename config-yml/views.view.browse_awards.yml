@@ -16,8 +16,8 @@ dependencies:
     - taxonomy.vocabulary.campus
     - taxonomy.vocabulary.season
   content:
-    - 'taxonomy_term:campus:0ea721cc-c13f-4189-9cff-b946a92f6d0a'
-    - 'taxonomy_term:campus:ed33429e-4deb-4f1a-9eb9-4c3efccaa4b7'
+    - 'taxonomy_term:address_type:4cb32dd7-d030-47cd-99d8-d9121cbb6374'
+    - 'taxonomy_term:campus:d4bdb422-e58e-4aae-bec9-09ac698ffa78'
   module:
     - image
     - node
@@ -82,7 +82,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          quantity: 9
+          quantity: 5
       style:
         type: default
         options:
