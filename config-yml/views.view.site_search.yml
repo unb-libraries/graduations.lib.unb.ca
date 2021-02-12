@@ -42,7 +42,7 @@ display:
           expose_sort_order: true
           sort_asc_label: 'Oldest first'
           sort_desc_label: 'Newest first'
-          text_input_required: '<p>Type any keywords and click on Go to see results.</p>'
+          text_input_required: ''
           text_input_required_format: full_html
       pager:
         type: full
@@ -216,7 +216,7 @@ display:
           expose:
             operator_id: search_api_fulltext_op
             label: 'Search keywords'
-            description: ''
+            description: 'Type any keywords and click on Go to see results.'
             use_operator: false
             operator: search_api_fulltext_op
             operator_limit_selection: false
@@ -272,7 +272,7 @@ display:
           expose:
             label: ''
           plugin_id: search_api
-      title: SEARCH
+      title: Search
       header:
         result:
           id: result

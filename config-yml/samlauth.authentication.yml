@@ -14,7 +14,7 @@ logout_menu_item_title: ''
 drupal_saml_login: false
 login_redirect_url: ''
 logout_redirect_url: ''
-sp_entity_id: 'https://graduations.lib.unb.ca'
+sp_entity_id: 'https://dev-graduations.lib.unb.ca'
 sp_name_id_format: ''
 sp_x509_certificate: ''
 sp_private_key: ''

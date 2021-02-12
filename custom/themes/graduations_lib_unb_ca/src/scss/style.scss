@@ -2,7 +2,7 @@
 @import 'import';
 
 // Broad — Careful here.
-// All exposed filter form 'sort bys'.
+// All filter form sort-bys.
 div.form-item-sort-by {
   display: none;
 }
@@ -14,10 +14,29 @@ div.views-exposed-form.block-views {
   }
 }
 
+// Browse Graduation Ceremonies view.
+#views-exposed-form-browse-graduation-ceremonies-page-1 {
+  // Break on Graduation Ceremony filter.
+  .form-item-field-season-target-id {
+    margin-right: 49%;
+  }
+}
+
+// Browse Awards.
+#views-exposed-form-browse-awards-page-1 {
+  // Break on Search filter.
+  .form-item-combine {
+    margin-right: 24%;
+    width: 73.5%;
+  }
+  // Break on Award Type filter.
+  .form-item-field-award-type-target-id {
+    margin-right: 24%;
+  }
+}
+
 // Browse block.
 div.views-exposed-form.block-views + div.block {
-  height: 8.5rem !important;
-
   p {
     margin: 0 !important;
   }
@@ -33,6 +52,10 @@ div.block-page-title-block {
 // Main content block.
 div.block-system-main-block {
   background-color: initial !important;
+
+  #ceremony-link {
+    margin-bottom: 2rem;
+  }
 
   p {
     text-align: justify;

@@ -74,20 +74,21 @@
 #}
 <div id="award">
   <br>
-  <a href="{{ "/ceremony/#{ceremony_id}" }}" class="h4">
+  <a id="ceremony-link" href="{{ "/ceremony/#{ceremony_id}" }}" class="h5">
     <i class="fa fa-caret-left"></i>{{ " #{ceremony_title}" }}
   </a>
+  <br>
 
   <h1>{{ award_recipient }}</h2>
 
   {% if award_type == 'Honorary Degree' %}
-    <p class="h4">{{ "#{degree_description} (#{degree_short})"}}</p>
+    <p class="h5">{{ "#{degree_description} (#{degree_short})"}}</p>
   {% elseif award_type == 'Faculty Award/Honour' %}
-    <p class="h4">{{ "Faculty award: #{faculty_award}"}}</p>
+    <p class="h5">{{ "Faculty award: #{faculty_award}"}}</p>
   {% elseif award_type == 'Graduate Award' %}
-    <p class="h4">{{ "Graduate award: #{grad_award}"}}</p>
+    <p class="h5">{{ "Graduate award: #{grad_award}"}}</p>
   {% elseif award_type == 'Professor Emeritus' %}
-    <p class="h4">Professor Emeritus</p>
+    <p class="h5">Professor Emeritus</p>
   {%- endif -%}
 
   {%- if orator -%}
