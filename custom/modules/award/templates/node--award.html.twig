@@ -79,7 +79,7 @@
   </a>
   <br>
 
-  <h1>{{ award_recipient }}</h2>
+  <h1 class="mt-3">{{ award_recipient }}</h2>
 
   {% if award_type == 'Honorary Degree' %}
     <p class="h5">{{ "#{degree_description} (#{degree_short})"}}</p>
@@ -92,7 +92,7 @@
   {%- endif -%}
 
   {%- if orator -%}
-    <h2>{{ "Orator: #{orator}" }}</h2>
+    <h2 class="multi-h2 h5">{{ "Orator: #{orator}" }}</h2>
   {%- endif -%}
 
   {%- if content.field_citation['#items'] -%}
@@ -108,7 +108,7 @@
     {% endif %}
 
     {% if content.field_citation['#items'] %}
-      <h2 class="h4"><strong>Citation:</strong></h2>
+      <h2 class="mt-3 multi-h2 h5"><strong>Citation:</strong></h2>
       {{ content.field_citation }}
       <br>
 

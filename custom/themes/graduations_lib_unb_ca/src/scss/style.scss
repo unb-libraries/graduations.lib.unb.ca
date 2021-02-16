@@ -21,8 +21,35 @@ div.views-exposed-form.block-views {
     margin-right: 49%;
   }
 }
-
 // Browse Awards.
+// Browse award rows.
+.browse-degree {
+  border-bottom: 1px solid #ececeb;
+}
+.browse-degree table {
+  table-layout: fixed !important;
+  width: 100% !important;
+  border: none !important;
+}
+.browse-degree tr td {
+  padding-bottom: 10px !important;
+  border: none !important;
+  background-color: white !important;
+}
+.browse-degree tr td:first-of-type {
+  padding-top: 1rem;
+  width: 80% !important;
+  vertical-align: top !important;
+  text-align: left !important;
+}
+.browse-degree tr td:last-of-type {
+  vertical-align: top !important;
+
+  a {
+    border-bottom: none !important;
+  }
+}
+// Exposed form.
 #views-exposed-form-browse-awards-page-1 {
   // Break on Search filter.
   .form-item-combine {
@@ -34,7 +61,10 @@ div.views-exposed-form.block-views {
     margin-right: 24%;
   }
 }
-
+// View footer.
+.view-footer {
+  margin-top: .5rem;
+}
 // Browse block.
 div.views-exposed-form.block-views + div.block {
   p {
@@ -52,12 +82,52 @@ div.block-page-title-block {
 // Main content block.
 div.block-system-main-block {
   background-color: initial !important;
-
+  // Ceremony node.
   #ceremony-link {
     margin-bottom: 2rem;
   }
-
+  // Floated figures.
+  div.floated-fig {
+    float: right;
+    margin: 0 10px 10px 10px;
+    padding: 0 10px 10px 10px;
+  }
+  .floated-fig figure {
+    display: table !important;
+    width: 200px;
+    -webkit-margin-before: 0px !important;
+    -webkit-margin-after: 0px !important;
+    -webkit-margin-start: 0px !important;
+    -webkit-margin-end: 0px !important;
+    background-color: $unb-halfgray !important;
+    border: 10px solid $unb-halfgray !important;
+  }
+  .floated-fig a {
+    border-bottom: none !important;
+  }
+  .floated-fig figcaption {
+    display: table-row !important;
+    font-size: 12px;
+  }
+  .floated-fig img {
+    margin: 0 0 .5rem 0 !important;
+  }
+  .unfloat {
+    float: none !important;
+    margin: 2rem 0 0 0 !important;
+    padding: 0 !important;
+  }
+  // Paragraphs.
   p {
     text-align: justify;
+  }
+  // "Traditions" page tables.
+  table#traditions-gowns th, table#traditions-gowns td,
+  table#traditions-hoods th, table#traditions-hoods td {
+    border: 1px solid $unb-gray;
+    padding: .5em;
+  }
+  table#traditions-hoods, table#traditions-gowns {
+    width: 80% !important;
   }
 }
