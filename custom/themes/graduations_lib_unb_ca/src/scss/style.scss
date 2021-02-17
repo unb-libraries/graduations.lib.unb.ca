@@ -7,6 +7,13 @@ div.form-item-sort-by {
   display: none;
 }
 
+// Bulk node operations.
+[id^="edit-node-bulk-form"] {
+  #edit-action {
+    width: 24%;
+  }
+}
+
 // Exposed form block.
 div.views-exposed-form.block-views {
   .form-type-textfield {
