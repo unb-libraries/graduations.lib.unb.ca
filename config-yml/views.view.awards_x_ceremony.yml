@@ -9,8 +9,11 @@ dependencies:
     - field.storage.node.field_orator_name
     - field.storage.node.field_recipient
     - node.type.award
+    - taxonomy.vocabulary.faculty_award_type
+    - taxonomy.vocabulary.grad_award_type
   module:
     - node
+    - taxonomy
     - user
 id: awards_x_ceremony
 label: 'Awards by Ceremony'
@@ -463,7 +466,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "{{- field_recipient -}} \r\n{%- if field_honorary_degree -%}\r\n{{- \" (#{field_honorary_degree})\" -}}\r\n{%- elseif field_faculty_award_type -%}\r\n{{- \" (#{field_faculty_award_type})\" -}}\r\n{%- elseif field_grad_award_type -%}\r\n{{- \" (#{field_grad_award_type})\" -}}\r\n{% endif %}\r\n"
+            text: "{%- if field_honorary_degree -%}\r\n{{- \"#{field_recipient} (#{field_honorary_degree})\" -}}\r\n{%- elseif field_faculty_award_type -%}\r\n{{- \"#{field_faculty_award_type} - #{field_recipient}\" -}}\r\n{%- elseif field_grad_award_type -%}\r\n{{- \"#{field_grad_award_type} - #{field_recipient}\" -}}\r\n{% else %}\r\n{{- field_recipient -}}\r\n{% endif %}\r\n"
             make_link: true
             path: '/node/{{ nid }}'
             absolute: false
@@ -528,6 +531,34 @@ display:
             operator_limit_selection: false
             operator_list: {  }
       sorts:
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          relationship: term_node_tid
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: standard
+        name_1:
+          id: name_1
+          table: taxonomy_term_field_data
+          field: name
+          relationship: term_node_tid_1
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: standard
         field_recipient_value:
           id: field_recipient_value
           table: node__field_recipient
@@ -555,6 +586,30 @@ display:
           required: false
           entity_type: node
           plugin_id: entity_reverse
+        term_node_tid:
+          id: term_node_tid
+          table: node_field_data
+          field: term_node_tid
+          relationship: none
+          group_type: group
+          admin_label: term_faculty_award_type
+          required: false
+          vids:
+            - faculty_award_type
+          entity_type: node
+          plugin_id: node_term_data
+        term_node_tid_1:
+          id: term_node_tid_1
+          table: node_field_data
+          field: term_node_tid
+          relationship: none
+          group_type: group
+          admin_label: term_graduate_award_type
+          required: false
+          vids:
+            - grad_award_type
+          entity_type: node
+          plugin_id: node_term_data
       arguments:
         nid:
           id: nid

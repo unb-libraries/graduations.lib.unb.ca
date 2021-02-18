@@ -85,13 +85,13 @@ $genders = [
 
 // Graduate award types for new content type as per POMP-125.
 $gradaward_types = [
+  'Alumni Gold Medal',
   'Douglas Gold Medal',
   'Governor General’s Gold Medal',
   'Governor General’s Silver Medal',
-  'Lieutenant Governor of New Brunswick’s Silver Medal',
-  'Alumni Gold Medal',
-  'Montgomery-Campbell Prize',
   'Ketchum Silver Medal',
+  'Lieutenant Governor of New Brunswick’s Silver Medal',
+  'Montgomery-Campbell Prize',
 ];
 
 // Honorary degree options for graduations.lib.unb.ca v2.
