@@ -765,7 +765,7 @@ display:
           entity_field: title
           plugin_id: string
       sorts: {  }
-      title: 'BROWSE CONTENT'
+      title: 'Browse Content'
       header: {  }
       footer: {  }
       empty: {  }

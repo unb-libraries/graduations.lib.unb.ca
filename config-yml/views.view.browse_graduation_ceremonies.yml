@@ -404,7 +404,7 @@ display:
           expose:
             label: ''
           plugin_id: standard
-      title: 'BROWSE GRADUATION CEREMONIES'
+      title: 'Browse Graduation Ceremonies'
       header:
         result:
           id: result
