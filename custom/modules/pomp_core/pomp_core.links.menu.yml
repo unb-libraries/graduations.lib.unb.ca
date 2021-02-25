@@ -67,7 +67,7 @@ pomp_core.contact:
   description: 'Contact'
   parent: main
   menu_name: main
-  url: internal:/contact
+  url: https://lib.unb.ca/contact-unb-libraries-staff?recipient=archives@unb.ca&subject=Pomp%20and%20Circumstance:%20Graduations%20Database
   weight: 70
 pomp_core.archives:
   title: 'Archives'
