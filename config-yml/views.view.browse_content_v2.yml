@@ -34,7 +34,7 @@ display:
             administrator: administrator
             pomp_content_editor: pomp_content_editor
       cache:
-        type: tag
+        type: none
         options: {  }
       query:
         type: views_query
