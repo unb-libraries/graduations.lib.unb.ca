@@ -1,0 +1,8 @@
+uuid: cafa4823-a145-46d6-b47e-2107d83586cb
+langcode: en
+status: true
+dependencies: {  }
+name: 'Emeritus Type'
+vid: emeritus_type
+description: ''
+weight: 0

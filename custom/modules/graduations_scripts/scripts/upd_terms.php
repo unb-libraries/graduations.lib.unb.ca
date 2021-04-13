@@ -23,7 +23,7 @@ $award_types = [
   "Faculty Award/Honour",
   "Graduate Award",
   "Honorary Degree",
-  "Professor Emeritus",
+  "Emeritus Designation",
 ];
 
 // Campus options for graduations.lib.unb.ca v2.
@@ -106,6 +106,29 @@ $honorary_degrees = [
   'Ph.D.',
 ];
 
+// Emeritus designation options for graduations.lib.unb.ca v2.
+$emeritus_types = [
+  'Professor Emeritus',
+  'Professor Emerita',
+  'President Emeritus',
+  'Librarian Emeritus',
+  'Librarian Emerita',
+  'Governor Emeritus',
+  'Governor Emerita',
+  'Registrar Emeritus',
+  'Registrar Emeritus',
+  'Dean Emeritus',
+  'Dean Emerita',
+  'Vice-President Emeritus',
+  'Vice-President Emerita',
+  'Associate Vice-President Emeritus',
+  'Associate Vice-President Emerita',
+  'Chancellor Emeritus',
+  'Chancellor Emerita',
+  'Residence Fellow Emeritus',
+  'Senior Teaching Associate Emeritus',
+];
+
 // Graduation ceremony season options for graduations.lib.unb.ca v2.
 $seasons = [
   'Fall',
@@ -136,6 +159,9 @@ add_terms('grad_award_type', $gradaward_types);
 
 // Add honorary degrees.
 add_terms('honorary_degree', $honorary_degrees);
+
+// Add emeritus designation types.
+add_terms('emeritus_type', $emeritus_types);
 
 // Add seasons.
 add_terms('season', $seasons);
