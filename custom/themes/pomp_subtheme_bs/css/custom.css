@@ -780,20 +780,6 @@ div[data-drupal-selector="edit-field-degree-notes-0-format"] {
   display: none !important;
 }
 
-#node-honorary-degree-edit-form >
-div.js-form-item.form-item.js-form-type-vertical-tabs.form-type-vertical-tabs.js-form-item-.form-item-.form-no-label
-{
-  display: none;
-}
-
-/* Emeritus Edit */
-
-#node-professor-emeritus-edit-form >
-div.js-form-item.form-item.js-form-type-vertical-tabs.form-type-vertical-tabs.js-form-item-.form-item-.form-no-label
-{
-  display: none;
-}
-
 /* Page Edit */
 
 div[data-drupal-selector="edit-body-0-format"] {

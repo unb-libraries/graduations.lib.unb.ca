@@ -87,8 +87,8 @@
     <p class="h5">{{ "Faculty award: #{faculty_award}"}}</p>
   {% elseif award_type == 'Graduate Award' %}
     <p class="h5">{{ "Graduate award: #{grad_award}"}}</p>
-  {% elseif award_type == 'Professor Emeritus' %}
-    <p class="h5">Professor Emeritus</p>
+  {% elseif award_type == 'Emeritus Designation' %}
+  <p class="h5">{{ emeritus_designation }}</p>
   {%- endif -%}
 
   {%- if orator -%}

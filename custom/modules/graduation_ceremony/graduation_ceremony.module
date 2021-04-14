@@ -73,7 +73,7 @@ function graduation_ceremony_preprocess_node__graduation_ceremony(&$variables) {
     'Faculty Award/Honour',
     'Graduate Award',
     'Honorary Degree',
-    'Professor Emeritus',
+    'Emeritus Designation',
   ];
 
   foreach ($award_types as $award_type) {
@@ -102,9 +102,9 @@ function graduation_ceremony_preprocess_node__graduation_ceremony(&$variables) {
     $honorary_x_ceremony = views_embed_view('awards_x_ceremony', 'block_1', $nid, $award_tids['Honorary Degree']);
     $variables['honorary_x_ceremony'] = $honorary_x_ceremony;
   }
-  // Pass professors emeriti for ceremony, if any.
-  if (in_array('Professor Emeritus', $awards_found)) {
-    $emeriti_x_ceremony = views_embed_view('awards_x_ceremony', 'block_1', $nid, $award_tids['Professor Emeritus']);
+  // Pass emeritus designations for ceremony, if any.
+  if (in_array('Emeritus Designation', $awards_found)) {
+    $emeriti_x_ceremony = views_embed_view('awards_x_ceremony', 'block_1', $nid, $award_tids['Emeritus Designation']);
     $variables['emeriti_x_ceremony'] = $emeriti_x_ceremony;
   }
   // Pass faculty awards for ceremony, if any.
