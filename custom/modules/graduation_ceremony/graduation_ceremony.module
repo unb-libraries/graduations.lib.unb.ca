@@ -81,8 +81,10 @@ function graduation_ceremony_preprocess_node__graduation_ceremony(&$variables) {
       ->getStorage('taxonomy_term')
       ->loadByProperties(['name' => $award_type, 'vid' => 'award_type']);
 
-    $term = reset($terms);
-    $award_tids[$award_type] = $term->id();
+    if (!empty($terms)) {
+      $term = reset($terms);
+      $award_tids[$award_type] = $term->id();
+    }
   }
 
   // Get awards.
