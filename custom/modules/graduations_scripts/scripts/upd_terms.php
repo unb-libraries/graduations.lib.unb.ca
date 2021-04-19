@@ -11,6 +11,7 @@ use Drupal\taxonomy\Entity\Term;
 
 // Address types for graduations.lib.unb.ca v2.
 $address_types = [
+  "Address in Praise of Founders",
   "Alumni Oration",
   "Founder's Day Address",
   "Graduation Address",
@@ -86,6 +87,7 @@ $genders = [
 // Graduate award types for new content type as per POMP-125.
 $gradaward_types = [
   'Alumni Gold Medal',
+  'City of Fredericton Gold Medal',
   'Douglas Gold Medal',
   'Governor General’s Gold Medal',
   'Governor General’s Silver Medal',
