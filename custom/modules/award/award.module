@@ -152,17 +152,17 @@ function award_form_node_award_form_alter(&$form, $form_state, $form_id) {
   // Form states — Display exclusive fields for emeritus designation.
   $disp_emeritus_designation = [
     'visible' => [
-      ':input[name*="field_award_type"]' => ['value' => $types['Emeritus Designation']],
+      ':input[name*="field_award_type"]' => ['value' => $types['Emeritus Honour']],
     ],
   ];
 
   $form['field_emeritus_designation']['#states'] = $disp_emeritus_designation;
 
-  // Form states — Display for group 1: Honorary Degree, Emeritus Designation.
+  // Form states — Display for group 1: Honorary Degree, Emeritus Honour.
   $disp_group1 = [
     'visible' => [
       [':input[name*="field_award_type"]' => ['value' => $types['Honorary Degree']]],
-      [':input[name*="field_award_type"]' => ['value' => $types['Emeritus Designation']]],
+      [':input[name*="field_award_type"]' => ['value' => $types['Emeritus Honour']]],
     ],
   ];
 
@@ -226,17 +226,17 @@ function award_form_node_award_edit_form_alter(&$form, $form_state, $form_id) {
   // Form states — Display exclusive fields for emeritus designation.
   $disp_emeritus_designation = [
     'visible' => [
-      ':input[name*="field_award_type"]' => ['value' => $types['Emeritus Designation']],
+      ':input[name*="field_award_type"]' => ['value' => $types['Emeritus Honour']],
     ],
   ];
 
   $form['field_emeritus_designation']['#states'] = $disp_emeritus_designation;
 
-  // Form states — Display for group 1: Honorary Degree, Emeritus Designation.
+  // Form states — Display for group 1: Honorary Degree, Emeritus Honour.
   $disp_group1 = [
     'visible' => [
       [':input[name*="field_award_type"]' => ['value' => $types['Honorary Degree']]],
-      [':input[name*="field_award_type"]' => ['value' => $types['Emeritus Designation']]],
+      [':input[name*="field_award_type"]' => ['value' => $types['Emeritus Honour']]],
     ],
   ];
 
@@ -302,17 +302,17 @@ function award_inline_entity_form_entity_form_alter(&$entity_form, $form_state) 
     // Form states — Display exclusive fields for emeritus designation.
     $disp_emeritus_designation = [
       'visible' => [
-        ':input[name*="field_award_type"]' => ['value' => $types['Emeritus Designation']],
+        ':input[name*="field_award_type"]' => ['value' => $types['Emeritus Honour']],
       ],
     ];
 
-    $form['field_emeritus_designation']['#states'] = $disp_emeritus_designation;
+    $entity_form['field_emeritus_designation']['#states'] = $disp_emeritus_designation;
 
-    // Form states — Display for group 1: Honorary Degree, Emeritus Designation.
+    // Form states — Display for group 1: Honorary Degree, Emeritus Honour.
     $disp_group1 = [
       'visible' => [
         [':input[name*="field_award_type"]' => ['value' => $types['Honorary Degree']]],
-        [':input[name*="field_award_type"]' => ['value' => $types['Emeritus Designation']]],
+        [':input[name*="field_award_type"]' => ['value' => $types['Emeritus Honour']]],
       ],
     ];
 
@@ -349,7 +349,7 @@ function award_title($entity_type, $entity, $entity_form, &$form_state) {
       $title = "Honorary Degree awarded to $recipient ($subtype)";
       break;
 
-    case 'Emeritus Designation':
+    case 'Emeritus Honour':
       // If emeritus designation...
       $subtype = $entity->get('field_emeritus_designation')->entity->getName();
       $title = "$subtype awarded to $recipient";

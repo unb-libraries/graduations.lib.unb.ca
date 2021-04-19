@@ -10,7 +10,7 @@ id: node.award.field_emeritus_designation
 field_name: field_emeritus_designation
 entity_type: node
 bundle: award
-label: 'Emeritus Designation'
+label: 'Emeritus Honour'
 description: ''
 required: false
 translatable: false

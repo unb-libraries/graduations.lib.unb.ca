@@ -20,10 +20,10 @@ $address_types = [
 
 // Award types for graduations.lib.unb.ca v2.
 $award_types = [
+  "Emeritus Honour",
   "Faculty Award/Honour",
   "Graduate Award",
   "Honorary Degree",
-  "Emeritus Designation",
 ];
 
 // Campus options for graduations.lib.unb.ca v2.
