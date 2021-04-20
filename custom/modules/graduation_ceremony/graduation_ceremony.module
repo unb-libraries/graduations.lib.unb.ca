@@ -94,8 +94,9 @@ function graduation_ceremony_preprocess_node__graduation_ceremony(&$variables) {
   // Record each award's type.
   foreach ($ceremony_awards as $award) {
     $type_id = Node::load($award['target_id'])->field_award_type->getString();
-    $type = Term::load($type_id)->getName();
-    $awards_found[] = $type;
+    $type = !empty(Term::load($type_id)) ? Term::load($type_id)->getName()
+      : NULL;
+    $awards_found[] = $type ? $type;
   }
 
   // Pass honorary degrees for ceremony, if any.
