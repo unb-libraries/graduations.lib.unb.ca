@@ -96,7 +96,7 @@ function graduation_ceremony_preprocess_node__graduation_ceremony(&$variables) {
     $type_id = Node::load($award['target_id'])->field_award_type->getString();
     $type = !empty(Term::load($type_id)) ? Term::load($type_id)->getName()
       : NULL;
-    $awards_found[] = $type ? $type;
+    $awards_found[] = $type ? $type : NULL;
   }
 
   // Pass honorary degrees for ceremony, if any.
