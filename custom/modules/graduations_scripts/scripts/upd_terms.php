@@ -69,6 +69,11 @@ $ceremony_types = [
   'Virtual Convocation - Ceremony B',
   'Virtual Convocation - Ceremony C',
   'Virtual Convocation - Ceremony D',
+  'Virtual Encaenia - Ceremony A',
+  'Virtual Encaenia - Ceremony B',
+  'Virtual Encaenia - Ceremony C',
+  'Virtual Encaenia - Ceremony D',
+  'Virtual Spring Convocation',
 ];
 
 // Faculty award options for graduations.lib.unb.ca v2.
