@@ -4,6 +4,7 @@ description: "For graduations.lib.unb.ca - Sub-themed from Bootstrap."
 base theme: bootstrap
 package: Custom
 core: 8.x
+core_version_requirement: ^8 || ^9
 
 libraries:
   - pomp_subtheme_bs/global-styling

@@ -2,4 +2,5 @@ name: browse_awards
 type: module
 description: Custom support module for view browse_awards
 core: 8.x
+core_version_requirement: ^8 || ^9
 package: Custom
