@@ -165,7 +165,7 @@
         "drupal/bootstrap": "3.23",
         "drupal/bootstrap4": "2.1.13",
         "drupal/config_update": "1.5",
-        "drupal/core": "8.9.17",
+        "drupal/core": "8.9.18",
         "drupal/externalauth": "1.4",
         "drupal/features": "3.8",
         "drupal/fontawesome": "2.19",
