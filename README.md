@@ -1,4 +1,3 @@
-![graduations.lib.unb.ca screenshot](https://github.com/unb-libraries/graduations.lib.unb.ca/raw/prod/.dockworker/screenshot.png "graduations.lib.unb.ca screenshot")
 # [graduations.lib.unb.ca](https://graduations.lib.unb.ca/) : Lean Instance Repository
 [![Build Status](https://github.com/unb-libraries/graduations.lib.unb.ca/actions/workflows/test-suite.yaml/badge.svg?branch=prod)](https://github.com/unb-libraries/graduations.lib.unb.ca/actions/workflows/test-suite.yaml)
 [![GitHub license](https://img.shields.io/github/license/unb-libraries/graduations.lib.unb.ca)](https://github.com/unb-libraries/graduations.lib.unb.ca/blob/prod/LICENSE)
