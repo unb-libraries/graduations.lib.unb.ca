@@ -21,7 +21,33 @@ div.views-exposed-form.block-views {
   }
 }
 
+// All exposed filter forms.
+form.views-exposed-form {
+  // Field sets (year ranges).
+  fieldset {
+    margin-top: 0;
+    margin-right: 0;
+    width: 50%;
+
+    legend {
+      display: none;
+    }
+
+    div.fieldset-wrapper > div.form-item {
+      width: 48% !important;
+    }
+  }
+}
+// Sort order.
+#views-exposed-form-browse-graduation-ceremonies-page-1,
+#views-exposed-form-browse-awards-page-1 {
+  .form-item-sort-order {
+    margin-left: -14px;
+  }
+}
+
 // Browse Graduation Ceremonies view.
+// Exposed filters form.
 #views-exposed-form-browse-graduation-ceremonies-page-1 {
   // Break on Graduation Ceremony filter.
   .form-item-field-season-target-id {
