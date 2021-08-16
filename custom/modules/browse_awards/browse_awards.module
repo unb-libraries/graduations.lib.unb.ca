@@ -10,8 +10,9 @@
 */
 function browse_awards_form_views_exposed_form_alter(&$form, $form_state, $form_id) {
   // If these are the exposed filters for view's page 1...
-  if ($form['#id'] == 'views-exposed-form-browse-awards-page-1') {
+  if ($form_id == 'views-exposed-form-browse-awards-page-1') {
     // Override default label of maximum year field.
-    $form['field_ceremony_year_value']['max']['#title'] = t('To (year)');
+    $form['field_ceremony_year_value_wrapper']['field_ceremony_year_value']['min']['#title'] = t('From (year)');
+    $form['field_ceremony_year_value_wrapper']['field_ceremony_year_value']['max']['#title'] = t('To (year)');
   }
 }
