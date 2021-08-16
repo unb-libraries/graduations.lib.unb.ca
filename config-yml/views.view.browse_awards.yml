@@ -1006,7 +1006,7 @@ display:
           exposed: true
           expose:
             operator_id: field_ceremony_year_value_op
-            label: 'From (year)'
+            label: ''
             description: ''
             use_operator: false
             operator: field_ceremony_year_value_op
