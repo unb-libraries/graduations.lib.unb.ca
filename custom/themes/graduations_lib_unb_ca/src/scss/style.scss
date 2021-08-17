@@ -169,3 +169,14 @@ div.block-system-main-block {
     width: 80% !important;
   }
 }
+
+// Responsive.
+@media (max-width: 768px) {
+  // Sort order.
+  #views-exposed-form-browse-graduation-ceremonies-page-1,
+  #views-exposed-form-browse-awards-page-1 {
+    .form-item-sort-order {
+      margin-left: 0;
+    }
+  }
+}
