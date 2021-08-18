@@ -45,7 +45,6 @@ module:
   pomp_restrict_urls: 0
   quickedit: 0
   rdf: 0
-  redirect_after_login: 0
   redis: 0
   samlauth: 0
   search_api: 0
