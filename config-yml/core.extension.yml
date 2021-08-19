@@ -55,6 +55,7 @@ module:
   token: 0
   token_filter: 0
   toolbar: 0
+  unb_lib_login_front: 0
   update: 0
   user: 0
   views_slideshow: 0
