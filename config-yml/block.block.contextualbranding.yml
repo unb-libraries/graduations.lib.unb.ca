@@ -1,0 +1,20 @@
+uuid: b93c1417-dcf8-4340-8151-e5597618d8fd
+langcode: en
+status: true
+dependencies:
+  module:
+    - unb_lib_context_branding
+  theme:
+    - graduations_lib_unb_ca
+id: contextualbranding
+theme: graduations_lib_unb_ca
+region: header
+weight: -6
+provider: null
+plugin: context_branding_block
+settings:
+  id: context_branding_block
+  label: 'Contextual Branding'
+  provider: unb_lib_context_branding
+  label_display: '0'
+visibility: {  }
