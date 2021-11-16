@@ -163,7 +163,7 @@
     "require": {
         "drupal/admin_toolbar": "3.0.3",
         "drupal/bootstrap": "3.23",
-        "drupal/bootstrap4": "2.1.13",
+        "drupal/bootstrap4": "2.1.14",
         "drupal/core": "9.2.8",
         "drupal/fontawesome": "2.19",
         "drupal/google_analytics": "2.5",
