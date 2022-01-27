@@ -161,7 +161,7 @@
         }
     ],
     "require": {
-        "drupal/admin_toolbar": "3.0.3",
+        "drupal/admin_toolbar": "3.1.0",
         "drupal/bootstrap": "3.23",
         "drupal/bootstrap4": "2.1.14",
         "drupal/core": "9.3.3",
