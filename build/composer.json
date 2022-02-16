@@ -171,7 +171,7 @@
         "drupal/inline_entity_form": "1.0-rc9",
         "drupal/login_return_page": "1.x-dev",
         "drupal/node_edit_protection": "1.0",
-        "drupal/pathauto": "1.8",
+        "drupal/pathauto": "1.9",
         "drupal/redirect_after_login": "2.7",
         "drupal/redis": "1.5",
         "drupal/samlauth": "3.4",
