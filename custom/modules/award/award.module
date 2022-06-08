@@ -339,20 +339,35 @@ function award_title($entity_type, $entity, $entity_form, &$form_state) {
 
     case 'Graduate Award':
       // If graduate award...
-      $subtype = $entity->get('field_grad_award_type')->entity->getName();
-      $title = "$subtype awarded to $recipient";
+      if ($entity->get('field_grad_award_type')->entity) {
+        $subtype = $entity->get('field_grad_award_type')->entity->getName();
+        $title = "$subtype awarded to $recipient";
+      }
+      else {
+        $title = "WARNING: No graduate award type entered. Please correct.";
+      }
       break;
 
     case 'Honorary Degree':
       // If honorary degree...
-      $subtype = $entity->get('field_honorary_degree')->entity->getName();
-      $title = "Honorary Degree awarded to $recipient ($subtype)";
+      if ($entity->get('field_honorary_degree')->entity) {
+        $subtype = $entity->get('field_honorary_degree')->entity->getName();
+        $title = "Honorary Degree awarded to $recipient ($subtype)";
+      }
+      else {
+        $title = "WARNING: No honorary degree entered. Please correct.";
+      }
       break;
 
     case 'Emeritus Honour':
       // If emeritus designation...
-      $subtype = $entity->get('field_emeritus_designation')->entity->getName();
-      $title = "$subtype awarded to $recipient";
+      if ($entity->get('field_emeritus_designation')->entity) {
+        $subtype = $entity->get('field_emeritus_designation')->entity->getName();
+        $title = "$subtype awarded to $recipient";
+      }
+      else {
+        $title = "WARNING: No emeritus honour entered. Please correct.";
+      }
       break;
 
     default:
