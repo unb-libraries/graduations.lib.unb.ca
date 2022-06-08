@@ -11,12 +11,12 @@ pattern: '/ceremony/[node:nid]'
 selection_criteria:
   743534d4-cbd1-449f-9429-7b61efc18d42:
     id: node_type
-    bundles:
-      honorary_ceremony: honorary_ceremony
     negate: false
+    uuid: 743534d4-cbd1-449f-9429-7b61efc18d42
     context_mapping:
       node: node
-    uuid: 743534d4-cbd1-449f-9429-7b61efc18d42
+    bundles:
+      honorary_ceremony: honorary_ceremony
 selection_logic: and
 weight: -5
 relationships: {  }

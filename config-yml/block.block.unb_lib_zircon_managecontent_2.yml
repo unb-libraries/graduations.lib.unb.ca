@@ -16,13 +16,13 @@ plugin: pomp_content_man
 settings:
   id: pomp_content_man
   label: 'Manage Content'
-  provider: pomp_core
   label_display: '0'
+  provider: pomp_core
 visibility:
   user_role:
     id: user_role
-    roles:
-      pomp_content_editor: pomp_content_editor
     negate: false
     context_mapping:
       user: '@user.current_user_context:current_user'
+    roles:
+      pomp_content_editor: pomp_content_editor

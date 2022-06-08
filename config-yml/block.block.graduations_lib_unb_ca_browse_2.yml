@@ -16,11 +16,11 @@ plugin: pomp_browse
 settings:
   id: pomp_browse
   label: Browse
-  provider: pomp_core
   label_display: visible
+  provider: pomp_core
 visibility:
   request_path:
     id: request_path
-    pages: "<front>\r\n/search"
     negate: false
     context_mapping: {  }
+    pages: "<front>\r\n/search"

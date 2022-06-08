@@ -16,30 +16,30 @@ bundle: honorary_banner
 mode: default
 content:
   field_banner_image:
-    weight: 101
+    type: image
     label: above
     settings:
-      image_style: ''
       image_link: ''
+      image_style: ''
     third_party_settings: {  }
-    type: image
+    weight: 101
     region: content
   field_link_path:
-    weight: 102
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 102
     region: content
   field_sort_order:
-    weight: 103
+    type: number_integer
     label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    type: number_integer
+    weight: 103
     region: content
   links:
     weight: 100

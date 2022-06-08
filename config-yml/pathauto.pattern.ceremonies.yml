@@ -11,12 +11,12 @@ pattern: '/ceremony/[node:nid]'
 selection_criteria:
   5d377975-6ce8-448b-a368-54016e161802:
     id: node_type
-    bundles:
-      graduation_ceremony: graduation_ceremony
     negate: false
+    uuid: 5d377975-6ce8-448b-a368-54016e161802
     context_mapping:
       node: node
-    uuid: 5d377975-6ce8-448b-a368-54016e161802
+    bundles:
+      graduation_ceremony: graduation_ceremony
 selection_logic: and
 weight: -5
 relationships: {  }

@@ -15,6 +15,6 @@ plugin: pomp_footer
 settings:
   id: pomp_footer
   label: 'Honorary Footer'
-  provider: pomp_core
   label_display: '0'
+  provider: pomp_core
 visibility: {  }

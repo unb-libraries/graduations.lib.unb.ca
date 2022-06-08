@@ -10,10 +10,10 @@ description: ''
 backend: search_api_db
 backend_config:
   database: 'default:default'
-  database_text: ''
   min_chars: 3
-  partial_matches: true
+  matching: words
   autocomplete:
     suggest_suffix: true
     suggest_words: true
-  matching: words
+  database_text: ''
+  partial_matches: true

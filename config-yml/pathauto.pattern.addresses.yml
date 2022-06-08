@@ -11,12 +11,12 @@ pattern: '/address/[node:nid]'
 selection_criteria:
   43b24fa2-d6c8-47af-b8e4-d229c2b435fc:
     id: node_type
-    bundles:
-      address: address
     negate: false
+    uuid: 43b24fa2-d6c8-47af-b8e4-d229c2b435fc
     context_mapping:
       node: node
-    uuid: 43b24fa2-d6c8-47af-b8e4-d229c2b435fc
+    bundles:
+      address: address
 selection_logic: and
 weight: -5
 relationships: {  }

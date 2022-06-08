@@ -11,12 +11,12 @@ pattern: '/degree/[node:nid]'
 selection_criteria:
   ea26e6ea-9749-4587-b54a-7c144ebace75:
     id: node_type
-    bundles:
-      honorary_degree: honorary_degree
     negate: false
+    uuid: ea26e6ea-9749-4587-b54a-7c144ebace75
     context_mapping:
       node: node
-    uuid: ea26e6ea-9749-4587-b54a-7c144ebace75
+    bundles:
+      honorary_degree: honorary_degree
 selection_logic: and
 weight: -5
 relationships: {  }

@@ -11,12 +11,12 @@ pattern: '/address/[node:nid]'
 selection_criteria:
   5d14c4a7-e19c-4308-9c67-34c177dccdf1:
     id: node_type
-    bundles:
-      honorary_address: honorary_address
     negate: false
+    uuid: 5d14c4a7-e19c-4308-9c67-34c177dccdf1
     context_mapping:
       node: node
-    uuid: 5d14c4a7-e19c-4308-9c67-34c177dccdf1
+    bundles:
+      honorary_address: honorary_address
 selection_logic: and
 weight: -5
 relationships: {  }

@@ -1,15 +1,15 @@
-definitions:
-  node__add_page:
-    enabled: false
-    menu_name: tools
-    parent: ''
-    expanded: false
-    weight: 0
-  user__page:
-    enabled: false
-    menu_name: account
-    parent: ''
-    expanded: false
-    weight: -10
 _core:
   default_config_hash: jdY7AU0tU-QsjmiOw3W8vwpYMb-By--_MSFgbqKUTYM
+definitions:
+  node__add_page:
+    menu_name: tools
+    parent: ''
+    weight: 0
+    expanded: false
+    enabled: false
+  user__page:
+    menu_name: account
+    parent: ''
+    weight: -10
+    expanded: false
+    enabled: false

@@ -11,12 +11,12 @@ pattern: '/award/[node:nid]'
 selection_criteria:
   1f013a6b-a42a-42d2-ac19-7969a72785cc:
     id: node_type
-    bundles:
-      award: award
     negate: false
+    uuid: 1f013a6b-a42a-42d2-ac19-7969a72785cc
     context_mapping:
       node: node
-    uuid: 1f013a6b-a42a-42d2-ac19-7969a72785cc
+    bundles:
+      award: award
 selection_logic: and
 weight: -5
 relationships: {  }

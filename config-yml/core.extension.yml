@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: m2GVq11UAOVuNgj8x0t5fMOPujpvQQ_zxLoaly1BMEU
 module:
   address: 0
   admin_toolbar: 0
@@ -77,5 +79,3 @@ theme:
   unb_lib_zircon: 0
   graduations_lib_unb_ca: 0
 profile: minimal
-_core:
-  default_config_hash: m2GVq11UAOVuNgj8x0t5fMOPujpvQQ_zxLoaly1BMEU
