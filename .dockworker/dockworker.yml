@@ -11,6 +11,9 @@ dockworker:
     environments:
       - dev
       - prod
+    workflow:
+      source: dockworker-drupal
+      type: deployment-workflow
   github:
     repo: graduations.lib.unb.ca
     owner: unb-libraries
@@ -22,4 +25,4 @@ dockworker:
     date_tag_image: true
     repository: ghcr
 drupal:
-    version: 9
+  version: 9
