@@ -1,9 +1,5 @@
 const host = 'https://graduations.lib.unb.ca'
 describe('Graduations', {baseUrl: host, groups: ['sites']}, () => {
-  
-  beforeEach(() => {
-    cy.blockUnbFont()
-  })
 
   context('Front page', {baseUrl: host}, () => {
     beforeEach(() => {
