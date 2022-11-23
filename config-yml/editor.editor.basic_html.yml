@@ -42,13 +42,7 @@ settings:
           name: Tools
           items:
             - Source
-  plugins:
-    language:
-      language_list: un
-    stylescombo:
-      styles: ''
-    tokenbrowser:
-      token_types: {  }
+  plugins: {  }
 image_upload:
   status: true
   scheme: public
