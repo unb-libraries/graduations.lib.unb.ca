@@ -2,7 +2,6 @@
   "config": {
     "allow-plugins": {
       "dealerdirect/phpcodesniffer-composer-installer": true,
-      "oomphinc/composer-installers-extender": true
     },
     "preferred-install": {
       "*": "dist"
