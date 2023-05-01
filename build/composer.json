@@ -14,9 +14,9 @@
     "allow-plugins": {
       "composer/installers": true,
       "cweagans/composer-patches": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true,
       "drupal/core-composer-scaffold": true,
-      "oomphinc/composer-installers-extender": true,
-      "dealerdirect/phpcodesniffer-composer-installer": true
+      "oomphinc/composer-installers-extender": true
     },
     "discard-changes": true,
     "preferred-install": {
@@ -166,7 +166,7 @@
     }
   ],
   "require": {
-    "drupal/admin_toolbar": "3.3.0",
+    "drupal/admin_toolbar": "3.3.1",
     "drupal/bootstrap": "3.25",
     "drupal/bootstrap4": "2.1.16",
     "drupal/core": "9.5.8",
