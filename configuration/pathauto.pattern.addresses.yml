@@ -1,0 +1,22 @@
+uuid: e2208353-f942-478a-b04a-cd5f002a1c0b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: addresses
+label: Addresses
+type: 'canonical_entities:node'
+pattern: '/address/[node:nid]'
+selection_criteria:
+  43b24fa2-d6c8-47af-b8e4-d229c2b435fc:
+    id: entity_bundle:node
+    negate: false
+    uuid: 43b24fa2-d6c8-47af-b8e4-d229c2b435fc
+    context_mapping:
+      node: node
+    bundles:
+      address: address
+selection_logic: and
+weight: -5
+relationships: {  }

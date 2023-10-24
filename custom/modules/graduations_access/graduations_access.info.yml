@@ -1,6 +1,6 @@
 name: 'Graduations Access'
 type: module
 description: 'Customized access functionality for graduations.lib.unb.ca'
-core: 8.x
-core_version_requirement: ^8 || ^9
-package: 'Custom'
+core: 10.x
+core_version_requirement: ^9 || ^10
+ackage: 'Custom'

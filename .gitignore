@@ -1,8 +1,9 @@
 .gitkeep
 .idea
-composer.lock
+/composer.lock
 build/scripts/local
 tests/features/bootstrap
 vendor
 custom/modules/pomp_migration/dump
 config-yml/.htaccess
+/build/vendor

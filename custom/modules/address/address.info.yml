@@ -1,6 +1,6 @@
 name: address
 type: module
 description: Custom support module for address content type.
-core: 8.x
-core_version_requirement: ^8 || ^9
+core: 10.x
+core_version_requirement: ^9 || ^10
 package: Custom

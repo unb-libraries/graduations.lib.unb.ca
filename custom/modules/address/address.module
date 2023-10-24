@@ -78,7 +78,7 @@ function address_theme($existing, $type, $theme, $path) {
         'output' => NULL,
       ],
       'template' => 'node--address',
-      'path' => drupal_get_path('module', 'address') . '/templates',
+      'path' => \Drupal::service('extension.list.module')->getPath('address') . '/templates',
       'base hook' => 'node__address',
     ],
   ];

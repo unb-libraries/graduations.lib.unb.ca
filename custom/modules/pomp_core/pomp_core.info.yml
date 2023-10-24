@@ -1,6 +1,6 @@
 name: Graduations Core
 type: module
 description: Core functionality extension for graduations.lib.unb.ca
-core: 8.x
-core_version_requirement: ^8 || ^9
+core: 10.x
+core_version_requirement: ^9 || ^10
 package: POMP

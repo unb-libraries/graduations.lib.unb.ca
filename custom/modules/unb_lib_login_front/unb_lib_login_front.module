@@ -1,5 +1,6 @@
 <?php
 
+use Drupal\Core\Url;
 /**
  * @file
  * Contains unb_lib_login_front.module.
@@ -22,7 +23,7 @@ function unb_lib_login_front_user_login($account) {
       // Default login destination to the dashboard.
       $current_request->query->set(
         'destination',
-        \Drupal\Core\Url::fromRoute('<front>')->toString()
+        Url::fromRoute('<front>')->toString()
       );
     }
   }

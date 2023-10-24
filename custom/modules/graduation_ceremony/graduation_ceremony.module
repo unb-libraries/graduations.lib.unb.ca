@@ -144,7 +144,7 @@ function graduation_ceremony_theme($existing, $type, $theme, $path) {
         'output' => NULL,
       ],
       'template' => 'node--graduation-ceremony',
-      'path' => drupal_get_path('module', 'graduation_ceremony') . '/templates',
+      'path' => \Drupal::service('extension.list.module')->getPath('graduation_ceremony') . '/templates',
       'base hook' => 'node__graduation_ceremony',
     ],
   ];

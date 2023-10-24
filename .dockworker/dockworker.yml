@@ -1,28 +1,70 @@
 dockworker:
-  version: '5'
+  version: '6'
   application:
-    name: graduations.lib.unb.ca
-    finish_marker: '99_zz_notify_user_URI'
-    project_prefix: POMP
-    upstream_images:
-      - ghcr.io/unb-libraries/drupal:9.x-2.x-unblib
-    uuid: 3088
-  deployment:
-    environments:
+    name: POMP AND CIRCUMSTANCE — Graduation Ceremonies 1828 - Present
+    uri: https://graduations.lib.unb.ca
+    description: >
+      Information about honorary degree recipients at UNB, from the orators' presentations 
+      at the encaenia and convocation ceremonies, are a significant resource for university 
+      staff, alumni, and external researchers. 
+      - unb
+      - academia
+      - history
+    identifiers:
+      id: graduations.lib.unb.ca
+      slug: graduations-lib-unb-ca
+      short_slug: graduations
+      uuid: 3088
+    framework:
+      name: Drupal
+      version: 10
+      startup_finished_marker: '99_startup_sequence_complete'
+      endpoint:
+        name: http
+        port: 80
+        readiness_timeout: 15
+    license:
+      license: MIT
+      holder: University of New Brunswick Libraries
+    shell:
+      path: /bin/sh
+  endpoints:
+    env:
       - dev
       - prod
-    workflow:
-      source: dockworker-drupal
-      type: deployment-workflow
-  github:
-    repo: graduations.lib.unb.ca
-    owner: unb-libraries
-  image:
-    push_branches:
-      - dev
-      - prod
-    name: ghcr.io/unb-libraries/graduations.lib.unb.ca
-    date_tag_image: true
-    repository: ghcr
-drupal:
-  version: 9
+    deployments:
+      graduations-lib-unb-ca:
+        default: true
+        managed: true
+        name: graduations-lib-unb-ca
+      drupal-mysql-lib-unb-ca:
+        managed: false
+        name: mysql
+      drupal-redis-lib-unb-ca:
+        managed: false
+        name: redis
+      drupal-solr-lib-unb-ca:
+        managed: false
+        name: solr
+  workflows:
+    vcs:
+      type: github
+      owner: unb-libraries
+      name: graduations.lib.unb.ca
+    jira:
+      project_keys:
+        - POMP
+    image:
+      name: ghcr.io/unb-libraries/graduations.lib.unb.ca
+      parent: ghcr.io/unb-libraries/drupal:10.x-1.x-unblib
+      repository: GitHub
+      push-branches:
+        - dev
+        - prod
+    e2e_tests:
+        - id: core
+          frequency: '*/5 * * * *'
+          source_files:
+            - .dockworker/tests/e2e/graduations.lib.unb.ca.yml
+          namespaces:
+            - prod
