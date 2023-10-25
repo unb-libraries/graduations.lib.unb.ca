@@ -21,6 +21,19 @@ div.views-exposed-form.block-views {
   }
 }
 
+// Main navigation.
+#block-graduations-lib-unb-ca-main-menu {
+  .navbar-nav {
+    .dropdown-menu {
+      .nav-item {
+        a {
+          padding: 1rem;
+        }
+      }
+    }
+  }
+}
+
 // All exposed filter forms.
 form.views-exposed-form {
   // Field sets (year ranges).

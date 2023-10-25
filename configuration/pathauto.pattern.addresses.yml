@@ -10,7 +10,7 @@ type: 'canonical_entities:node'
 pattern: '/address/[node:nid]'
 selection_criteria:
   43b24fa2-d6c8-47af-b8e4-d229c2b435fc:
-    id: entity_bundle:node
+    id: 'entity_bundle:node'
     negate: false
     uuid: 43b24fa2-d6c8-47af-b8e4-d229c2b435fc
     context_mapping:

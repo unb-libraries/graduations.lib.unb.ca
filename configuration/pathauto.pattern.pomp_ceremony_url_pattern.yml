@@ -10,7 +10,7 @@ type: 'canonical_entities:node'
 pattern: '/ceremony/[node:nid]'
 selection_criteria:
   743534d4-cbd1-449f-9429-7b61efc18d42:
-    id: entity_bundle:node
+    id: 'entity_bundle:node'
     negate: false
     uuid: 743534d4-cbd1-449f-9429-7b61efc18d42
     context_mapping:
