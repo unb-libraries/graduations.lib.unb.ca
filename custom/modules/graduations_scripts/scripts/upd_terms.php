@@ -179,6 +179,7 @@ foreach ($honorary_degrees as $honorary_degree) {
   $found = \Drupal::entityQuery('taxonomy_term')
     ->condition('vid', 'honorary_degree')
     ->condition('name', $honorary_degree)
+    ->accesscheck(true)
     ->execute();
 
   if ($found) {
@@ -238,6 +239,7 @@ function add_terms($vid, array $terms) {
     $found = \Drupal::entityQuery('taxonomy_term')
       ->condition('vid', $vid)
       ->condition('name', $term)
+      ->accesscheck(true)
       ->execute();
 
     if (!$found) {

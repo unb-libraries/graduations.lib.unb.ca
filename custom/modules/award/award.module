@@ -19,6 +19,7 @@ function award_preprocess_node__award(&$variables) {
   $ceremony_q = \Drupal::entityQuery('node')
     ->condition('type', 'graduation_ceremony')
     ->condition('field_awards', $nid)
+    ->accesscheck(true)
     ->execute();
 
   // Get ceremony id.
@@ -109,6 +110,7 @@ function award_form_node_award_form_alter(&$form, $form_state, $form_id) {
   // Recover term ids for all award types.
   $tids = \Drupal::entityQuery('taxonomy_term')
     ->condition('vid', 'award_type')
+    ->accesscheck(true)
     ->execute();
 
   // Build associative array with name => tid for award types.
@@ -183,6 +185,7 @@ function award_form_node_award_edit_form_alter(&$form, $form_state, $form_id) {
   // Recover term ids for all award types.
   $tids = \Drupal::entityQuery('taxonomy_term')
     ->condition('vid', 'award_type')
+    ->accesscheck(true)
     ->execute();
 
   // Build associative array with name => tid for award types.
@@ -259,6 +262,7 @@ function award_inline_entity_form_entity_form_alter(&$entity_form, $form_state) 
     // Recover term ids for all award types.
     $tids = \Drupal::entityQuery('taxonomy_term')
       ->condition('vid', 'award_type')
+      ->accesscheck(true)
       ->execute();
 
     // Build associative array with name => tid for award types.

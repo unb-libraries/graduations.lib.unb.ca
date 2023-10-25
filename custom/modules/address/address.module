@@ -17,9 +17,10 @@ function address_preprocess_node__address(&$variables) {
   $nid = $address_node->id();
   // Query for parent ceremony.
   $ceremony_q = \Drupal::entityQuery('node')
-   ->condition('type', 'graduation_ceremony')
-   ->condition('field_addresses', $nid)
-   ->execute();
+    ->condition('type', 'graduation_ceremony')
+    ->condition('field_addresses', $nid)
+    ->accesscheck(true)
+    ->execute();
 
   // Get ceremony id.
   $ceremony_id = $ceremony_q ? reset($ceremony_q) : NULL;
