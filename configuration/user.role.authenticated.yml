@@ -1,7 +1,9 @@
 uuid: 8482faaa-045a-4b8e-9a93-d4686162347b
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - system
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
 id: authenticated
@@ -10,4 +12,3 @@ weight: 1
 is_admin: false
 permissions:
   - 'access content'
-  - 'access site-wide contact form'

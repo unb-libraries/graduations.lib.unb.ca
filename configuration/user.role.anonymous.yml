@@ -1,7 +1,10 @@
 uuid: d9b19fec-62b9-446f-b3f6-74205a1b13f7
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - samlauth
+    - system
 _core:
   default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
 id: anonymous
@@ -10,6 +13,4 @@ weight: 0
 is_admin: false
 permissions:
   - 'access content'
-  - 'access site-wide contact form'
-  - 'use text format restricted_html'
   - 'view sp metadata'

@@ -1,7 +1,18 @@
 uuid: 9e5ae087-f4ce-4cdf-bc03-dda84317200d
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.unb_libraries
+    - node.type.address
+    - node.type.award
+    - node.type.graduation_ceremony
+    - node.type.honorary_banner
+    - node.type.static_page
+  module:
+    - filter
+    - node
+    - toolbar
 id: pomp_content_editor
 label: 'POMP Content Editor'
 weight: 3
@@ -11,29 +22,19 @@ permissions:
   - 'create address content'
   - 'create award content'
   - 'create graduation_ceremony content'
-  - 'create honorary_address content'
-  - 'create honorary_ceremony content'
-  - 'create honorary_degree content'
   - 'create static_page content'
   - 'delete all revisions'
   - 'delete any address content'
   - 'delete any award content'
   - 'delete any graduation_ceremony content'
-  - 'delete any honorary_address content'
-  - 'delete any honorary_ceremony content'
-  - 'delete any honorary_degree content'
   - 'delete any static_page content'
   - 'delete award revisions'
   - 'delete graduation_ceremony revisions'
-  - 'delete honorary_address revisions'
   - 'delete honorary_banner revisions'
   - 'delete static_page revisions'
   - 'edit any address content'
   - 'edit any award content'
   - 'edit any graduation_ceremony content'
-  - 'edit any honorary_address content'
-  - 'edit any honorary_ceremony content'
-  - 'edit any honorary_degree content'
   - 'edit any static_page content'
   - 'revert address revisions'
   - 'revert all revisions'
