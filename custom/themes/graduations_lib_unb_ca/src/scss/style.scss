@@ -21,6 +21,13 @@ div.views-exposed-form.block-views {
   }
 }
 
+// Form 'About text formats'
+form {
+  .js-filter-wrapper {
+    display: none !important;
+  }
+}
+
 // Main navigation.
 #block-graduations-lib-unb-ca-main-menu {
   .navbar-nav {
