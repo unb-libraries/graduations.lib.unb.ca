@@ -55,24 +55,17 @@ pomp_core.orators:
   menu_name: main
   url: internal:/orators
   weight: 50
-pomp_core.acknowledgements:
-  title: 'Acknowledgements'
-  description: 'Acknowledgements'
-  parent: main
-  menu_name: main
-  url: internal:/acknowledgements
-  weight: 60
 pomp_core.contact:
   title: 'Contact'
   description: 'Contact'
   parent: main
   menu_name: main
   url: https://lib.unb.ca/contact-unb-libraries-staff?recipient=archives@unb.ca&subject=Pomp%20and%20Circumstance:%20Graduations%20Database
-  weight: 70
+  weight: 60
 pomp_core.archives:
   title: 'Archives'
   description: 'Archives'
   parent: main
   menu_name: main
   url: https://www.lib.unb.ca/archives/
-  weight: 80
+  weight: 70
