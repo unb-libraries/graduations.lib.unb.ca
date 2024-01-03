@@ -201,6 +201,7 @@
     "drupal/samlauth": "^3",
     "drupal/search_api": "^1",
     "drupal/search_api_solr": "^4",
+    "drupal/simple_sitemap": "^4",
     "drupal/token_filter": "^2",
     "drupal/views_slideshow": "^5",
     "jquery/cycle": "^3",
