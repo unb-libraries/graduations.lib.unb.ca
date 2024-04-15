@@ -113,9 +113,9 @@
           "url": "https://github.com/briancherne/jquery-hoverIntent/archive/v1.10.2.zip"
         },
         "extra": {
-          "installer-name": "jquery.hoverintent"
+          "installer-name": "jquery.hover-intent"
         },
-        "name": "jquery/hoverintent",
+        "name": "jquery/hover-intent",
         "type": "drupal-library",
         "version": "1.10.2"
       },
@@ -204,7 +204,7 @@
     "drupal/token_filter": "^2",
     "drupal/views_slideshow": "^5",
     "jquery/cycle": "^3",
-    "jquery/hoverintent": "^1",
+    "jquery/hover-intent": "^1",
     "jquery/json2": "dev-master",
     "jquery/pause": "dev-master",
     "malsup/jquery.cycle": "^1",
