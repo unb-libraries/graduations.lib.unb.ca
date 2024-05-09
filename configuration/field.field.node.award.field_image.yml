@@ -12,7 +12,7 @@ field_name: field_image
 entity_type: node
 bundle: award
 label: Image
-description: ''
+description: 'Images uploaded here will display better if they are in portrait orientation and with the subject towards the top. '
 required: false
 translatable: true
 default_value: {  }

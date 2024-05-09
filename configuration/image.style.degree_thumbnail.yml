@@ -11,7 +11,7 @@ effects:
     weight: -9
     data:
       width: 140
-      height: 140
+      height: 200
       anchor: left-top
   7ac999c9-7d27-4f6b-b469-914245296e6f:
     uuid: 7ac999c9-7d27-4f6b-b469-914245296e6f
