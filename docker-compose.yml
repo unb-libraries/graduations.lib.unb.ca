@@ -68,6 +68,8 @@ services:
       - "4088:8025"
     networks:
       - graduations.lib.unb.ca
+    profiles:
+      - mailhog
 networks:
   graduations.lib.unb.ca:
     name: graduations.lib.unb.ca
