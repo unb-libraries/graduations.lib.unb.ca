@@ -196,7 +196,6 @@
     "drupal/quickedit": "^1", 
     "drupal/redirect_after_login": "^2",
     "drupal/redis": "^1",
-    "drupal/rdf": "^2", 
     "drupal/samlauth": "^3",
     "drupal/search_api": "^1",
     "drupal/search_api_solr": "^4",
