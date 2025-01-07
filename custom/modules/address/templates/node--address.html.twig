@@ -85,6 +85,8 @@
 
   {% if content.field_address_text['#items'] %}
     {{ content.field_address_text }}
+  {% else %}
+    <p>A transcript or description of this address has not been recorded at this time.</p>
   {%- endif -%}
   <br>
 
