@@ -4,6 +4,5 @@ status: true
 dependencies: {  }
 name: 'Ceremony Type'
 vid: ceremony_type
-description: null
+description: ''
 weight: 0
-new_revision: false

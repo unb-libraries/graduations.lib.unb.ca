@@ -4,6 +4,5 @@ status: true
 dependencies: {  }
 name: 'Graduate Award Type'
 vid: grad_award_type
-description: null
+description: ''
 weight: 0
-new_revision: false
