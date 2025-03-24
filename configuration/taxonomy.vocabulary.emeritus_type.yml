@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Emeritus Type'
 vid: emeritus_type
-description: ''
+description: null
 weight: 0
+new_revision: false

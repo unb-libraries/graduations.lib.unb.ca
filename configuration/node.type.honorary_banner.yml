@@ -10,8 +10,8 @@ third_party_settings:
     parent: ''
 name: 'Slideshow Image'
 type: honorary_banner
-description: ''
-help: ''
+description: null
+help: null
 new_revision: false
 preview_mode: 0
 display_submitted: false
