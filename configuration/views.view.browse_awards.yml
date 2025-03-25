@@ -15,7 +15,10 @@ dependencies:
     - node.type.award
     - taxonomy.vocabulary.award_type
     - taxonomy.vocabulary.campus
+    - taxonomy.vocabulary.emeritus_type
+    - taxonomy.vocabulary.faculty_award_type
     - taxonomy.vocabulary.grad_award_type
+    - taxonomy.vocabulary.honorary_degree
     - taxonomy.vocabulary.season
   module:
     - image
@@ -829,6 +832,7 @@ display:
           plugin_id: bundle
           value:
             award: award
+          group: 1
           expose:
             operator_limit_selection: false
             operator_list: {  }
@@ -1021,30 +1025,27 @@ display:
           hierarchy: false
           limit: true
           error_message: true
-        field_ceremony_year_value:
-          id: field_ceremony_year_value
-          table: node__field_ceremony_year
-          field: field_ceremony_year_value
-          relationship: reverse__node__field_awards
+        field_emeritus_designation_target_id:
+          id: field_emeritus_designation_target_id
+          table: node__field_emeritus_designation
+          field: field_emeritus_designation_target_id
+          relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: numeric
-          operator: between
-          value:
-            min: ''
-            max: ''
-            value: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
           group: 1
           exposed: true
           expose:
-            operator_id: field_ceremony_year_value_op
-            label: ''
+            operator_id: field_emeritus_designation_target_id_op
+            label: Award
             description: ''
             use_operator: false
-            operator: field_ceremony_year_value_op
+            operator: field_emeritus_designation_target_id_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: field_ceremony_year_value
+            identifier: field_emeritus_designation_target_id
             required: false
             remember: false
             multiple: false
@@ -1053,9 +1054,7 @@ display:
               anonymous: '0'
               administrator: '0'
               pomp_content_editor: '0'
-            min_placeholder: ''
-            max_placeholder: ''
-            placeholder: ''
+            reduce: false
           is_grouped: false
           group_info:
             label: ''
@@ -1068,6 +1067,60 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+          reduce_duplicates: false
+          vid: emeritus_type
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_faculty_award_type_target_id:
+          id: field_faculty_award_type_target_id
+          table: node__field_faculty_award_type
+          field: field_faculty_award_type_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_faculty_award_type_target_id_op
+            label: Award
+            description: ''
+            use_operator: false
+            operator: field_faculty_award_type_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_faculty_award_type_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              pomp_content_editor: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: faculty_award_type
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
         field_grad_award_type_target_id:
           id: field_grad_award_type_target_id
           table: node__field_grad_award_type
@@ -1116,6 +1169,105 @@ display:
           hierarchy: false
           limit: true
           error_message: true
+        field_honorary_degree_target_id:
+          id: field_honorary_degree_target_id
+          table: node__field_honorary_degree
+          field: field_honorary_degree_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_honorary_degree_target_id_op
+            label: Award
+            description: ''
+            use_operator: false
+            operator: field_honorary_degree_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_honorary_degree_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              pomp_content_editor: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: honorary_degree
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_ceremony_year_value:
+          id: field_ceremony_year_value
+          table: node__field_ceremony_year
+          field: field_ceremony_year_value
+          relationship: reverse__node__field_awards
+          group_type: group
+          admin_label: ''
+          plugin_id: numeric
+          operator: between
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_ceremony_year_value_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: field_ceremony_year_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_ceremony_year_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              pomp_content_editor: '0'
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
       style:
         type: default
         options:
