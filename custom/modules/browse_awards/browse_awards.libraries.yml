@@ -1,0 +1,8 @@
+reset-awards:
+  version: VERSION
+  js:
+    js/reset_awards.js: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/once
