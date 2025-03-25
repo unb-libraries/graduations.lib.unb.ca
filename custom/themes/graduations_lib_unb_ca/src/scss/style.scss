@@ -112,6 +112,13 @@ form.views-exposed-form {
   // Break on Award Type filter.
   .form-item-field-award-type-target-id {
     margin-right: 24%;
+    &:has(~ .form-item-field-emeritus-designation-target-id:not([style="display: none;"])), 
+    &:has(~ .form-item-field-faculty-award-type-target-id:not([style="display: none;"])),
+    &:has(~ .form-item-field-grad-award-type-target-id:not([style="display: none;"])),
+    &:has(~ .form-item-field-honorary-degree-type-target-id:not([style="display: none;"]))
+    {
+      margin-right: .5rem !important;
+    }
   }
 }
 // View footer.
