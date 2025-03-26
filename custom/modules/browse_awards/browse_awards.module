@@ -15,6 +15,7 @@ function browse_awards_form_views_exposed_form_alter(&$form, $form_state, $form_
   if ($form['#id'] == 'views-exposed-form-browse-awards-page-1') {
     // Attach JS.
     $form['#attached']['library'][] = 'browse_awards/reset-awards';
+    /*
     // Override default label of maximum year field.
     $form['field_ceremony_year_value_wrapper']['field_ceremony_year_value']['min']['#title'] = t('From (year)');
     $form['field_ceremony_year_value_wrapper']['field_ceremony_year_value']['max']['#title'] = t('To (year)');
@@ -68,13 +69,6 @@ function browse_awards_form_views_exposed_form_alter(&$form, $form_state, $form_
     ];
 
     $form['field_emeritus_designation_target_id']['#states'] = $disp_emeritus_designation;
-
-    // Form states — Display for group 1: Honorary Degree, Emeritus Honour.
-    $disp_group1 = [
-      'visible' => [
-        [':input[name*="field_award_type"]' => ['value' => $types['Honorary Degree']]],
-        [':input[name*="field_award_type"]' => ['value' => $types['Emeritus Honour']]],
-      ],
-    ];
+    */
   }
 }

@@ -115,7 +115,7 @@ form.views-exposed-form {
     &:has(~ .form-item-field-emeritus-designation-target-id:not([style="display: none;"])), 
     &:has(~ .form-item-field-faculty-award-type-target-id:not([style="display: none;"])),
     &:has(~ .form-item-field-grad-award-type-target-id:not([style="display: none;"])),
-    &:has(~ .form-item-field-honorary-degree-type-target-id:not([style="display: none;"]))
+    &:has(~ .form-item-field-honorary-degree-target-id:not([style="display: none;"]))
     {
       margin-right: .5rem !important;
     }
