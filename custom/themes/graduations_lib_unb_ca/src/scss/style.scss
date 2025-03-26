@@ -109,6 +109,14 @@ form.views-exposed-form {
     margin-right: 24%;
     width: 73.5%;
   }
+  // Default all sub-award fileds not to display.
+  .form-item-field-emeritus-designation-target-id,
+  .form-item-field-faculty-award-type-target-id,
+  .form-item-field-grad-award-type-target-id,
+  .form-item-field-honorary-degree-target-id {
+    display: none;
+  }
+
   // Break on Award Type filter.
   .form-item-field-award-type-target-id {
     margin-right: 24%;
