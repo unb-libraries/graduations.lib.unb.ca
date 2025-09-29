@@ -182,7 +182,7 @@ div.block-system-main-block {
     display: table-row !important;
     font-size: 12px;
   }
-  .floated-fig .field--name-field-image {
+  .floated-fig .field--name-field-image:has(> figure > div) {
     margin-bottom: .5rem !important;
   }
   .floated-fig img {
