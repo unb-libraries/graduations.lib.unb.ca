@@ -181,6 +181,9 @@ div.block-system-main-block {
   .floated-fig figcaption {
     display: table-row !important;
     font-size: 12px;
+    &:first-of-type {
+      margin-top: .5rem !important;
+    }
   }
   .floated-fig img {
     margin: 0 !important;
