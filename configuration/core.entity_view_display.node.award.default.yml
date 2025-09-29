@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.award.field_recipient
     - field.field.node.award.field_recipient_gender
     - field.field.node.award.field_recipient_valedictorian
+    - image.style.award_main
     - node.type.award
   module:
     - image
@@ -79,7 +80,7 @@ content:
     label: visually_hidden
     settings:
       image_link: file
-      image_style: ''
+      image_style: award_main
       image_loading:
         attribute: lazy
     third_party_settings: {  }

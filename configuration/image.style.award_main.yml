@@ -1,0 +1,15 @@
+uuid: 996dffba-a2a7-4ebb-80e7-d466d004c73d
+langcode: en
+status: true
+dependencies: {  }
+name: award_main
+label: 'Award main'
+effects:
+  4e03b98e-fea7-4c53-96ba-8e56c9e6f749:
+    uuid: 4e03b98e-fea7-4c53-96ba-8e56c9e6f749
+    id: image_scale
+    weight: 1
+    data:
+      width: 200
+      height: null
+      upscale: true
