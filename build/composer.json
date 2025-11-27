@@ -30,7 +30,7 @@
   "conflict": {
     "drupal/drupal": "*"
   },
-  "description": "Drupal 10 component of graduations.lib.unb.ca",
+  "description": "Drupal 11 component of graduations.lib.unb.ca",
   "extra": {
     "drupal-scaffold": {
       "locations": {
@@ -185,19 +185,19 @@
     "drupal/admin_toolbar": "^3",
     "drupal/bootstrap": "^3",
     "drupal/bootstrap4": "^3",
-    "drupal/color": "^1",
-    "drupal/core": "^10",
-    "drupal/core-composer-scaffold": "^10",
-    "drupal/core-recommended": "^10",
+    "drupal/color": "^2",
+    "drupal/core": "^11",
+    "drupal/core-composer-scaffold": "^11",
+    "drupal/core-recommended": "^11",
     "drupal/fontawesome": "^2",
     "drupal/google_analytics": "^4",
     "drupal/health_check": "^3",
-    "drupal/inline_entity_form": "1.0-rc15",
+    "drupal/inline_entity_form": "^3",
     "drupal/node_edit_protection": "^1",
     "drupal/pathauto": "^1",
     "drupal/quickedit": "^1",
-    "drupal/rdf": "^2", 
-    "drupal/redirect_after_login": "^2",
+    "drupal/rdf": "^3", 
+    "drupal/redirect_after_login": "^3",
     "drupal/redis": "^1",
     "drupal/samlauth": "^3",
     "drupal/search_api": "^1",
@@ -211,12 +211,12 @@
     "jquery/pause": "dev-master",
     "malsup/jquery.cycle": "^1",
     "oomphinc/composer-installers-extender": "^2",
-    "unb-libraries/composer-drupal-scaffold": "^10",
+    "unb-libraries/composer-drupal-scaffold": "^11",
     "unb-libraries/saml_features": "dev-10.x-1.x",
     "unb-libraries/unb_lib_zircon": "dev-10.x-bootstrap-4.x"
   },
   "require-dev": {
-    "unb-libraries/drupal-development-libraries": "^10"
+    "unb-libraries/drupal-development-libraries": "^11"
   },
   "type": "project"
 }

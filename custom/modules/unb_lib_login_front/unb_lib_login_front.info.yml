@@ -2,5 +2,5 @@ name: Login front by UNB Libraries
 type: module
 description: Redirects to <front> on user login.
 core: 10.x
-core_version_requirement: ^9 || ^10
+core_version_requirement: ^9 || ^10 || ^11
 package: Custom

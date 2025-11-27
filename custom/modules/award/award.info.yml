@@ -2,5 +2,5 @@ name: award
 type: module
 description: Custom support module for award content type.
 core: 10.x
-core_version_requirement: ^9 || ^10
+core_version_requirement: ^9 || ^10 || ^11
 package: Custom

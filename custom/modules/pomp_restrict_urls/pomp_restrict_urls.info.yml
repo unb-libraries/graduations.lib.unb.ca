@@ -2,5 +2,5 @@ type: module
 name: Pomp Restrict URLs
 description: 'Restrict URLs to admins'
 core: 10.x
-core_version_requirement: ^9 || ^10
+core_version_requirement: ^9 || ^10 || ^11
 ackage: POMP

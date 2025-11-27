@@ -2,5 +2,5 @@ name: browse_ceremonies
 type: module
 description: Custom support module for view browse_graduation_ceremonies
 core: 10.x
-core_version_requirement: ^9 || ^10
+core_version_requirement: ^9 || ^10 || ^11
 package: Custom
