@@ -28,8 +28,6 @@ privacy:
   anonymizeip: true
 custom:
   parameters: {  }
-  dimension: {  }
-  metric: {  }
 codesnippet:
   create: {  }
   before: ''
