@@ -19,15 +19,28 @@ function graduations_slideshow_views_pre_render(ViewExecutable $view) {
       if (!isset($view->element['#attributes']['class'])) {
         $view->element['#attributes']['class'] = [];
       }
-      
-      // Optional: pass options to JS (enable fade here).
+
+      // Add a unique class to scope the swiper for this view instance.
+      // If you have multiple instances and need unique IDs, you can also generate one here.
+      $view->element['#attributes']['class'][] = 'graduations-swiper';
+
+      // Options to pass to JS (enable fade and navigation).
       $options = [
+        // transition speed in ms (integer).
+        'speed' => 3000,
+        // autoplay as an object with delay in ms.
+        'autoplay' => [
+          'delay' => 7000,
+          'disableOnInteraction' => FALSE,
+        ],
         'effect' => 'fade',
-        'speed' => '5000',
-        'autoplay' => TRUE,
-        'autoplaySpeed' => 7000,
+        // Show pagination? (boolean or object if you need a selector)
         'pagination' => FALSE,
-        'navigation' => FALSE,
+        // Enable navigation and scope to the container's buttons.
+        'navigation' => [
+          'nextEl' => '.graduations-swiper .swiper-button-next',
+          'prevEl' => '.graduations-swiper .swiper-button-prev',
+        ],
       ];
       $view->element['#attributes']['data-swiper-options'] = json_encode($options);
     }
