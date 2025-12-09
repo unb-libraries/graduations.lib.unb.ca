@@ -12,7 +12,6 @@ dependencies:
     - image
     - node
     - user
-    - views_slideshow
 id: rotating_banner
 label: 'Rotating Banner'
 module: views
@@ -287,43 +286,11 @@ display:
             operator_limit_selection: false
             operator_list: {  }
       style:
-        type: slideshow
+        type: default
         options:
+          grouping: {  }
           row_class: ''
-          default_row_class: true
-          slideshow_skin: default
-          slideshow_type: views_slideshow_cycle
-          widgets:
-            top:
-              views_slideshow_controls:
-                enable: false
-                weight: '1'
-                hide_on_single_slide: '0'
-                type: views_slideshow_controls_text
-              views_slideshow_slide_counter:
-                enable: false
-                weight: '1'
-                hide_on_single_slide: '0'
-              views_slideshow_pager:
-                enable: false
-                weight: '1'
-                hide_on_single_slide: '0'
-                type: views_slideshow_pager_fields
-            bottom:
-              views_slideshow_controls:
-                enable: true
-                weight: '1'
-                hide_on_single_slide: '0'
-                type: views_slideshow_controls_text
-              views_slideshow_slide_counter:
-                enable: false
-                weight: '1'
-                hide_on_single_slide: '0'
-              views_slideshow_pager:
-                enable: false
-                weight: '1'
-                hide_on_single_slide: '0'
-                type: views_slideshow_pager_fields
+          default_row_class: false
       row:
         type: fields
       query:
@@ -355,7 +322,8 @@ display:
     display_plugin: block
     position: 1
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        simple_sitemap_display_extender: {  }
     cache_metadata:
       max-age: -1
       contexts:

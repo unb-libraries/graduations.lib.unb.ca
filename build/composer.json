@@ -79,6 +79,10 @@
       "url": "https://packages.drupal.org/8"
     },
     {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    },
+    {
       "package": {
         "dist": {
           "type": "file",
@@ -210,6 +214,7 @@
     "jquery/json2": "dev-master",
     "jquery/pause": "dev-master",
     "malsup/jquery.cycle": "^1",
+    "npm-asset/swiper": "^9",
     "oomphinc/composer-installers-extender": "^2",
     "unb-libraries/composer-drupal-scaffold": "^11.x-dev",
     "unb-libraries/saml_features": "dev-10.x-1.x",
