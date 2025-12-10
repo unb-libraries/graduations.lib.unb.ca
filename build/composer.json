@@ -199,7 +199,7 @@
     "drupal/inline_entity_form": "^3",
     "drupal/node_edit_protection": "^1",
     "drupal/pathauto": "^1",
-    "drupal/quickedit": "^1",
+    "drupal/quickedit": "^2",
     "drupal/rdf": "^3", 
     "drupal/redirect_after_login": "^3",
     "drupal/redis": "^1",
