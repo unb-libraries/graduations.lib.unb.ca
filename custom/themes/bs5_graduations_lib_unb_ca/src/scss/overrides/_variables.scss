@@ -1,0 +1,11 @@
+// Override bootstrap framework variables.
+
+// Import custom variables.
+@use '../custom/variables' as custom;
+
+// Spacers.
+$spacer: 1rem !default;
+$spacers: () !default;
+
+// Colours.
+$link-color: custom.$unb-darkred;

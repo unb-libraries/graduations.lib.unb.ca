@@ -30,7 +30,7 @@
   "conflict": {
     "drupal/drupal": "*"
   },
-  "description": "Drupal 10 component of graduations.lib.unb.ca",
+  "description": "Drupal 11 component of graduations.lib.unb.ca",
   "extra": {
     "drupal-scaffold": {
       "locations": {
@@ -187,7 +187,7 @@
   ],
   "require": {
     "drupal/admin_toolbar": "^3",
-    "drupal/bootstrap": "^3",
+    "drupal/bootstrap": "^5",
     "drupal/bootstrap4": "^3",
     "drupal/color": "^2",
     "drupal/core": "^11",
