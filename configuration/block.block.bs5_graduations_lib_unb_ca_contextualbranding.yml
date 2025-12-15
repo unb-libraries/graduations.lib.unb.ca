@@ -8,7 +8,7 @@ dependencies:
     - bs5_graduations_lib_unb_ca
 id: bs5_graduations_lib_unb_ca_contextualbranding
 theme: bs5_graduations_lib_unb_ca
-region: nav_branding
+region: top_header
 weight: -5
 provider: null
 plugin: context_branding_block

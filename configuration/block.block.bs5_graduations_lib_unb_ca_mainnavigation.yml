@@ -1,4 +1,4 @@
-uuid: 4d5b717b-d5fb-46c6-b396-f60e8cf86465
+uuid: 50a7ce6b-8f89-4e96-a4bb-2ae237bcfac3
 langcode: en
 status: true
 dependencies:
@@ -8,12 +8,10 @@ dependencies:
     - system
   theme:
     - bs5_graduations_lib_unb_ca
-_core:
-  default_config_hash: rx9IrdDv7Ldc4kpalZAxdhIPZfYIeOMh1N-qKoQZwHo
-id: bs5_graduations_lib_unb_ca_main_menu
+id: bs5_graduations_lib_unb_ca_mainnavigation
 theme: bs5_graduations_lib_unb_ca
-region: nav_main
-weight: -6
+region: primary_menu
+weight: -5
 provider: null
 plugin: 'system_menu_block:main'
 settings:
@@ -22,6 +20,6 @@ settings:
   label_display: '0'
   provider: system
   level: 1
-  depth: 0
+  depth: null
   expand_all_items: false
 visibility: {  }

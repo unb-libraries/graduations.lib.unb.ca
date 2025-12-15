@@ -10,8 +10,8 @@ dependencies:
     - bs5_graduations_lib_unb_ca
 id: bs5_graduations_lib_unb_ca_footer
 theme: bs5_graduations_lib_unb_ca
-region: footer
-weight: 0
+region: footer_first
+weight: -4
 provider: null
 plugin: 'system_menu_block:footer'
 settings:
