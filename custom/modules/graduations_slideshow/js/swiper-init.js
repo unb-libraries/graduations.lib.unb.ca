@@ -4,7 +4,7 @@
   Drupal.behaviors.graduationsSlideshowSwiper = {
     attach: function (context, settings) {
       // Add swiper-slider class to view-content if needed.
-      var viewContent = context.querySelector('#block-graduations-lib-unb-ca-views-block-rotating-banner-block-1-3 .view-content');
+      var viewContent = context.querySelector('#block-bs5-graduations-lib-unb-ca-views-block-rotating-banner-block-1-3 .view-content');
       if (viewContent && !viewContent.classList.contains('swiper-slider')) {
         viewContent.classList.add('swiper-slider');
       }
