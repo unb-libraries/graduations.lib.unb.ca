@@ -6,4 +6,17 @@
 
 // Broad rules (careful)
 #page-wrapper {
+  // All in page (toolbar excluded)
+  margin: auto;
+  padding: 1rem;
+  // All links
+  a {
+    color: custom.$unb-darkred;
+  }
+}
+
+@media screen and (width > 1300px) {
+  #page-wrapper {
+    max-width: 1300px;
+  }
 }
