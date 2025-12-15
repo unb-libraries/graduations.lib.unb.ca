@@ -11,19 +11,70 @@
   padding: 1rem;
   /* All links */
   a {
+    text-decoration: none;
     color: custom.$unb-darkred;
+    &:active,
+    &:hover,
+    &:focus,
+    &:focus-within,
+    &:focus-visible {
+      text-decoration: underline;
+      color: custom.$unb-darkerred;
+    }
   }
 }
 
 /* Branding */
-#block-bs5-graduations-lib-unb-ca-contextualbranding {
+.block-context-branding-block {
   .site-title {
+    margin-bottom: 0;
     font-size: 2rem;
     color: custom.$unb-darkred;
   }
   .site-slogan {
     font-size: 1rem;
     color: custom.$unb-gray;
+  }
+}
+
+/* Main navigation */
+#CollapsingNavbar {
+  nav[role="navigation"] {
+    width: 100%;
+    * {
+      background-color: custom.$unb-darkgray;
+      color: custom.$offwhite !important;
+    }
+    .navbar-nav {
+      .nav-item {
+        > a, > span {
+          padding: 1rem;
+          text-decoration: none !important;
+          &.is-active,
+          &:hover,
+          &:focus {
+            background-color: custom.$unb-darkerred;
+          }
+        }
+        .dropdown-menu {
+          padding: 0;
+          .dropdown-item {
+            line-height: 2rem;
+            &:has(> a:hover) {
+              background-color: custom.$unb-darkerred;
+            }
+            a {
+              text-decoration: none !important;
+              &.is-active,
+              &:hover,
+              &:focus {
+                background-color: custom.$unb-darkerred;
+              }              
+            }
+          }
+        }
+      }
+    }
   }
 }
 
