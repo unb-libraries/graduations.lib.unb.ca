@@ -10,3 +10,14 @@
   transform: translateY(-50%) !important;
   margin-top: 0 !important;
 }
+
+/* Align navigation buttons to their respective sides */
+.view-content.swiper-slider {
+  .swiper-button-next {
+    justify-content: flex-end;
+  }
+  .swiper-button-prev {
+    justify-content: flex-start;
+  }
+}
+

@@ -1,20 +1,21 @@
-// Variable overrides.
+/* Variable overrides */
 @use 'overrides/variables' as overrides;
 
-// Custom variables.
+/* Custom variables */
 @use 'custom/variables' as custom;
 
-// Broad rules (careful)
+/* Broad rules (careful) */
 #page-wrapper {
-  // All in page (toolbar excluded)
+  /* All in page (toolbar excluded) */
   margin: auto;
   padding: 1rem;
-  // All links
+  /* All links */
   a {
     color: custom.$unb-darkred;
   }
 }
 
+/* Responsive */
 @media screen and (width > 1300px) {
   #page-wrapper {
     max-width: 1300px;
