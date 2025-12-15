@@ -19,9 +19,8 @@ class ContextBrandingBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-    $current_path = \Drupal::service('path.current')->getPath();
-    $front_page = \Drupal::config('system.site')->get('front');
-    $is_front = $current_path === $front_page;    $site_config = \Drupal::config('system.site');
+    $is_front = \Drupal::service('path.matcher')->isFrontPage();
+    $site_config = \Drupal::config('system.site');
     $site_name = $site_config->get('name');
     $site_slogan = $site_config->get('slogan');
 

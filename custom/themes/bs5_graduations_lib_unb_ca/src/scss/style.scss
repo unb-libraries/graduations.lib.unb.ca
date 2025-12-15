@@ -15,8 +15,21 @@
   }
 }
 
+/* Branding */
+#block-bs5-graduations-lib-unb-ca-contextualbranding {
+  .site-title {
+    font-size: 2rem;
+    color: custom.$unb-darkred;
+  }
+  .site-slogan {
+    font-size: 1rem;
+    color: custom.$unb-gray;
+  }
+}
+
 /* Responsive */
 @media screen and (width > 1300px) {
+  /* All in page (toolbar excluded) */
   #page-wrapper {
     max-width: 1300px;
   }
