@@ -1,0 +1,26 @@
+uuid: dfe6a5fc-4960-4d33-b110-1b78902e166a
+langcode: en
+status: true
+dependencies:
+  module:
+    - pomp_core
+    - system
+  theme:
+    - bs5_graduations_lib_unb_ca
+id: bs5_graduations_lib_unb_ca_browse_2
+theme: bs5_graduations_lib_unb_ca
+region: content
+weight: -4
+provider: null
+plugin: pomp_browse
+settings:
+  id: pomp_browse
+  label: Browse
+  label_display: visible
+  provider: pomp_core
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: "<front>\r\n/search"

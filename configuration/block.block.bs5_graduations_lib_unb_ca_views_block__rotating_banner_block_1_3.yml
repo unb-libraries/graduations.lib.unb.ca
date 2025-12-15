@@ -1,0 +1,30 @@
+uuid: 32898b10-5774-4f58-9b70-c3047447bb07
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.rotating_banner
+  module:
+    - system
+    - views
+  theme:
+    - bs5_graduations_lib_unb_ca
+id: bs5_graduations_lib_unb_ca_views_block__rotating_banner_block_1_3
+theme: bs5_graduations_lib_unb_ca
+region: content
+weight: -6
+provider: null
+plugin: 'views_block:rotating_banner-block_1'
+settings:
+  id: 'views_block:rotating_banner-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: "<front>\r\n/about\r\n/traditions\r\n/orators\r\n/acknowledgements\r\n/cattley\r\n/effervescences\r\n"

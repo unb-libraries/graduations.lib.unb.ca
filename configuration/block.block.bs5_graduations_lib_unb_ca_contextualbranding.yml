@@ -1,0 +1,20 @@
+uuid: cfccd656-dd00-487e-b531-2dc6717cb20e
+langcode: en
+status: true
+dependencies:
+  module:
+    - unb_lib_context_branding
+  theme:
+    - bs5_graduations_lib_unb_ca
+id: bs5_graduations_lib_unb_ca_contextualbranding
+theme: bs5_graduations_lib_unb_ca
+region: nav_branding
+weight: -5
+provider: null
+plugin: context_branding_block
+settings:
+  id: context_branding_block
+  label: 'Contextual Branding'
+  label_display: '0'
+  provider: unb_lib_context_branding
+visibility: {  }

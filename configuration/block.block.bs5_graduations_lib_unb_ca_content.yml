@@ -1,0 +1,22 @@
+uuid: 83efb85e-236f-432f-8b29-1e8eaee64dfc
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bs5_graduations_lib_unb_ca
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: bs5_graduations_lib_unb_ca_content
+theme: bs5_graduations_lib_unb_ca
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

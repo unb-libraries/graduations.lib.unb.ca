@@ -1,0 +1,22 @@
+uuid: 61bcceb2-d4fe-4530-8231-d827792fd84c
+langcode: en
+status: true
+dependencies:
+  theme:
+    - bs5_graduations_lib_unb_ca
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: bs5_graduations_lib_unb_ca_local_tasks
+theme: bs5_graduations_lib_unb_ca
+region: content
+weight: -3
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

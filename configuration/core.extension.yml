@@ -79,4 +79,5 @@ theme:
   bootstrap4: 0
   unb_lib_zircon: 0
   graduations_lib_unb_ca: 0
+  bs5_graduations_lib_unb_ca: 0
 profile: minimal
