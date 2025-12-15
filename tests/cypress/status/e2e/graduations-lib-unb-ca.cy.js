@@ -9,7 +9,7 @@ describe('Graduations', {baseUrl: host, groups: ['sites']}, () => {
     })
 
     specify('Sidebar block "Browse" should contain "Honorary Degrees and Awards" link', () => {
-      cy.get('#block-graduations-lib-unb-ca-browse-2 a')
+      cy.get('#block-bs5-graduations-lib-unb-ca-browse-2 a')
         .contains('Honorary Degrees and Awards')
         .its('0.href')
         .should('match', /\/awards/)
