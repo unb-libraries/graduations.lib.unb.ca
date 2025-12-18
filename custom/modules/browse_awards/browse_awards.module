@@ -34,38 +34,42 @@ function browse_awards_form_views_exposed_form_alter(&$form, $form_state, $form_
     }
 
     // Form states — Display exclusive fields for graduate award.
-    $disp_grad_award = [
+    $disp_grad_award = !empty($types['Graduate Award']) ?
+    [
       'visible' => [
         ':input[name*="field_award_type"]' => ['value' => $types['Graduate Award']],
       ],
-    ];
+    ] : FALSE;
 
     $form['field_grad_award_type_target_id']['#states'] = $disp_grad_award;
 
     // Form states — Display exclusive fields for honorary degree.
-    $disp_hon_degree = [
+    $disp_hon_degree = !empty($types['Honorary Degree']) ?
+    [
       'visible' => [
         ':input[name*="field_award_type"]' => ['value' => $types['Honorary Degree']],
       ],
-    ];
+    ] : FALSE;
 
     $form['field_honorary_degree_target_id']['#states'] = $disp_hon_degree;
 
     // Form states — Display exclusive fields for faculty award.
-    $disp_fac_award = [
+    $disp_fac_award = !empty($types['Faculty Award/Honour']) ?
+    [
       'visible' => [
         ':input[name*="field_award_type"]' => ['value' => $types['Faculty Award/Honour']],
       ],
-    ];
+    ] : NULL;
 
     $form['field_faculty_award_type_target_id']['#states'] = $disp_fac_award;
 
     // Form states — Display exclusive fields for emeritus designation.
-    $disp_emeritus_designation = [
+    $disp_emeritus_designation = !empty($types['Emeritus Honour']) ?
+    [
       'visible' => [
         ':input[name*="field_award_type"]' => ['value' => $types['Emeritus Honour']],
       ],
-    ];
+    ] : FALSE;
 
     $form['field_emeritus_designation_target_id']['#states'] = $disp_emeritus_designation;
   }
