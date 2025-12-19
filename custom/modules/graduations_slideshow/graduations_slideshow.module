@@ -27,7 +27,7 @@ function graduations_slideshow_views_pre_render(ViewExecutable $view) {
       // Options to pass to JS (enable fade and navigation).
       $options = [
         // transition speed in ms (integer).
-        'speed' => 1000,
+        'speed' => 2000,
         // autoplay as an object with delay in ms.
         'autoplay' => [
           'delay' => 7000,

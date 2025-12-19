@@ -81,7 +81,7 @@
             padding: 0;
             .dropdown-item {
               line-height: 2rem;
-              &:has(> a:hover) {
+              &:has(> a:hover, a:focus, a.is-active) {
                 background-color: custom.$unb-darkerred;
               }
               a {
@@ -104,85 +104,109 @@
 }
 
 /* Main container */
-#main-wrapper {
-  #main {
-    padding: 0;
-    .section {
-      /* Slideshow block */
-      .block-views[class*='-swiper'] {
-        .swiper-slider {
-          margin: revert;
-        }
+body.path-frontpage {
+  #main-wrapper {
+    #main {
+      padding: 0;
+      .section {
       }
-      /* Search and browse blocks */
-      .views-exposed-form,
-      .views-exposed-form + .block {
-        display: inline-block;
-        margin-top: 1rem;
-        height: 140px;
-        padding: 1rem;
-        background-color: custom.$unb-halfgray;
-        > h2 {
-          font-size: 1.6rem;
-        }
-      }
-      .block-views[class*='-swiper'] + .block {
-        float: inline-start;
-        width: 794px;
-      }
-      .block-views[class*='-swiper'] + .block + .block {
-        position: relative;
-        float: inline-end;
-        width: 458px;
-      }
-      /* Search block */
-      .views-exposed-form {
-        h2 {
-          margin-bottom: 0;
-        }
-        form {
-          margin-top: -.5rem;
-          & > .flex-wrap {
-            > div:not(:first-child) {
-              margin-left: 1rem;
-            }
-            > div:first-child {
-              width: 545px;
-            }
-            label {
-              visibility: hidden;
-            }
+    }
+  }
+}
 
-            small {
-              color: custom.$unb-darkgray !important;
-            }
-            .form-item-sort-by {
-              display: none;
-              width: 0;
-            }
-            .form-actions {
-              align-self: anchor-center;
+/* Main container - Home, Search */
+body.path-frontpage,
+body.path-search {
+  #main-wrapper {
+    #main {
+      padding: 0;
+      .section {
+        /* Slideshow block */
+        .block-views[class*='-swiper'] {
+          .swiper-slider {
+            margin: revert;
+          }
+        }
+        /* Search and browse blocks */
+        .views-exposed-form,
+        .views-exposed-form + .block {
+          display: inline-block;
+          margin-top: 1rem;
+          height: 140px;
+          padding: 1rem;
+          background-color: custom.$unb-halfgray;
+          > h2 {
+            font-size: 1.6rem;
+          }
+        }
+        .views-exposed-form {
+          float: inline-start;
+          width: 794px;
+        }
+        .views-exposed-form + .block {
+          position: relative;
+          float: inline-end;
+          width: 458px;
+        }
+        /* Search block */
+        .views-exposed-form {
+          h2 {
+            margin-bottom: 0;
+          }
+          form {
+            margin-top: -.5rem;
+            & > .flex-wrap {
+              > div:not(:first-child) {
+                margin-left: 1rem;
+              }
+              > div:first-child {
+                width: 545px;
+              }
+              label {
+                visibility: hidden;
+              }
+
+              small {
+                color: custom.$unb-darkgray !important;
+              }
+              .form-item-sort-by {
+                display: none;
+                width: 0;
+              }
+              .form-actions {
+                align-self: anchor-center;
+              }
             }
           }
         }
-      }
-      /* Browse block */
-      .views-exposed-form + .block {
-        p {
-          margin-bottom: .5rem;
+        /* Browse block */
+        .views-exposed-form + .block {
+          p {
+            margin-bottom: .5rem;
+          }
         }
-      }
-      /* Page title block */
-      .block-page-title-block {
-        margin-top: 12rem;
-        clear: both;
-        .field--name-title {
-          font-size: 1.8rem;
+        /* Page title block */
+        .block-page-title-block {
+          margin-top: 12rem;
+          clear: both;
+          .field--name-title {
+            font-size: 1.8rem;
+          }
         }
       }
     }
   }
 }
+
+/* Main container - Search */
+body.path-search {
+  /* Search and browse blocks */
+  .views-exposed-form,
+  .views-exposed-form + .block {
+    margin-top: 0 !important;
+  }
+}
+
 
 /* Footer */
 .site-footer, .site-footer * {
