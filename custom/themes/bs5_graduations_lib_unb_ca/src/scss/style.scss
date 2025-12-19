@@ -103,19 +103,11 @@
   }
 }
 
-/* Main container */
-body.path-frontpage {
-  #main-wrapper {
-    #main {
-      padding: 0;
-      .section {
-      }
-    }
-  }
-}
-
-/* Main container - Home, Search */
+/* Main container - Home, Search, static pages */
 body.path-frontpage,
+body.path-about,
+body.path-traditions,
+body.path-orators,
 body.path-search {
   #main-wrapper {
     #main {
@@ -189,9 +181,6 @@ body.path-search {
         .block-page-title-block {
           margin-top: 12rem;
           clear: both;
-          .field--name-title {
-            font-size: 1.8rem;
-          }
         }
       }
     }
@@ -200,13 +189,52 @@ body.path-search {
 
 /* Main container - Search */
 body.path-search {
-  /* Search and browse blocks */
-  .views-exposed-form,
-  .views-exposed-form + .block {
-    margin-top: 0 !important;
+    #main-wrapper {
+    #main {
+      padding: 0;
+      .section {
+        /* Search and browse blocks */
+        .views-exposed-form,
+        .views-exposed-form + .block {
+          margin-top: 0 !important;
+        }
+      }
+    }
   }
 }
 
+/* Main container - Elsewhere */
+body:not(.path-homepage, .path-search) {
+    #main-wrapper {
+      #main {
+        .section {
+        .views-exposed-form {
+          > .flex-wrap {
+            display: block !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Main container - Everywhere */
+body {
+  #main-wrapper {
+    #main {
+      padding: 0;
+      .section {
+        /* Page title block */
+        .block-page-title-block {
+          .field--name-title, 
+          .title {
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+  }
+}
 
 /* Footer */
 .site-footer, .site-footer * {
