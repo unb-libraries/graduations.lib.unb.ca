@@ -1,6 +1,3 @@
-/* Variable overrides */
-@use 'overrides/variables' as overrides;
-
 /* Custom variables */
 @use 'custom/variables' as custom;
 
@@ -22,6 +19,27 @@
       color: custom.$unb-darkerred;
     }
   }
+  /* All controls */
+  input, select {
+    border: 1px solid custom.$unb-25gray !important;
+    box-shadow: initial !important;
+    &.btn {
+      border: initial !important;
+    }
+  }
+  /* All buttons */
+  button, .btn {
+    background-color: custom.$unb-darkerred;
+    border-color: custom.$unb-darkerred;
+    &:active,
+    &:hover,
+    &:focus,
+    &:focus-within,
+    &:focus-visible {
+      background-color: custom.$unb-darkred;
+      border-color: custom.$unb-darkred;
+    }
+  } 
 }
 
 /* Branding */
@@ -97,11 +115,11 @@
         }
       }
       /* Search and browse blocks */
-      .block-views[class*='-swiper'] + .block,
-      .block-views[class*='-swiper'] + .block + .block {
+      .views-exposed-form,
+      .views-exposed-form + .block {
         display: inline-block;
         margin-top: 1rem;
-        height: 160px;
+        height: 140px;
         padding: 1rem;
         background-color: custom.$unb-halfgray;
         > h2 {
@@ -116,6 +134,48 @@
         position: relative;
         float: inline-end;
         width: 458px;
+      }
+      /* Search block */
+      .views-exposed-form {
+        h2 {
+          margin-bottom: 0;
+        }
+        form {
+          margin-top: -.5rem;
+          & > .flex-wrap {
+            > div:not(:first-child) {
+              margin-left: 1rem;
+            }
+            > div:first-child {
+              width: 545px;
+            }
+            label {
+              visibility: hidden;
+            }
+
+            small {
+              color: custom.$unb-darkgray !important;
+            }
+            .form-item-sort-by {
+              display: none;
+              width: 0;
+            }
+            .form-actions {
+              align-self: anchor-center;
+            }
+          }
+        }
+      }
+      /* Browse block */
+      .views-exposed-form + .block {
+        p {
+          margin-bottom: .5rem;
+        }
+      }
+      /* Page title block */
+      .block-page-title-block {
+          content: "";
+          clear: both;
       }
     }
   }
