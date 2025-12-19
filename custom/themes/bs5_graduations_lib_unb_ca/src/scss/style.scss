@@ -174,9 +174,26 @@
       }
       /* Page title block */
       .block-page-title-block {
-          content: "";
-          clear: both;
+        margin-top: 12rem;
+        clear: both;
+        .field--name-title {
+          font-size: 1.8rem;
+        }
       }
+    }
+  }
+}
+
+/* Footer */
+.site-footer, .site-footer * {
+  background-color: white;
+}
+.site-footer {
+  margin-top: 1rem;
+  border-top: 1px solid custom.$unb-halfgray;
+  #footer-copy {
+    p {
+      float: inline-end;
     }
   }
 }
