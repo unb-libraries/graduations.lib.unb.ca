@@ -237,6 +237,7 @@ body {
     #main {
       padding: 0;
       .section {
+        margin-top: 1rem;
         /* Exposed form */
         .views-exposed-form {
           .form-item-sort-by {
@@ -252,6 +253,49 @@ body {
           .field--name-title, 
           .title {
             font-size: 1.8rem;
+          }
+        }
+        /* Main block */
+        .block-system-main-block {
+          .content {
+            margin-top: 2rem;
+            .view-header {
+              margin-top: 1rem;
+              padding-bottom: 1rem;
+              border-bottom: 1px solid custom.$unb-halfgray;
+            }
+            .view-content.row {
+              margin-top: 1rem;
+              .item-list {
+                margin-top: 1rem;
+                ul {
+                  list-style: disc;
+                  li {
+                    margin-left: 1.5rem;
+                  }
+                }
+              }
+            }
+            .view-footer {
+              margin-top: 2rem;
+            }
+            nav {
+              margin-top: 3rem;
+              .pagination {
+                justify-content: center;
+                .page-item {
+                  &.active {
+                    .page-link {
+                      background-color: custom.$unb-darkerred;
+                    }
+                  }
+                  a {
+                    background-color: initial !important;
+                    box-shadow: none !important;
+                  }
+                }
+              }
+            }
           }
         }
       }
