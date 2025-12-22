@@ -157,14 +157,6 @@ body.path-search {
               label {
                 visibility: hidden;
               }
-
-              small {
-                color: custom.$unb-darkgray !important;
-              }
-              .form-item-sort-by {
-                display: none;
-                width: 0;
-              }
               .form-actions {
                 align-self: anchor-center;
               }
@@ -204,13 +196,34 @@ body.path-search {
 }
 
 /* Main container - Elsewhere */
-body:not(.path-homepage, .path-search) {
+body:not(.path-frontpage, .path-search) {
     #main-wrapper {
       #main {
         .section {
         .views-exposed-form {
+          margin-top: -.5rem;
           > .flex-wrap {
             display: block !important;
+          }
+          .js-form-item { 
+          display: inline-block;
+          margin-left: 0;
+          width: 360px;
+          }
+          fieldset {
+            width: 740px !important;
+            .js-form-item {
+            }
+          }
+          .form-actions {
+            display: inline-block;
+            width: auto;
+          }
+          .form-item-field-season-target-id,
+          .form-item-field-ceremony-year-value-max,
+          .form-item-sort-order,
+          .form-actions {
+            margin-left: 1rem !important;
           }
         }
       }
@@ -224,6 +237,16 @@ body {
     #main {
       padding: 0;
       .section {
+        /* Exposed form */
+        .views-exposed-form {
+          .form-item-sort-by {
+            display: none !important;
+            width: 0;
+          }
+          small {
+            color: custom.$unb-darkgray !important;
+          }
+        }
         /* Page title block */
         .block-page-title-block {
           .field--name-title, 
