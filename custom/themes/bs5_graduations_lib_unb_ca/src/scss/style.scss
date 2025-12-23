@@ -39,6 +39,14 @@
       background-color: custom.$unb-darkred;
       border-color: custom.$unb-darkred;
     }
+  }
+  /* All tables */
+  table {
+    tbody {
+      tr {
+        background-color: initial;
+      }
+    }
   } 
 }
 
@@ -142,6 +150,7 @@ body.path-search {
         }
         /* Search block */
         .views-exposed-form {
+          margin-bottom: 2rem;
           h2 {
             margin-bottom: 0;
           }
@@ -200,30 +209,56 @@ body:not(.path-frontpage, .path-search) {
     #main-wrapper {
       #main {
         .section {
+          margin-top: 1rem;
         .views-exposed-form {
           margin-top: -.5rem;
           > .flex-wrap {
             display: block !important;
           }
-          .js-form-item { 
-          display: inline-block;
-          margin-left: 0;
-          width: 360px;
+          .js-form-item {
+            display: inline-block;
+            margin-left: 0;
+            width: 324px;
+            &.js-form-item-combine {
+              width: 1012px;
+            }
           }
           fieldset {
-            width: 740px !important;
+            width: 668px !important;
             .js-form-item {
             }
           }
           .form-actions {
             display: inline-block;
-            width: auto;
+            & > * {
+              width: 100px;
+              display: inline-block;
+            }
           }
           .form-item-field-season-target-id,
           .form-item-field-ceremony-year-value-max,
           .form-item-sort-order,
+          .js-form-item-field-award-type-target-id,
+          .js-form-item-field-emeritus-designation-target-id,
+          .js-form-item-field-faculty-award-type-target-id,
+          .js-form-item-field-grad-award-type-target-id,
+          .js-form-item-field-honorary-degree-target-id,
           .form-actions {
             margin-left: 1rem !important;
+          }
+          .js-form-item-field-emeritus-designation-target-id,
+          .js-form-item-field-faculty-award-type-target-id,
+          .js-form-item-field-grad-award-type-target-id,
+          .js-form-item-field-honorary-degree-target-id {
+            width: 200px;
+          }
+        }
+        /* Main block */
+        .block-system-main-block {
+          .content {
+            margin-top: 2rem;
+            .view-header {
+            }
           }
         }
       }
@@ -237,7 +272,6 @@ body {
     #main {
       padding: 0;
       .section {
-        margin-top: 1rem;
         /* Exposed form */
         .views-exposed-form {
           .form-item-sort-by {
@@ -258,20 +292,50 @@ body {
         /* Main block */
         .block-system-main-block {
           .content {
-            margin-top: 2rem;
             .view-header {
-              margin-top: 1rem;
+              clear: both;
+              margin-top: 2rem;
               padding-bottom: 1rem;
               border-bottom: 1px solid custom.$unb-halfgray;
             }
             .view-content.row {
-              margin-top: 1rem;
+              display: block;
+              margin-top: 2rem;
               .item-list {
                 margin-top: 1rem;
                 ul {
                   list-style: disc;
                   li {
                     margin-left: 1.5rem;
+                  }
+                }
+              }
+              .views-row {
+                border-bottom: 1px solid custom.$unb-halfgray;
+                table {
+                  & * {
+                    font-size: 1rem;
+                  }
+                  tbody {
+                    tr {
+                      padding: 0 !important;
+                      td {
+                        padding: 0 !important;
+                      }
+                    }
+                  }
+                }
+                img:not([class^=image-style-slideshow]) {
+                  margin: 1rem;
+                  max-width: 100%;
+                  height: auto;
+                  object-fit: cover;
+                  -webkit-box-shadow: 4px 4px 8px #d3d3d3;
+                  -moz-box-shadow: 4px 4px 8px #d3d3d3;
+                  box-shadow: 4px 4px 8px #d3d3d3;
+                  border: 6px solid #fff;
+                  &.image-style-degree-thumbnail {
+                    float: inline-end;
                   }
                 }
               }

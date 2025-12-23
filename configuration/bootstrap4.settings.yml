@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: KSNPviNI7ZQYoUp7GU-1xLaUDIGxJk-LTrhGAE0QJ8A
 b4_body_schema: ''
 b4_body_bg_schema: ''
 b4_navbar_schema: dark
@@ -5,5 +7,3 @@ b4_navbar_bg_schema: dark
 b4_footer_schema: dark
 b4_footer_bg_schema: secondary
 b4_top_container: container
-_core:
-  default_config_hash: KSNPviNI7ZQYoUp7GU-1xLaUDIGxJk-LTrhGAE0QJ8A
