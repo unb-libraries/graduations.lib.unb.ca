@@ -2,6 +2,10 @@
 @use 'custom/variables' as custom;
 
 /* Broad rules (careful) */
+html {
+  /* Base font size */
+  font-size: 18px;
+}
 /* Fonts */
 body {
   /* All */
@@ -145,7 +149,7 @@ body.path-search {
         .views-exposed-form + .block {
           display: inline-block;
           margin-top: 1rem;
-          height: 140px;
+          height: 160px;
           padding: 1rem;
           background-color: custom.$unb-halfgray;
           > h2 {
@@ -230,7 +234,7 @@ body:not(.path-frontpage, .path-search) {
           .js-form-item {
             display: inline-block;
             margin-left: 0;
-            width: 324px;
+            width: 322px;
             &.js-form-item-combine {
               width: 1012px;
             }
