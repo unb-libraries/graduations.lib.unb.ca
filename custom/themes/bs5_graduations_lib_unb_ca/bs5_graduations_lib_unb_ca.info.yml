@@ -8,6 +8,7 @@ base theme: bootstrap
 
 libraries:
   - bs5_graduations_lib_unb_ca/global-styling
+  - bs5_graduations_lib_unb_ca/google-fonts
 
 regions:
   top_header: 'Top header'

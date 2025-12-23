@@ -2,11 +2,26 @@
 @use 'custom/variables' as custom;
 
 /* Broad rules (careful) */
+/* Fonts */
+body {
+  /* All */
+  * {
+    font-family: "Barlow Condensed", sans-serif;
+  }
+  /* Upper headers */
+  h1, h2 {
+    font-family: "Nunito Sans", sans-serif;
+  }
+  /* Other headers */
+  h3, h4, h5, h6 {
+    font-family: "Nunito", serif;
+  }
+}
+/* All links */
 #page-wrapper {
   /* All in page (toolbar excluded) */
   margin: auto;
   padding: 1rem;
-  /* All links */
   a {
     text-decoration: none;
     color: custom.$unb-darkred;
