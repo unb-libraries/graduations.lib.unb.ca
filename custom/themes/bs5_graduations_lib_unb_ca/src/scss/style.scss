@@ -14,7 +14,7 @@ body {
     color: custom.$unb-darkgray;
   }
   /* Upper headers */
-  h1, h2 {
+  h1, h1 *, h2, h2 *, a.site-title {
     font-family: "Nunito Sans", sans-serif;
   }
   /* Other headers */
@@ -97,7 +97,7 @@ body {
       .navbar-nav {
         .nav-item {
           > a, > span {
-            padding: 1rem;
+            padding: 1rem 1.5rem;
             text-decoration: none !important;
             &.is-active,
             &:hover,
@@ -131,7 +131,7 @@ body {
   }
 }
 
-/* Main container - Home, Search */
+/* Main container - Home, Search, static page */
 body.path-frontpage,
 body.node--type-static-page,
 body.path-search {
@@ -323,16 +323,37 @@ body {
         /* Main block */
         .block-system-main-block {
           .content {
+            /* Headers */
+            h1, h1 * {
+              font-size: 1.6rem;
+            }
+            h2, h2 * {
+              font-size: 1.2rem;
+            }
+            h3, h3 * {
+              font-size: 1rem;
+            }
+            #graduation_ceremony {
+              > div {
+                margin-bottom: 1rem;
+              }
+            }
             .view-header {
               clear: both;
-              margin-top: 2rem;
+              margin-top: 1rem;
               padding-bottom: 1rem;
               border-bottom: 1px solid custom.$unb-halfgray;
             }
+            .view-awards-x-ceremony,
+            .view-addresses-x-ceremony {
+              .view-content.row {
+                margin-top: -1rem;
+              }
+            }
             .view-content.row {
               display: block;
-              margin-top: 2rem;
               margin-left: 0 !important;
+              margin-top: 2rem;
               .item-list {
                 margin-top: 1rem;
                 ul {
@@ -380,12 +401,6 @@ body {
               }
             }
             .node__content {
-              h2, h2 * {
-                font-size: 1.4rem !important;
-              }
-              h3, h3 * {
-                font-size: 1.2rem !important;
-              }
               table {
                 & * {
                   border: none;
@@ -419,8 +434,12 @@ body {
 .site-footer {
   margin-top: 1rem;
   border-top: 1px solid custom.$unb-halfgray;
+  .footer-logo {
+    max-width: 260px;
+  }
   #footer-copy {
     p {
+      margin-top: 0;
       float: inline-end;
     }
   }
