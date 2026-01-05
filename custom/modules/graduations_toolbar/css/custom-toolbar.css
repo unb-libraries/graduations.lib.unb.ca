@@ -1,3 +1,9 @@
+/* Toolbar Menu */
+#toolbar-bar {
+  * {
+    font-size: .9rem;
+  }
+}
 /* Toolbar Menu Item Styling */
 .toolbar-tab a:focus,
 .toolbar-tab a:hover,
