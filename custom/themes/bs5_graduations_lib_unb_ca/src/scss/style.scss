@@ -51,11 +51,7 @@ body {
   button, .btn {
     background-color: custom.$unb-darkerred;
     border-color: custom.$unb-darkerred;
-    &:active,
-    &:hover,
-    &:focus,
-    &:focus-within,
-    &:focus-visible {
+    &:hover {
       background-color: custom.$unb-darkred;
       border-color: custom.$unb-darkred;
     }
@@ -87,6 +83,17 @@ body {
 #navbar-main {
   margin: 1rem 0;
   padding: 0;
+  .navbar-toggler {
+    border-radius: 0 !important;
+    box-shadow: none;
+    span {
+      background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='rgba%28255, 249, 250, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+    }
+    &:not(.collapsed) {
+      background-color: custom.$unb-darkgray !important;
+      border-color: custom.$unb-darkgray !important;
+    }
+  }
   #CollapsingNavbar {
     nav[role="navigation"] {
       width: 100%;
@@ -215,7 +222,7 @@ body.path-search {
         /* Search and browse blocks */
         .views-exposed-form,
         .views-exposed-form + .block {
-          margin-top: 0 !important;
+          margin-top: 0;
         }
       }
     }
@@ -275,6 +282,20 @@ body:not(.path-frontpage, .path-search) {
           .content {
             .view-header {
             }
+            /* Award content type */
+            #award, #address {
+              strong {
+                font-weight: 500 !important;
+              }
+              h1 {
+                margin-top: 1rem;
+              }
+              #ceremony-link {
+                svg, svg path {
+                  color: inherit !important;
+                }
+              }
+            }
           }
         }
       }
@@ -286,6 +307,7 @@ body:not(.path-frontpage, .path-search) {
 body {
   #main-wrapper {
     #main {
+      max-width: 100% !important;
       /* Al images except slides */
       img:not([class^=image-style-slideshow]) {
         margin: 1rem;
@@ -433,21 +455,193 @@ body {
 .site-footer {
   margin-top: 1rem;
   border-top: 1px solid custom.$unb-halfgray;
-  .footer-logo {
-    max-width: 260px;
-  }
-  #footer-copy {
-    p {
-      margin-top: 0;
-      float: inline-end;
+  .container {
+    max-width: 100%;
+    .footer-logo {
+      max-width: 260px;
+    }
+    #footer-copy {
+      p {
+        margin-top: 0;
+        float: inline-end;
+      }
     }
   }
 }
 
 /* Responsive */
-@media screen and (width > 1300px) {
+@media screen and (width > 1316px) {
   /* All in page (toolbar excluded) */
   #page-wrapper {
     max-width: 1300px;
+  }
+}
+@media screen and (width <= 1316px) {
+  /* Main container - Home, Search, static page */
+  body.path-frontpage,
+  body.node--type-static-page,
+  body.path-search {
+    #main-wrapper {
+      #main {
+        .section {
+          /* Slideshow block */
+          .block-views[class*='-swiper'] {
+            .swiper-slider {
+            }
+          }
+          /* Search and browse blocks */
+          .views-exposed-form,
+          .views-exposed-form + .block {
+            display: block;
+            height: initial;
+            > h2 {
+            }
+          }
+          .views-exposed-form {
+            width: 100%;
+          }
+          .views-exposed-form + .block {
+            width: 100%;
+          }
+          /* Search block */
+          .views-exposed-form {
+            margin-bottom: 0;
+            h2 {
+            }
+            form {
+              & > .flex-wrap {
+                > div:not(:first-child) {
+                }
+                > div:first-child {
+                }
+                label {
+                }
+                .form-actions {
+                }
+              }
+            }
+          }
+          /* Browse block */
+          .views-exposed-form + .block {
+            margin-bottom: 2rem;
+            p {
+            }
+          }
+          /* Page title block */
+          .block-page-title-block {
+          }
+        }
+      }
+    }
+  }
+  /* Main container - Search */
+  body.path-search {
+      #main-wrapper {
+      #main {
+        padding: 0;
+        .section {
+          /* Search and browse blocks */
+          .views-exposed-form {
+            margin-top: 0;
+          }
+          .views-exposed-form + .block {
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (width <= 817px) {
+  /* Main container - Home, Search, static page */
+  body.path-frontpage,
+  body.node--type-static-page,
+  body.path-search {
+    #main-wrapper {
+      #main {
+        .section {
+          /* Slideshow block */
+          .block-views[class*='-swiper'] {
+            display: none;
+            .swiper-slider {
+            }
+          }
+          /* Search and browse blocks */
+          .views-exposed-form,
+          .views-exposed-form + .block {
+            > h2 {
+            }
+          }
+          .views-exposed-form {
+            margin-top: 0;
+          }
+          .views-exposed-form + .block {
+          }
+          /* Search block */
+          .views-exposed-form {
+            h2 {
+            }
+            form {
+              & > .flex-wrap {
+                > div:not(:first-child) {
+                }
+                > div:first-child {
+                }
+                label {
+                }
+                .form-actions {
+                }
+                .js-form-item, .form-actions {
+                  display: contents;
+                  > * {
+                    margin-top: .5rem;
+                  }
+                }
+              }
+            }
+          }
+          /* Browse block */
+          .views-exposed-form + .block {
+            p {
+            }
+          }
+          /* Page title block */
+          .block-page-title-block {
+          }
+        }
+      }
+    }
+  }
+  /* Main container - Search */
+  body.path-search {
+      #main-wrapper {
+      #main {
+        .section {
+          /* Search and browse blocks */
+          .views-exposed-form {
+          }
+          .views-exposed-form + .block {
+          }
+        }
+      }
+    }
+  }
+  /* Footer */
+  .site-footer, .site-footer * {
+  }
+  .site-footer {
+    .container {
+      #footer-logo-div, #footer-copy {
+        text-align: center;
+      }
+      #footer-logo-div {
+      }
+      #footer-copy {
+        margin-top: .5rem;
+        p {
+          float: none;
+        }
+      }
+    }
   }
 }
