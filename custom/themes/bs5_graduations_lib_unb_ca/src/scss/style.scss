@@ -595,11 +595,12 @@ body {
                 }
               }
               fieldset {
+                display: block;
                 legend {
                 }
               }
               .form-item-field-season-target-id {
-                margin-right: 300px;
+                margin-right: 260px;
               }
               .form-item-field-award-type-target-id {
                 margin-left: 0;
