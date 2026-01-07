@@ -4,18 +4,18 @@
 /* Broad rules (careful) */
 html {
   /* Base font size */
-  font-size: 20px;
+  font-size: 16px;
 }
 /* Fonts */
 body {
   /* All */
   * {
-    font-family: "Barlow Condensed", sans-serif;
+    font-family: "Nunito Sans", sans-serif;
     color: custom.$unb-darkgray;
   }
   /* Upper headers */
   h1, h1 *, h2, h2 *, a.site-title {
-    font-family: "Nunito Sans", sans-serif;
+    font-family: "Barlow Condensed", sans-serif;
   }
   /* Other headers */
   h3, h4, h5, h6 {
@@ -67,15 +67,18 @@ body {
 }
 
 /* Branding */
-.block-context-branding-block {
-  .site-title {
-    margin-bottom: 0;
-    font-size: 2rem;
-    color: custom.$unb-darkred;
-  }
-  .site-slogan {
-    font-size: 1rem;
-    color: custom.$unb-gray;
+#navbar-top {
+  padding: 0;
+  .block-context-branding-block {
+    .site-title {
+      margin-bottom: 0;
+      font-size: 2.2rem;
+      color: custom.$unb-darkred;
+    }
+    .site-slogan {
+      font-size: .9rem;
+      color: custom.$unb-gray;
+    }
   }
 }
 
@@ -92,6 +95,11 @@ body {
     &:not(.collapsed) {
       background-color: custom.$unb-darkgray !important;
       border-color: custom.$unb-darkgray !important;
+      + .navbar-collapse .dropdown-menu.show {
+        .dropdown-item {
+          padding-left: 2rem;
+        }
+      }
     }
   }
   #CollapsingNavbar {
@@ -161,12 +169,11 @@ body.path-search {
           padding: 1rem;
           background-color: custom.$unb-halfgray;
           > h2 {
-            font-size: 1.6rem;
           }
         }
         .views-exposed-form {
           float: inline-start;
-          width: 784px;
+          width: 794px;
         }
         .views-exposed-form + .block {
           position: relative;
@@ -238,12 +245,14 @@ body:not(.path-frontpage, .path-search) {
           margin-top: -.5rem;
           > .flex-wrap {
             display: block !important;
+            margin-top: 1rem;
           }
           .js-form-item {
             display: inline-block;
             margin-left: 0;
+            margin-bottom: .5rem !important;
             width: 322px;
-            &.js-form-item-combine {
+            &.form-item-combine {
               width: 1012px;
             }
           }
@@ -262,18 +271,18 @@ body:not(.path-frontpage, .path-search) {
           .form-item-field-season-target-id,
           .form-item-field-ceremony-year-value-max,
           .form-item-sort-order,
-          .js-form-item-field-award-type-target-id,
-          .js-form-item-field-emeritus-designation-target-id,
-          .js-form-item-field-faculty-award-type-target-id,
-          .js-form-item-field-grad-award-type-target-id,
-          .js-form-item-field-honorary-degree-target-id,
+          .form-item-field-award-type-target-id,
+          .form-item-field-emeritus-designation-target-id,
+          .form-item-field-faculty-award-type-target-id,
+          .form-item-field-grad-award-type-target-id,
+          .form-item-field-honorary-degree-target-id,
           .form-actions {
-            margin-left: 1rem !important;
+            margin-left: 1rem;
           }
-          .js-form-item-field-emeritus-designation-target-id,
-          .js-form-item-field-faculty-award-type-target-id,
-          .js-form-item-field-grad-award-type-target-id,
-          .js-form-item-field-honorary-degree-target-id {
+          .form-item-field-emeritus-designation-target-id,
+          .form-item-field-faculty-award-type-target-id,
+          .form-item-field-grad-award-type-target-id,
+          .form-item-field-honorary-degree-target-id {
             width: 200px;
           }
         }
@@ -302,7 +311,6 @@ body:not(.path-frontpage, .path-search) {
     }
   }
 }
-
 /* Main container - Everywhere */
 body {
   #main-wrapper {
@@ -346,10 +354,10 @@ body {
           .content {
             /* Headers */
             h1, h1 * {
-              font-size: 1.6rem;
+              font-size: 2rem;
             }
             h2, h2 * {
-              font-size: 1.2rem;
+              font-size: 1.4rem;
             }
             h3, h3 * {
               font-size: 1rem;
@@ -398,6 +406,9 @@ body {
                       }
                     }
                   }
+                }
+                strong {
+                  font-weight: 500;
                 }
               }
             }
@@ -536,7 +547,7 @@ body {
   }
   /* Main container - Search */
   body.path-search {
-      #main-wrapper {
+    #main-wrapper {
       #main {
         padding: 0;
         .section {
@@ -551,8 +562,369 @@ body {
       }
     }
   }
+    /* Main container - Everywhere */
+  body {
+    #main-wrapper {
+      #main {
+        /* Al images except slides */
+        img:not([class^=image-style-slideshow]) {
+          &.image-style-degree-thumbnail {
+          }
+        }
+        .section {
+          /* Exposed form */
+          #views-exposed-form-browse-awards-page-1 {
+            & > .flex-wrap {
+              > div:not(:first-child) {
+              }
+              > div:first-child {
+              }
+              label {
+              }
+              .form-actions {
+              }
+              fieldset {
+              }
+              .form-item-sort-order {
+              }
+              .js-form-item, .form-actions, fieldset {
+
+                > label {
+                }
+                > .button {
+                }
+              }
+              fieldset {
+                legend {
+                }
+              }
+              .form-item-field-season-target-id {
+                margin-right: 300px;
+              }
+              .form-item-field-award-type-target-id {
+                margin-left: 0;
+              }
+              .form-item-field-emeritus-designation-target-id {
+                margin-right: 200px;
+                width: 322px;
+              }
+            }
+          }
+          /* Page title block */
+          .block-page-title-block {
+            .field--name-title, 
+            .title {
+            }
+          }
+          /* Main block */
+          .block-system-main-block {
+            .content {
+              /* Headers */
+              h1, h1 * {
+              }
+              h2, h2 * {
+              }
+              h3, h3 * {
+              }
+              #graduation_ceremony {
+                > div {
+                }
+              }
+              .view-header {
+              }
+              .view-awards-x-ceremony,
+              .view-addresses-x-ceremony {
+                .view-content.row {
+                }
+              }
+              .view-content.row {
+                .item-list {
+                  ul {
+                    li {
+                    }
+                  }
+                }
+                .views-row {
+                  table {
+                    & * {
+                    }
+                    tbody {
+                      tr {
+                        td {
+                        }
+                      }
+                    }
+                  }
+                  strong {
+                  }
+                }
+              }
+              .view-footer {
+              }
+              nav {
+                .pagination {
+                  .page-item {
+                    &.active {
+                      .page-link {
+                      }
+                    }
+                    a {
+                    }
+                  }
+                }
+              }
+              .node__content {
+                table {
+                  & * {
+                  }
+                  tbody {
+                    tr {
+                      &:nth-child(odd) {
+                      }
+                      td {
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (width <= 1199px) {
+  /* Main navigation */
+  #navbar-main {
+    .navbar-toggler {
+      span {
+      }
+      &:not(.collapsed) {
+        + .navbar-collapse .dropdown-menu.show {
+          .dropdown-item {
+          }
+        }
+      }
+    }
+  }
+  /* Main container - Home, Search, static page */
+  body.path-frontpage,
+  body.node--type-static-page,
+  body.path-search {
+    #main-wrapper {
+      #main {
+        .section {
+          /* Slideshow block */
+          .block-views[class*='-swiper'] {
+            .swiper-slider {
+            }
+          }
+          /* Search and browse blocks */
+          .views-exposed-form,
+          .views-exposed-form + .block {
+            > h2 {
+            }
+          }
+          .views-exposed-form {
+          }
+          .views-exposed-form + .block {
+          }
+          /* Search block */
+          .views-exposed-form {
+            h2 {
+            }
+            form {
+              & > .flex-wrap {
+                > div:not(:first-child) {
+                }
+                > div:first-child {
+                }
+                label {
+                }
+                .form-actions {
+                }
+                .js-form-item, .form-actions, fieldset {
+                  > label {
+                  }
+                  > .button {
+                  }
+                }
+                fieldset {
+                  legend {
+                  }
+                }
+              }
+            }
+          }
+          /* Browse block */
+          .views-exposed-form + .block {
+            p {
+            }
+          }
+          /* Page title block */
+          .block-page-title-block {
+          }
+        }
+      }
+    }
+  }
+  /* Main container - Search */
+  body.path-search {
+      #main-wrapper {
+      #main {
+        .section {
+          /* Search and browse blocks */
+          .views-exposed-form {
+          }
+          .views-exposed-form + .block {
+          }
+        }
+      }
+    }
+  }
+  /* Main container - Everywhere */
+  body {
+    #main-wrapper {
+      #main {
+        /* Al images except slides */
+        img:not([class^=image-style-slideshow]) {
+          &.image-style-degree-thumbnail {
+          }
+        }
+        .section {
+          /* Exposed form */
+          .views-exposed-form {
+            & > .flex-wrap {
+              > div:not(:first-child) {
+              }
+              > div:first-child {
+              }
+              label {
+              }
+              .form-actions {
+              }
+              fieldset {
+                margin-right: 200px;
+              }
+              .form-item-sort-order {
+                margin-left: 0 !important;
+              }
+              .js-form-item, .form-actions, fieldset {
+
+                > label {
+                }
+                > .button {
+                }
+              }
+              fieldset {
+                legend {
+                }
+              }
+            }
+          }
+          /* Page title block */
+          .block-page-title-block {
+            .field--name-title, 
+            .title {
+            }
+          }
+          /* Main block */
+          .block-system-main-block {
+            .content {
+              /* Headers */
+              h1, h1 * {
+              }
+              h2, h2 * {
+              }
+              h3, h3 * {
+              }
+              #graduation_ceremony {
+                > div {
+                }
+              }
+              .view-header {
+              }
+              .view-awards-x-ceremony,
+              .view-addresses-x-ceremony {
+                .view-content.row {
+                }
+              }
+              .view-content.row {
+                .item-list {
+                  ul {
+                    li {
+                    }
+                  }
+                }
+                .views-row {
+                  table {
+                    & * {
+                    }
+                    tbody {
+                      tr {
+                        td {
+                        }
+                      }
+                    }
+                  }
+                  strong {
+                  }
+                }
+              }
+              .view-footer {
+              }
+              nav {
+                .pagination {
+                  .page-item {
+                    &.active {
+                      .page-link {
+                      }
+                    }
+                    a {
+                    }
+                  }
+                }
+              }
+              .node__content {
+                table {
+                  & * {
+                  }
+                  tbody {
+                    tr {
+                      &:nth-child(odd) {
+                      }
+                      td {
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 @media screen and (width <= 817px) {
+  /* Main navigation */
+  #navbar-main {
+    .navbar-toggler {
+      span {
+      }
+      &:not(.collapsed) {
+        background-color: custom.$unb-darkgray !important;
+        border-color: custom.$unb-darkgray !important;
+        + .navbar-collapse .dropdown-menu.show {
+          border-color: custom.$unb-darkgray;
+          .dropdown-item {
+            padding-left: 2rem;
+          }
+        }
+      }
+    }
+  }
   /* Main container - Home, Search, static page */
   body.path-frontpage,
   body.node--type-static-page,
@@ -591,10 +963,18 @@ body {
                 }
                 .form-actions {
                 }
-                .js-form-item, .form-actions {
+                .js-form-item, .form-actions, fieldset {
                   display: contents;
-                  > * {
+                  > label {
                     margin-top: .5rem;
+                  }
+                  > .button {
+                    margin-top: 1rem;
+                  }
+                }
+                fieldset {
+                  legend {
+                    display: none;
                   }
                 }
               }
@@ -621,6 +1001,127 @@ body {
           .views-exposed-form {
           }
           .views-exposed-form + .block {
+          }
+        }
+      }
+    }
+  }
+  /* Main container - Everywhere */
+  body {
+    #main-wrapper {
+      #main {
+        /* Al images except slides */
+        img:not([class^=image-style-slideshow]) {
+          &.image-style-degree-thumbnail {
+          }
+        }
+        .section {
+          /* Exposed form */
+          .views-exposed-form {
+            & > .flex-wrap {
+              > div:not(:first-child) {
+              }
+              > div:first-child {
+              }
+              label {
+              }
+              .form-actions {
+              }
+              .js-form-item, .form-actions, fieldset {
+                display: contents;
+                > label {
+                  margin-top: .5rem;
+                }
+                > .button {
+                  margin-top: 1rem;
+                  width: 100%;
+                }
+              }
+              fieldset {
+                legend {
+                  display: none;
+                }
+              }
+            }
+          }
+          /* Page title block */
+          .block-page-title-block {
+            .field--name-title, 
+            .title {
+            }
+          }
+          /* Main block */
+          .block-system-main-block {
+            .content {
+              /* Headers */
+              h1, h1 * {
+              }
+              h2, h2 * {
+              }
+              h3, h3 * {
+              }
+              #graduation_ceremony {
+                > div {
+                }
+              }
+              .view-header {
+              }
+              .view-awards-x-ceremony,
+              .view-addresses-x-ceremony {
+                .view-content.row {
+                }
+              }
+              .view-content.row {
+                .item-list {
+                  ul {
+                    li {
+                    }
+                  }
+                }
+                .views-row {
+                  table {
+                    & * {
+                    }
+                    tbody {
+                      tr {
+                        td {
+                        }
+                      }
+                    }
+                  }
+                  strong {
+                  }
+                }
+              }
+              .view-footer {
+              }
+              nav {
+                .pagination {
+                  .page-item {
+                    &.active {
+                      .page-link {
+                      }
+                    }
+                    a {
+                    }
+                  }
+                }
+              }
+              .node__content {
+                table {
+                  & * {
+                  }
+                  tbody {
+                    tr {
+                      &:nth-child(odd) {
+                      }
+                      td {
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
