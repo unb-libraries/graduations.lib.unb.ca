@@ -117,6 +117,7 @@ body {
             &.is-active,
             &:hover,
             &:focus {
+              cursor: pointer;
               background-color: custom.$unb-darkerred;
             }
           }
@@ -250,12 +251,14 @@ body:not(.path-frontpage, .path-search) {
             margin-left: 0;
             margin-bottom: .5rem !important;
             width: 322px;
+            max-width: 100%;
             &.form-item-combine {
               width: 1012px;
             }
           }
           fieldset {
             width: 668px !important;
+            max-width: 100%;
             .js-form-item {
             }
           }
@@ -584,6 +587,7 @@ body {
               fieldset {
               }
               .form-item-sort-order {
+                margin-left: 0;
               }
               .js-form-item, .form-actions, fieldset {
 
@@ -598,12 +602,15 @@ body {
                 }
               }
               .form-item-field-season-target-id {
-                margin-right: 260px;
+                margin-right: 32%;
               }
               .form-item-field-award-type-target-id {
                 margin-left: 0;
               }
-              .form-item-field-emeritus-designation-target-id {
+              .form-item-field-emeritus-designation-target-id,
+              .form-item-field-faculty-award-type-target-id,
+              .form-item-field-grad-award-type-target-id,
+              .form-item-field-honorary-degree-target-id {
                 margin-right: 200px;
                 width: 322px;
               }
@@ -806,8 +813,231 @@ body {
               fieldset {
                 margin-right: 200px;
               }
+              .form-item-field-season-target-id {
+                margin-right: 14% !important;
+              }
               .form-item-sort-order {
                 margin-left: 0 !important;
+              }
+              .js-form-item, .form-actions, fieldset {
+
+                > label {
+                }
+                > .button {
+                }
+              }
+              fieldset {
+                legend {
+                }
+              }
+            }
+          }
+          /* Page title block */
+          .block-page-title-block {
+            .field--name-title, 
+            .title {
+            }
+          }
+          /* Main block */
+          .block-system-main-block {
+            .content {
+              /* Headers */
+              h1, h1 * {
+              }
+              h2, h2 * {
+              }
+              h3, h3 * {
+              }
+              #graduation_ceremony {
+                > div {
+                }
+              }
+              .view-header {
+              }
+              .view-awards-x-ceremony,
+              .view-addresses-x-ceremony {
+                .view-content.row {
+                }
+              }
+              .view-content.row {
+                .item-list {
+                  ul {
+                    li {
+                    }
+                  }
+                }
+                .views-row {
+                  table {
+                    & * {
+                    }
+                    tbody {
+                      tr {
+                        td {
+                        }
+                      }
+                    }
+                  }
+                  strong {
+                  }
+                }
+              }
+              .view-footer {
+              }
+              nav {
+                .pagination {
+                  .page-item {
+                    &.active {
+                      .page-link {
+                      }
+                    }
+                    a {
+                    }
+                  }
+                }
+              }
+              .node__content {
+                table {
+                  & * {
+                  }
+                  tbody {
+                    tr {
+                      &:nth-child(odd) {
+                      }
+                      td {
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (width <= 916px) {
+  /* Main navigation */
+  #navbar-main {
+    .navbar-toggler {
+      span {
+      }
+      &:not(.collapsed) {
+        + .navbar-collapse .dropdown-menu.show {
+          .dropdown-item {
+          }
+        }
+      }
+    }
+  }
+  /* Main container - Home, Search, static page */
+  body.path-frontpage,
+  body.node--type-static-page,
+  body.path-search {
+    #main-wrapper {
+      #main {
+        .section {
+          /* Slideshow block */
+          .block-views[class*='-swiper'] {
+            .swiper-slider {
+            }
+          }
+          /* Search and browse blocks */
+          .views-exposed-form,
+          .views-exposed-form + .block {
+            > h2 {
+            }
+          }
+          .views-exposed-form {
+          }
+          .views-exposed-form + .block {
+          }
+          /* Search block */
+          .views-exposed-form {
+            h2 {
+            }
+            form {
+              & > .flex-wrap {
+                > div:not(:first-child) {
+                }
+                > div:first-child {
+                }
+                label {
+                }
+                .form-actions {
+                }
+                .js-form-item, .form-actions, fieldset {
+                  > label {
+                  }
+                  > .button {
+                  }
+                }
+                fieldset {
+                  legend {
+                  }
+                }
+              }
+            }
+          }
+          /* Browse block */
+          .views-exposed-form + .block {
+            p {
+            }
+          }
+          /* Page title block */
+          .block-page-title-block {
+          }
+        }
+      }
+    }
+  }
+  /* Main container - Search */
+  body.path-search {
+      #main-wrapper {
+      #main {
+        .section {
+          /* Search and browse blocks */
+          .views-exposed-form {
+          }
+          .views-exposed-form + .block {
+          }
+        }
+      }
+    }
+  }
+  /* Main container - Everywhere */
+  body {
+    #main-wrapper {
+      #main {
+        /* Al images except slides */
+        img:not([class^=image-style-slideshow]) {
+          &.image-style-degree-thumbnail {
+          }
+        }
+        .section {
+          /* Exposed form */
+          .views-exposed-form {
+            & > .flex-wrap {
+              > div:not(:first-child) {
+              }
+              > div:first-child {
+              }
+              label {
+              }
+              .form-actions {
+              }
+              fieldset {
+              }
+              .form-item-field-emeritus-designation-target-id,
+              .form-item-field-faculty-award-type-target-id,
+              .form-item-field-grad-award-type-target-id,
+              .form-item-field-honorary-degree-target-id {
+                margin-right: 102px !important;
+              }
+              .form-item-field-season-target-id {
+                margin-right: 10% !important;
+              }
+              .form-item-sort-order {
               }
               .js-form-item, .form-actions, fieldset {
 
@@ -962,8 +1192,12 @@ body {
                 }
                 .form-actions {
                 }
-                .js-form-item, .form-actions, fieldset {
+                .js-form-item, 
+                .form-actions, 
+                fieldset, 
+                .fieldset-wrapper {
                   display: contents;
+                  width: 100% !important;
                   > label {
                     margin-top: .5rem;
                   }
