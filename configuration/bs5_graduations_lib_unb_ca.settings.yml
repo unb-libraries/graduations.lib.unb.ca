@@ -92,7 +92,7 @@ bootstrap_button_size: ''
 bootstrap_button_type: primary
 bootstrap_button_outline: 0
 bootstrap_navbar_container: '0'
-bootstrap_navbar_toggle: navbar-toggleable-xl
+bootstrap_navbar_toggle: navbar-toggleable-lg
 bootstrap_navbar_top_navbar: 0
 bootstrap_navbar_top_class: ''
 bootstrap_navbar_class: ''
