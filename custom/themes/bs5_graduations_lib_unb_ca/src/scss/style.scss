@@ -36,7 +36,7 @@ body {
     &:focus-within,
     &:focus-visible {
       text-decoration: underline;
-      color: custom.$unb-darkerred;
+      color: custom.$unb-darkerred !important;
     }
   }
   /* All controls */
@@ -52,8 +52,8 @@ body {
     background-color: custom.$unb-darkerred;
     border-color: custom.$unb-darkerred;
     &:hover {
-      background-color: custom.$unb-darkred;
-      border-color: custom.$unb-darkred;
+      background-color: custom.$unb-darkred !important;
+      border-color: custom.$unb-darkred !important;
     }
   }
   /* All tables */
@@ -93,8 +93,8 @@ body {
       background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='rgba%28255, 249, 250, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
     }
     &:not(.collapsed) {
-      background-color: custom.$unb-darkgray !important;
-      border-color: custom.$unb-darkgray !important;
+      background-color: custom.$unb-darkgray;
+      border-color: custom.$unb-darkgray;
       + .navbar-collapse .dropdown-menu.show {
         .dropdown-item {
           padding-left: 2rem;
@@ -145,7 +145,6 @@ body {
     }
   }
 }
-
 /* Main container - Home, Search, static page */
 body.path-frontpage,
 body.node--type-static-page,
@@ -219,7 +218,6 @@ body.path-search {
     }
   }
 }
-
 /* Main container - Search */
 body.path-search {
     #main-wrapper {
