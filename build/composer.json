@@ -67,7 +67,11 @@
         "type:drupal-custom-theme"
       ]
     },
-    "patches": {}
+    "patches": {
+      "drupal/bootstrap": {
+        "Fix bootstrap_icons schema type mismatch": "/build/patches/bootstrap-icons-schema-fix.patch"
+      }
+    }
   },
   "license": "MIT",
   "minimum-stability": "dev",
