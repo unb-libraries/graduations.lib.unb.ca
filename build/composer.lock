@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d374c0056a5e36b6812ebba58d82fe47",
+    "content-hash": "6216a561dbebda47155a60c0166c4441",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3689,18 +3689,6 @@
             "type": "drupal-library",
             "extra": {
                 "installer-name": "json2"
-            }
-        },
-        {
-            "name": "jquery/pause",
-            "version": "dev-master",
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/tobia/Pause/archive/master.zip"
-            },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "jquery.pause"
             }
         },
         {
@@ -8903,15 +8891,14 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "jquery/json2": 20,
-        "jquery/pause": 20,
         "unb-libraries/composer-drupal-scaffold": 20,
-        "unb-libraries/drupal-development-libraries": 20,
         "unb-libraries/saml_features": 20,
-        "unb-libraries/unb_lib_zircon": 20
+        "unb-libraries/unb_lib_zircon": 20,
+        "unb-libraries/drupal-development-libraries": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": {},
-    "platform-dev": {},
-    "plugin-api-version": "2.9.0"
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
 }

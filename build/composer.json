@@ -149,21 +149,6 @@
       "package": {
         "dist": {
           "type": "zip",
-          "url": "https://github.com/tobia/Pause/archive/master.zip"
-        },
-        "extra": {
-          "installer-name": "jquery.pause"
-        },
-        "name": "jquery/pause",
-        "type": "drupal-library",
-        "version": "dev-master"
-      },
-      "type": "package"
-    },
-    {
-      "package": {
-        "dist": {
-          "type": "zip",
           "url": "https://github.com/FortAwesome/Font-Awesome/archive/5.14.0.zip"
         },
         "extra": {
@@ -216,7 +201,6 @@
     "jquery/cycle": "^3",
     "jquery/hover-intent": "^1",
     "jquery/json2": "dev-master",
-    "jquery/pause": "dev-master",
     "malsup/jquery.cycle": "^1",
     "npm-asset/swiper": "^9",
     "oomphinc/composer-installers-extender": "^2",
