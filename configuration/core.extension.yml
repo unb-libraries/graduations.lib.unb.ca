@@ -15,12 +15,10 @@ module:
   config: 0
   contextual: 0
   datetime: 0
-  dblog: 0
   dynamic_page_cache: 0
   editor: 0
   externalauth: 0
   field: 0
-  field_ui: 0
   file: 0
   filter: 0
   fontawesome: 0
@@ -65,7 +63,6 @@ module:
   user: 0
   views_slideshow: 0
   views_slideshow_cycle: 0
-  views_ui: 0
   menu_link_content: 1
   pathauto: 1
   views: 10
