@@ -9042,13 +9042,13 @@
     "stability-flags": {
         "jquery/json2": 20,
         "unb-libraries/composer-drupal-scaffold": 20,
-        "unb-libraries/drupal-development-libraries": 20,
         "unb-libraries/saml_features": 20,
-        "unb-libraries/unb_lib_zircon": 20
+        "unb-libraries/unb_lib_zircon": 20,
+        "unb-libraries/drupal-development-libraries": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": {},
-    "platform-dev": {},
-    "plugin-api-version": "2.9.0"
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
 }
