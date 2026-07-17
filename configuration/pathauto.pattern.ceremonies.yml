@@ -2,6 +2,8 @@ uuid: d3c75583-4e57-4d41-a9f7-5d4e05512428
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.graduation_ceremony
   module:
     - node
 id: ceremonies
@@ -12,7 +14,6 @@ selection_criteria:
   5d377975-6ce8-448b-a368-54016e161802:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 5d377975-6ce8-448b-a368-54016e161802
     context_mapping:
       node: node
     bundles:

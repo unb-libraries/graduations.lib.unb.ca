@@ -2,6 +2,8 @@ uuid: 73c8ad3e-3594-41d5-ac58-1d11d4d3c5e0
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.award
   module:
     - node
 id: awards
@@ -12,7 +14,6 @@ selection_criteria:
   1f013a6b-a42a-42d2-ac19-7969a72785cc:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 1f013a6b-a42a-42d2-ac19-7969a72785cc
     context_mapping:
       node: node
     bundles:
