@@ -86,100 +86,11 @@
     {
       "type": "composer",
       "url": "https://asset-packagist.org"
-    },
-    {
-      "package": {
-        "dist": {
-          "type": "file",
-          "url": "https://malsup.github.io/jquery.cycle.all.js"
-        },
-        "name": "malsup/jquery.cycle",
-        "require": {
-          "composer/installers": "^2"
-        },
-        "type": "drupal-library",
-        "version": "1.0"
-      },
-      "type": "package"
-    },
-    {
-      "package": {
-        "dist": {
-          "type": "zip",
-          "url": "https://github.com/malsup/cycle/archive/3.0.3.zip"
-        },
-        "extra": {
-          "installer-name": "jquery.cycle"
-        },
-        "name": "jquery/cycle",
-        "type": "drupal-library",
-        "version": "3.0.3"
-      },
-      "type": "package"
-    },
-    {
-      "package": {
-        "dist": {
-          "type": "zip",
-          "url": "https://github.com/briancherne/jquery-hoverIntent/archive/v1.10.2.zip"
-        },
-        "extra": {
-          "installer-name": "jquery.hover-intent"
-        },
-        "name": "jquery/hover-intent",
-        "type": "drupal-library",
-        "version": "1.10.2"
-      },
-      "type": "package"
-    },    {
-      "package": {
-        "dist": {
-          "type": "zip",
-          "url": "https://github.com/douglascrockford/JSON-js/archive/master.zip"
-        },
-        "extra": {
-          "installer-name": "json2"
-        },
-        "name": "jquery/json2",
-        "type": "drupal-library",
-        "version": "dev-master"
-      },
-      "type": "package"
-    },
-    {
-      "package": {
-        "dist": {
-          "type": "zip",
-          "url": "https://github.com/FortAwesome/Font-Awesome/archive/5.14.0.zip"
-        },
-        "extra": {
-          "installer-name": "fontawesome"
-        },
-        "name": "unb-libraries/font_awesome",
-        "type": "drupal-library",
-        "version": "5.14.0"
-      },
-      "type": "package"
-    },
-    {
-      "package": {
-        "name": "drupal/login_return_page",
-        "source": {
-          "reference": "8.x-1.x",
-          "type": "git",
-          "url": "https://git.drupalcode.org/sandbox/gnuget-2824414.git"
-        },
-        "type": "drupal-module",
-        "version": "1.x-dev"
-      },
-      "type": "package"
     }
   ],
   "require": {
     "drupal/admin_toolbar": "^3",
     "drupal/bootstrap": "^5",
-    "drupal/bootstrap4": "^3",
-    "drupal/color": "^2",
     "drupal/core": "^11",
     "drupal/core-composer-scaffold": "^11",
     "drupal/core-recommended": "^11",
@@ -190,7 +101,6 @@
     "drupal/node_edit_protection": "^1",
     "drupal/pathauto": "^1",
     "drupal/quickedit": "^2",
-    "drupal/rdf": "^3", 
     "drupal/redirect_after_login": "^3",
     "drupal/redis": "^1",
     "drupal/samlauth": "^3",
@@ -198,16 +108,10 @@
     "drupal/search_api_solr": "^4",
     "drupal/simple_sitemap": "^4",
     "drupal/token_filter": "^2",
-    "drupal/views_slideshow": "^5",
-    "jquery/cycle": "^3",
-    "jquery/hover-intent": "^1",
-    "jquery/json2": "dev-master",
-    "malsup/jquery.cycle": "^1",
     "npm-asset/swiper": "^9",
     "oomphinc/composer-installers-extender": "^2",
     "unb-libraries/composer-drupal-scaffold": "^11.x-dev",
-    "unb-libraries/saml_features": "dev-10.x-1.x",
-    "unb-libraries/unb_lib_zircon": "dev-11.x-bootstrap-4.x"
+    "unb-libraries/saml_features": "dev-10.x-1.x"
   },
   "require-dev": {
     "unb-libraries/drupal-development-libraries": "^11.x-dev"

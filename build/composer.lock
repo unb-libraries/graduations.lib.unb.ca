@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6216a561dbebda47155a60c0166c4441",
+    "content-hash": "c72d938156c84cfe86c0d6f5276df930",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1166,111 +1166,6 @@
             }
         },
         {
-            "name": "drupal/bootstrap4",
-            "version": "3.0.7",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/bootstrap4.git",
-                "reference": "3.0.7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bootstrap4-3.0.7.zip",
-                "reference": "3.0.7",
-                "shasum": "c4989d6fe4b0d33a07c47f4a7bad976a9ced30c3"
-            },
-            "require": {
-                "drupal/core": "^10.2 || ^11"
-            },
-            "type": "drupal-theme",
-            "extra": {
-                "drupal": {
-                    "version": "3.0.7",
-                    "datestamp": "1767794815",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Janna M (jannakha)",
-                    "homepage": "https://www.drupal.org/u/jannakha",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Vladimir Roudakov (vladimiraus)",
-                    "homepage": "https://www.drupal.org/u/vladimiraus",
-                    "role": "Maintainer"
-                }
-            ],
-            "description": "Master theme using Bootstrap 4: powerful front-end framework for faster and easier web development.",
-            "homepage": "https://www.drupal.org/project/bootstrap4",
-            "keywords": [
-                "Drupal"
-            ],
-            "support": {
-                "source": "https://git.drupalcode.org/project/bootstrap4",
-                "issues": "https://www.drupal.org/project/issues/bootstrap4"
-            }
-        },
-        {
-            "name": "drupal/color",
-            "version": "2.0.0-alpha1",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/color.git",
-                "reference": "2.0.0-alpha1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/color-2.0.0-alpha1.zip",
-                "reference": "2.0.0-alpha1",
-                "shasum": "5e518124fe3e18f0104ecad7dd4d6d6dce441e83"
-            },
-            "require": {
-                "drupal/core": ">=10.1.3 || ^11"
-            },
-            "require-dev": {
-                "drupal/bartik": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "2.0.0-alpha1",
-                    "datestamp": "1751431548",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Alpha releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "andypost",
-                    "homepage": "https://www.drupal.org/user/118908"
-                },
-                {
-                    "name": "kostyashupenko",
-                    "homepage": "https://www.drupal.org/user/3281537"
-                }
-            ],
-            "description": "Allows users to change the color scheme of compatible themes",
-            "homepage": "https://www.drupal.org/project/color",
-            "support": {
-                "source": "https://git.drupalcode.org/project/color"
-            }
-        },
-        {
             "name": "drupal/core",
             "version": "11.4.10",
             "source": {
@@ -2258,85 +2153,6 @@
             "time": "2025-12-29T15:30:47+00:00"
         },
         {
-            "name": "drupal/rdf",
-            "version": "3.0.0-beta2",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/rdf.git",
-                "reference": "3.0.0-beta2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/rdf-3.0.0-beta2.zip",
-                "reference": "3.0.0-beta2",
-                "shasum": "1cdc2900f70bc405d542fb56209905ebc8d5dae2"
-            },
-            "require": {
-                "drupal/core": "^10.3 || ^11.0"
-            },
-            "require-dev": {
-                "easyrdf/easyrdf": "^1.0 || ^1.1"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "3.0.0-beta2",
-                    "datestamp": "1721596082",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Arto",
-                    "homepage": "https://www.drupal.org/user/26089"
-                },
-                {
-                    "name": "bbrala",
-                    "homepage": "https://www.drupal.org/user/3366066"
-                },
-                {
-                    "name": "bhuga",
-                    "homepage": "https://www.drupal.org/user/186547"
-                },
-                {
-                    "name": "febbraro",
-                    "homepage": "https://www.drupal.org/user/43670"
-                },
-                {
-                    "name": "jmiccolis",
-                    "homepage": "https://www.drupal.org/user/31731"
-                },
-                {
-                    "name": "linclark",
-                    "homepage": "https://www.drupal.org/user/396253"
-                },
-                {
-                    "name": "miglius",
-                    "homepage": "https://www.drupal.org/user/18741"
-                },
-                {
-                    "name": "scor",
-                    "homepage": "https://www.drupal.org/user/52142"
-                },
-                {
-                    "name": "smustgrave",
-                    "homepage": "https://www.drupal.org/user/3252890"
-                }
-            ],
-            "description": "Enriches your content with metadata to let other applications (e.g. search engines, aggregators) better understand its relationships and attributes",
-            "homepage": "https://www.drupal.org/project/rdf",
-            "support": {
-                "source": "https://git.drupalcode.org/project/rdf"
-            }
-        },
-        {
             "name": "drupal/redirect_after_login",
             "version": "3.0.2",
             "source": {
@@ -2899,64 +2715,6 @@
             "homepage": "https://www.drupal.org/project/token_filter",
             "support": {
                 "source": "https://git.drupalcode.org/project/token_filter"
-            }
-        },
-        {
-            "name": "drupal/views_slideshow",
-            "version": "5.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/views_slideshow.git",
-                "reference": "5.0.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/views_slideshow-5.0.1.zip",
-                "reference": "5.0.1",
-                "shasum": "f181dd86f40f0a65186ee818daded06a98e5d510"
-            },
-            "require": {
-                "drupal/core": "^9 || ^10 || ^11"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "5.0.1",
-                    "datestamp": "1724040371",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Neslee Canil Pinto",
-                    "homepage": "https://www.drupal.org/u/neslee-canil-pinto",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "nickdickinsonwilde",
-                    "homepage": "https://www.drupal.org/user/3094661"
-                },
-                {
-                    "name": "redndahead",
-                    "homepage": "https://www.drupal.org/user/160320"
-                },
-                {
-                    "name": "vbouchet",
-                    "homepage": "https://www.drupal.org/user/1671428"
-                }
-            ],
-            "description": "Describes relationships between entities.",
-            "homepage": "https://www.drupal.org/project/views_slideshow",
-            "support": {
-                "source": "https://git.drupalcode.org/project/views_slideshow",
-                "issues": "https://www.drupal.org/project/issues/views_slideshow"
             }
         },
         {
@@ -3677,42 +3435,6 @@
             "time": "2025-12-05T14:53:09+00:00"
         },
         {
-            "name": "jquery/cycle",
-            "version": "3.0.3",
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/malsup/cycle/archive/3.0.3.zip"
-            },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "jquery.cycle"
-            }
-        },
-        {
-            "name": "jquery/hover-intent",
-            "version": "1.10.2",
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/briancherne/jquery-hoverIntent/archive/v1.10.2.zip"
-            },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "jquery.hover-intent"
-            }
-        },
-        {
-            "name": "jquery/json2",
-            "version": "dev-master",
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/douglascrockford/JSON-js/archive/master.zip"
-            },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "json2"
-            }
-        },
-        {
             "name": "justinrainbow/json-schema",
             "version": "6.8.2",
             "source": {
@@ -4063,18 +3785,6 @@
                 }
             ],
             "time": "2026-04-11T18:38:28+00:00"
-        },
-        {
-            "name": "malsup/jquery.cycle",
-            "version": "1.0",
-            "dist": {
-                "type": "file",
-                "url": "https://malsup.github.io/jquery.cycle.all.js"
-            },
-            "require": {
-                "composer/installers": "^2"
-            },
-            "type": "drupal-library"
         },
         {
             "name": "marc-mabe/php-enum",
@@ -8941,42 +8651,6 @@
                 "source": "https://github.com/unb-libraries/saml_features/tree/10.x-1.x"
             },
             "time": "2025-10-30T19:28:33+00:00"
-        },
-        {
-            "name": "unb-libraries/unb_lib_zircon",
-            "version": "dev-11.x-bootstrap-4.x",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/unb-libraries/unb_lib_zircon.git",
-                "reference": "cbf2fc83a826f043747f1a7510069aa6e03072f3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/unb-libraries/unb_lib_zircon/zipball/cbf2fc83a826f043747f1a7510069aa6e03072f3",
-                "reference": "cbf2fc83a826f043747f1a7510069aa6e03072f3",
-                "shasum": ""
-            },
-            "require-dev": {
-                "twbs/bootstrap": "~4.5.3"
-            },
-            "type": "drupal-theme",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "UNB Libraries",
-                    "email": "libsupport@unb.ca"
-                }
-            ],
-            "description": "Drupal Bootstrap 4.x Base Theme For UNB Libraries Archive Sites.",
-            "homepage": "https://github.com/unb-libraries/unb_lib_zircon",
-            "support": {
-                "issues": "https://github.com/unb-libraries/unb_lib_zircon/issues",
-                "source": "https://github.com/unb-libraries/unb_lib_zircon/tree/11.x-bootstrap-4.x"
-            },
-            "time": "2025-12-01T19:10:48+00:00"
         }
     ],
     "packages-dev": [
@@ -9450,15 +9124,13 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "jquery/json2": 20,
         "unb-libraries/composer-drupal-scaffold": 20,
-        "unb-libraries/drupal-development-libraries": 20,
         "unb-libraries/saml_features": 20,
-        "unb-libraries/unb_lib_zircon": 20
+        "unb-libraries/drupal-development-libraries": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": {},
-    "platform-dev": {},
-    "plugin-api-version": "2.9.0"
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.6.0"
 }
