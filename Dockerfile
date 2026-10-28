@@ -26,6 +26,9 @@ COPY ./custom/modules ${DRUPAL_ROOT}/modules/custom
 ARG BUILD_DATE
 ARG VCS_REF
 ARG VERSION
+# Drupal's deployment_identifier (service container, APCu and Twig cache keys) changes with
+# every build. Set here, in the last layers, so it does not invalidate the cached layers above.
+ENV DRUPAL_DEPLOYMENT_IDENTIFIER=$VERSION
 LABEL ca.unb.lib.generator="drupal11" \
   org.opencontainers.image.title="graduations.lib.unb.ca" \
   org.opencontainers.image.description="graduations.lib.unb.ca provides information about honorary degree recipients at UNB from the orators' presentations at encaenia and convocation ceremonies." \
