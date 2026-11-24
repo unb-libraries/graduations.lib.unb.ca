@@ -1,0 +1,7 @@
+short-url:
+  version: VERSION
+  js:
+    js/short_url.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

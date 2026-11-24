@@ -14,5 +14,7 @@ function browse_ceremonies_form_views_exposed_form_alter(&$form, $form_state, $f
     // Override default label of maximum year field.
     $form['field_ceremony_year_value_wrapper']['field_ceremony_year_value']['min']['#title'] = t('From (year)');
     $form['field_ceremony_year_value_wrapper']['field_ceremony_year_value']['max']['#title'] = t('To (year)');
+    // Keep empty filters and the default sort out of the URL.
+    $form['#attached']['library'][] = 'browse_ceremonies/short-url';
   }
 }
